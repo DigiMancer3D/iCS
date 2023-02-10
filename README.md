@@ -85,10 +85,11 @@
 
 #### &nbsp; &nbsp; &nbsp; Add Item --> "drive" --> "import" --> item importer
 
-### &nbsp; :To Access:   --   :Item Importer:
-### &nbsp; &nbsp; Input 1 -- "Drive"
-### &nbsp; &nbsp; Input 2 -- "import"
-### &nbsp; &nbsp; What you get -- Item Importer App
+### &nbsp; :To Access:   
+### &nbsp; &nbsp; :Item Importer:
+### &nbsp; &nbsp; Input 1 --> "Drive"
+### &nbsp; &nbsp; Input 2 --> "import"
+### &nbsp; &nbsp; What you get --> Item Importer App
 
 ## &nbsp; **Do Not Import Funds This Way**
 --

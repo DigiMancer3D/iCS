@@ -2,8 +2,14 @@
 ### An interactive Character Sheet with a custom open ended "Unlicense"
 ---
 
+To play with iCS live, visit https://3dd.in/iCS or the use IFPS CID directly #QmNVmZ5LmRHnypPw8QDJYATGj6wxaRSspTQYYo1LS2SC5U to view, use & host
 
-&nbsp;&nbsp;&nbsp; The interactive Character Sheet was first built up by 3Douglas 3D Pihl. Because of the Open Gaming License (pre OGL 2) was looking at being changed by Hasbro via Wizards of the Coast. Because of the hurt this would cause many people to very quickly change & adapt to unforturnate events by these conglomerates. Out of that madness, 3D began showing an online usable Character Sheet. With a non-static character sheet not reliant upon OGL licensing this could help people continue to enjoy their favorite table top, RPG or larping online without worry.
+
+
+## About iCS::
+
+
+&nbsp;&nbsp;&nbsp; The interactive Character Sheet was first built up by 3Douglas 3D Pihl. Because of the Open Gaming License (pre OGL 2) was looking at being changed by Hasbro via Wizards of the Coast. Because of the hurt this would cause many people to very quickly change & adapt to unforturnate events by these conglomerates. Out of that madness, 3D began showing an online usable Character Sheet. With a non-static character sheet not reliant upon OGL licensing this could help people continue to enjoy their favorite table top, RPG or larping online without worry. Using Itty-Bitty v1 to create personalized iCS saves then allows for people to send, trade or continue previous saves.
 
 
 &nbsp;&nbsp;&nbsp; iCS takes cares of many actions for the users and considerations in a manner that is based on a custom RPG layout concept. The internal algos help make the process of keeping up with a character sheet easy for all user levels. The algorithms used are as follows:

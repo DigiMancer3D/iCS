@@ -302,8 +302,49 @@ This license must be visiable with a maximum of a single click mechanic, a singl
 
 
 ### &nbsp; &nbsp; General Commands (Print Commands)
-###### resetlevel, rosebud
+
+
 
 
 #### &nbsp; &nbsp; &nbsp; &nbsp; Recgonized Words/Commands: 1100+ unique words recgonized
+---
+
+---
+## iCS Input Sanatization Process'
+
+### &nbsp; &nbsp; Because there is a <q><i>Click-to-Change</i></q> mechanic, there are a series of sanatizers. Each one handles things slightly differently for different reasons but we could drop these down to essentially 3 sanatizers.
+
+
+
+### &nbsp; &nbsp; Spell & Standard Input Sanatizer:
+###### Used with a replacement function: <code>/[^a-z0-9áéíóúñü\[\] \@#&.,_-]/gim</code> ***JavaScript RegEx***
+###### This design doesn't allow for much more than important writable characters. This should prevent links & javascript manipulation in the input field.
+
+
+
+### &nbsp; &nbsp; Document Sanatizer:
+###### Used with a replacement function: <code>/[^a-z0-9áéíóúñü\[\] \@#&.,_-]/gim</code> ***JavaScript RegEx***
+###### Using the same as the spell sanatizer but this is implimented at 3 lines at a time, which is max lines size for writable documents in iCS. This should prevent links & javascript manipulation in the input field.
+
+
+
+### &nbsp; &nbsp; Numbers 1 Sanatizer:
+###### Used with a replacement function: <code>/(/[^0-9 \-]/gim</code> ***JavaScript RegEx***
+###### This should only allow numbers (no decimals) but should allow for negative numbers in the input field.
+
+
+
+### &nbsp; &nbsp; Numbers 2 Sanatizer:
+###### Starting at the replacement function: <code>input = input.replace(/[^0-9\.]/gim,"");</code>
+ 
+###### <code> if(input.toString().toString().search(/\./gm) >= 0){</code>
+###### <code>  if(input.toString().match(/\./gm).length >= 2){</code>
+###### <code>   var tempinput = input.split(/\./g)[0] + "." + input.split(/\./g)[1] + input.split(/\./g)[2].replace(/[^0-9]/gim,"");</code>
+###### <code>   input = tempinput; } }</code> ***JavaScript Snippet***
+###### This should only allow numbers (with decimals) while keeping out negative numbers in the input field.
+
+---
+--
+--
+--
 ---

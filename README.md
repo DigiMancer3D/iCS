@@ -9,18 +9,20 @@ To play with iCS live, visit https://3dd.in/iCS or the use IFPS CID directly #Qm
 ## About iCS::
 
 
-&nbsp;&nbsp;&nbsp; The interactive Character Sheet was first built up by 3Douglas 3D Pihl. Because of the Open Gaming License (pre OGL 2) was looking at being changed by Hasbro via Wizards of the Coast. Because of the hurt this would cause many people to very quickly change & adapt to unforturnate events by these conglomerates. Out of that madness, 3D began showing an online usable Character Sheet. With a non-static character sheet not reliant upon OGL licensing this could help people continue to enjoy their favorite table top, RPG or larping online without worry. Using Itty-Bitty v1 to create personalized iCS saves then allows for people to send, trade or continue previous saves.
+&nbsp;&nbsp;&nbsp; The interactive Character Sheet was first built up by 3Douglas "<i>3D</i>" Pihl. Because the Open Gaming License (pre OGL 2) was looking at being changed by Hasbro via Wizards of the Coast. Because of the hurt this would cause, many people (VTT and Table Top Players) very quickly begun changing to adapt to the unforturnate events by these conglomerates. Out of that madness, 3D began working on an online usable Character Sheet. With a non-static character sheet not reliant upon the OGL licensing, this could help people continue to enjoy their favorite table top, RPG or larping online without worry. Using Itty-Bitty v1 to create personalized iCS saves that allows for people to send, trade or continue previous saves. Wave Data APIs are used for sending objects into and out-of the interactive Character Sheet (iCS).
 
 
-&nbsp;&nbsp;&nbsp; iCS takes cares of many actions for the users and considerations in a manner that is based on a custom RPG layout concept. The internal algos help make the process of keeping up with a character sheet easy for all user levels. The algorithms used are as follows:
+&nbsp;&nbsp;&nbsp; iCS takes cares of many actions for the users and considerations in a manner that is based on a custom RPG layout concept. Where OGL DnD may be mostly based upon common logic consideration & Pathfinder could be considered more Mathematical logical considersations, while both are relaint on rolls for checks. iCS uses a combination of both common logic & mathematical logical considerations & uses equational checks & rolls for randomizing possibilities. The internal algos help make the process of keeping up with a character sheet easy for all user levels, from handling equip allowances to determining if you are overburden. Almost every aspect that isn't strictly player choice, has been reduced to alorithms & equations. The algorithms used are as follows:
 
-## Input Maker: This algorithm inserts an input with some customized information per area
+## Input Maker: This algorithm inserts an input with some customized information per area called for an input. This allows for anything on the page that can be changed just needs the user to click to be able to change it.
 
-## Weight: This algorithm considers the estimated weight of items based on their item type. When a player becomes over-burdened, an orange OB will appear next to the Armor words.
+## Weight: This algorithm considers the estimated weight of items based on their item type. When a player becomes over-burdened, an orange OB will appear next to the Armor words. If a player is too underweight (overweight will be coming with this feature soon), they can becomed overburdened easier or even be unable to sustain their own weight (with armor, weapons, etc) which can cause loss of carry capability as well as loss of health points.
+
+## Backfill1: This will return data from instered inputs back to where they were but with the inputted data as new information.
 </br>
 
 --
-## Holding: This algorithm looks at how many items are being held when equiping and unequiping weapons and books.
+## Holding: This algorithm looks at how many items are being held when equiping and unequiping holdables (like weapons and books).
 ### &nbsp; IF: A player that has strength that's higher then their strength combined with their phyiscal dexterity divided by their mental dexterity adjust up by 45 points can hold 2-handed items simultaneously.   
 #### &nbsp; &nbsp; &nbsp; "((S+PDex)/(Mdex))+45 <= strength" === Duel Wielding 2H Weapons
  
@@ -36,6 +38,22 @@ To play with iCS live, visit https://3dd.in/iCS or the use IFPS CID directly #Qm
  ### &nbsp; &nbsp; Health Points: The number of points the user can take before dieing.
  ### &nbsp; &nbsp; Experience Points: The amount of total and active user experience points. 
  ### &nbsp; &nbsp; Inspirations: Revalations by the character based on a random roll & other factors.
+ ### &nbsp; &nbsp; Player Weight: Tracks player weight <code>[lbs.oz]</code>.
+ ### &nbsp; &nbsp; Player Height: Tracks player height <code>[feet.inches]</code>.
+ ### &nbsp; &nbsp; Player Ratio: Tracks players weight:height <code>[feet.inches]</code> ratio. 
+ #### &nbsp; &nbsp; &nbsp; "((Weight)/(Height))-21" = Player Ratio.
+ ### &nbsp; &nbsp; Player Age: Tracks players age.
+ ### &nbsp; &nbsp; Player GPA|IQ: Tracks Player GPA & IQ. Determines one's GPA if an IQ is given & determines one's IQ if a GPA is given.
+ #### &nbsp; &nbsp; &nbsp; "((0.004)/(IQ))-1" = Player GPA.
+ #### &nbsp; &nbsp; &nbsp; "(((GPA)/2)*0.333)*100" = Player IQ.
+ ### &nbsp; &nbsp; Player Hometwon: Tracks players hometown. Has a list of recgonizable village names, town names, city names & metropolis names.
+ ### &nbsp; &nbsp; Player Population: Tracks players hometown population.
+ ### &nbsp; &nbsp; Player Favs: Tracks players favorites (up to 3 different favorites).
+ ### &nbsp; &nbsp; Player Belief: Tracks players Belief.
+ ### &nbsp; &nbsp; Player Alignment: Tracks players alignment.
+ ### &nbsp; &nbsp; Player Background: Tracks players background.
+ ### &nbsp; &nbsp; Player Skill Boosted: Tracks players amount that their skills are boosted by.
+ ### &nbsp; &nbsp; Player style: Tracks players style.
 ---
 
 ## Current Level: The character's level.

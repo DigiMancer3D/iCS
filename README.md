@@ -1,15 +1,15 @@
 # iCS
 ### An interactive Character Sheet with a custom open ended "Unlicense"
 ---
----
+
 
 To play with iCS live, visit https://3dd.in/iCS or the use IFPS CID directly #QmNVmZ5LmRHnypPw8QDJYATGj6wxaRSspTQYYo1LS2SC5U to view, use & host
 
----
+
 
 ## About iCS::
 
----
+
 
 &nbsp;&nbsp;&nbsp; The interactive Character Sheet was first built up by 3Douglas "<i>3D</i>" Pihl. Because the Open Gaming License (pre OGL 2) was looking at being changed by Hasbro via Wizards of the Coast. Because of the hurt this would cause, many people (VTT and Table Top Players) very quickly begun changing to adapt to the unforturnate events by these conglomerates. Out of that madness, 3D began working on an online usable Character Sheet. With a non-static character sheet not reliant upon the OGL licensing, this could help people continue to enjoy their favorite table top, RPG or larping online without worry. Using Itty-Bitty v1 to create personalized iCS saves that allows for people to send, trade or continue previous saves. Wave Data APIs are used for sending objects into and out-of the interactive Character Sheet (iCS).
 
@@ -23,7 +23,7 @@ To play with iCS live, visit https://3dd.in/iCS or the use IFPS CID directly #Qm
 ## Backfill1: This will return data from instered inputs back to where they were but with the inputted data as new information.
 
 
---
+---
 ## Holding: This algorithm looks at how many items are being held when equiping and unequiping holdables (like weapons and books).
 ### &nbsp; IF: A player that has strength that's higher then their strength combined with their phyiscal dexterity divided by their mental dexterity adjust up by 45 points can hold 2-handed items simultaneously.   
 #### &nbsp; &nbsp; &nbsp; "((S+PDex)/(Mdex))+45 <= strength" === Duel Wielding 2H Weapons
@@ -31,7 +31,7 @@ To play with iCS live, visit https://3dd.in/iCS or the use IFPS CID directly #Qm
 ### &nbsp; THEN: If your character meets this criteria, equip a single handed object then equip a 2-handed weapon.
 #### &nbsp; &nbsp; Once equpied, unequip the 1-handed object then equip a second 2-handed weapon.  
 #### &nbsp; &nbsp; &nbsp; 1H -> Hold Check (duel opened) -> 2H -> unequip 1H -> equip 2H (check not needed)
---
+---
 
 ---
 ## User Details: This algorithm is a set of algorithms that keep track of various user character data.
@@ -84,7 +84,6 @@ To play with iCS live, visit https://3dd.in/iCS or the use IFPS CID directly #Qm
 
 # Unique Actions with iCS
 
---
 ## Contracting (Bountys & Writing)
 
 ### &nbsp; Writing a contract for a bounty can allow you to hire for these actions. The Contracts also handle the writing actions for making journal entries and deeds for items/property/objects.
@@ -104,9 +103,9 @@ To play with iCS live, visit https://3dd.in/iCS or the use IFPS CID directly #Qm
 ### &nbsp; To import an item from an item hash, click "Add Item" then insert, "print" into the first input field and then insert, "import" or another import type action command to activate the importing input. Place the item hash in that blank input and click, "Add" to add that item.
 
 ### &nbsp; &nbsp; &nbsp; If an item's code is malformed from transferring, recieving users may have to click a final item type button.
---
+---
 
---
+---
 ## Import:
 
 #### &nbsp; &nbsp; &nbsp; Add Item --> "drive" --> "import" --> item importer
@@ -118,17 +117,17 @@ To play with iCS live, visit https://3dd.in/iCS or the use IFPS CID directly #Qm
 ### &nbsp; &nbsp; What you get --> Item Importer App
 
 ## &nbsp; !**!Do Not Import Funds This Way!**!
---
+---
 
---
+---
 ## Books (Reading VS Holding)
 
    Some books are held to gain acces to item's attribute de/booster. While other books are a one time reading action. Scrolls, pages, books and similar may be considered "readables" which are all conted as 'books'.
 
 ### &nbsp; &nbsp; Hoover to learn more about most actions.
---
+---
 
---
+---
 ## Exchaning & Sending
 
 ### &nbsp; &nbsp; Anyone can send crypto or fiat that is in their account and the options they offer. Using the banking exchange will let you experience the crypto/fiat market from buying and selling cryptocurrency. The banking application can imprint your personal market data onto your items. Tranferring an item with market data will effect the market of the players that import that item.
@@ -163,18 +162,18 @@ To Access Wallet:
 #### &nbsp; &nbsp; Banking App -- "Online" -- "Bank" -- Buy/Sell/Trade Fiat & Crypto
 #### &nbsp; &nbsp; Send Crypto App -- "Online" -- "Send" -- Send Crypto (obtain a P2P UTXO Hash to send to recieving party)
 #### &nbsp; &nbsp; Send Crypto App -- "Online" -- "Coin" -- Sweep UTXO Hashes to accept Crypto
---
+---
 
---
+---
 ## Commands
 
-### &nbsp; &nbsp; Comands are put in the first two inputs after clicking to "Add Item". The first input commands are normally names of items. This section also does internal triggering but there's three other user commands possible, "data", "print" & "online". Data, Print & Online are unimportant commands but are helpful for users remembering the options for the next set of commands.
+### &nbsp; &nbsp; Comands are put in the first two inputs after clicking to "Add Item". The first input commands are normally names of items. This section also does internal triggering but there's three other user commands possible, "data", "print" & "online". Data, Print & Online are unimportant commands (because there are different commands to do the same task as these) but are helpful for users remembering the options for the next set of commands.
 
 ### &nbsp; &nbsp; The second set of input commnads are normally item types but there are a handful of recognized commands that perform various actions like access the Banking app, the Crypto wallet & Cheats. In the list of recgonized inputs, unless they say "trigger" or are for "triggers" then they work on this line of commands. Going through that list will help you navigate around the iCS application.
 
 #### &nbsp; &nbsp; &nsbp; Most commands will work under this process tree: command1, command2, command3*, command-expander*.
 
---
+---
 ## Input Process Trees
 
 ### &nbsp; :Item:
@@ -188,9 +187,9 @@ To Access Wallet:
 
 #### &nbsp; &nbsp; * an astrik represents an injection possible point
 #### &nbsp; &nbsp; &nbsp; " " words inside quotation marks are verbatim command input
---
+---
 
---
+---
 ## Unlocked License (UnLicense)
 
 ### &nbsp; &nbsp; The Unlocked License is a form of License that has only 2 stimpulations for validity, which are as follows:
@@ -205,9 +204,9 @@ This license must be visiable with a maximum of a single click mechanic, a singl
 ###### If this license is valid, then this web object/app/page/document & the use of this web object/app/page/document is allowed by this license. If this license is not valid, then the web object/app/page/document & use of this web object/app/page/document is not allowed. If the original credit & any additional credits are left in-tact and are visible as previously described in this license, then this license is valid. If this license is visible either through a single click mechanic, a single linked page (must be a direct to page or direct to file link) or directly on the page then this license is valid.
 
 ###### No user specific data is allowed to transfer to new users, owners, builders, creators or any other enitity, person, company, governemnt or electronic identity or intelligence. This license is over the usability and the web object/app/page/document itself not the user-specific data inputted, automated, generated or processed from use of the web object/app/page/document. The user that inputs data as well as causes the creation of data through automation, generation, APIs or processing is for that user alone. This does not mark owners of data inputted, automated, generated, pulled in, proccessed or considered but does deny the builders, creators, hosts, interactors of the web object/app/page/document allowance of being called owners of any data inputted, automated, generated, pulled in, proccessed or considered through this or any future version of this web object/app/page/document. This license cannot be revoked, removed, changed or withdrawn without causing the license for that specific version of the web object/app/page/document. To stop using this license for future versions of the connected web object/app/page/document, you will have to create a new version of this web object/app/page/document without this license but must include that the new version is not an Unlocked License Web Object in a clear, readable format that's directly viewable by users without any clicking or hiding of any kind.
---
+---
 
---
+---
 ## Recgonized Items List
 
 ### &nbsp; &nbsp; These are the offically recognized item types to increase capabilities of the interactive Character Sheet (iCS). Weapons will prompt the Power Level & Holding options. Arrows will push to the secondary weapon slot (only used for arrow type weapons/ammo). Armors will add wieght but will also prompt the Defense Level & Armor Form options. Wearables add weight of a constant 0.1 lbs per wearable but prompts the Level & Form options. Readables/Books add weight equivalent to the number of pages in the readable object but also prompts the Pages & Type options.
@@ -252,6 +251,20 @@ This license must be visiable with a maximum of a single click mechanic, a singl
 
 ### &nbsp; &nbsp; Writables
 ###### spiral, papers, paper, deed, bounty, journal, blank, blank book, unsealed, notebook
+
+
+
+### &nbsp; &nbsp; Hometowns
+#### Villages, Towns, Cities, Metropolis
+###### Villages: Kochan, Ablanista, Koprivlen, Laki, Nova Lovcha, nova Leski, Paril, Petrelik, Babyak, Floating Villages, Bibury, Ait-Ben-Haddou, Hallstatt, Juzcar, Eze, Inle Lake, Lamayuru, Isla Del Sol, Del Sol, Larung Gar, Larung, Marsaxlokk, Oia, Navala, Navala Village, Floating, Floating Village, Enkeri, Enkeri Village, Nubian, Bubia, Nubia, Nubian Village, Nuuk, Pariangan, Palangan, Punji, Pygmy, Batwa, Pygmy Batwa, Pygmy Village, Batwa Village, Shirakawa, Xidi, Swat Valley, Wenen, Jukkasjarvi, Kash Goz, Kash, Goz, Giethoorn, Gasadalur, Freundenberg, Zell am See, Wagrain, Sauris-Zahre, Isola del Giglio, Castelo Novo, Castelo, Novo, Rasinari, Bohinj, Rupit, Murten, Andermatt, Birgi, Thai Hai, Guadalupe, Old Town, Choke Mountains Ecovillage, Aguarico, Angochagua, Mestia, Kfar Kama, Umm Qais, Creel, El Fuerte, Ksar Elkhorbat, Moulay Bouzerktoune, Lamas, Raqchi, Pyeongsa-ri, Pyeongsa
+
+
+###### Towns: Smalltown, Albarracin, Ban Rak, Ban Rak Thai, Rak Thai, Banos, Bar Harbor, Biei, Bled, Bocas del Toro, Bocas, del Toro, Carmel-by-the-Sea, Colonia del Sacramento, del Sacramento, Colonia, Castle Combe, CastleCombe, Combe, Esperance, Gokayama, Gordes, Goreme, Guatape, Hatta, Ilulissat, Iruya, Itchan Kala, Kaikoura, Kalk Bay, Kralendijk, Lamu, Lauterbrunnen, Luang Prabang, Luang, Prabang, LuangPrabang, Luderitz, Lunenburg, Mandawa, Moulay, Idriss, Moulay Idriss Zerhoun, Zerhoun, Navala, Niagra-on-the-Lake, Paraty, Penglipuran, Port Fairy, Praiano, Raquira, Rothenburg ob der Tauber, ob der Tauber, Tauber, Sai Kung, Sapa, Sayulita, Sedona, Sidi Bou Said, Sidi, Bou, Bou Said, Sitka, Siwa, St Augustine, Augustine, St. Augustine, Saint Augustine, Tepoztlan, Vinales, Zhouzhuang, Wallace, Marfa, Jim Thorpe, Bisbee, Eureka Springs, Yellow Springs, Helen, Whitefish, Taos, Mount Dora, MountDora, Astoria, Lanesboro, Hillsboro, Galena, New Harmony, Salina, Lindsburg, Joseph, Lititz, Beaufort, Port Townsend, Townsend, Ferndale, Breaux Bridge, Eclectic, Delight, Why, Unalaska, Rough and Randy, Rough & Randy, Mystic, Superior, Slaughter Beach, Enigma, Sandwich, Electric City, Cal-Nev-Ari, Tightsqueeze, Tuxedo, Loveladies, Truth or Consequences, What Cheer, Bald Head, Halfway, Hometown, West Virigina, Hometown,West Virigina, Satan's Kingdom, Satan's Kingdom, Satans Kingdom, North Star, Hot Coffee, Monkey's Eyebrow, Monkey's Eyebrow, Monkeys Eyebrow, Monkies Eyebrow, Intercourse, Waterproof, Tiki Island, Valentine, Sweet Lips, Elmo, Wineglass, Miner's Delight, Miner's Delight, Miners Delight, Normal, Santa Claus, Defiance, Dead Women Crossing, Sublimity, Yeehaw Junction, Bread Loaf, BreadLoaf, Kismet, Ketchuptown, Love Valley, Luck, Humansville, Porchupine, Killdeer, Volcano Village, Good Grief, Woonsocket, Upton Snodsbury, Pucklechurch, Barton in the Beans, Curry Mallet, Droop, Throop, Plumpton, Lickfold, Warninglid, Nomansland, Uploders, Matching Tye, MatchingTye, Nether Wallop, NetherWallop, Poling, Patching, Climping, Didling, Crudwell, Puddletown, Tolpuddle, Affpuddle, Braintpuddle, Westward Ho!, WestwardHo!, Westward Ho, WestwardHo, Upper Bucklebury, UpperBucklebury, Mudford Sock, MudfordSock, New Invention, NewInvention, picklescott, Marsh Gibbon, MarshGibbon, Blubberhouses, Mamble, Tedstone Wafre, TedstoneWafre, Hose, Hoby, Shoby, Thumpton, Bitchfield, Over Peover, OverPeover, Wetwood, Wetwang, Papplewick, Bishop's Ichington, Bishop's Ichington, Bishops Ichington, Bishop'sIchington, Bishop'sIchington, BishopsIchington, Queen Camel, QueenCamel, Great Snoring, GreatSnoring, Cement, Laramie, Larrimah, Bidgeegud, Derby, Lawton, Alesund, Bruges
+
+
+###### Cities: Abidjan, Accra, Adana, Addis Ababa, Adelaide, Agre, Ahmadabad, Aleppo, Aleppohalab, Aleepo Halab, Alexandria, Algiers, Allahabad, Almaty, amman, Amristar, Ankara, Anshan, Baghdad, Baku, Bandung, Bangalore, Bangkok, Baotou, Barcelona, Barquisimeto, Barranquilla, Basrah, Beijing, Beirut, Belem, Belgrade, Belo Horizonte, BeloHorizonte, Benghazi, Benin, Berlin, Bhopal, Birmingham, Bogo Ta, Bogota, BogoTa, Bogo, Brasilia, Brazzaville, Brisbane, Bucharest, Budapest, Buenos Aires, Bursa, Busan, Cairo, Cali, Campinas, Capetown, Caracas, Casablanca, Changchun, Changsha, Changzhou, Chelyabinsk, Chengdu, Chennai, Chicago, Chittagong, Chongquin, Ciudad Juarez, CiudadJuarez, Conakry, Copenhagen, Cordoba, Curitiba, Daegu, Daejon, Dakar, Dalian, Dallas, Damascus, Dar es Salaam, DarEsSalaam, DaresSalaam, Dar Es Salaam, Datong, Delhi, Dhaka, Dnipropetrovsk, Donetsk, Douala, Durban, Ecatepec, Ekaterinburg, Faislabad, Fortaleza, Foshan, Freetown, Fukoka, FreeTown, Fuzhou, Giza, Goiania, Gudalajara, Guangzhou, Guarulhos, Guatamala City, Guayaquil, Guiyang, Gujranwala, Gwangju, Wala Wala Washinton, WalaWala, Wala Wala, WalaWalaWashinton, Gwangju, Haiphong, Hamburg, Handan, Hangzhou, Hanoi, Haora, Harare, Harbin, Havana, Hefei, Hiroshima, Ho Chi Minh City, HoChiMinh, HoChiMinhCity, Ho Chi, Chi Minh, Ho Chi Minh, Minh City, HCMC, Hong Kong, Houston, Hyderabad, Ibadan, Incheon, Indore, Irbil, Isfahen, Istanbul, Izmir, Jaipur, Jakarta, Jeddah, Jilin, Jilan, Jodphur, Johannesburg, Kabul, Kaduna, Kano, Kanpur, Kaohsiung, Karachi, Kawasaki, Kazan, Kharkiv, Khartoum, Khulna, Kiev, Kinshasa, Kitakyushu, Kobe, Kolkata, Kowloon, Kuala Lumpur, KualaLumpur, Kunming, Kyoto, La Paz, LaPaz, Lapaz, Lagos, Lahore, Lanzhou, Lean, Lima, London, Los Angeles, Luanda, Lubumbashi, Lucknow, Ludhiana, Luoyang, Lusaka, Madrid, Maiduguri, Makassar, Managua, Manaus, Manila, Maputo, Maracaibo, Mashhad, Mecca, Medellin, Medina, Meerut, Melbourne, Mexicali, Mexico City, Milsan, Minsk, Mogadishu, Monterrey, Montevideo, Montreal, Moscow, Mosul, Multan, Mumbai, Mumbai Bombay, MumbaiBombay, Bombay, Munich, Nagoya, Nagpur, Nairobi, Nanchang, Nanjing, Nanning, Napoli, Nashik, New York City, New York, NYC, Big Apple, NewYork, NewYorkCity, NYCity, Nesahualcoyotl, Nizhny Novgorod, NizhnyNovgorod, Novosibisrk, Odessa, Omdurman, Omsk, Osaka, Palembang, Paris, Patna, Perm, Perth, Peshawar, Philadelphia, Phily, Philly, Phnom Penh, PhnomPenh, Phnompenh, Phnom, Penh, Phoneix, Phoenix, Pimpri Chinchwad, PimpriChinchwad, Pimpri, Chinchwad, Port Harcourt, Harcourt, PortHarcourt, Port-Au-Prince, Port Au Prince, Port Prince Gold, Prince Gold Port, Port Gold Prince, PortAuPrince, AuPrince, Au Prince, Porto Alegre, Portoalegre, PortoAlegre, Prague, Puebla, Pune, Pyongyang, Quingdao, Qiqihar, Quito, Rabat, Rajkot, Ranchi, Rawalpindi, Recife, Rawalpindi, Rio de Janerio, RiodeJanerio, RioDeJanerio, de Janerio, Rio, Janerio, Riyadah, Rome, Rosario, Rostov on Don, Rostov, on Don, Don Rostov, Salvador, Samara, San Antonio, Antonio, San Diego, DanDiego, Sanaa, Santa Cruz, SantaCruz, San Tiago, Santiago, Tiago, Cruz, Santo Domingo, Domingo, SantoDomingo, Sao Paulo, SaoPaulo, Paulo, Sapporo, Semarang, Sendai, Seongnam, Seoul, Shanghai, Shenyang, Shenzhen, Shiraz, Shiziahuang, Shubra El Khemia, Shubra, El Khemia, Khemia, ShubraElKhemia, ShubraKhemia, Shubra Khemia, Singapore, Sofia, Soweto, St Petersburg, St. Petersburg, StPetersburg, Saint Petersburg, SaintPetersburg, Stockholm, Surabaya, Surat, Suzhou, Sydney, Tabriz, Taichung, Taipei, Tai Pei, Taiyuan, Tangshan, Ta Shkent, TaShkent, Tashkent, Tbilisi, Tegucigalpa, Tehran, Tianjin, Tijana, Tokyo, Marijuana, Toronto, Tripoli, Tri Poli, TriPoly, Tripoly, Tshwane, Tshwana Pretoria, TshwanaPretoria, Pretoria, Petoria, Peteoria, Tunis, Ufa, Ulsan, Urumqi, Vadodara, Valencia, Varanasi, Vienna, Viena, Volgograd, Vol Gograd, Warsaw, Wuhan, Wuxi, Xian, Xuzhou, Yangon, Yaounde, Yerevan, Yokohama, Yoko Hama, Yoko, Hama, Zapopan, Za Po Pan, Za Popan, Zhengzhou, Zheng Zhou, Sheng Zhou, Sheng Sou, Zibo, Bangs, Soda Springs, SodaSprings, Springs, Bluff, Placentia, Fries, Dinosaur, American Fork, Concrete, Briny Breezes, Whynot, Hurt, Ninety Six, NinetySix, 96, Cut and Shoot, Cut & Shoot, CutNShoot, CutShoot, CutandShoot, Cut&Shoot, Kill Devil Hills, KillDevilHills, Devil Hills, DevilHills, Kill Devil, KillDevil, Canadian, Superior, Atomic City, Atomiccity, Atomicity, Okay, Nowhere, Hell, Coward, Three Way, ThreeWay, Threeway, Reno, Las Vegas, LasVegas, Vegas, Climax, OKC, Oklahoma City, Winnebago, Uncertain, Last Chance, LastChance, Lastchance, Speed, Oblong, Cool, Colon, Pink, BlueGrass, Blue Grass, Bluegrass, Rainbow City, RainbowCity, Rainbow, China, City, Hooker, Popejoy, London, Edinburgh, Manchester, Music City, MusicCity, Musiccity, Musicity, Memphis, Clarcksville, Nashville, Birgingham, Glasgow, Liverpool, Bristol, Oxford, Cambridge, Cardiff, Brighton, Newcastle-upon-Tyne, Newcastle, NewcastleuponTyne, NewcastleTyne, Newcastle Tyne, Tyne, Leeds, Yorkshire, York, Inverness, Culloden, Bath, Nottingham, Aberdeen, Chester, Ambrose, Amity Island, AmityIsland, Alphaville, Asteriod City, AsteroidCity, Belleville, Bedford Falls, BedfordFalls, Brahms, Brigadoon, Brightburn, Bismuth, Bristo Camino, Bristo, BristroCamino, Catsville, Chesterford, Cloverdale, Creek Falls, CreekFalls, Crystal Lake, CrystalLake, Damon, Dammuz, Deer Meadow, DeerMedow, Dillford, Dogville, Duloc, Egging, Flagstone, Fly Creek, FlyCreek, Greenbow, Greenhills, Flinthills, Green Hills, Flint Hills, Flinthill, Groom Lake City, Groom Lake, Lake City, Grouchland, Haddonfield, Harper, Hilltop, Hill Valley, HillValley, Hope, Inferno, Hope Town, Hopetown, Ivory Creek, IvoryCreek, Jonathanland, Karatas, Kartas, Khansaar, Hotha, Kotha, Liiian, Loganville, Madison, Mantua, Middleton, Midlothia, Middlesex, Millbrook, Mill Valley, Millvalley, Miles County, MilesCounty, Moesko Island, Moesko, MoeskoIsland, Mos Eisley, MosEisley, Eisley, Mos Espa, Mosespa, Espa, Mt Abraham, Mt. Abraham, MtAbraham, Mount Abraham, Newton Haven, Newton, NewtonHaven, Haven, Nickeltown, Nickles, Nilbog, Oak Ridge, OakRidge, Ogden Marsh, Ogden, OgdenMarsh, Old Stump, OlStump, Ol Stump, OldStump, Peacock, Perfection, Pleasantville, Pokyo, Portoroso, Pozharnov, Pribrezhny, Racoon City, RacoonCity, Radiator Springs, RadiatorSprings, Redmeption, Regimenton, Red Hill, Redhill, Rose Rock, Rosehill, Rockbridge, Rock Ridge, Rockridge, Rock Vegas, San Angeles, San Miguel Arcangel, San Miguel, Miguel Archangel, SanMiguel Arcangel, SanmigelArcangel, Sanford, Sandford, Santa Cecilia, Cecilia, Seabroook, Sexville, Silent Hill, Silenthill, Shermer, Silver Creek, Silvercreek, Springwood, Suburbicon, Sweetwater, Sylvane, Tenderville, Theed, Tipoca City, Tipoca, Twin Peaks, TwinPeaks, Two-Bit, 2bit, Verona, Victory, Waaji, Waaji City, WaajiCity, Wardenclyffe, Warden Clyffe, Warren Valley, WarrenValley, Woodsboro, Woop Woop, WoopWoop, Seattle, San Francisco, Francisco, Roma, Toronto, Boston, Pittsburg, Whichita Falls, Whichita, Cleveland, Denver, Jacksonville, Fort Worth, Charlotte, Columbus, Indianapolis, El Paso, ElPaso, Portland, Louisville, Baltimore, Milwaukee, Albuquerque, Tucson, Fresno, Sacramento, Mesa, Alanta, Kansas City, KansasCity, Colorado Springs, Omaha, Raleigh, Virginia Beach, Long Beach, Oakland, Bakerfield, Tulsa, Tampa, Tampa Bay, Arlington, Wichita, Wichita Falls, Aurora, New Orleans, Honolulu, Anaheim, Henderson, Orlando, Lexington, Stockton, Riverside, Corpus Christi, Irvine, Cincinnati, Santa Ana, Newark, Saint Paul, St.Paul, St Paul, St. Paul, StPaul, Durham, Lincoln, Jersey City, Plano, Anchorage, North Las Vegas, NLV, St Louis, St. Louis, New Vagas, Night City, NC, Nightcity, Madison, Chandler, Gilbert, Buffalo, Chula Vista, Fort Wayne, Lubbock, Toledo, Laredo, Irving, Chesapeake, Glendale, Winston Salem, Winston, Salem, Scottsdale, Graland, Boise, Norfolk, Spokane, Richmond, Fremont, Huntsville, Frisco, Cape Coral, Santa Clarita, San Bernardino, Tacoma, Hialeah, Baton Rouge, Modesto, Fontana, McKinney, Moreno Valley, Des Moines, Fayetteville, Salt Lake City, Salt Lake, Yonkers, Worcester, Sioux Falls, Little Rock, Amarillo, Tallahassee, Grand Prairie, Augusta, Peoria, Oxnard, Knoxville, Overland Park, Overland, Vancouver, Grand Rapids, Montgomery, Huntington Beach, Providence, Brownsville, Tempe, Akron, Chattanooga, Fort Lauderdale, Newport, Newport News, Mobile, Ontario, Cary, Elk Grove, Shreveport, Eugene, Santa Rosa, Rancho Cucamonga, Cucamonga, Pembroke Pines, For Collins, Fort Brag, Fort Sill, Springfield, Oceanside, Garden Grove, Murfreesboro, Palmdale, Corona, Killeen, Salinas, Roseville, Denton, Surprise, Macon, Paterson, Lakeood, Hayward, Charleston, Hollywood, Sunnyvalue, Sunnydale, Bellevue, Joliet, Naperville, Escondido, Bridgeport, Savannah, Olathe, Mesquite, Pasadena, McAllen, Rockford, Gainesville, Syracuse, Pomona, Visalia, Thornton, Waco, Jackson, Lakewood, Fullerton, Torrance, Victorville, Vicotoryville, Midland, Orange, Miramar, Hampton, Warren, Stamford, Cedar Rapids, Elizabeth, Palm Bay, Dayton, New Haven, Coral Springs, Meridian, West Valley City, WVC, Lewisville, Sterling Heights, Kent, Carrollton, Santa Clara, Round Rock, Roundrock, Norman, Athens, Pearland, Clovis, Topeka, College Station, Simi Valley, Allentown, Wast Palm Beach, WPB, Thousand Oaks, Vallejo, Wilmington, Rochester, Concord, Lakeland, North Charleston, Lafayette, Arvada, Independence, Billings, Ann Arbor, Broken Arrow, Indiahoma, Berkeley, Antioch, High Point, West Point, Clearwater, League City, Electric City, Evansville, Waterbury, West Jordan, Las Cruces, Westminster, Lowell, Nampa, Pompano Beach, Carlsbad, Menifee, Provo, Elgin, Greeley, Beaumont, Lansing, Murrieta, Goodyear, Allen, Tuscaloosa, Everett, Pueblo, New Braunfels, South Fulton, Miami Gardens, Grsham, Temecula, Rio Rancho, Peoria, Tyler, Sparks, Ventura, Buckeye, Downey, Sugar Land, Sugarland, Costa Mesa, Black Mesa, Area 51, Spokane Valley, Davie, Jurupa Valley, Centennial, Edison, Boulder, Dearborn, Edinburg, Hesperia, Suffolk, Yuma, Lynn, Quincy, Palm Coast, Vacaville, Florance, Annecy, Amsterdam, Mykonos, Valletta, Tallinn, Lisbon, Strasbourg, Ghent, Dubrovinik, Reykjavik, Lucerne, Galway, Barsov, Aarhus, Vilnius, Split, Bordeaux, Marseille, Innsburk, Farnkfurt, Santorini, Brussels
+ 
+###### Metropolis: Agrabah, Alantica, Autobot, Autobot City, AutobotCity, Auto Bot City, Cloud City, CloudCity, Emerald City, EmeraldCity, Mega City, Megacity, Mega-City, Mega-City One, Mega-City 1, Megacity 1, Megacity1, Metropolis, Metroville, Monstropolis, Ratropolis, Zion, Croix-des-Bouquets, Croix des Bouquets, Croix Bouquets, Giza, Manila, Mandaluyong, Male, Dhaka, Bnei Brak, Caloocan, Kolkata, Kathmandu, Makati, Levallois Perret, Guediawaye, Montouge, Bogota, Vincennes, Le Pre Saint Grevais, Pre Saint Grevias, Le Pre St Grevais, St Grevais, Saint Grevais, Pasig, Saint Mande, St Mande, St. Mande, St. Grevais, Le Pre St. Grevias, Pre St. Grevias, La Planta, Planta, Saint Josse ten Noode, St Josse ten Noode, St Josse, St. Josse, Saint Josse, Guttenberg, Malabon, Pasay, Neapolli, Damascus, San Juan, SanJuan, Navotas, Asmara, Mislata, Macau, Kaillithea, Nea Smyrni, NeaSymrni, Union City, Colombo, L'Hospitalet, L'Hositalet de Llobregat, Llobregat, Marikina, Saint Gilles, St. Gilles, Clichy, Kotsibuynske, Boulogne-Billancourt, Boulogne Billancourt, Boulonge, Billancourt, Giv'atayim, Givatayim, Las Pinas, LasPinas, Pinas, Koekelberg, Bandung, General Mariano Alverez, Mariano Alverez, GMA, Monaco, Les Lilas, LesLilas, Lilas, Hoboken, Pikine, Quezon, Quezon City, Quezoncity, Modi'in Illit, Modi'in, Illit, Vanves, Asnieres sur Seine, AsnieresSurSiene, Ciudad, Cidad Nezahulcoyotl, Nezahlcoyotl, Silema, Howrah, Santa Coloma de Gramenet, Chittagong, Sint Jans Molenbeek, Keur Massar, KeurMassar, Charenton le Pont, La Garenne Colombes, Schaerbeek, Neuilly sur Seine, Issy les Moulineaux, Moulineaux, Jakarta, Bat Yam, Batyam, Gentilly, Cario, Mandaue, Warabi, Bacoor, El'ad, Beitar Illit, Elad, Senglea, Cimahi, San Pedro, Lagos, Kiryat Motzkin, Gaza City, Geneva, Portici, Chongqing, Bengaluru, Ahmedabad, Dongguan, Miami, Atlanta, Washington, Washinton DC, DC, Jinan, Guadalajara, San Jose, SanJose, Detroit, Minneapolis, Antwerp, Athena, Greater Bristol, Dnipro, Gdansk, Tricity, Gothenburg, Hauge, Hannover, Helsinki, Katowice, Karkow, Kyiv, Lille, Lisborn, Lodz, Lyon, Malaga Marbella, Marbella, Mannheim Ludwigshafen, Ludwigshafen, Mannheim, Milan, Naples, Nantes, Nice, Bremen, Nuremberg, Oslo, Ostrava, Poznan, Rhien Nord, Dusseldorf, Neuss, Rhein Sud, Cologne, Bonn, Riga, Rotterdam, Ruhr, Saarbrucken, Forbach, Saratov, Seville, South Yorkshire, Stuttgrat, Toulouse, Turin, Tyne and Wear, Wear, Voroenzh, West midlands, Zagreb, Zurich, Randstad, Flemish, Flemish Diamond
 
 
 

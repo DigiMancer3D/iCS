@@ -1,13 +1,15 @@
 # iCS
 ### An interactive Character Sheet with a custom open ended "Unlicense"
 ---
+---
 
 To play with iCS live, visit https://3dd.in/iCS or the use IFPS CID directly #QmNVmZ5LmRHnypPw8QDJYATGj6wxaRSspTQYYo1LS2SC5U to view, use & host
 
-
+---
 
 ## About iCS::
 
+---
 
 &nbsp;&nbsp;&nbsp; The interactive Character Sheet was first built up by 3Douglas "<i>3D</i>" Pihl. Because the Open Gaming License (pre OGL 2) was looking at being changed by Hasbro via Wizards of the Coast. Because of the hurt this would cause, many people (VTT and Table Top Players) very quickly begun changing to adapt to the unforturnate events by these conglomerates. Out of that madness, 3D began working on an online usable Character Sheet. With a non-static character sheet not reliant upon the OGL licensing, this could help people continue to enjoy their favorite table top, RPG or larping online without worry. Using Itty-Bitty v1 to create personalized iCS saves that allows for people to send, trade or continue previous saves. Wave Data APIs are used for sending objects into and out-of the interactive Character Sheet (iCS).
 
@@ -19,7 +21,7 @@ To play with iCS live, visit https://3dd.in/iCS or the use IFPS CID directly #Qm
 ## Weight: This algorithm considers the estimated weight of items based on their item type. When a player becomes over-burdened, an orange OB will appear next to the Armor words. If a player is too underweight (overweight will be coming with this feature soon), they can becomed overburdened easier or even be unable to sustain their own weight (with armor, weapons, etc) which can cause loss of carry capability as well as loss of health points.
 
 ## Backfill1: This will return data from instered inputs back to where they were but with the inputted data as new information.
-</br>
+
 
 --
 ## Holding: This algorithm looks at how many items are being held when equiping and unequiping holdables (like weapons and books).
@@ -40,7 +42,7 @@ To play with iCS live, visit https://3dd.in/iCS or the use IFPS CID directly #Qm
  ### &nbsp; &nbsp; Inspirations: Revalations by the character based on a random roll & other factors.
  ### &nbsp; &nbsp; Player Weight: Tracks player weight <code>[lbs.oz]</code>.
  ### &nbsp; &nbsp; Player Height: Tracks player height <code>[feet.inches]</code>.
- ### &nbsp; &nbsp; Player Ratio: Tracks players weight:height <code>[feet.inches]</code> ratio. 
+ ### &nbsp; &nbsp; Player Ratio: Tracks players weight:height ratio. 
  #### &nbsp; &nbsp; &nbsp; "((Weight)/(Height))-21" = Player Ratio.
  ### &nbsp; &nbsp; Player Age: Tracks players age.
  ### &nbsp; &nbsp; Player GPA|IQ: Tracks Player GPA & IQ. Determines one's GPA if an IQ is given & determines one's IQ if a GPA is given.
@@ -76,8 +78,8 @@ To play with iCS live, visit https://3dd.in/iCS or the use IFPS CID directly #Qm
 
 ## Item Hashing: The current item's state as a reversable hash.
 
-## Item Rebuilding: The return API that tells how to rebuild the item via the hash.
-<hr>
+## Item Rebuilding: The return API that tells iCS how to rebuild an item via its hash.
+---
 
 
 # Unique Actions with iCS
@@ -97,7 +99,7 @@ To play with iCS live, visit https://3dd.in/iCS or the use IFPS CID directly #Qm
 
 #### &nbsp; &nbsp; This can also allow for users to transfer messages or contracts for a new layer of player actions.
 
-### &nbsp; Pressing the "s" button below each item will give the current status of that item as a hash. This hash can be shared and anyone with that hash can import that item. This is for side-layer player actions, player contracts, debts, and for onlline table-top gaming.
+### &nbsp; Pressing the "s" button below each item will give the current status of that item as a hash. This hash can be shared and anyone with that hash can import that item. This is for side-layer player actions, player contracts, debts, onlline table-top gaming & Virtual Table-Tops (VTT).
 
 ### &nbsp; To import an item from an item hash, click "Add Item" then insert, "print" into the first input field and then insert, "import" or another import type action command to activate the importing input. Place the item hash in that blank input and click, "Add" to add that item.
 
@@ -115,7 +117,7 @@ To play with iCS live, visit https://3dd.in/iCS or the use IFPS CID directly #Qm
 ### &nbsp; &nbsp; Input 2 --> "import"
 ### &nbsp; &nbsp; What you get --> Item Importer App
 
-## &nbsp; **Do Not Import Funds This Way**
+## &nbsp; !**!Do Not Import Funds This Way!**!
 --
 
 --

@@ -1,18 +1,20 @@
 # iCS
-### An interactive Character Sheet with a custom open ended "Unlicense"
+### An interactive Character Sheet Intelligently Acting with a custom open ended "Unlicense" to be used as a FOSS & Opened Table-Top System
 ---
+##### &nbsp;&nbsp;&nbsp; iCS is slowly becoming an "Intelligent Character Sheet" since the iCS system is doing some algo work and word recgonition. I don't think iCS will reach ICS standards very quickly but maybe one day iCS (interactive Character Sheet) will also be an ICS (Intelligent Character Sheet).
 
-
-To play with iCS live, visit https://3dd.in/iCS or the use IFPS CID directly #QmNVmZ5LmRHnypPw8QDJYATGj6wxaRSspTQYYo1LS2SC5U to view, use & host
+--
+---
+### To play with iCS live, visit https://3dd.in/iCS or the use IFPS CID directly #QmNVmZ5LmRHnypPw8QDJYATGj6wxaRSspTQYYo1LS2SC5U to view, use & host
+---
+--
 
 
 
 ## About iCS::
 
 
-
 &nbsp;&nbsp;&nbsp; The interactive Character Sheet was first built up by 3Douglas "<i>3D</i>" Pihl. The Open Gaming License (pre OGL 2) was looking at being changed by Hasbro via Wizards of the Coast. Because of the hurt this would cause, many people (VTT and Table Top Players) very quickly begun changing to adapt to the unforturnate events by these conglomerates. Out of that madness, 3D began working on an online usable Character Sheet. With a non-static character sheet not reliant upon the OGL licensing, this could help people continue to enjoy their favorite table top, RPG or larping online without worry. Using Itty-Bitty v1 to create personalized iCS saves that allows for people to send, trade or continue previous saves. Wave Data APIs are used for sending objects into and out-of the interactive Character Sheet (iCS).
-
 
 &nbsp;&nbsp;&nbsp; iCS takes cares of many actions for the users and considerations in a manner that is based on a custom RPG layout concept. Where OGL DnD may be mostly based upon common logic consideration & Pathfinder could be considered more Mathematical logical considersations, while both are relaint on rolls for checks. iCS uses a combination of both common logic & mathematical logical considerations & uses equational checks & rolls for randomizing possibilities. The internal algos help make the process of keeping up with a character sheet easy for all user levels, from handling equip allowances to determining if you are overburden. Almost every aspect that isn't strictly player choice, has been reduced to alorithms & equations. The algorithms used are as follows:
 
@@ -90,7 +92,7 @@ To play with iCS live, visit https://3dd.in/iCS or the use IFPS CID directly #Qm
 
 #### &nbsp; &nbsp; All bounties are based on on-game trust but do not turst the bounty writer for anything is possible.
 
-#### &nbsp; &nbsp; Objects writen in your writables are not being seen by others.
+#### &nbsp; &nbsp; Objects writen in your writables are not being seen by others until you share them.
    
 #### &nbsp; &nbsp; Importing Items
 
@@ -271,6 +273,116 @@ This license must be visiable with a maximum of a single click mechanic, a singl
 
 
 
+### &nbsp; &nbsp; Personality Traits
+##### Goal Driven: 
+###### Idoit, Independent, Jack-Of-All-Trades, Leader, Entrepreneur, Realist, Optimistic, Slacker, Loner, Outcasted
+
+##### Socially Driven: 
+###### Influencer, Follower, Worker, Idealist, Pessimistic
+
+##### Simply Driven: 
+###### Faithful, Unfaithful, Neutral, Trustworthy, Untrustworthy
+
+##### Belief Driven: 
+###### Druid, Jewish, Catholic, Christian, Muslim, Pegan, Spiritualist, Revolutionist, Atheist, Satosist, Stateist
+
+##### Culture Driven: 
+###### Punk, S.P.A.M., McCreedy, Goth, Fashion Goth, Nerd, Dork, Geek, Tri-Alpha-Phi-Delta, Jock, Cheerleader, Pop Cultered, Fashion Sub-Cultered, Sub-Cultered, Alt-Cutlered
+
+##### Thought Driven: 
+###### Scientologist, Alien Hopeful, Alien Waiter, Alien Denier, Alien Hater, Abductee, Abductor, Abducted
+
+##### Knowledge Driven: 
+###### Anti-Mancer, Solo-Mancer, Dual-Mancer, Tri-Mancer, Multi-Mancer, Forever Mancer
+
+##### Physically Driven: 
+###### Human, Synthetic, Droid, Alien, Monster, Zombie, Fairy, Cryptid, Gold-Bug, Crusader, Gold-Digger, Cougar, Prey, Lion, Stud, Stead, Pony, Furry, Bear, Ox, Bull, Bat
+
+##### Digitally Driven: 
+###### range, Silver, Grey, Bitcoiner, No-Coiner, Altcoiner, All-Coiner, Spammer, Bot
+
+
+
+### &nbsp; &nbsp; Perspective Ideas
+##### Motivational: 
+###### Sloth, Procrastinator, Almost On-Time, On-Time, Occasionally Early, Early Bird
+
+##### Educational: 
+###### Never Been, Occasionally Visited, Average Student, Above Average, Exceptional, Home Learned
+
+##### Technological: 
+###### Stays Away, Sometimes Uses, Commonly Uses, Normally On-Hand, On-Hand, Always Available
+
+##### Traditional: 
+###### Modern, Tech Modern, Evenly Mixed, More Traditional, Very Traditional, Traditional
+
+##### Governmental: 
+###### Marxism, Socialism, Dictatorship, Boarded Republic, Family Monarchy, Democratic Republic
+
+##### Personal: 
+###### It’s All About Me, Me & Mine, Help Yourself then Others, Help Others First, It’s about Us not We, It Takes A Village
+
+
+
+### &nbsp; &nbsp; Positive Bonds
+##### Active: 
+###### Accepting, Active, Adventurous, Athletic, Attentive, Captivating, Charismatic, Cheerful, Competent, Daring, Dedicated, Dutiful, Earnest, Ebullient, Energetic, Enthusiastic, Faithful, Grateful, Gregarious, Hardworking, High-Spirited, Humorous, Observant, Neat, Outgoing, Playful, Productive, Punctual, Quirky, Reliable, Responsive, Seraphic, Serious, Sociable, Spontaneous, Tidy, Vivacious, Youthful, Zealous
+
+##### Assertive: 
+###### Assertive, Assured, Balanced, Blunt, Brilliant, Consistent, Convincing, Decisive, Determined, Diligent, Driven, Encouraging, Extraordinary, Felicific, Firm, Forceful, Guileless, Heroic, Honest, Independent, Individualistic, Intuitive, Paternalistic, Persistent, Persuasive, Protean, Prudent, Disciplined, Suave, Talkative, Urbane
+
+##### Dynamic: 
+###### Adaptable, Admirable, Alert, Appreciative, Capable, Chummy, Cultured, Dignified, Dynamic, Fashionable, Flexible, Gallant, Insightful, Intelligent, Outspoken, Resilient, Resourceful, Rounded, Versatile
+
+##### Bold: 
+###### Ambitious, Authentic, Bold, Brave, Clever, Confident, Courageous, Creative, Forthright, Frank, Hearty, Humble, Interesting, Loyal, Obedient, Original, Responsible, Skilled, Venturesome
+
+##### Paced: 
+###### Breezy, Cautious, Charming, Conciliatory, Cooperative, Crafty, Diplomatic, Dreamer, Elegant, Eloquent, Fair, Focused, Mannered, Optimistic, Open-Minded, Paced, Proficient, Quiet, Reserved, Stoic, Trustworthy, Well-Read
+
+##### Calm: 
+###### Affable, Calm, Clear-Headed, Easygoing, Friendly, Placid, Patient, Rational, Relaxed
+
+##### Methodical: 
+###### Accurate, Articulate, Artistic, Careful, Clean, Constructive, Contemplative, Discreet, Efficient, Esthetic, Ethical, Knowledgeable, Logical, Lyrical, Methodical, Meticulous, Multi-Leveled, Orderly, Organized, Precise, Perfectionist, Pragmatic, Purposeful, Scholarly, Scrupulous, Shrewd, Sophisticated, Systematic, Tolerant, Understanding
+
+##### Thoughtful: 
+###### Allocentric, Bright, Broad-minded, Compassionate, Conscientious, Considerate, Curious, Dependable, Empathetic, Freethinking, Helpful, Honorable, Imaginative, Incisive, Innovative, Inventive, Kind, Magnanimous, Mindful, Perceptive, Practical, Realistic, Reflective, Studious, Sympathetic, Thoughtful, Thrifty, Wise, Witty
+
+##### Emotional: 
+###### Affectionate, Amusing, Benevolent, Caring, Congenial, Courteous, Debonair, Deep, Dramatic, Emotional, Empathetic, Exuberant, Expressive, Fancy, Forgiving, Fun-Loving, Funny, Generous, Gentle, Genuine, Giving, Good-Natured, Gracious, Happy, Hopeful, Insouciant, Lovable, Loving, Mature, Mellow, Nurturing, Open, Passionate, Patriotic, Peaceful, Personable, Philanthropic, Polite, Positive, Progressive, Protective, Proud, Reasonable, Respectful, Romantic, Rustic, Sensitive, Sentimental, Sharing, Sincere, Supportive, Trusting, Warm, Wholesome
+
+
+
+### &nbsp; &nbsp; Negative Flaws
+##### Active: 
+###### Active, Angry, Argumentative, Barbaric, Boisterous, Brutal, Clumsy, Disconcerting, Disrespectful, Discourteous, Disorderly, Disturbing, Fraudulent, Harsh, Hesitant, Hidebound, Ignorant, Impulsive, Inconsiderate, Indulgent, Intolerant, Libidinous, Mannerless, Misguided, Mistaken, Narrow-Minded, Negativistic, Nihilistic, Pedantic, Perverse, Pompous, Reactive, Reckless, Ridiculous, Rude, Rowdy, Sarcastic, Stupid, Suspicious, Thoughtless, Troublesome, Unforgiving, Unreliable, Vulgar
+
+##### Assertive: 
+###### Abrasive, Abrupt, Aggressive, Assertive, Bossy, Blunt, Cantankerous, Closed-Minded, Condemnatory, Crazy, Criminal, Demanding, Devious, Discouraging, Disputatious, Disruptive, Domineering, Enervated, Envious, Fawning, Forceful, Greedy, Hostile, Inhibited, Insulting, Irascible, Irritable, Imitative, Impatient, Manipulative, Mealy-Mouthed, Meddlesome, Narcissistic, Obsessive, Opinionated, Overbearing, Passive-Aggressive, Possessive, Power-Hungry, Predatory, Provocative, Puritanical, Rigid, Temperamental, Uncooperative, Unfriendly, Vindictive, Violent, Vulnerable
+
+##### Dynamic: 
+###### Artificial, Asocial, Boorish, Disloyal, Disobedient, Dynamic, Erratic, Flaky, Impulsive, Neurotic, Obnoxious, Pharisaical, Pugnacious, Unrestrained, Unstable, Vague
+
+##### Bold: 
+###### Arrogant, Bizarre, Bold, Conceited, Challenging, Compulsive, Crass, Decadent, Destructive, Dishonest, Dogmatic, Faithless, Fanatical, Haughty, Intense, Irreverent, Malicious, Mawkish, Meretricious, Profligate, Scornful, Sly, Stubborn, Treacherous, Unpredictable, Unlovable, Venomous
+
+##### Paced: 
+###### Aimless, Cautious, Cowardly, Distractible, Gullible, Lazy, Loquacious, Inert, Messy, Muddle-Headed, Naive, Neglectful, One-Dimensional, Self-Centered, Paced, Plodding, Sadistic, Sedentary, Shallow, Sloppy, Softheaded
+
+##### Calm: 
+###### Aloof, Amoral, Apathetic, Bland, Calm, Careless, Confused, Disorganized, Discouraged, Incurious, Insensitive, Monstrous, Natty, Selfish, Slovenly, Unreflective, Vacuous
+
+##### Methodical: 
+###### Contemptible, Deceitful, Deceptive, Dissolute, Expedient, Fickle, Finicky, Imprudent, Picky, Pragmatic, Mannered, Mechanical, Methodical, Scheming, Secretive, Sneaky, Superstitious, Thievish, Unrealistic, Venal
+
+##### Thoughtful: 
+###### Cruel, Cynical, Forgetful, Indecisive, Mischievous, Nervous, Pessimistic, Stingy, Superficial, Thoughtful, Uncertain, Unctuous
+
+##### Emotional: 
+###### Afraid, Anxious, Bewildered, Callous, Childish, Cold, Complacent, Complaining, Delicate, Dependent, Desperate, Discontented, Dull, Egocentric, Emotional, Fatalistic, Fearful, Fiery, Frightening, Frivolous, Gloomy, Grim, Hateful, Hedonistic, Insecure, Insincere, Irrational, Irresponsible, Jealous, Judgmental, Miserable, Moody, Needy, Paranoid, Petty, Phlegmatic, Prim, Regretful, Repentant, Resentful, Surly, Sanctimonious, Steely, Stiff, Tense, Vain, Weak, Wishful
+
+
 ### &nbsp; &nbsp; Item Importing (Data Commands)
 ###### import, download, install, mount, collect, item
 
@@ -302,11 +414,11 @@ This license must be visiable with a maximum of a single click mechanic, a singl
 
 
 ### &nbsp; &nbsp; General Commands (Print Commands)
+###### resetlevel, rosebud
 
 
 
-
-#### &nbsp; &nbsp; &nbsp; &nbsp; Recgonized Words/Commands: 1100+ unique words recgonized
+#### &nbsp; &nbsp; &nbsp; &nbsp; Recgonized Words/Commands: 2700+ unique words recgonized
 ---
 
 ---

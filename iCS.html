@@ -2119,56 +2119,72 @@ if(nameupdate > 0 || classupdate > 0 || raceupdate > 0 || heightupdate > 0 || we
  <!--auto fav1 recgonizer -->
  if(document.getElementById('fav1').innerHTML.search(/(\w|\w+|\W|\W+|\D|\D+)/g) >= 0 && document.getElementById('fav1').innerHTML.search(/Favorite/i) < 0 || document.getElementById('fav1').innerHTML === "" || document.getElementById('fav1').innerHTML === null){
  
- document.getElementById('fav1').innerHTML = "---"; //default entry (no auto recgonition if this stays here)
+  if(document.getElementById('fav1').innerHTML === "" || document.getElementById('fav1').innerHTML === null){
+   document.getElementById('fav1').innerHTML = "---"; //default entry (no auto recgonition if this stays here)
+  }
  }
  
  
  <!--auto fav2 recgonizer -->
  if(document.getElementById('fav2').innerHTML.search(/(\w|\w+|\W|\W+|\D|\D+)/g) >= 0 && document.getElementById('fav2').innerHTML.search(/Favorite/i) < 0 || document.getElementById('fav2').innerHTML === "" || document.getElementById('fav2').innerHTML === null){
  
- document.getElementById('fav2').innerHTML = "---"; //default entry (no auto recgonition if this stays here)
+  if(document.getElementById('fav2').innerHTML === "" || document.getElementById('fav2').innerHTML === null){
+   document.getElementById('fav2').innerHTML = "---"; //default entry (no auto recgonition if this stays here)
+  }
  }
  
  
  <!--auto fav3 recgonizer -->
  if(document.getElementById('fav3').innerHTML.search(/(\w|\w+|\W|\W+|\D|\D+)/g) >= 0 && document.getElementById('fav3').innerHTML.search(/Favorite/i) < 0 || document.getElementById('fav3').innerHTML === "" || document.getElementById('fav3').innerHTML === null){
  
- document.getElementById('fav3').innerHTML = "---"; //default entry (no auto recgonition if this stays here)
+  if(document.getElementById('fav3').innerHTML === "" || document.getElementById('fav3').innerHTML === null){
+   document.getElementById('fav3').innerHTML = "---"; //default entry (no auto recgonition if this stays here)
+  }
  }
  
  
  <!--auto beliefs recgonizer -->
  if(document.getElementById('believean').innerHTML.search(/(\w|\w+|\W|\W+|\D|\D+)/g) >= 0 && document.getElementById('believean').innerHTML.search(/Belief/i) < 0 || document.getElementById('believean').innerHTML === "" || document.getElementById('believean').innerHTML === null){
  
- document.getElementById('believean').innerHTML = "---"; //default entry (no auto recgonition if this stays here)
+  if(document.getElementById('believean').innerHTML === "" || document.getElementById('believean').innerHTML === null){
+   document.getElementById('believean').innerHTML = "---"; //default entry (no auto recgonition if this stays here)
+  }
  }
  
  
  <!--auto align1 recgonizer -->
  if(document.getElementById('selfalign').innerHTML.search(/(\w|\w+|\W|\W+|\D|\D+)/g) >= 0 && document.getElementById('selfalign').innerHTML.search(/Self\-Alignment/i) < 0 || document.getElementById('selfalign').innerHTML === "" || document.getElementById('selfalign').innerHTML === null){
  
- document.getElementById('selfalign').innerHTML = "---"; //default entry (no auto recgonition if this stays here)
+  if(document.getElementById('selfalign').innerHTML === "" || document.getElementById('selfalign').innerHTML === null){
+   document.getElementById('selfalign').innerHTML = "---"; //default entry (no auto recgonition if this stays here)
+  }
  }
  
  
  <!--auto background recgonizer -->
  if(document.getElementById('bckgrd').innerHTML.search(/(\w|\w+|\W|\W+|\D|\D+)/g) >= 0 && document.getElementById('bckgrd').innerHTML.search(/(Background|bckgrd)/i) < 0 || document.getElementById('bckgrd').innerHTML === "" || document.getElementById('bckgrd').innerHTML === null){
  
- document.getElementById('bckgrd').innerHTML = "---"; //default entry (no auto recgonition if this stays here)
+  if(document.getElementById('bckgrd').innerHTML === "" || document.getElementById('bckgrd').innerHTML === null){
+   document.getElementById('bckgrd').innerHTML = "---"; //default entry (no auto recgonition if this stays here)
+  }
  }
  
  
  <!--auto background recgonizer -->
  if(document.getElementById('addalign').innerHTML.search(/(\w|\w+|\W|\W+|\D|\D+)/g) >= 0 && document.getElementById('addalign').innerHTML.search(/(Character Style|Character\&nbsp\;Style)/i) < 0 || document.getElementById('addalign').innerHTML === "" || document.getElementById('addalign').innerHTML === null){
  
- document.getElementById('addalign').innerHTML = "---"; //default entry (no auto recgonition if this stays here)
+  if(document.getElementById('addalign').innerHTML === "" || document.getElementById('addalign').innerHTML === null){
+   document.getElementById('addalign').innerHTML = "---"; //default entry (no auto recgonition if this stays here)
+  }
  }
  
  
  <!--auto background recgonizer -->
  if(document.getElementById('skillboost').innerHTML.search(/(\D|\D+)/g) >= 0 && document.getElementById('skillboost').innerHTML.search(/(Skill Boost|Skill\&nbsp\;Boost|Skill|Boost)/i) < 0 || document.getElementById('skillboost').innerHTML === "" || document.getElementById('skillboost').innerHTML === null){
  
- document.getElementById('skillboost').innerHTML = Number(0); //default entry (no auto recgonition if this stays here)
+  if(document.getElementById('skillboost').innerHTML === "" || document.getElementById('skillboost').innerHTML === null){
+   document.getElementById('skillboost').innerHTML = Number(0); //default entry (no auto recgonition if this stays here)
+  }
  }
  <!--above are auto-input updater checks needing to be filled out upgrade possible i'm here I'm here im here Im here upgradeable !!-->
  

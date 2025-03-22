@@ -5,9 +5,11 @@
  <title>iCS
  </title>
  <meta name="viewport" content="width=device-width, initial-scale=1">
- <meta property="og:url" content="The interactive character sheet making playing table top games online easier. Comes with an UnLicense for free-plays and more!">
+ <meta property="og:url" content="The interactive character sheet making playing online table top games easier. Comes with an UnLicense for free-plays and more! FOSS">
  <meta name="apple-mobile-web-app-capable" content="yes">
  <html manifest="Hlist.appcache">
+ <meta name="version" content="3.x.n" value="3.0.1">
+ <meta name="tags" content="iCS,interactive Character Sheet,Intelligent Character Sheet,Smart Sheet,UnLicense,Character Sheet,VTT,Table Top">
  </meta>
 <link rel="icon" type="image/x-icon" href="https://ipfs.io/ipfs/QmcGxSGGzAQ31E2eqCzDy7hskJp4s7udDK5HcrxHThwf4y">
   </head>
@@ -706,11 +708,12 @@ text-shadow: 0px 0px 0.69px green;
 	<span id='nbi' style='padding-bottom:6.5px;border-bottom-style:inset;border-bottom-width:0.5px;'><button id='dobuyin' class='button2' onclick='this.style="display:inline-block";document.getElementById("setbuyin").style="display:inline-block";document.getElementById("nbitext").style="display:inline-block";document.getElementById("bi").innerHTML=1;this.style="display:none";' title='Start Your BuyIn'><b>O</b></button> <span id='nbitext' title="BuyIn Limit" style="display:none"></span> <button id='setbuyin' style="display:none" class='button2' onclick='this.style="display:none";document.getElementById("resetbuyin").style="display:inline-block";buyin();' title='Sets Your BuyIn'><b>I</b></button> <button id='resetbuyin' style="display:none" class='button2' onclick='document.getElementById("nbi").style="display:none";this.style="display:none";document.getElementById("newbehr").style.display="block";' title='Remove extra buttons'><b><s>O</s></b></button> <button id='nobuyin' class='button2' onclick='pointbuy=0;document.getElementById("bi").innerHTML=0;document.getElementById("nbitext").innerHTML=Number(-2);document.getElementById("nbi").style="visibility:hidden";' title='Cancel BuyIn Method'><b>x</b></button></span>
 	<hr id='skillshr'>
 	<div id='skills2'>
-	<div id='skillstuff' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;'><button class='button2' onclick="skilladd();" ><b style='font-size:175%' title='Click to add a skill'>Add a Skill</b></button></br class='brs'>
+	<div id='skillstuff' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;'>
 	<span id='skillsbtns'>
+	<button class='button2' onclick="skilladd();" id='sa' ><b style='font-size:175%' title='Click to add a skill'>Add a Skill</b></button></br class='brs'>
 	<button class='button2' onclick='document.getElementById("skillsbtns").remove();' title='Click to not be able to add more skills'><b style='font-size:125%'>o</b></button>
 	<button class='button2' onclick='document.getElementById("skills2").remove();' title='Click to remove the skills section'><b style='font-size:125%'>x</b></button>
-	</span>
+	</span></br class='brs'>
 	</br>
 	</div>
 	<div id='uhold13'></div>
@@ -754,7 +757,7 @@ text-shadow: 0px 0px 0.69px green;
 	<div id='weapons2' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;'>
 	<span id="weapondump"></span>
 	<span id='weaponbtns'>
-	<button class='button2' onclick='document.getElementById("weaponsbtns").remove();' title='Click to remove extra Weapon button'><b style='font-size:125%'>o</b></button>&nbsp;
+	<button class='button2' onclick='document.getElementById("weaponbtns").remove();' title='Click to remove extra Weapon button'><b style='font-size:125%'>o</b></button>&nbsp;
 	<button class='button2' onclick='document.getElementById("weaponstuff").remove();' title='Click to remove Weapon section'><b style='font-size:125%'>x</b></button>
 	</span>
 	</br>
@@ -787,12 +790,11 @@ text-shadow: 0px 0px 0.69px green;
    </div>
    
   <div id='magic'>
-	<div id='magicstuff' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;'><button class='button2' onclick="spelladd();" ><b style='font-size:175%' title='Click to add a skill'>Add a Spell</b></button></br class='brs'>
-	<span id='magicbtns'>
-	<button class='button2' onclick='document.getElementById("magicstuff").remove();' title='Click to not be able to add more spells'><b style='font-size:125%'>-</b></button>
+	<div id='magicstuff' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;'>
+	<span id='magicbtns'><button class='button2' onclick="spelladd();" ><b style='font-size:175%' title='Click to add a skill'>Add a Spell</b></button></br class='brs'>
 	<button class='button2' onclick='document.getElementById("magicbtns").remove();'><b style='font-size:125%' title='Click to remove extra spell buttons'>o</b></button>
 	<button class='button2' onclick='document.getElementById("magic").remove();' title='Click to remove the spells section'><b style='font-size:125%'>x</b></button>
-	</span>
+	</span></br class='brs'>
 	</br>
 	</div>
 	<div id='mhold1'></div>

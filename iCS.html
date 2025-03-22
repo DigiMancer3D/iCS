@@ -135,8 +135,7 @@ text-shadow: 0px 0px 0.69px green;
    border-radius: 50%;
    font-size: 50%;
    margin-top: 1.3vw;
-   align: left;
-   left: 0;
+   align: center;
    margin-right: 1.3vw;
    cursor: pointer;
  }
@@ -150,8 +149,7 @@ text-shadow: 0px 0px 0.69px green;
  font-size: 50%;
  
  margin-top: 1.3vw;
- align: right;
- right: 0;
+ align: center;
  margin-left: 1.3vw;
  cursor: pointer;
  border-style: outset;
@@ -164,8 +162,7 @@ text-shadow: 0px 0px 0.69px green;
  font-size: 80%;
  
  margin-top: 1.3vw;
- align: right;
- right: 0;
+ align: center;
  margin-left: 1.3vw;
  cursor: pointer;
  border-style: outset;
@@ -212,7 +209,6 @@ text-shadow: 0px 0px 0.69px green;
  .footer{
   postion: fixed;
   bottom:0;
-  left:0;
   width:98%;
  }
    
@@ -257,12 +253,12 @@ text-shadow: 0px 0px 0.69px green;
  }
  
  .subt1 {
-  align:left;
+  align:center;
   left:0;
   }
   
   .subt2 {
-  align:right;
+  align:center;
   right:0;
   }
  
@@ -641,18 +637,18 @@ text-shadow: 0px 0px 0.69px green;
   <span id="preday" style='display:inline-block;'>
    </br>
    <div style='align:center;text-align:center;padding:0.5vw;'>
-     <b>Pick a Starting Month & Day</b></br><sup><sub><sup><i>You can pick the year after the day has begun</i></sup></sub></sup></br>
+     <b>Start a New Round, Rest or <i>Pick a Start Date</i></b></br><sup><sub><sup><i>You can click-2-pick the year after your 1st day has begun</i></sup></sub></sup></br>
 	 <button class='button3' style='visibility:hidden' title='make things look better'><sub><sup><sup><sub>I push things left</sub></sup></sup></sub></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;Month:&nbsp;<button class='button3' onclick='document.getElementById("ismon").innerHTML=Number(document.getElementById("ismon").innerHTML)+1;moncheck(1);'>+</button><span id='ismon'>0</span><button class='button3' onclick='document.getElementById("ismon").innerHTML=Number(document.getElementById("ismon").innerHTML)-1;moncheck(2);'>-</button>&nbsp;&nbsp;|&nbsp;&nbsp;Day&nbsp;<button class='button3' onclick='document.getElementById("isday").innerHTML=Number(document.getElementById("isday").innerHTML)+1;daycheck(1);'>+</button><span id='isday'>0</span><button class='button3' onclick='document.getElementById("isday").innerHTML=Number(document.getElementById("isday").innerHTML)-1;daycheck(2);'>-</button>&nbsp;]&nbsp;&nbsp;&nbsp;<button class='button3' onclick='days=Number(document.getElementById("isday").innerHTML);month=Number(document.getElementById("ismon").innerHTML);seasons=Number(months);document.getElementById("preday").style.display="none";livestats();' ><sub><sup><sup><sub><h2>Use Your Start Time</h2></sub></sup></sup></sub></button></br>
    </div>
   </span></br>
-  <input style="width:60vw;" id='newround' title='Experience Points (+/-) Input' placeholder='Experience Earned or Lost' onfocus='this.value="0";this.select();' oninput='snum2();' /> </br>
+  <input style="width:60vw;" id='newround' title='Experience Points (+/-) Input' placeholder='Experience Earned or Lost' onfocus='this.select();' oninput='snum2();' /> </br>
     <button class='button2' id='newrnd' title='Starting a New Round?' onclick='round()' disabled>New Round</button>
-	<span id='restinp' style='display:none'><input style="width:60vw;" id='newrest' title='Hours Resting...' placeholder='Number of Hours to Wait' onfocus='this.value="0";this.select();' oninput='snum2();' /> </br></span>
-    <button class='button2' id='restonly' title='Needing to Rest?' onclick='rest()' >Rest</button>&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;<span id='restinp' style='display:none'><input style="width:60vw;" id='newrest' title='Hours Resting...' placeholder='Number of Hours to Wait' onfocus='this.value="0";this.select();' oninput='snum2();' /> </br></span>&nbsp;&nbsp;
+    <button class='button2' id='restonly' title='Needing to Rest?' onclick='rest()' >Rest</button>
 	
   </span>
   <div align="center">
-<button class='button2' style='align:center;display:none;' align="center" id='aub4' onclick='document.getElementById("allaud").style="display:block;";this.style="display:none";' title='Remove Blind Skull'>x</button>
+<button class='button2' style='align:center;display:none;' align="center" id='aub4' onclick='document.getElementById("allaud").style="display:block;";this.style="display:none";' title='Remove Blind Skull'>x&nbsp;&nbsp;&nbsp;x</button>
 </div>
    <div id="tophold"><hr>
   <table style='align:center;text-align:center;width:97vw;margin-top:-3.75vw;padding:0.05vw;'><tr><td>
@@ -711,8 +707,10 @@ text-shadow: 0px 0px 0.69px green;
 	<hr id='skillshr'>
 	<div id='skills2'>
 	<div id='skillstuff' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;'><button class='button2' onclick="skilladd();" ><b style='font-size:175%' title='Click to add a skill'>Add a Skill</b></button></br class='brs'>
-	<button class='button2' onclick='document.getElementById("skillstuff").remove();'><b style='font-size:125%' title='Click to not be able to add more skills'>o</b></button>
-	<button class='button2' onclick='document.getElementById("skills2").remove();'><b style='font-size:125%' title='Click to remove the skills section'>x</b></button>
+	<span id='skillsbtns'>
+	<button class='button2' onclick='document.getElementById("skillsbtns").remove();' title='Click to not be able to add more skills'><b style='font-size:125%'>o</b></button>
+	<button class='button2' onclick='document.getElementById("skills2").remove();' title='Click to remove the skills section'><b style='font-size:125%'>x</b></button>
+	</span>
 	</br>
 	</div>
 	<div id='uhold13'></div>
@@ -740,21 +738,25 @@ text-shadow: 0px 0px 0.69px green;
 	<div id='yhold3'><span id='initiavtive' onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='span';document.getElementById('sanu').innerHTML='Input Your HP';document.getElementById('brn').innerHTML=3;document.getElementById('tyu').innerHTML='y';document.getElementById('sano').innerHTML=this.getAttribute('onclick');jim();document.getElementById('wha').innerHTML=this.innerHTML;inpmaker();document.getElementById('up'+Number(document.getElementById('brn').innerHTML)).style.display='inline-block';document.getElementById('dn'+Number(document.getElementById('brn').innerHTML)).style.display='inline-block';" value="0" >Health</span></div>
 	<div id='vhold6'></div>
 	<div id='healths2'>
+	</div>
+	<span id='healthbtns'>
+	<button class='button2' onclick='document.getElementById("healthbtns").remove();' title='Click to remove remove extra health buttons'><b style='font-size:125%'>o</b></button>
+	<button class='button2' onclick='document.getElementById("healthstuff").remove();' title='Click to remove Health section'><b style='font-size:125%'>x</b></button>
 	<!--<div id='healthstuff'><button class='button2' onclick="healthadd();" ><b style='font-size:175%' title='Click to add temp health'>Add Temp Health</b></button>
 	</br></div>
 	<button class='button2' onclick='document.getElementById("healths2").remove();'><b style='font-size:125%' title='Click to remove extra Health button'>o</b></button>-->
-	<button class='button2' onclick='document.getElementById("healths2").remove();'><b style='font-size:125%' title='Click to remove &#034;Remove Health&#034; button'>o</b></button>
-	<button class='button2' onclick='document.getElementById("healthstuff").remove();'><b style='font-size:125%' title='Click to remove Health section'>x</b></button>
+	</span>
 	</br>
-	</div>
 	<hr>
 	</div>
 	
 	<div id='weaponstuff'><b style='font-size:101%;cursor:default;' id='wpbo' title='Equip weapons when added as an item'>Weapons</b></br class='brs'>
 	<div id='weapons2' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;'>
 	<span id="weapondump"></span>
-	<button class='button2' onclick='document.getElementById("weapons2").remove();'><b style='font-size:125%' title='Click to remove extra Weapon button'>o</b></button>&nbsp;
-	<button class='button2' onclick='document.getElementById("weaponstuff").remove();'><b style='font-size:125%' title='Click to remove Weapon section'>x</b></button>
+	<span id='weaponbtns'>
+	<button class='button2' onclick='document.getElementById("weaponsbtns").remove();' title='Click to remove extra Weapon button'><b style='font-size:125%'>o</b></button>&nbsp;
+	<button class='button2' onclick='document.getElementById("weaponstuff").remove();' title='Click to remove Weapon section'><b style='font-size:125%'>x</b></button>
+	</span>
 	</br>
 	</div>
 	<div id='qhold3'></div>
@@ -768,8 +770,10 @@ text-shadow: 0px 0px 0.69px green;
 	
 	<div id='armors2' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;'>
 	 <span id="armordump"></span>
-	<button class='button2' onclick='document.getElementById("armors2").remove();'><b style='font-size:125%' title='Click to remove extra Armor button'>o</b></button>&nbsp;
-	<button class='button2' onclick='document.getElementById("armorstuff").remove();'><b style='font-size:125%' title='Click to remove Armor section'>x</b></button>
+	<span id='armorbtns'>
+	<button class='button2' onclick='document.getElementById("armorbtns").remove();' title='Click to remove extra Armor button'><b style='font-size:125%'>o</b></button>&nbsp;
+	<button class='button2' onclick='document.getElementById("armorstuff").remove();' title='Click to remove Armor section'><b style='font-size:125%'>x</b></button>
+	</span>
 	</br>
 	</div>
 	<div id='zhold9'></div>
@@ -784,8 +788,11 @@ text-shadow: 0px 0px 0.69px green;
    
   <div id='magic'>
 	<div id='magicstuff' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;'><button class='button2' onclick="spelladd();" ><b style='font-size:175%' title='Click to add a skill'>Add a Spell</b></button></br class='brs'>
-	<button class='button2' onclick='document.getElementById("magicstuff").remove();'><b style='font-size:125%' title='Click to not be able to add more spells'>o</b></button>
-	<button class='button2' onclick='document.getElementById("magic").remove();'><b style='font-size:125%' title='Click to remove the spells section'>x</b></button>
+	<span id='magicbtns'>
+	<button class='button2' onclick='document.getElementById("magicstuff").remove();' title='Click to not be able to add more spells'><b style='font-size:125%'>-</b></button>
+	<button class='button2' onclick='document.getElementById("magicbtns").remove();'><b style='font-size:125%' title='Click to remove extra spell buttons'>o</b></button>
+	<button class='button2' onclick='document.getElementById("magic").remove();' title='Click to remove the spells section'><b style='font-size:125%'>x</b></button>
+	</span>
 	</br>
 	</div>
 	<div id='mhold1'></div>
@@ -798,8 +805,10 @@ text-shadow: 0px 0px 0.69px green;
   <div id='pack'>
 	<hr id='hrp'>
    <div id='packstuff' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;'><button class='button2' onclick="itemadd();" ><b style='font-size:175%' title='Click to add an item'>Add Item</b></button></br class='brs'>
-	<button class='button2' onclick='document.getElementById("packstuff").remove();'><b style='font-size:125%' title='Click to not be able to add more items'>o</b></button>
+   <span id='packbtns'>
+	<button class='button2' onclick='document.getElementById("packbtns").remove();'><b style='font-size:125%' title='Click to not be able to add more items'>o</b></button>
 	<button class='button2' onclick='document.getElementById("pack").remove();'><b style='font-size:125%' title='Click to remove the pack section'>x</b></button>
+	</span>
 	</br>
 	</div>
 	<div id='ehold1'></div>
@@ -816,7 +825,7 @@ text-shadow: 0px 0px 0.69px green;
   </br></br></br></br></br>
   <div id='save' align='center' style='align:center;word-break:break-all'>
    <button id='savebutton' class='button2' onclick='nextfun();'><h1>Save with Itty-Bitty</h1></button>
-   <span align="center" style="center"><span id='notice'><span id='shareon' ></span><span id='sharecheck'></span><hr><sup>To save your character sheet, click "Save Sheet". Saving will plot a LMZA compressed B64 hashlink containing the data you've input along with a copy of this webware.<sup></br></br>All information being inputted is only existing on your device & wihtin the browser.</br><sup>**<b>Node like servers are only used for saving into hashlinks & decoding the hashlink with this webware.</b>**</sup></sup></sup></span>	
+   <span align="center" style="align:center;"><span id='notice'><span id='shareon' ></span><span id='sharecheck'></span><hr><sup style='cursor:default;'>To save your character sheet, click "Save Sheet". Saving will plot a LMZA compressed B64 hashlink containing the data you've input along with a copy of this webware.<sup></br></br><span id='inpinfo' style='cursor:help' title='Click me to learn more about this...' onclick='document.getElementById("jandan").style.display="inline-block";'>All information being inputted is only being inputted on your device & wihtin your browser.</span><div id='jandan' style='width:60vw;padding:3vw;margin:3vw;align:center;cursor:pointer;display:none;' title='Click to Close' onclick='this.style.display="none";'><h2>How Can Information Leak from iCS?</h2><sub>&nbsp;&nbsp;&nbsp;Only if you transfer objects, transfer character sheets or use hashes from within the game (In Example: Sharing Item Hashes for player-2-player item transfer) to something or someone outside of your device & browser are you at risk of any potential information leaving your running copy of iCS (no phyiscal install is needed, iCS runs as webware or electronic intranet required software that runs locally within the ram of the device).</br></br>&nbsp;&nbsp;&nbsp;All transferred data will be considered previously owned or currently owned by the characters from within the game. Players of these characters only hold rights to the character in namesake and actions they directed the character to make, not the objects nor the data formed, made by or provided by during or within the game sheet or alogrithms within iCS.</br></br>&nbsp;&nbsp;&nbsp;Their character may own the objects built, made, handled; used within the game for their character is the one interacting, building and/or using the in-game objects not the player. The player is the director of the character even if the character is made to mimic the player 100% completely in every aspect.</sub></div></br></br><sup>**<b>Node like servers are only used for saving into hashlinks & decoding the hashlink with this webware.</b>**</sup></sup></sup></span>	
    </div>
 
   
@@ -826,7 +835,7 @@ text-shadow: 0px 0px 0.69px green;
    <button class="button2" id="1theme" onclick="this.style='display:none';document.getElementById('2theme').style='display:inline-block';document.getElementById('main').className='display:inline-block';document.getElementById('main').style='background-color:black;color:silver;border-color:dimgrey;left:0;align:left:width:100%;text-align:center;';document.getElementById('body').style='background-color:black;color:silver;border-color:dimgrey;left:0;align:left:width:100%;text-align:center;';theme=1;" style="display:none"><h1>Night Theme</h1></button>
    </br></span>
    </br><sup><span id='hashishere' title='Try Importing This'></span></br><button onclick="inphash();" title='huh?' classs="button2">[-<b id='butt' onclick="inphash();"></b>-]</button></sup></br>
-   <b onclick="window.open('https://3dthe.ninja')" target="_blank" rel="noreferrer;noopener;" title="Click to Visit 3Douglas' Website"><i title="interactie Character Sheet">iCS <sup><sub>interactive Character Sheet</sub></sup></i>&nbsp;&nbsp; | &nbsp;&nbsp;Hosted on <i id="hostloc">IPFS</i> | Crafted by <i>3Douglas</i>&nbsp;&nbsp;</b></br><span style="cursor:default">Deoblou Corp. 2000 - <span id="nyear"></span> &nbsp; ®</br>Hodlserv Inc 2017 - <span id="nyear2"></span> &nbsp; ©</span></br></br>
+   <b onclick="window.open('https://3dthe.ninja')" target="_blank" rel="noreferrer;noopener;" title="Click to Visit 3Douglas' Website"><i title="interactive Character Sheet">iCS <sup><sub>interactive Character Sheet</sub></sup></i>&nbsp;&nbsp; | &nbsp;&nbsp;Hosted on <i id="hostloc">IPFS</i> | Crafted by <i>3Douglas</i>&nbsp;&nbsp;</b></br><span style="cursor:default">Deoblou Corp. 2000 - <span id="nyear"></span> &nbsp; ®</br>Hodlserv Inc 2017 - <span id="nyear2"></span> &nbsp; ©</span></br></br>
    <b id="learnmore" onclick='document.getElementById("lm").style="display:inline-block;border:0.5px inset orange;";this.style="visibility:hidden";' style="cursor:help" title="Learn more about iCS">Learn More</b></br><b id="contract" onclick='document.getElementById("contracts").style="display:inline-block;border:0.5px inset orange;";this.style="visibility:hidden";' style="cursor:help" title="Find out types of items that can handle writing">Contracts & Writables</b></br><b id="imper" onclick='document.getElementById("impee").style="display:inline-block;border:0.5px inset orange;";this.style="visibility:hidden";' style="cursor:help" title="Learn more about importing and sharing items">Importing&nbsp;Items</b></br><b id="rvh" onclick='document.getElementById("bks1").style="display:inline-block;border:0.5px inset orange;";this.style="visibility:hidden";' style="cursor:help" title="Learn more about how books work here">Books</b></br><b id="foex" onclick='document.getElementById("foexi").style="display:inline-block;border:0.5px inset orange;";this.style="visibility:hidden";' style="cursor:help" title="Learn more about how the exchanges work">Exchange</b></br><b id="coms" onclick='document.getElementById("comms").style="display:inline-block;border:0.5px inset orange;";this.style="visibility:hidden";' style="cursor:help" title="Learn more about what commands work">Commands</b></br><b id="maa" onclick='document.getElementById("aam").style="display:inline-block;border:0.5px inset orange;";this.style="visibility:hidden";' style="cursor:help" title="Learn more about how the importing apis work">API & Moding</b></br><b id="itemlist" onclick='document.getElementById("ril").style="display:inline-block;border:0.5px inset orange;";this.style="visibility:hidden";' style="cursor:help" title="Find out types of items iCS can recgonize">Recgonized Items List</b></br><b id="openagreement" onclick='document.getElementById("license").style="display:inline-block;border:0.5px inset silver;";this.style="visibility:hidden";' style="cursor:help" title="The License Agreement for this web object">Unlocked License</b>
    
    
@@ -1060,14 +1069,14 @@ text-shadow: 0px 0px 0.69px green;
  
  
  <!-- internal market data --> 
-  var ab = 0; //gold
+  var ab = 0;  //gold
   var ba = 0; //hashes
-  var wallet = 0;  //Used with cryptos
+  var wallet = 0;   //Used with cryptos
   var trades = 0;  //market trade counts
 
 
  <!-- buyin() data  --> 
-  var pointbuy = 30;  //buyin starter value 
+  var pointbuy = 30;   //buyin starter value 
   var points = 0;     //used with buyin 
 
  
@@ -1079,22 +1088,23 @@ text-shadow: 0px 0px 0.69px green;
   var brnum = 0;           //unique ID value for inpmaker() 
   var yrnum = 0;          //a type of sanitizer unique ID system 
   var weaponcount = 0;   //Number of equpied weapons
-  var armcount = 0;               //has something to do with armor //may be the armor value 
-  var attackcount = 0;           //attack value 
-  var miscin = 0;               //if 1, arrows are used (misc inventory) <!-- arrows & bolts -->
-  var defcount = 0;            //Defense Value (shown Output)
-  var notcarry = 1;           //character wieght
-  var height = 0;            //character height
-  var boosted = 0;          //skillboost
-  var muscle = 0;          //strength
-  var phydex = 0;         //dexterity
-  var mendex = 0;        //wisdom
-  var constit = 0;      //constitution
-  var intel = 0;       //intelligence
-  var charisma = 0;   //charisma
-  var hp = 0;        //initiavtive
-  var thp = 0;      //NOT CURRENTLY USED   //should be a used to store old hp max value while temp health status is active
-  var thpnum = 0;  //NOT CURRENTLY USED   //should be a temp health timer for when temp health status is active 
+  var armcount = 0;                //has something to do with armor //may be the armor value 
+  var attackcount = 0;            //attack value 
+  var miscin = 0;                //if 1, arrows are used (misc inventory) <!-- arrows & bolts -->
+  var defcount = 0;             //Defense Value (shown Output)
+  var notcarry = 1;            //character wieght
+  var height = 0;             //character height
+  var boosted = 0;           //skillboost
+  var muscle = 0;           //strength
+  var phydex = 0;          //dexterity
+  var mendex = 0;         //wisdom
+  var constit = 0;       //constitution
+  var intel = 0;        //intelligence
+  var charisma = 0;    //charisma
+  var hp = 0;         //initiavtive
+  var thp = 0;       //NOT CURRENTLY USED   //should be a used to store old hp max value while temp health status is active
+  var thptimer = 0; //NOT CURRENTLY USED   //should be a temp health timer for when temp health status is active 
+  var thpnum = 0;  //NOT CURRENTLY USED   //should be a temp health for when temp health status is active 
   var woh = 0;    //weight over height inital check output 
   var x21 = 0;   //under/over-weight check output //neg over 0.9 is underwieght && pos over 0.9 is underwieght //both should effect carry && stanima
   var traits = [];      //stores possible character traits <!--may not be active & passive effects not allowed but passive apis are allowed -->
@@ -1116,17 +1126,17 @@ text-shadow: 0px 0px 0.69px green;
   var roundsare = 0;  //rounds seen by system 
   var year = 1;      //current year or tracking year idk which atm 
   var years = year; // other year tracker....
-  var days = 1;               //current standing  days 
-  var oldays = Number(days); //original starting day point 
-  var nights = 0;           //nights lived through 
-  var hrs = 0;             //current standing hours
-  var hours = 0;          //perpetual in-game hours 
-  var months = 1;        //starter seasons adjuster 
-  var monthout = '';    //displayed month aka season (minor cases)
-  var seasonout = '';  //displayed season (most cases)
-  var seasons = 1;    //current month 
-  var timeindays = 0;//perpetual day counter 
-  var yearsout = '';//displayed years
+  var days = 1;                   //current standing  days 
+  var oldays = Number(days);     //original starting day point 
+  var nights = 0;               //nights lived through 
+  var hrs = 0;                 //current standing hours
+  var hours = 0;              //perpetual in-game hours 
+  var months = 1;            //starter seasons adjuster 
+  var monthout = 'May Day'; //displayed month aka season (minor cases)
+  var seasonout = '';      //displayed season (most cases)
+  var seasons = 1;        //current month 
+  var timeindays = 0;    //perpetual day counter 
+  var yearsout = '';    //displayed years
   var piadj = 314;     //darkside pi day
   var moon = 28;      //new moon counter 
   var moonstar = 28; //1st new moon adjuster
@@ -1152,16 +1162,17 @@ text-shadow: 0px 0px 0.69px green;
   var tempspeed = 0;  //used when speed isn't at normal
   var tempmove = 0;  //used when move isn't at normal
   
-  var deboost = 0;         //NOT CURRENTLY USED   //should be used for tempary deboosting counter (future thought) 
-  var boosttot = 0;       //NOT CURRENTLY USED   //should be used for how much deboosting is needed (future thought) 
-  var boosttoted = 0;    //NOT CURRENTLY USED   //should be used for restoring boost after deboosting (future thought) 
-  var savemod = 0;      //Stat Modifier (applies extra stat points across the field but not evenly) start at any point and work down then if need be loop up but only add in this value in this order from start point: +1.25;+1.05;+0.85;+0.65;+0.45;+0.25; 
+  var deboost = 0;           //NOT CURRENTLY USED   //should be used for tempary deboosting counter (future thought) 
+  var boosttot = 0;         //NOT CURRENTLY USED   //should be used for how much deboosting is needed (future thought) 
+  var deboosttimer = 0;    //NOT CURRENTLY USED   //should be used for a deboosting timer (future thought) 
+  var boosttoted = 0;     //NOT CURRENTLY USED   //should be used for restoring boost after deboosting (future thought) 
+  var savemod = 0;       //Stat Modifier (applies extra stat points across the field but not evenly) start at any point and work down then if need be loop up but only add in this value in this order from start point: +1.25;+1.05;+0.85;+0.65;+0.45;+0.25; 
  
   var remjewel = 0;   //jewel value 
   var newspell = 0;  //if 1, calls that a spell is new 
   var theme = 0;    //0 for dark mode (default)    //1 for paper mode
   
-  document.getElementById('nbitext').innerHTML = pointbuy;
+  document.getElementById('nbitext').innerHTML = pointbuy; <!-- assigns system buy-point total -->
   
   <!--algo below-->
   var lastval = '5', lastedval = '5', flaweq = 0;
@@ -1169,7 +1180,7 @@ text-shadow: 0px 0px 0.69px green;
   var lvl = 0;              //level
   var inspired = 0;        //gained from different practices (currently only from skills)
   var exp = 0;            //experience
-  var expdif = 0;        //NOT CURRENTLY USED    //should be used for locking experience behind an action wall (bounty/paper imported exp)
+  var expdif = 0;        //NOT CURRENTLY USED  //should be used for locking experience behind an action wall (bounty/paper imported exp)
   var att = 0;          //attack points
   var def = 0;         //defense points 
   var spd = 0;        //speed (player order in rounds)
@@ -1177,16 +1188,14 @@ text-shadow: 0px 0px 0.69px green;
   var wieght = 0;   //carry ability
   var ogcarry = 0;
   
-  var skillwatch = 0;      //skilllvl difficulty
-  var spellwatch = 0;     //spelllvl difficulty
-  
+  var skillwatch = 0;     //skilllvl difficulty
+  var spellwatch = 0;    //spelllvl difficulty
   var skilllvl0 = 0;    //player skill level 
   var skilllvl1 = 0;   //object skill level
   var spelllvl0 = 0;  //player spell level
   var spelllvl1 = 0; //object spell level 
   
-  <!-- traits, personalities, bonds, flaws algo global variables below -->
-  
+  <!-- traits, personalities, bonds, flaws & algo global variables below -->
  var tb1 = "<option id='Motivational...' value='Motivational...' onselect='document.getElementById(&#039;menu2&#039;).value=this.innerHTML;' >Motivational...</options><option id='Sloth' value='Sloth' onselect='document.getElementById(&#039;menu2&#039;).value=this.innerHTML;' >Sloth</options><option id='Procrastinator' value='Procrastinator' onselect='document.getElementById(&#039;menu2&#039;).value=this.innerHTML;' >Procrastinator</options><option id='Almost On-Time' value='Almost On-Time' onselect='document.getElementById(&#039;menu2&#039;).value=this.innerHTML;' >Almost On-Time</options><option id='On-Time' value='On-Time' onselect='document.getElementById(&#039;menu2&#039;).value=this.innerHTML;' >On-Time</options><option id='Occasionally Early' value='Occasionally Early' onselect='document.getElementById(&#039;menu2&#039;).value=this.innerHTML;' >Occasionally Early</options><option id='Early Bird' value='Early Bird' onselect='document.getElementById(&#039;menu2&#039;).value=this.innerHTML;' >Early Bird</options>"; //PI Set1
  
  var tb2 = "<option id='Educational...' value='Educational...' onselect='document.getElementById(&#039;menu2&#039;).value=this.innerHTML;' >Educational...</options><option id='Never Been' value='Never Been' onselect='document.getElementById(&#039;menu2&#039;).value=this.innerHTML;' >Never Been</options><option id='Occasionally Visited' value='Occasionally Visited' onselect='document.getElementById(&#039;menu2&#039;).value=this.innerHTML;' >Occasionally Visited</options><option id='Average Student' value='Average Student' onselect='document.getElementById(&#039;menu2&#039;).value=this.innerHTML;' >Average Student</options><option id='Above Average' value='Above Average' onselect='document.getElementById(&#039;menu2&#039;).value=this.innerHTML;' >Above Average</options><option id='Exceptional' value='Exceptional' onselect='document.getElementById(&#039;menu2&#039;).value=this.innerHTML;' >Exceptional</options><option id='Home Learned' value='Home Learned' onselect='document.getElementById(&#039;menu2&#039;).value=this.innerHTML;' >Home Learned</options>"; //PI Set2
@@ -1263,6 +1272,16 @@ text-shadow: 0px 0px 0.69px green;
  var s12 = ["Thoughtful...","Cruel","Cynical","Forgetful","Indecisive","Mischievous","Nervous","Pessimistic","Stingy","Superficial","Thoughtful","Uncertain","Unctuous"];
  
  var s11 = ["Emotional...","Afraid","Anxious","Bewildered","Callous","Childish","Cold","Complacent","Complaining","Delicate","Dependent","Desperate","Discontented","Dull","Egocentric","Emotional","Fatalistic","Fearful","Fiery","Frightening","Frivolous","Gloomy","Grim","Hateful","Hedonistic","Insecure","Insincere","Irrational","Irresponsible","Jealous","Judgmental","Miserable","Moody","Needy","Paranoid","Petty","Phlegmatic","Prim","Regretful","Repentant","Resentful","Surly","Sanctimonious","Steely","Stiff","Tense","Vain","Weak","Wishful"];
+ 
+ <!-- hometowns -->
+ 
+   var villagenames = ["Kochan","Ablanista","Koprivlen","Laki","Nova Lovcha","nova Leski","Paril","Petrelik","Babyak","Floating Villages","Bibury","Ait-Ben-Haddou","Hallstatt","Juzcar","Eze","Inle Lake","Lamayuru","Isla Del Sol", "Del Sol", "Larung Gar", "Larung", "Marsaxlokk", "Oia", "Navala", "Navala Village", "Floating", "Floating Village", "Enkeri", "Enkeri Village", "Nubian", "Bubia", "Nubia", "Nubian Village", "Nuuk", "Pariangan", "Palangan", "Punji", "Pygmy", "Batwa", "Pygmy Batwa", "Pygmy Village", "Batwa Village","Shirakawa","Xidi","Swat Valley","Wenen","Jukkasjarvi", "Kash Goz","Kash","Goz","Giethoorn","Gasadalur","Freundenberg","Zell am See","Wagrain","Sauris-Zahre","Isola del Giglio","Castelo Novo", "Castelo", "Novo", "Rasinari", "Bohinj", "Rupit", "Murten", "Andermatt", "Birgi", "Thai Hai","Guadalupe","Old Town","Choke Mountains Ecovillage","Aguarico","Angochagua","Mestia","Kfar Kama","Umm Qais","Creel","El Fuerte","Ksar Elkhorbat","Moulay Bouzerktoune","Lamas","Raqchi","Pyeongsa-ri","Pyeongsa"];
+   
+   var townnames = ["Smalltown","Albarracin","Ban Rak","Ban Rak Thai", "Rak Thai","Banos","Bar Harbor","Biei","Bled","Bocas del Toro","Bocas","del Toro","Carmel-by-the-Sea","Colonia del Sacramento", "del Sacramento", "Colonia", "Castle Combe", "CastleCombe", "Combe", "Esperance","Gokayama","Gordes","Goreme","Guatape","Hatta","Ilulissat","Iruya","Itchan Kala","Kaikoura","Kalk Bay","Kralendijk","Lamu","Lauterbrunnen","Luang Prabang", "Luang", "Prabang","LuangPrabang","Luderitz","Lunenburg","Mandawa","Moulay","Idriss","Moulay Idriss Zerhoun","Zerhoun","Navala","Niagra-on-the-Lake","Paraty","Penglipuran","Port Fairy","Praiano","Raquira","Rothenburg ob der Tauber","ob der Tauber","Tauber","Sai Kung","Sapa","Sayulita","Sedona","Sidi Bou Said", "Sidi", "Bou","Bou Said","Sitka","Siwa","St Augustine", "Augustine", "St. Augustine", "Saint Augustine","Tepoztlan","Vinales","Zhouzhuang","Wallace","Marfa","Jim Thorpe","Bisbee","Eureka Springs","Yellow Springs","Helen","Whitefish","Taos","Mount Dora","MountDora","Astoria","Lanesboro","Hillsboro","Galena","New Harmony","Salina","Lindsburg","Joseph","Lititz","Beaufort","Port Townsend","Townsend","Ferndale","Breaux Bridge","Eclectic","Delight","Why","Unalaska","Rough and Randy","Rough & Randy","Mystic","Superior","Slaughter Beach","Enigma","Sandwich","Electric City","Cal-Nev-Ari","Tightsqueeze","Tuxedo","Loveladies","Truth or Consequences","What Cheer","Bald Head","Halfway","Hometown, West Virigina","Hometown,West Virigina","Satan&#039;s Kingdom","Satan's Kingdom","Satans Kingdom","North Star","Hot Coffee","Monkey&#039;s Eyebrow","Monkey's Eyebrow","Monkeys Eyebrow","Monkies Eyebrow","Intercourse","Waterproof","Tiki Island","Valentine","Sweet Lips","Elmo","Wineglass","Miner&#039;s Delight","Miner's Delight","Miners Delight","Normal","Santa Claus","Defiance","Dead Women Crossing","Sublimity","Yeehaw Junction","Bread Loaf","BreadLoaf","Kismet","Ketchuptown","Love Valley","Luck","Humansville","Porchupine","Killdeer","Volcano Village","Good Grief","Woonsocket","Upton Snodsbury","Pucklechurch","Barton in the Beans","Curry Mallet","Droop","Throop","Plumpton","Lickfold","Warninglid","Nomansland","Uploders","Matching Tye","MatchingTye","Nether Wallop","NetherWallop","Poling","Patching","Climping","Didling","Crudwell","Puddletown","Tolpuddle","Affpuddle","Braintpuddle","Westward Ho!","WestwardHo!","Westward Ho","WestwardHo","Upper Bucklebury","UpperBucklebury","Mudford Sock","MudfordSock","New Invention","NewInvention","picklescott","Marsh Gibbon","MarshGibbon","Blubberhouses","Mamble","Tedstone Wafre","TedstoneWafre","Hose","Hoby","Shoby","Thumpton","Bitchfield","Over Peover","OverPeover","Wetwood","Wetwang","Papplewick","Bishop&#039;s Ichington","Bishop's Ichington","Bishops Ichington","Bishop&#039;sIchington","Bishop'sIchington","BishopsIchington","Queen Camel","QueenCamel","Great Snoring","GreatSnoring","Cement","Laramie","Larrimah","Bidgeegud","Derby","Lawton","Alesund","Bruges"];
+  
+   var citynames = ["Abidjan","Accra","Adana","Addis Ababa","Adelaide","Agre","Ahmadabad","Aleppo","Aleppohalab","Aleepo Halab","Alexandria","Algiers","Allahabad","Almaty","amman","Amristar","Ankara","Anshan","Baghdad","Baku","Bandung","Bangalore","Bangkok","Baotou","Barcelona","Barquisimeto","Barranquilla","Basrah","Beijing","Beirut","Belem","Belgrade","Belo Horizonte","BeloHorizonte","Benghazi","Benin","Berlin","Bhopal","Birmingham","Bogo Ta","Bogota","BogoTa","Bogo","Brasilia","Brazzaville","Brisbane","Bucharest","Budapest","Buenos Aires","Bursa","Busan","Cairo","Cali","Campinas","Capetown","Caracas","Casablanca","Changchun","Changsha","Changzhou","Chelyabinsk","Chengdu","Chennai","Chicago","Chittagong","Chongquin","Ciudad Juarez","CiudadJuarez","Conakry","Copenhagen","Cordoba","Curitiba","Daegu","Daejon","Dakar","Dalian","Dallas","Damascus","Dar es Salaam","DarEsSalaam","DaresSalaam","Dar Es Salaam","Datong","Delhi","Dhaka","Dnipropetrovsk","Donetsk","Douala","Durban","Ecatepec","Ekaterinburg","Faislabad","Fortaleza","Foshan","Freetown","Fukoka","FreeTown","Fuzhou","Giza","Goiania","Gudalajara","Guangzhou","Guarulhos","Guatamala City","Guayaquil","Guiyang","Gujranwala","Gwangju","Wala Wala Washinton","WalaWala","Wala Wala","WalaWalaWashinton","Gwangju","Haiphong","Hamburg","Handan","Hangzhou","Hanoi","Haora","Harare","Harbin","Havana","Hefei","Hiroshima","Ho Chi Minh City","HoChiMinh","HoChiMinhCity","Ho Chi","Chi Minh","Ho Chi Minh","Minh City","HCMC","Hong Kong","Houston","Hyderabad","Ibadan","Incheon","Indore","Irbil","Isfahen","Istanbul","Izmir","Jaipur","Jakarta","Jeddah","Jilin","Jilan","Jodphur","Johannesburg","Kabul","Kaduna","Kano","Kanpur","Kaohsiung","Karachi","Kawasaki","Kazan","Kharkiv","Khartoum","Khulna","Kiev","Kinshasa","Kitakyushu","Kobe","Kolkata","Kowloon","Kuala Lumpur","KualaLumpur","Kunming","Kyoto","La Paz","LaPaz","Lapaz","Lagos","Lahore","Lanzhou","Lean","Lima","London","Los Angeles","Luanda","Lubumbashi","Lucknow","Ludhiana","Luoyang","Lusaka","Madrid","Maiduguri","Makassar","Managua","Manaus","Manila","Maputo","Maracaibo","Mashhad","Mecca","Medellin","Medina","Meerut","Melbourne","Mexicali","Mexico City","Milsan","Minsk","Mogadishu","Monterrey","Montevideo","Montreal","Moscow","Mosul","Multan","Mumbai","Mumbai Bombay","MumbaiBombay","Bombay", "Munich","Nagoya","Nagpur","Nairobi","Nanchang","Nanjing","Nanning","Napoli","Nashik","New York City","New York", "NYC", "Big Apple", "NewYork", "NewYorkCity","NYCity","Nesahualcoyotl","Nizhny Novgorod","NizhnyNovgorod","Novosibisrk","Odessa","Omdurman","Omsk","Osaka","Palembang","Paris","Patna","Perm","Perth","Peshawar","Philadelphia","Phily","Philly","Phnom Penh","PhnomPenh","Phnompenh","Phnom","Penh", "Phoneix","Phoenix","Pimpri Chinchwad","PimpriChinchwad","Pimpri","Chinchwad","Port Harcourt","Harcourt","PortHarcourt","Port-Au-Prince","Port Au Prince","Port Prince Gold","Prince Gold Port","Port Gold Prince","PortAuPrince","AuPrince","Au Prince","Porto Alegre","Portoalegre","PortoAlegre","Prague","Puebla","Pune","Pyongyang","Quingdao","Qiqihar","Quito","Rabat","Rajkot","Ranchi","Rawalpindi","Recife","Rawalpindi","Rio de Janerio","RiodeJanerio","RioDeJanerio","de Janerio","Rio","Janerio","Riyadah","Rome","Rosario","Rostov on Don","Rostov","on Don","Don Rostov","Salvador","Samara","San Antonio","Antonio","San Diego","DanDiego","Sanaa","Santa Cruz","SantaCruz","San Tiago","Santiago","Tiago","Cruz","Santo Domingo","Domingo","SantoDomingo","Sao Paulo","SaoPaulo","Paulo","Sapporo","Semarang","Sendai","Seongnam","Seoul","Shanghai","Shenyang","Shenzhen","Shiraz","Shiziahuang","Shubra El Khemia","Shubra","El Khemia","Khemia","ShubraElKhemia","ShubraKhemia","Shubra Khemia","Singapore","Sofia","Soweto","St Petersburg", "St. Petersburg", "StPetersburg","Saint Petersburg","SaintPetersburg","Stockholm","Surabaya","Surat","Suzhou","Sydney","Tabriz","Taichung","Taipei","Tai Pei","Taiyuan","Tangshan","Ta Shkent","TaShkent","Tashkent","Tbilisi","Tegucigalpa","Tehran","Tianjin","Tijana","Tokyo","Marijuana","Toronto","Tripoli","Tri Poli","TriPoly","Tripoly","Tshwane","Tshwana Pretoria","TshwanaPretoria","Pretoria","Petoria","Peteoria","Tunis","Ufa","Ulsan","Urumqi","Vadodara","Valencia","Varanasi","Vienna","Viena","Volgograd","Vol Gograd","Warsaw","Wuhan","Wuxi","Xian","Xuzhou","Yangon","Yaounde","Yerevan","Yokohama","Yoko Hama","Yoko","Hama","Zapopan","Za Po Pan","Za Popan","Zhengzhou","Zheng Zhou","Sheng Zhou","Sheng Sou","Zibo","Bangs","Soda Springs","SodaSprings","Springs","Bluff","Placentia","Fries","Dinosaur","American Fork","Concrete","Briny Breezes","Whynot","Hurt","Ninety Six","NinetySix","96","Cut and Shoot","Cut & Shoot","CutNShoot","CutShoot","CutandShoot","Cut&Shoot","Kill Devil Hills","KillDevilHills","Devil Hills","DevilHills","Kill Devil","KillDevil","Canadian","Superior","Atomic City","Atomiccity","Atomicity","Okay","Nowhere","Hell","Coward","Three Way","ThreeWay","Threeway","Reno","Las Vegas","LasVegas","Vegas","Climax","OKC","Oklahoma City","Winnebago","Uncertain","Last Chance","LastChance","Lastchance","Speed","Oblong","Cool","Colon","Pink","BlueGrass","Blue Grass","Bluegrass","Rainbow City","RainbowCity","Rainbow","China","City","Hooker","Popejoy","London","Edinburgh","Manchester","Music City","MusicCity","Musiccity","Musicity","Memphis","Clarcksville","Nashville","Birgingham","Glasgow","Liverpool","Bristol","Oxford","Cambridge","Cardiff","Brighton","Newcastle-upon-Tyne","Newcastle","NewcastleuponTyne","NewcastleTyne","Newcastle Tyne","Tyne","Leeds","Yorkshire","York","Inverness","Culloden","Bath","Nottingham","Aberdeen","Chester","Ambrose","Amity Island","AmityIsland","Alphaville","Asteriod City","AsteroidCity","Belleville","Bedford Falls","BedfordFalls","Brahms","Brigadoon","Brightburn","Bismuth","Bristo Camino","Bristo","BristroCamino","Catsville","Chesterford","Cloverdale","Creek Falls","CreekFalls","Crystal Lake","CrystalLake","Damon","Dammuz","Deer Meadow","DeerMedow","Dillford","Dogville","Duloc","Egging","Flagstone","Fly Creek","FlyCreek","Greenbow","Greenhills","Flinthills","Green Hills","Flint Hills","Flinthill","Groom Lake City","Groom Lake","Lake City","Grouchland","Haddonfield","Harper","Hilltop","Hill Valley","HillValley","Hope","Inferno","Hope Town","Hopetown","Ivory Creek","IvoryCreek","Jonathanland","Karatas","Kartas","Khansaar","Hotha","Kotha","Liiian","Loganville","Madison","Mantua","Middleton","Midlothia","Middlesex","Millbrook","Mill Valley","Millvalley","Miles County","MilesCounty","Moesko Island","Moesko","MoeskoIsland","Mos Eisley","MosEisley","Eisley","Mos Espa","Mosespa","Espa","Mt Abraham","Mt. Abraham","MtAbraham","Mount Abraham","Newton Haven","Newton","NewtonHaven","Haven","Nickeltown","Nickles","Nilbog","Oak Ridge","OakRidge","Ogden Marsh","Ogden","OgdenMarsh","Old Stump","OlStump","Ol Stump","OldStump","Peacock","Perfection","Pleasantville","Pokyo","Portoroso","Pozharnov","Pribrezhny","Racoon City","RacoonCity","Radiator Springs","RadiatorSprings","Redmeption","Regimenton","Red Hill","Redhill","Rose Rock","Rosehill","Rockbridge","Rock Ridge","Rockridge","Rock Vegas","San Angeles","San Miguel Arcangel", "San Miguel","Miguel Archangel","SanMiguel Arcangel","SanmigelArcangel","Sanford","Sandford","Santa Cecilia","Cecilia","Seabroook","Sexville","Silent Hill","Silenthill","Shermer","Silver Creek","Silvercreek","Springwood","Suburbicon","Sweetwater","Sylvane","Tenderville","Theed","Tipoca City","Tipoca","Twin Peaks","TwinPeaks","Two-Bit","2bit","Verona","Victory","Waaji","Waaji City","WaajiCity","Wardenclyffe","Warden Clyffe","Warren Valley","WarrenValley","Woodsboro","Woop Woop","WoopWoop","Seattle","San Francisco","Francisco","Roma","Toronto","Boston","Pittsburg","Whichita Falls","Whichita","Cleveland","Denver","Jacksonville","Fort Worth","Charlotte","Columbus","Indianapolis","El Paso","ElPaso","Portland","Louisville","Baltimore","Milwaukee","Albuquerque","Tucson","Fresno","Sacramento","Mesa","Alanta","Kansas City","KansasCity","Colorado Springs","Omaha","Raleigh","Virginia Beach","Long Beach","Oakland","Bakerfield","Tulsa","Tampa","Tampa Bay","Arlington","Wichita","Wichita Falls","Aurora","New Orleans","Honolulu","Anaheim","Henderson","Orlando","Lexington","Stockton","Riverside","Corpus Christi","Irvine","Cincinnati","Santa Ana","Newark","Saint Paul","St.Paul","St Paul","St. Paul","StPaul","Durham","Lincoln","Jersey City","Plano","Anchorage","North Las Vegas","NLV","St Louis","St. Louis","New Vagas","Night City","NC","Nightcity","Madison","Chandler","Gilbert","Buffalo","Chula Vista","Fort Wayne","Lubbock","Toledo","Laredo","Irving","Chesapeake","Glendale","Winston Salem","Winston","Salem","Scottsdale","Graland","Boise","Norfolk","Spokane","Richmond","Fremont","Huntsville","Frisco","Cape Coral","Santa Clarita","San Bernardino","Tacoma","Hialeah","Baton Rouge","Modesto","Fontana","McKinney","Moreno Valley","Des Moines","Fayetteville","Salt Lake City","Salt Lake","Yonkers","Worcester","Sioux Falls","Little Rock","Amarillo","Tallahassee","Grand Prairie","Augusta","Peoria","Oxnard","Knoxville","Overland Park","Overland","Vancouver","Grand Rapids","Montgomery","Huntington Beach","Providence","Brownsville","Tempe","Akron","Chattanooga","Fort Lauderdale","Newport","Newport News","Mobile","Ontario","Cary","Elk Grove","Shreveport","Eugene","Santa Rosa","Rancho Cucamonga","Cucamonga","Pembroke Pines","For Collins", "Fort Brag","Fort Sill","Springfield","Oceanside","Garden Grove","Murfreesboro","Palmdale","Corona","Killeen","Salinas","Roseville","Denton","Surprise","Macon","Paterson","Lakeood","Hayward","Charleston","Hollywood","Sunnyvalue","Sunnydale","Bellevue","Joliet","Naperville","Escondido","Bridgeport","Savannah","Olathe","Mesquite","Pasadena","McAllen","Rockford","Gainesville","Syracuse","Pomona","Visalia","Thornton","Waco","Jackson","Lakewood","Fullerton","Torrance","Victorville","Vicotoryville","Midland","Orange","Miramar","Hampton","Warren","Stamford","Cedar Rapids","Elizabeth","Palm Bay","Dayton","New Haven","Coral Springs","Meridian","West Valley City","WVC","Lewisville","Sterling Heights","Kent","Carrollton","Santa Clara","Round Rock","Roundrock","Norman","Athens","Pearland","Clovis","Topeka","College Station","Simi Valley","Allentown","Wast Palm Beach","WPB","Thousand Oaks","Vallejo","Wilmington","Rochester","Concord","Lakeland","North Charleston","Lafayette","Arvada","Independence","Billings","Ann Arbor","Broken Arrow","Indiahoma","Berkeley","Antioch","High Point","West Point","Clearwater","League City","Electric City","Evansville","Waterbury","West Jordan","Las Cruces","Westminster","Lowell","Nampa","Pompano Beach","Carlsbad","Menifee","Provo","Elgin","Greeley","Beaumont","Lansing","Murrieta","Goodyear","Allen","Tuscaloosa","Everett","Pueblo","New Braunfels","South Fulton","Miami Gardens","Grsham","Temecula","Rio Rancho","Peoria","Tyler","Sparks","Ventura","Buckeye","Downey","Sugar Land","Sugarland","Costa Mesa","Black Mesa","Area 51", "Spokane Valley","Davie","Jurupa Valley","Centennial","Edison","Boulder","Dearborn","Edinburg","Hesperia","Suffolk","Yuma","Lynn","Quincy","Palm Coast","Vacaville","Florance","Annecy","Amsterdam","Mykonos","Valletta","Tallinn","Lisbon", "Strasbourg","Ghent","Dubrovinik","Reykjavik","Lucerne","Galway","Barsov","Aarhus","Vilnius","Split","Bordeaux","Marseille","Innsburk","Farnkfurt","Santorini","Brussels"];
+   
+   var metropolisnames = ["Agrabah","Alantica","Autobot","Autobot City","AutobotCity","Auto Bot City","Cloud City","CloudCity","Emerald City","EmeraldCity","Mega City","Megacity","Mega-City","Mega-City One","Mega-City 1","Megacity 1", "Megacity1","Metropolis","Metroville","Monstropolis","Ratropolis","Zion","Croix-des-Bouquets","Croix des Bouquets","Croix Bouquets","Giza","Manila","Mandaluyong","Male","Dhaka","Bnei Brak","Caloocan","Kolkata","Kathmandu","Makati","Levallois Perret","Guediawaye","Montouge","Bogota","Vincennes","Le Pre Saint Grevais","Pre Saint Grevias","Le Pre St Grevais","St Grevais","Saint Grevais","Pasig","Saint Mande","St Mande","St. Mande","St. Grevais","Le Pre St. Grevias","Pre St. Grevias","La Planta","Planta","Saint Josse ten Noode","St Josse ten Noode","St Josse", "St. Josse", "Saint Josse","Guttenberg","Malabon","Pasay","Neapolli","Damascus","San Juan","SanJuan","Navotas","Asmara","Mislata","Macau","Kaillithea","Nea Smyrni","NeaSymrni","Union City","Colombo","L'Hospitalet","L'Hositalet de Llobregat","Llobregat","Marikina","Saint Gilles","St. Gilles","Clichy","Kotsibuynske","Boulogne-Billancourt","Boulogne Billancourt","Boulonge","Billancourt","Giv'atayim","Givatayim","Las Pinas","LasPinas","Pinas","Koekelberg","Bandung","General Mariano Alverez","Mariano Alverez","GMA","Monaco","Les Lilas","LesLilas","Lilas","Hoboken","Pikine","Quezon","Quezon City","Quezoncity","Modi'in Illit","Modi'in", "Illit","Vanves","Asnieres sur Seine","AsnieresSurSiene","Ciudad","Cidad Nezahulcoyotl","Nezahlcoyotl","Silema","Howrah","Santa Coloma de Gramenet","Chittagong","Sint Jans Molenbeek","Keur Massar","KeurMassar","Charenton le Pont","La Garenne Colombes","Schaerbeek","Neuilly sur Seine","Issy les Moulineaux","Moulineaux","Jakarta","Bat Yam","Batyam", "Gentilly","Cario","Mandaue","Warabi","Bacoor","El'ad","Beitar Illit","Elad","Senglea","Cimahi","San Pedro","Lagos","Kiryat Motzkin","Gaza City","Geneva","Portici","Chongqing","Bengaluru","Ahmedabad","Dongguan","Miami","Atlanta","Washington","Washinton DC","DC","Jinan","Guadalajara","San Jose","SanJose","Detroit","Minneapolis","Antwerp","Athena","Greater Bristol","Dnipro","Gdansk", "Tricity","Gothenburg","Hauge","Hannover","Helsinki","Katowice","Karkow","Kyiv","Lille","Lisborn","Lodz","Lyon","Malaga Marbella","Marbella","Mannheim Ludwigshafen","Ludwigshafen","Mannheim","Milan","Naples","Nantes","Nice","Bremen","Nuremberg","Oslo","Ostrava","Poznan","Rhien Nord","Dusseldorf","Neuss","Rhein Sud","Cologne","Bonn","Riga","Rotterdam","Ruhr","Saarbrucken","Forbach","Saratov","Seville","South Yorkshire","Stuttgrat","Toulouse","Turin","Tyne and Wear","Wear","Voroenzh","West midlands","Zagreb","Zurich","Randstad","Flemish","Flemish Diamond"];
 
   <!--year intiator based on real year -->
 var yy = datething.getFullYear().toString().replace(/[^0-9]/gim,"");
@@ -1402,6 +1421,16 @@ dayis();
 function rest(){  //when a rest is made 
  waithuh = Number(waithuh) + 1;  //number of rests made 
 var resting = document.getElementById('newround').value;
+
+ if(resting === "" || isNaN(resting) === true || resting <= 0.1){ //no rest value over 0 seen or a neg value is seen
+  resting = Number(Math.floor(Math.random()*7)+3); //rest between 3 and 10 hrs 
+  
+  if(resting > 10.0){ //overshoot corrector
+   resting = Number(10);
+  }
+ }
+ 
+
  hrs = Number(hrs) + Number(Number(resting) + Number(0.7142857142));
  hours = Number(hours) + Number(Number(resting) + Number(0.7142857142)); //perpetual hour tracker
 
@@ -1728,28 +1757,28 @@ if(days <= 1 && seasons === 1 && timeindays > 1){ //marker day
  }
  
  if(hrs === 0){
- document.getElementById('dayout').innerHTML = "(Midnight) <span id='yearsout' onclick='document.getElementById(&#039;yrinp&#039;).style.display=&#039;inline-block&#039;;document.getElementById(&#039;inpconf&#039;).style.display=&#039;inline-block&#039;;' title='Click to Specify a Year'></span></span><input id='yrinp' style='display:none'  oninput='this.value=this.value.replace(/[^0-9]/gim,&#039;&#039;);' placeholder='Enter a Year' /><button type='button' id='inpconf' onclick='document.getElementById(&#039;yearsout&#039;).innerHTML=document.getElementById(&#039;yrinp&#039;).value;year=document.getElementById(&#039;yrinp&#039;).value;document.getElementById(&#039;yrinp&#039;).style.display=&#039;none&#039;;document.getElementById(&#039;inpconf&#039;).style.display=&#039;none&#039;;' style='display:none'><sup><sub><b>Done</b></sub></sup></button></br>" + monthout   + " [" + seasonout + "]";
+ document.getElementById('dayout').innerHTML = "(Midnight) <span id='yearsout' onclick='document.getElementById(&#039;yrinp&#039;).style.display=&#039;inline-block&#039;;document.getElementById(&#039;inpconf&#039;).style.display=&#039;inline-block&#039;;' title='Click to Specify a Year'></span>&nbsp;<span id='yrbadges'></span></span>&nbsp;<input id='yrinp' style='display:none'  oninput='this.value=this.value.replace(/[^0-9 \-]/gim,&#039;&#039;);' placeholder='Enter a Year' /><button type='button' id='inpconf' onclick='document.getElementById(&#039;yearsout&#039;).innerHTML=document.getElementById(&#039;yrinp&#039;).value;year=document.getElementById(&#039;yrinp&#039;).value;document.getElementById(&#039;yrinp&#039;).style.display=&#039;none&#039;;document.getElementById(&#039;inpconf&#039;).style.display=&#039;none&#039;;nums(&#039;yearsout&#039;);' style='display:none'><sup><sub><b>Done</b></sub></sup></button></br>" + monthout   + " [" + seasonout + "]";
  }
  if(hrs > 0 && hrs < 7 ){
- document.getElementById('dayout').innerHTML = Math.trunc(hrs)+" am (Morn) <span id='yearsout' onclick='document.getElementById(&#039;yrinp&#039;).style.display=&#039;inline-block&#039;;document.getElementById(&#039;inpconf&#039;).style.display=&#039;inline-block&#039;;' title='Click to Specify a Year'></span></span><input id='yrinp' style='display:none'  oninput='this.value=this.value.replace(/[^0-9]/gim,&#039;&#039;);' placeholder='Enter a Year' /><button type='button' id='inpconf' onclick='document.getElementById(&#039;yearsout&#039;).innerHTML=document.getElementById(&#039;yrinp&#039;).value;year=document.getElementById(&#039;yrinp&#039;).value;document.getElementById(&#039;yrinp&#039;).style.display=&#039;none&#039;;document.getElementById(&#039;inpconf&#039;).style.display=&#039;none&#039;;' style='display:none'><sup><sub><b>Done</b></sub></sup></button></br>"  + " " +  monthout  + " [" + seasonout + "]";
+ document.getElementById('dayout').innerHTML = Math.trunc(hrs)+" am (Morn) <span id='yearsout' onclick='document.getElementById(&#039;yrinp&#039;).style.display=&#039;inline-block&#039;;document.getElementById(&#039;inpconf&#039;).style.display=&#039;inline-block&#039;;' title='Click to Specify a Year'></span>&nbsp;<span id='yrbadges'></span></span>&nbsp;<input id='yrinp' style='display:none'  oninput='this.value=this.value.replace(/[^0-9 \-]/gim,&#039;&#039;);' placeholder='Enter a Year' /><button type='button' id='inpconf' onclick='document.getElementById(&#039;yearsout&#039;).innerHTML=document.getElementById(&#039;yrinp&#039;).value;year=document.getElementById(&#039;yrinp&#039;).value;document.getElementById(&#039;yrinp&#039;).style.display=&#039;none&#039;;document.getElementById(&#039;inpconf&#039;).style.display=&#039;none&#039;;nums(&#039;yearsout&#039;);' style='display:none'><sup><sub><b>Done</b></sub></sup></button></br>"  + " " +  monthout  + " [" + seasonout + "]";
  }
  else if(hrs > 6 && hrs < 12){
- document.getElementById('dayout').innerHTML = Math.trunc(hrs)+" am (Morning) <span id='yearsout' onclick='document.getElementById(&#039;yrinp&#039;).style.display=&#039;inline-block&#039;;document.getElementById(&#039;inpconf&#039;).style.display=&#039;inline-block&#039;;' title='Click to Specify a Year'></span></span><input id='yrinp' style='display:none'  oninput='this.value=this.value.replace(/[^0-9]/gim,&#039;&#039;);' placeholder='Enter a Year' /><button type='button' id='inpconf' onclick='document.getElementById(&#039;yearsout&#039;).innerHTML=document.getElementById(&#039;yrinp&#039;).value;year=document.getElementById(&#039;yrinp&#039;).value;document.getElementById(&#039;yrinp&#039;).style.display=&#039;none&#039;;document.getElementById(&#039;inpconf&#039;).style.display=&#039;none&#039;;' style='display:none'><sup><sub><b>Done</b></sub></sup></button></br>"  + " " +  monthout  + " [" + seasonout + "]";
+ document.getElementById('dayout').innerHTML = Math.trunc(hrs)+" am (Morning) <span id='yearsout' onclick='document.getElementById(&#039;yrinp&#039;).style.display=&#039;inline-block&#039;;document.getElementById(&#039;inpconf&#039;).style.display=&#039;inline-block&#039;;' title='Click to Specify a Year'></span>&nbsp;<span id='yrbadges'></span></span>&nbsp;<input id='yrinp' style='display:none'  oninput='this.value=this.value.replace(/[^0-9 \-]/gim,&#039;&#039;);' placeholder='Enter a Year' /><button type='button' id='inpconf' onclick='document.getElementById(&#039;yearsout&#039;).innerHTML=document.getElementById(&#039;yrinp&#039;).value;year=document.getElementById(&#039;yrinp&#039;).value;document.getElementById(&#039;yrinp&#039;).style.display=&#039;none&#039;;document.getElementById(&#039;inpconf&#039;).style.display=&#039;none&#039;;nums(&#039;yearsout&#039;);' style='display:none'><sup><sub><b>Done</b></sub></sup></button></br>"  + " " +  monthout  + " [" + seasonout + "]";
  }
  else if(hrs === 12){
- document.getElementById('dayout').innerHTML = "(Noon) <span id='yearsout' onclick='document.getElementById(&#039;yrinp&#039;).style.display=&#039;inline-block&#039;;document.getElementById(&#039;inpconf&#039;).style.display=&#039;inline-block&#039;;' title='Click to Specify a Year'></span></span><input id='yrinp' style='display:none'  oninput='this.value=this.value.replace(/[^0-9]/gim,&#039;&#039;);' placeholder='Enter a Year' /><button type='button' id='inpconf' onclick='document.getElementById(&#039;yearsout&#039;).innerHTML=document.getElementById(&#039;yrinp&#039;).value;year=document.getElementById(&#039;yrinp&#039;).value;document.getElementById(&#039;yrinp&#039;).style.display=&#039;none&#039;;document.getElementById(&#039;inpconf&#039;).style.display=&#039;none&#039;;' style='display:none'><sup><sub><b>Done</b></sub></sup></button></br>" + monthout  + " [" + seasonout + "]";
+ document.getElementById('dayout').innerHTML = "(Noon) <span id='yearsout' onclick='document.getElementById(&#039;yrinp&#039;).style.display=&#039;inline-block&#039;;document.getElementById(&#039;inpconf&#039;).style.display=&#039;inline-block&#039;;' title='Click to Specify a Year'></span>&nbsp;<span id='yrbadges'></span></span>&nbsp;<input id='yrinp' style='display:none'  oninput='this.value=this.value.replace(/[^0-9 \-]/gim,&#039;&#039;);' placeholder='Enter a Year' /><button type='button' id='inpconf' onclick='document.getElementById(&#039;yearsout&#039;).innerHTML=document.getElementById(&#039;yrinp&#039;).value;year=document.getElementById(&#039;yrinp&#039;).value;document.getElementById(&#039;yrinp&#039;).style.display=&#039;none&#039;;document.getElementById(&#039;inpconf&#039;).style.display=&#039;none&#039;;nums(&#039;yearsout&#039;);' style='display:none'><sup><sub><b>Done</b></sub></sup></button></br>" + monthout  + " [" + seasonout + "]";
  }
  else if(hrs > 12 && hrs < 18){
- document.getElementById('dayout').innerHTML = Math.trunc(hrs-12)+" pm (Afternoon) <span id='yearsout' onclick='document.getElementById(&#039;yrinp&#039;).style.display=&#039;inline-block&#039;;document.getElementById(&#039;inpconf&#039;).style.display=&#039;inline-block&#039;;' title='Click to Specify a Year'></span></span><input id='yrinp' style='display:none'  oninput='this.value=this.value.replace(/[^0-9]/gim,&#039;&#039;);' placeholder='Enter a Year' /><button type='button' id='inpconf' onclick='document.getElementById(&#039;yearsout&#039;).innerHTML=document.getElementById(&#039;yrinp&#039;).value;year=document.getElementById(&#039;yrinp&#039;).value;document.getElementById(&#039;yrinp&#039;).style.display=&#039;none&#039;;document.getElementById(&#039;inpconf&#039;).style.display=&#039;none&#039;;' style='display:none'><sup><sub><b>Done</b></sub></sup></button></br>" + monthout + " [" + seasonout + "]";
+ document.getElementById('dayout').innerHTML = Math.trunc(hrs-12)+" pm (Afternoon) <span id='yearsout' onclick='document.getElementById(&#039;yrinp&#039;).style.display=&#039;inline-block&#039;;document.getElementById(&#039;inpconf&#039;).style.display=&#039;inline-block&#039;;' title='Click to Specify a Year'></span>&nbsp;<span id='yrbadges'></span></span>&nbsp;<input id='yrinp' style='display:none'  oninput='this.value=this.value.replace(/[^0-9 \-]/gim,&#039;&#039;);' placeholder='Enter a Year' /><button type='button' id='inpconf' onclick='document.getElementById(&#039;yearsout&#039;).innerHTML=document.getElementById(&#039;yrinp&#039;).value;year=document.getElementById(&#039;yrinp&#039;).value;document.getElementById(&#039;yrinp&#039;).style.display=&#039;none&#039;;document.getElementById(&#039;inpconf&#039;).style.display=&#039;none&#039;;nums(&#039;yearsout&#039;);' style='display:none'><sup><sub><b>Done</b></sub></sup></button></br>" + monthout + " [" + seasonout + "]";
  }
  else if(hrs > 17 && hrs < 20){
- document.getElementById('dayout').innerHTML = Math.trunc(hrs-12)+" pm (Evening) <span id='yearsout' onclick='document.getElementById(&#039;yrinp&#039;).style.display=&#039;inline-block&#039;;document.getElementById(&#039;inpconf&#039;).style.display=&#039;inline-block&#039;;' title='Click to Specify a Year'></span></span><input id='yrinp' style='display:none'  oninput='this.value=this.value.replace(/[^0-9]/gim,&#039;&#039;);' placeholder='Enter a Year' /><button type='button' id='inpconf' onclick='document.getElementById(&#039;yearsout&#039;).innerHTML=document.getElementById(&#039;yrinp&#039;).value;year=document.getElementById(&#039;yrinp&#039;).value;document.getElementById(&#039;yrinp&#039;).style.display=&#039;none&#039;;document.getElementById(&#039;inpconf&#039;).style.display=&#039;none&#039;;' style='display:none'><sup><sub><b>Done</b></sub></sup></button></br>" + monthout + " [" + seasonout + "]";
+ document.getElementById('dayout').innerHTML = Math.trunc(hrs-12)+" pm (Evening) <span id='yearsout' onclick='document.getElementById(&#039;yrinp&#039;).style.display=&#039;inline-block&#039;;document.getElementById(&#039;inpconf&#039;).style.display=&#039;inline-block&#039;;' title='Click to Specify a Year'></span>&nbsp;<span id='yrbadges'></span></span>&nbsp;<input id='yrinp' style='display:none'  oninput='this.value=this.value.replace(/[^0-9 \-]/gim,&#039;&#039;);' placeholder='Enter a Year' /><button type='button' id='inpconf' onclick='document.getElementById(&#039;yearsout&#039;).innerHTML=document.getElementById(&#039;yrinp&#039;).value;year=document.getElementById(&#039;yrinp&#039;).value;document.getElementById(&#039;yrinp&#039;).style.display=&#039;none&#039;;document.getElementById(&#039;inpconf&#039;).style.display=&#039;none&#039;;nums(&#039;yearsout&#039;);' style='display:none'><sup><sub><b>Done</b></sub></sup></button></br>" + monthout + " [" + seasonout + "]";
  }
  else if(hrs > 19 && hrs < 24){
- document.getElementById('dayout').innerHTML = Math.trunc(hrs-12)+" pm (Night) <span id='yearsout' onclick='document.getElementById(&#039;yrinp&#039;).style.display=&#039;inline-block&#039;;document.getElementById(&#039;inpconf&#039;).style.display=&#039;inline-block&#039;;' title='Click to Specify a Year'></span></span><input id='yrinp' style='display:none'  oninput='this.value=this.value.replace(/[^0-9]/gim,&#039;&#039;);' placeholder='Enter a Year' /><button type='button' id='inpconf' onclick='document.getElementById(&#039;yearsout&#039;).innerHTML=document.getElementById(&#039;yrinp&#039;).value;year=document.getElementById(&#039;yrinp&#039;).value;document.getElementById(&#039;yrinp&#039;).style.display=&#039;none&#039;;document.getElementById(&#039;inpconf&#039;).style.display=&#039;none&#039;;' style='display:none'><sup><sub><b>Done</b></sub></sup></button></br>" + monthout + " [" + seasonout + "]";
+ document.getElementById('dayout').innerHTML = Math.trunc(hrs-12)+" pm (Night) <span id='yearsout' onclick='document.getElementById(&#039;yrinp&#039;).style.display=&#039;inline-block&#039;;document.getElementById(&#039;inpconf&#039;).style.display=&#039;inline-block&#039;;' title='Click to Specify a Year'></span>&nbsp;<span id='yrbadges'></span></span>&nbsp;<input id='yrinp' style='display:none'  oninput='this.value=this.value.replace(/[^0-9 \-]/gim,&#039;&#039;);' placeholder='Enter a Year' /><button type='button' id='inpconf' onclick='document.getElementById(&#039;yearsout&#039;).innerHTML=document.getElementById(&#039;yrinp&#039;).value;year=document.getElementById(&#039;yrinp&#039;).value;document.getElementById(&#039;yrinp&#039;).style.display=&#039;none&#039;;document.getElementById(&#039;inpconf&#039;).style.display=&#039;none&#039;;nums(&#039;yearsout&#039;);' style='display:none'><sup><sub><b>Done</b></sub></sup></button></br>" + monthout + " [" + seasonout + "]";
  }
  else{ //if(hrs >= 25){
- document.getElementById('dayout').innerHTML = "(Midnight) <span id='yearsout' onclick='document.getElementById(&#039;yrinp&#039;).style.display=&#039;inline-block&#039;;document.getElementById(&#039;inpconf&#039;).style.display=&#039;inline-block&#039;;' title='Click to Specify a Year'></span><input id='yrinp' style='display:none'  oninput='this.value=this.value.replace(/[^0-9]/gim,&#039;&#039;);' placeholder='Enter a Year' /><button type='button' id='inpconf' onclick='document.getElementById(&#039;yearsout&#039;).innerHTML=document.getElementById(&#039;yrinp&#039;).value;year=document.getElementById(&#039;yrinp&#039;).value;document.getElementById(&#039;yrinp&#039;).style.display=&#039;none&#039;;document.getElementById(&#039;inpconf&#039;).style.display=&#039;none&#039;;' style='display:none'><sup><sub><b>Done</b></sub></sup></button></br>" + monthout + " " + seasonout;
+ document.getElementById('dayout').innerHTML = "(Midnight) <span id='yearsout' onclick='document.getElementById(&#039;yrinp&#039;).style.display=&#039;inline-block&#039;;document.getElementById(&#039;inpconf&#039;).style.display=&#039;inline-block&#039;;' title='Click to Specify a Year'></span>&nbsp;<span id='yrbadges'></span></span>&nbsp;<input id='yrinp' style='display:none'  oninput='this.value=this.value.replace(/[^0-9 \-]/gim,&#039;&#039;);' placeholder='Enter a Year' /><button type='button' id='inpconf' onclick='document.getElementById(&#039;yearsout&#039;).innerHTML=document.getElementById(&#039;yrinp&#039;).value;year=document.getElementById(&#039;yrinp&#039;).value;document.getElementById(&#039;yrinp&#039;).style.display=&#039;none&#039;;document.getElementById(&#039;inpconf&#039;).style.display=&#039;none&#039;;nums(&#039;yearsout&#039;);' style='display:none'><sup><sub><b>Done</b></sub></sup></button></br>" + monthout + " " + seasonout;
  hrs = 1;
  
  }
@@ -1762,7 +1791,7 @@ if(days <= 1 && seasons === 1 && timeindays > 1){ //marker day
  
  }
  
- function nums(){ //this is called during backfill1()
+ function nums(yrch){ //this is called during backfill1()
  lvl = document.getElementById('level').innerHTML;
  inspired = document.getElementById('inspiration').innerHTML;
  exp = document.getElementById('experience').innerHTML;
@@ -1771,6 +1800,35 @@ if(days <= 1 && seasons === 1 && timeindays > 1){ //marker day
  spd = document.getElementById('speed').innerHTML;
  mve = document.getElementById('move').innerHTML;
  
+ if(yrch.toString().search(/[^0]/) >= 0){
+  var negcheck = document.getElementById(yrch).innerHTML; 
+   
+   if(Number(negcheck) >= 3031){ 
+    document.getElementById('yrbadges').innerHTML = "<sup id='Her Era' title='Empress Era' style='color:rgb(255,221,67,0.79);'><sub><sub><b><i>HER</i></b></sub></sub></sup>";
+   }
+   else if(negcheck.toString().search(/\-/g) >= 0 && Number(negcheck.toString().replace(/\-/g, '')) <= 368){
+    document.getElementById('yrbadges').innerHTML = "<sup id='bcera' title='B.C. Era' style='color:rgb(140,120,83,0.6);'><sub><sub><b><i>BCE</i></b></sub></sub></sup>";
+   }
+   else if(negcheck.toString().search(/\-/g) >= 0 && Number(negcheck.toString().replace(/\-/g, '')) >= 369 && Number(negcheck.toString().replace(/\-/g, '')) <= 998.99){
+    document.getElementById('yrbadges').innerHTML = "<sup id='aeera' title='A.E. Era' style='color:rgb(41,28,84,0.5);'><sub><sub><b><i>MORN</i></b></sub></sub></sup>";
+   }
+   else if(negcheck.toString().search(/\-/g) >= 0 && Number(negcheck.toString().replace(/\-/g, '')) >= 999 && Number(negcheck.toString().replace(/\-/g, '')) <= 99999999999998.99){
+    document.getElementById('yrbadges').innerHTML = "<sup id='Her Era' title='Empress Era' style='color:rgb(204,186,120,0.7);'><sub><sub><b><i>HODL</i></b></sub></sub></sup>";
+   }
+   else if(negcheck.toString().search(/\-/g) >= 0 && Number(negcheck.toString().replace(/\-/g, '')) >= 99999999999999 && Number(negcheck.toString().replace(/\-/g, '')) <= 99999999999999998.99){
+    document.getElementById('yrbadges').innerHTML = "<sup id='before eras' title='Shackles Still Unknown' style='color:rgb(129,132,199,0.8);'><sub><sub><b><i>SSU</i></b></sub></sub></sup>";
+   }
+   else if(negcheck.toString().search(/\-/g) >= 0 && Number(negcheck.toString().replace(/\-/g, '')) >= 99999999999999999){
+    document.getElementById('yrbadges').innerHTML = "<sup id='before eras' title='Before Time was Noticed' style='color:rgb(244,30,81,0.9);'><sub><sub><b><i>Before&nbsp;Time</i></b></sub></sub></sup>";
+   }
+   else if(negcheck.toString().search(/\-/g) >= 0 && Number(negcheck.toString().replace(/\-/g, '')) >= 99999999999999999){
+    document.getElementById('yrbadges').innerHTML = "<sup id='before eras' title='Before Time was Noticed' style='color:rgb(232,233,245,1);'><sub><sub><b><i>Before&nbsp;Time</i></b></sub></sub></sup>";
+   }
+   else {
+    document.getElementById('yrbadges').innerHTML = "";
+   }
+ document.getElementById(yrch).innerHTML = Number(negcheck.toString().replace(/\-/g, ''));
+ }
  
  if(document.getElementById('fhold6').querySelectorAll('span#strength').length >= 1){
   if(document.getElementById('strength').innerHTML.toString().search(/\d+/gm) >= 0){
@@ -2034,14 +2092,6 @@ if(nameupdate > 0 || classupdate > 0 || raceupdate > 0 || heightupdate > 0 || we
   
   
   var endis = '';
-   
-   var villagenames = ["Kochan","Ablanista","Koprivlen","Laki","Nova Lovcha","nova Leski","Paril","Petrelik","Babyak","Floating Villages","Bibury","Ait-Ben-Haddou","Hallstatt","Juzcar","Eze","Inle Lake","Lamayuru","Isla Del Sol", "Del Sol", "Larung Gar", "Larung", "Marsaxlokk", "Oia", "Navala", "Navala Village", "Floating", "Floating Village", "Enkeri", "Enkeri Village", "Nubian", "Bubia", "Nubia", "Nubian Village", "Nuuk", "Pariangan", "Palangan", "Punji", "Pygmy", "Batwa", "Pygmy Batwa", "Pygmy Village", "Batwa Village","Shirakawa","Xidi","Swat Valley","Wenen","Jukkasjarvi", "Kash Goz","Kash","Goz","Giethoorn","Gasadalur","Freundenberg","Zell am See","Wagrain","Sauris-Zahre","Isola del Giglio","Castelo Novo", "Castelo", "Novo", "Rasinari", "Bohinj", "Rupit", "Murten", "Andermatt", "Birgi", "Thai Hai","Guadalupe","Old Town","Choke Mountains Ecovillage","Aguarico","Angochagua","Mestia","Kfar Kama","Umm Qais","Creel","El Fuerte","Ksar Elkhorbat","Moulay Bouzerktoune","Lamas","Raqchi","Pyeongsa-ri","Pyeongsa"];
-   
-   var townnames = ["Smalltown","Albarracin","Ban Rak","Ban Rak Thai", "Rak Thai","Banos","Bar Harbor","Biei","Bled","Bocas del Toro","Bocas","del Toro","Carmel-by-the-Sea","Colonia del Sacramento", "del Sacramento", "Colonia", "Castle Combe", "CastleCombe", "Combe", "Esperance","Gokayama","Gordes","Goreme","Guatape","Hatta","Ilulissat","Iruya","Itchan Kala","Kaikoura","Kalk Bay","Kralendijk","Lamu","Lauterbrunnen","Luang Prabang", "Luang", "Prabang","LuangPrabang","Luderitz","Lunenburg","Mandawa","Moulay","Idriss","Moulay Idriss Zerhoun","Zerhoun","Navala","Niagra-on-the-Lake","Paraty","Penglipuran","Port Fairy","Praiano","Raquira","Rothenburg ob der Tauber","ob der Tauber","Tauber","Sai Kung","Sapa","Sayulita","Sedona","Sidi Bou Said", "Sidi", "Bou","Bou Said","Sitka","Siwa","St Augustine", "Augustine", "St. Augustine", "Saint Augustine","Tepoztlan","Vinales","Zhouzhuang","Wallace","Marfa","Jim Thorpe","Bisbee","Eureka Springs","Yellow Springs","Helen","Whitefish","Taos","Mount Dora","MountDora","Astoria","Lanesboro","Hillsboro","Galena","New Harmony","Salina","Lindsburg","Joseph","Lititz","Beaufort","Port Townsend","Townsend","Ferndale","Breaux Bridge","Eclectic","Delight","Why","Unalaska","Rough and Randy","Rough & Randy","Mystic","Superior","Slaughter Beach","Enigma","Sandwich","Electric City","Cal-Nev-Ari","Tightsqueeze","Tuxedo","Loveladies","Truth or Consequences","What Cheer","Bald Head","Halfway","Hometown, West Virigina","Hometown,West Virigina","Satan&#039;s Kingdom","Satan's Kingdom","Satans Kingdom","North Star","Hot Coffee","Monkey&#039;s Eyebrow","Monkey's Eyebrow","Monkeys Eyebrow","Monkies Eyebrow","Intercourse","Waterproof","Tiki Island","Valentine","Sweet Lips","Elmo","Wineglass","Miner&#039;s Delight","Miner's Delight","Miners Delight","Normal","Santa Claus","Defiance","Dead Women Crossing","Sublimity","Yeehaw Junction","Bread Loaf","BreadLoaf","Kismet","Ketchuptown","Love Valley","Luck","Humansville","Porchupine","Killdeer","Volcano Village","Good Grief","Woonsocket","Upton Snodsbury","Pucklechurch","Barton in the Beans","Curry Mallet","Droop","Throop","Plumpton","Lickfold","Warninglid","Nomansland","Uploders","Matching Tye","MatchingTye","Nether Wallop","NetherWallop","Poling","Patching","Climping","Didling","Crudwell","Puddletown","Tolpuddle","Affpuddle","Braintpuddle","Westward Ho!","WestwardHo!","Westward Ho","WestwardHo","Upper Bucklebury","UpperBucklebury","Mudford Sock","MudfordSock","New Invention","NewInvention","picklescott","Marsh Gibbon","MarshGibbon","Blubberhouses","Mamble","Tedstone Wafre","TedstoneWafre","Hose","Hoby","Shoby","Thumpton","Bitchfield","Over Peover","OverPeover","Wetwood","Wetwang","Papplewick","Bishop&#039;s Ichington","Bishop's Ichington","Bishops Ichington","Bishop&#039;sIchington","Bishop'sIchington","BishopsIchington","Queen Camel","QueenCamel","Great Snoring","GreatSnoring","Cement","Laramie","Larrimah","Bidgeegud","Derby","Lawton","Alesund","Bruges"];
-  
-   var citynames = ["Abidjan","Accra","Adana","Addis Ababa","Adelaide","Agre","Ahmadabad","Aleppo","Aleppohalab","Aleepo Halab","Alexandria","Algiers","Allahabad","Almaty","amman","Amristar","Ankara","Anshan","Baghdad","Baku","Bandung","Bangalore","Bangkok","Baotou","Barcelona","Barquisimeto","Barranquilla","Basrah","Beijing","Beirut","Belem","Belgrade","Belo Horizonte","BeloHorizonte","Benghazi","Benin","Berlin","Bhopal","Birmingham","Bogo Ta","Bogota","BogoTa","Bogo","Brasilia","Brazzaville","Brisbane","Bucharest","Budapest","Buenos Aires","Bursa","Busan","Cairo","Cali","Campinas","Capetown","Caracas","Casablanca","Changchun","Changsha","Changzhou","Chelyabinsk","Chengdu","Chennai","Chicago","Chittagong","Chongquin","Ciudad Juarez","CiudadJuarez","Conakry","Copenhagen","Cordoba","Curitiba","Daegu","Daejon","Dakar","Dalian","Dallas","Damascus","Dar es Salaam","DarEsSalaam","DaresSalaam","Dar Es Salaam","Datong","Delhi","Dhaka","Dnipropetrovsk","Donetsk","Douala","Durban","Ecatepec","Ekaterinburg","Faislabad","Fortaleza","Foshan","Freetown","Fukoka","FreeTown","Fuzhou","Giza","Goiania","Gudalajara","Guangzhou","Guarulhos","Guatamala City","Guayaquil","Guiyang","Gujranwala","Gwangju","Wala Wala Washinton","WalaWala","Wala Wala","WalaWalaWashinton","Gwangju","Haiphong","Hamburg","Handan","Hangzhou","Hanoi","Haora","Harare","Harbin","Havana","Hefei","Hiroshima","Ho Chi Minh City","HoChiMinh","HoChiMinhCity","Ho Chi","Chi Minh","Ho Chi Minh","Minh City","HCMC","Hong Kong","Houston","Hyderabad","Ibadan","Incheon","Indore","Irbil","Isfahen","Istanbul","Izmir","Jaipur","Jakarta","Jeddah","Jilin","Jilan","Jodphur","Johannesburg","Kabul","Kaduna","Kano","Kanpur","Kaohsiung","Karachi","Kawasaki","Kazan","Kharkiv","Khartoum","Khulna","Kiev","Kinshasa","Kitakyushu","Kobe","Kolkata","Kowloon","Kuala Lumpur","KualaLumpur","Kunming","Kyoto","La Paz","LaPaz","Lapaz","Lagos","Lahore","Lanzhou","Lean","Lima","London","Los Angeles","Luanda","Lubumbashi","Lucknow","Ludhiana","Luoyang","Lusaka","Madrid","Maiduguri","Makassar","Managua","Manaus","Manila","Maputo","Maracaibo","Mashhad","Mecca","Medellin","Medina","Meerut","Melbourne","Mexicali","Mexico City","Milsan","Minsk","Mogadishu","Monterrey","Montevideo","Montreal","Moscow","Mosul","Multan","Mumbai","Mumbai Bombay","MumbaiBombay","Bombay", "Munich","Nagoya","Nagpur","Nairobi","Nanchang","Nanjing","Nanning","Napoli","Nashik","New York City","New York", "NYC", "Big Apple", "NewYork", "NewYorkCity","NYCity","Nesahualcoyotl","Nizhny Novgorod","NizhnyNovgorod","Novosibisrk","Odessa","Omdurman","Omsk","Osaka","Palembang","Paris","Patna","Perm","Perth","Peshawar","Philadelphia","Phily","Philly","Phnom Penh","PhnomPenh","Phnompenh","Phnom","Penh", "Phoneix","Phoenix","Pimpri Chinchwad","PimpriChinchwad","Pimpri","Chinchwad","Port Harcourt","Harcourt","PortHarcourt","Port-Au-Prince","Port Au Prince","Port Prince Gold","Prince Gold Port","Port Gold Prince","PortAuPrince","AuPrince","Au Prince","Porto Alegre","Portoalegre","PortoAlegre","Prague","Puebla","Pune","Pyongyang","Quingdao","Qiqihar","Quito","Rabat","Rajkot","Ranchi","Rawalpindi","Recife","Rawalpindi","Rio de Janerio","RiodeJanerio","RioDeJanerio","de Janerio","Rio","Janerio","Riyadah","Rome","Rosario","Rostov on Don","Rostov","on Don","Don Rostov","Salvador","Samara","San Antonio","Antonio","San Diego","DanDiego","Sanaa","Santa Cruz","SantaCruz","San Tiago","Santiago","Tiago","Cruz","Santo Domingo","Domingo","SantoDomingo","Sao Paulo","SaoPaulo","Paulo","Sapporo","Semarang","Sendai","Seongnam","Seoul","Shanghai","Shenyang","Shenzhen","Shiraz","Shiziahuang","Shubra El Khemia","Shubra","El Khemia","Khemia","ShubraElKhemia","ShubraKhemia","Shubra Khemia","Singapore","Sofia","Soweto","St Petersburg", "St. Petersburg", "StPetersburg","Saint Petersburg","SaintPetersburg","Stockholm","Surabaya","Surat","Suzhou","Sydney","Tabriz","Taichung","Taipei","Tai Pei","Taiyuan","Tangshan","Ta Shkent","TaShkent","Tashkent","Tbilisi","Tegucigalpa","Tehran","Tianjin","Tijana","Tokyo","Marijuana","Toronto","Tripoli","Tri Poli","TriPoly","Tripoly","Tshwane","Tshwana Pretoria","TshwanaPretoria","Pretoria","Petoria","Peteoria","Tunis","Ufa","Ulsan","Urumqi","Vadodara","Valencia","Varanasi","Vienna","Viena","Volgograd","Vol Gograd","Warsaw","Wuhan","Wuxi","Xian","Xuzhou","Yangon","Yaounde","Yerevan","Yokohama","Yoko Hama","Yoko","Hama","Zapopan","Za Po Pan","Za Popan","Zhengzhou","Zheng Zhou","Sheng Zhou","Sheng Sou","Zibo","Bangs","Soda Springs","SodaSprings","Springs","Bluff","Placentia","Fries","Dinosaur","American Fork","Concrete","Briny Breezes","Whynot","Hurt","Ninety Six","NinetySix","96","Cut and Shoot","Cut & Shoot","CutNShoot","CutShoot","CutandShoot","Cut&Shoot","Kill Devil Hills","KillDevilHills","Devil Hills","DevilHills","Kill Devil","KillDevil","Canadian","Superior","Atomic City","Atomiccity","Atomicity","Okay","Nowhere","Hell","Coward","Three Way","ThreeWay","Threeway","Reno","Las Vegas","LasVegas","Vegas","Climax","OKC","Oklahoma City","Winnebago","Uncertain","Last Chance","LastChance","Lastchance","Speed","Oblong","Cool","Colon","Pink","BlueGrass","Blue Grass","Bluegrass","Rainbow City","RainbowCity","Rainbow","China","City","Hooker","Popejoy","London","Edinburgh","Manchester","Music City","MusicCity","Musiccity","Musicity","Memphis","Clarcksville","Nashville","Birgingham","Glasgow","Liverpool","Bristol","Oxford","Cambridge","Cardiff","Brighton","Newcastle-upon-Tyne","Newcastle","NewcastleuponTyne","NewcastleTyne","Newcastle Tyne","Tyne","Leeds","Yorkshire","York","Inverness","Culloden","Bath","Nottingham","Aberdeen","Chester","Ambrose","Amity Island","AmityIsland","Alphaville","Asteriod City","AsteroidCity","Belleville","Bedford Falls","BedfordFalls","Brahms","Brigadoon","Brightburn","Bismuth","Bristo Camino","Bristo","BristroCamino","Catsville","Chesterford","Cloverdale","Creek Falls","CreekFalls","Crystal Lake","CrystalLake","Damon","Dammuz","Deer Meadow","DeerMedow","Dillford","Dogville","Duloc","Egging","Flagstone","Fly Creek","FlyCreek","Greenbow","Greenhills","Flinthills","Green Hills","Flint Hills","Flinthill","Groom Lake City","Groom Lake","Lake City","Grouchland","Haddonfield","Harper","Hilltop","Hill Valley","HillValley","Hope","Inferno","Hope Town","Hopetown","Ivory Creek","IvoryCreek","Jonathanland","Karatas","Kartas","Khansaar","Hotha","Kotha","Liiian","Loganville","Madison","Mantua","Middleton","Midlothia","Middlesex","Millbrook","Mill Valley","Millvalley","Miles County","MilesCounty","Moesko Island","Moesko","MoeskoIsland","Mos Eisley","MosEisley","Eisley","Mos Espa","Mosespa","Espa","Mt Abraham","Mt. Abraham","MtAbraham","Mount Abraham","Newton Haven","Newton","NewtonHaven","Haven","Nickeltown","Nickles","Nilbog","Oak Ridge","OakRidge","Ogden Marsh","Ogden","OgdenMarsh","Old Stump","OlStump","Ol Stump","OldStump","Peacock","Perfection","Pleasantville","Pokyo","Portoroso","Pozharnov","Pribrezhny","Racoon City","RacoonCity","Radiator Springs","RadiatorSprings","Redmeption","Regimenton","Red Hill","Redhill","Rose Rock","Rosehill","Rockbridge","Rock Ridge","Rockridge","Rock Vegas","San Angeles","San Miguel Arcangel", "San Miguel","Miguel Archangel","SanMiguel Arcangel","SanmigelArcangel","Sanford","Sandford","Santa Cecilia","Cecilia","Seabroook","Sexville","Silent Hill","Silenthill","Shermer","Silver Creek","Silvercreek","Springwood","Suburbicon","Sweetwater","Sylvane","Tenderville","Theed","Tipoca City","Tipoca","Twin Peaks","TwinPeaks","Two-Bit","2bit","Verona","Victory","Waaji","Waaji City","WaajiCity","Wardenclyffe","Warden Clyffe","Warren Valley","WarrenValley","Woodsboro","Woop Woop","WoopWoop","Seattle","San Francisco","Francisco","Roma","Toronto","Boston","Pittsburg","Whichita Falls","Whichita","Cleveland","Denver","Jacksonville","Fort Worth","Charlotte","Columbus","Indianapolis","El Paso","ElPaso","Portland","Louisville","Baltimore","Milwaukee","Albuquerque","Tucson","Fresno","Sacramento","Mesa","Alanta","Kansas City","KansasCity","Colorado Springs","Omaha","Raleigh","Virginia Beach","Long Beach","Oakland","Bakerfield","Tulsa","Tampa","Tampa Bay","Arlington","Wichita","Wichita Falls","Aurora","New Orleans","Honolulu","Anaheim","Henderson","Orlando","Lexington","Stockton","Riverside","Corpus Christi","Irvine","Cincinnati","Santa Ana","Newark","Saint Paul","St.Paul","St Paul","St. Paul","StPaul","Durham","Lincoln","Jersey City","Plano","Anchorage","North Las Vegas","NLV","St Louis","St. Louis","New Vagas","Night City","NC","Nightcity","Madison","Chandler","Gilbert","Buffalo","Chula Vista","Fort Wayne","Lubbock","Toledo","Laredo","Irving","Chesapeake","Glendale","Winston Salem","Winston","Salem","Scottsdale","Graland","Boise","Norfolk","Spokane","Richmond","Fremont","Huntsville","Frisco","Cape Coral","Santa Clarita","San Bernardino","Tacoma","Hialeah","Baton Rouge","Modesto","Fontana","McKinney","Moreno Valley","Des Moines","Fayetteville","Salt Lake City","Salt Lake","Yonkers","Worcester","Sioux Falls","Little Rock","Amarillo","Tallahassee","Grand Prairie","Augusta","Peoria","Oxnard","Knoxville","Overland Park","Overland","Vancouver","Grand Rapids","Montgomery","Huntington Beach","Providence","Brownsville","Tempe","Akron","Chattanooga","Fort Lauderdale","Newport","Newport News","Mobile","Ontario","Cary","Elk Grove","Shreveport","Eugene","Santa Rosa","Rancho Cucamonga","Cucamonga","Pembroke Pines","For Collins", "Fort Brag","Fort Sill","Springfield","Oceanside","Garden Grove","Murfreesboro","Palmdale","Corona","Killeen","Salinas","Roseville","Denton","Surprise","Macon","Paterson","Lakeood","Hayward","Charleston","Hollywood","Sunnyvalue","Sunnydale","Bellevue","Joliet","Naperville","Escondido","Bridgeport","Savannah","Olathe","Mesquite","Pasadena","McAllen","Rockford","Gainesville","Syracuse","Pomona","Visalia","Thornton","Waco","Jackson","Lakewood","Fullerton","Torrance","Victorville","Vicotoryville","Midland","Orange","Miramar","Hampton","Warren","Stamford","Cedar Rapids","Elizabeth","Palm Bay","Dayton","New Haven","Coral Springs","Meridian","West Valley City","WVC","Lewisville","Sterling Heights","Kent","Carrollton","Santa Clara","Round Rock","Roundrock","Norman","Athens","Pearland","Clovis","Topeka","College Station","Simi Valley","Allentown","Wast Palm Beach","WPB","Thousand Oaks","Vallejo","Wilmington","Rochester","Concord","Lakeland","North Charleston","Lafayette","Arvada","Independence","Billings","Ann Arbor","Broken Arrow","Indiahoma","Berkeley","Antioch","High Point","West Point","Clearwater","League City","Electric City","Evansville","Waterbury","West Jordan","Las Cruces","Westminster","Lowell","Nampa","Pompano Beach","Carlsbad","Menifee","Provo","Elgin","Greeley","Beaumont","Lansing","Murrieta","Goodyear","Allen","Tuscaloosa","Everett","Pueblo","New Braunfels","South Fulton","Miami Gardens","Grsham","Temecula","Rio Rancho","Peoria","Tyler","Sparks","Ventura","Buckeye","Downey","Sugar Land","Sugarland","Costa Mesa","Black Mesa","Area 51", "Spokane Valley","Davie","Jurupa Valley","Centennial","Edison","Boulder","Dearborn","Edinburg","Hesperia","Suffolk","Yuma","Lynn","Quincy","Palm Coast","Vacaville","Florance","Annecy","Amsterdam","Mykonos","Valletta","Tallinn","Lisbon", "Strasbourg","Ghent","Dubrovinik","Reykjavik","Lucerne","Galway","Barsov","Aarhus","Vilnius","Split","Bordeaux","Marseille","Innsburk","Farnkfurt","Santorini","Brussels"];
-   
-   var metropolisnames = ["Agrabah","Alantica","Autobot","Autobot City","AutobotCity","Auto Bot City","Cloud City","CloudCity","Emerald City","EmeraldCity","Mega City","Megacity","Mega-City","Mega-City One","Mega-City 1","Megacity 1", "Megacity1","Metropolis","Metroville","Monstropolis","Ratropolis","Zion","Croix-des-Bouquets","Croix des Bouquets","Croix Bouquets","Giza","Manila","Mandaluyong","Male","Dhaka","Bnei Brak","Caloocan","Kolkata","Kathmandu","Makati","Levallois Perret","Guediawaye","Montouge","Bogota","Vincennes","Le Pre Saint Grevais","Pre Saint Grevias","Le Pre St Grevais","St Grevais","Saint Grevais","Pasig","Saint Mande","St Mande","St. Mande","St. Grevais","Le Pre St. Grevias","Pre St. Grevias","La Planta","Planta","Saint Josse ten Noode","St Josse ten Noode","St Josse", "St. Josse", "Saint Josse","Guttenberg","Malabon","Pasay","Neapolli","Damascus","San Juan","SanJuan","Navotas","Asmara","Mislata","Macau","Kaillithea","Nea Smyrni","NeaSymrni","Union City","Colombo","L'Hospitalet","L'Hositalet de Llobregat","Llobregat","Marikina","Saint Gilles","St. Gilles","Clichy","Kotsibuynske","Boulogne-Billancourt","Boulogne Billancourt","Boulonge","Billancourt","Giv'atayim","Givatayim","Las Pinas","LasPinas","Pinas","Koekelberg","Bandung","General Mariano Alverez","Mariano Alverez","GMA","Monaco","Les Lilas","LesLilas","Lilas","Hoboken","Pikine","Quezon","Quezon City","Quezoncity","Modi'in Illit","Modi'in", "Illit","Vanves","Asnieres sur Seine","AsnieresSurSiene","Ciudad","Cidad Nezahulcoyotl","Nezahlcoyotl","Silema","Howrah","Santa Coloma de Gramenet","Chittagong","Sint Jans Molenbeek","Keur Massar","KeurMassar","Charenton le Pont","La Garenne Colombes","Schaerbeek","Neuilly sur Seine","Issy les Moulineaux","Moulineaux","Jakarta","Bat Yam","Batyam", "Gentilly","Cario","Mandaue","Warabi","Bacoor","El'ad","Beitar Illit","Elad","Senglea","Cimahi","San Pedro","Lagos","Kiryat Motzkin","Gaza City","Geneva","Portici","Chongqing","Bengaluru","Ahmedabad","Dongguan","Miami","Atlanta","Washington","Washinton DC","DC","Jinan","Guadalajara","San Jose","SanJose","Detroit","Minneapolis","Antwerp","Athena","Greater Bristol","Dnipro","Gdansk", "Tricity","Gothenburg","Hauge","Hannover","Helsinki","Katowice","Karkow","Kyiv","Lille","Lisborn","Lodz","Lyon","Malaga Marbella","Marbella","Mannheim Ludwigshafen","Ludwigshafen","Mannheim","Milan","Naples","Nantes","Nice","Bremen","Nuremberg","Oslo","Ostrava","Poznan","Rhien Nord","Dusseldorf","Neuss","Rhein Sud","Cologne","Bonn","Riga","Rotterdam","Ruhr","Saarbrucken","Forbach","Saratov","Seville","South Yorkshire","Stuttgrat","Toulouse","Turin","Tyne and Wear","Wear","Voroenzh","West midlands","Zagreb","Zurich","Randstad","Flemish","Flemish Diamond"];
    
    if(ttow === "" || ttow === null){
    var pickerbiqker = Number(Math.floor(Math.random()*4)+1); //1-5
@@ -2334,7 +2384,7 @@ if(nameupdate > 0 || classupdate > 0 || raceupdate > 0 || heightupdate > 0 || we
   
   
   function jim(){
-  document.getElementById('what').innerHTML="</br><button class='button2' id='hup' onclick='document.getElementById(&#039;initiavtive&#039;).innerHTML=Number(document.getElementById(&#039;initiavtive&#039;).innerHTML)+Number(1);'>(+)&nbsp;</button>&nbsp;<button class='button2' id='hdn' onclick='document.getElementById(&#039;initiavtive&#039;).innerHTML=Number(document.getElementById(&#039;initiavtive&#039;).innerHTML)-Number(1)'>&nbsp;(-)</button></br>";
+  document.getElementById('what').innerHTML="</br><button class='button2' id='hup' onclick='ood(1)'>(+)&nbsp;</button>&nbsp;<button class='button2' id='hdn' onclick='oof(1)'>&nbsp;(-)</button></br>";
   document.getElementById('renamehealth').innerHTML = "Health</br></br>";
   }
  
@@ -2350,7 +2400,7 @@ if(nameupdate > 0 || classupdate > 0 || raceupdate > 0 || heightupdate > 0 || we
  document.getElementById('sano').innerHTML='document.getElementById(&#039;tyu&#039;).innerHTML=&#039;u&#039;;document.getElementById(&#039;where&#039;).innerHTML=this.getAttribute(&#039;id&#039;)+&#039;inp&#039;;document.getElementById(&#039;sani&#039;).innerHTML=this.getAttribute(&#039;id&#039;);document.getElementById(&#039;sanp&#039;).innerHTML=&#039;span&#039;;document.getElementById(&#039;sano&#039;).innerHTML=this.getAttribute(&#039;onclick&#039;);document.getElementById(&#039;sanu&#039;).innerHTML=&#039;Changing Skills?&#039;;document.getElementById(&#039;brn&#039;).innerHTML='+document.getElementById("bnm").innerHTML+';document.getElementById(&#039;wha&#039;).innerHTML='+document.getElementById("where").innerHTML+';inpmaker();';
  document.getElementById('sanu').innerHTML='Wha&#039;s Your Skill?';
  document.getElementById('brn').innerHTML=document.getElementById('bnm').innerHTML;
- document.getElementById('what').innerHTML='<button id="silklbtn'+document.getElementById('num').innerHTML+'" class="button2" onclick="document.getElementById(&#039;skill'+document.getElementById('num').innerHTML+'num&#039;).innerHTML=Number(document.getElementById(&#039;skill'+document.getElementById('num').innerHTML+'num&#039;).innerHTML)+Number(1);skilled(document.getElementById(&#039;skill'+document.getElementById('num').innerHTML+'num&#039;).innerText,document.getElementById(&#039;skilldiff'+document.getElementById('num').innerHTML+'&#039;).innerText);">(+)</button><span id="skill'+document.getElementById('num').innerHTML+'num" title="Skill Level">1</span><span id="skillbadges'+document.getElementById('num').innerHTML+'" ></span><span id="skilldiff'+document.getElementById('num').innerHTML+'" style="display:none"></span> </span> <button class="button2" onclick="document.getElementById(&#039;skill'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;silklbtn'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;skill'+document.getElementById('num').innerHTML+'num&#039;).remove();this.remove();" >X</button><div id="uhold'+bnum+'"></div>';
+ document.getElementById('what').innerHTML='<button id="silklbtn'+document.getElementById('num').innerHTML+'" class="button2" onclick="document.getElementById(&#039;skill'+document.getElementById('num').innerHTML+'num&#039;).innerHTML=Number(document.getElementById(&#039;skill'+document.getElementById('num').innerHTML+'num&#039;).innerHTML)+Number(1);skilled(document.getElementById(&#039;skill'+document.getElementById('num').innerHTML+'num&#039;).innerText,document.getElementById(&#039;skilldiff'+document.getElementById('num').innerHTML+'&#039;).innerText,'+document.getElementById('num').innerHTML+');">(+)</button><span id="skill'+document.getElementById('num').innerHTML+'num" title="Skill Level">1</span><span id="skillbadges'+document.getElementById('num').innerHTML+'" ></span><span id="skilldiff'+document.getElementById('num').innerHTML+'" style="display:none"></span> </span> <button class="button2" onclick="document.getElementById(&#039;skill'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;silklbtn'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;skill'+document.getElementById('num').innerHTML+'num&#039;).remove();this.remove();" >X</button><div id="uhold'+bnum+'"></div>';
  
  document.getElementById('bnm').innerHTML=bnum;
  var thisnumhere = document.getElementById('num').innerHTML;
@@ -2365,9 +2415,10 @@ if(nameupdate > 0 || classupdate > 0 || raceupdate > 0 || heightupdate > 0 || we
  }
   
   
- function spelladd(){
+ function spelladd(loca){
  var mnum = Number(document.getElementById('mnm').innerHTML)+Number(1);
  //var it4 = 'spellbadges'+document.getElementById('mnm').innerHTML;
+ var lastbe = loca;
  
  document.getElementById('tyu').innerHTML='m';
  document.getElementById('where').innerHTML='spellinp'+document.getElementById('mnm').innerHTML;
@@ -2379,12 +2430,12 @@ if(nameupdate > 0 || classupdate > 0 || raceupdate > 0 || heightupdate > 0 || we
  
   
  
- if(newspell === 1){ //new spell 
- document.getElementById('what').innerHTML='<span id="thisspell'+document.getElementById('mnm').innerHTML+'"><button id="slpelbtn'+document.getElementById('mnm').innerHTML+'" class="button2" onclick="document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'num&#039;).innerHTML=Number(document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'num&#039;).innerHTML)+Number(1);spelled(document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'num&#039;).innerText,document.getElementById(&#039;spelldiff'+document.getElementById('mnm').innerHTML+'&#039;).innerText);">(+)</button><span id="spell'+document.getElementById('mnm').innerHTML+'num" title="Spell Level">1</span><button id="2btn'+document.getElementById('mnm').innerHTML+'" class="button2" onclick="document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'num&#039;).innerHTML=Number(document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'num&#039;).innerHTML)-Number(1);">(-)</button><span>(</span><span id="spell'+document.getElementById('mnm').innerHTML+'pwr" title="Spell Power">1</span><span>)</span><span id="spellbadges'+document.getElementById('mnm').innerHTML+'"></span><span id="spelldiff'+document.getElementById('mnm').innerHTML+'" style="display:none">1</span> </span> <button style="display:none" id="spell'+document.getElementById('mnm').innerHTML+'rem" class="button2" onclick="armcount=armcount-'+remjewel+';document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'&#039;).remove();document.getElementById(&#039;slpelbtn'+document.getElementById('mnm').innerHTML+'&#039;).remove();document.getElementById(&#039;thisspell'+document.getElementById('mnm').innerHTML+'&#039;).remove();this.remove();" >X</button> <div id="mhold'+mnum+'"></div>';
+ if(newspell === 1){ //new spell //from tomb 
+ document.getElementById('what').innerHTML='<span id="thisspell'+document.getElementById('mnm').innerHTML+'"><button id="slpelbtn'+document.getElementById('mnm').innerHTML+'" class="button2" onclick="document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'num&#039;).innerHTML=Number(document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'num&#039;).innerHTML)+Number(1);spelled(document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'num&#039;).innerText,document.getElementById(&#039;spelldiff'+document.getElementById('mnm').innerHTML+'&#039;).innerText,'+document.getElementById('mnm').innerHTML+','+lastbe+');">(+)</button><span id="spell'+document.getElementById('mnm').innerHTML+'num" title="Spell Level">1</span><button id="2btn'+document.getElementById('mnm').innerHTML+'" class="button2" onclick="document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'num&#039;).innerHTML=Number(document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'num&#039;).innerHTML)-Number(1);">(-)</button><span>(</span><span id="spell'+document.getElementById('mnm').innerHTML+'pwr" title="Spell Power">1</span><span>)</span><span id="spellbadges'+document.getElementById('mnm').innerHTML+'"></span><span id="spelldiff'+document.getElementById('mnm').innerHTML+'" style="display:none">1</span> </span> <button style="display:none" id="spell'+document.getElementById('mnm').innerHTML+'rem" class="button2" onclick="armcount=armcount-'+remjewel+';document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'&#039;).remove();document.getElementById(&#039;slpelbtn'+document.getElementById('mnm').innerHTML+'&#039;).remove();document.getElementById(&#039;thisspell'+document.getElementById('mnm').innerHTML+'&#039;).remove();this.remove();" >X</button> <div id="mhold'+mnum+'"></div>';
  }
  
  if(newspell != 1){ //not new spell
- document.getElementById('what').innerHTML='<span id="thisspell'+document.getElementById('mnm').innerHTML+'"><button id="slpelbtn'+document.getElementById('mnm').innerHTML+'" class="button2" onclick="document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'num&#039;).innerHTML=Number(document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'num&#039;).innerHTML)+Number(1);spelled(document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'num&#039;).innerText,document.getElementById(&#039;spelldiff'+document.getElementById('mnm').innerHTML+'&#039;).innerText)">(+)</button><span id="spell'+document.getElementById('mnm').innerHTML+'num" title="Spell Level">1</span><button id="btn'+document.getElementById('mnm').innerHTML+'" class="button2" onclick="document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'num&#039;).innerHTML=Number(document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'num&#039;).innerHTML)-Number(1);">(-)</button><span>(</span><span id="spell'+document.getElementById('mnm').innerHTML+'pwr" title="Spell Power">1</span><span>)</span><span id="spellbadges'+document.getElementById('mnm').innerHTML+'"></span><span id="spelldiff'+document.getElementById('mnm').innerHTML+'" style="display:none">1</span> </span> </span><button class="button2" onclick="document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'&#039;).remove();document.getElementById(&#039;btn'+document.getElementById('mnm').innerHTML+'&#039;).remove();document.getElementById(&#039;thisspell'+document.getElementById('mnm').innerHTML+'&#039;).remove();this.remove();" >X</button> <div id="mhold'+mnum+'"></div>';
+ document.getElementById('what').innerHTML='<span id="thisspell'+document.getElementById('mnm').innerHTML+'"><button id="slpelbtn'+document.getElementById('mnm').innerHTML+'" class="button2" onclick="document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'num&#039;).innerHTML=Number(document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'num&#039;).innerHTML)+Number(1);spelled(document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'num&#039;).innerText,document.getElementById(&#039;spelldiff'+document.getElementById('mnm').innerHTML+'&#039;).innerText,'+document.getElementById('mnm').innerHTML+')">(+)</button><span id="spell'+document.getElementById('mnm').innerHTML+'num" title="Spell Level">1</span><button id="btn'+document.getElementById('mnm').innerHTML+'" class="button2" onclick="umph(&#039;spell'+document.getElementById('mnm').innerHTML+'num&#039;);">(-)</button><span>(</span><span id="spell'+document.getElementById('mnm').innerHTML+'pwr" title="Spell Power">1</span><span>)</span><span id="spellbadges'+document.getElementById('mnm').innerHTML+'"></span><span id="spelldiff'+document.getElementById('mnm').innerHTML+'" style="display:none">1</span> </span> </span><button class="button2" onclick="document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'&#039;).remove();document.getElementById(&#039;btn'+document.getElementById('mnm').innerHTML+'&#039;).remove();document.getElementById(&#039;thisspell'+document.getElementById('mnm').innerHTML+'&#039;).remove();this.remove();" >X</button> <div id="mhold'+mnum+'"></div>';
  
  
  }
@@ -2396,6 +2447,106 @@ if(nameupdate > 0 || classupdate > 0 || raceupdate > 0 || heightupdate > 0 || we
  
  inpmaker();
  }
+ 
+ 
+function umph(thishere) {<!--prevents neg spell pwr levels-->
+ var contexthere = document.getElementById(thishere).innerHTML;
+ 
+  if(Number(Number(contexthere)-1) >= 0){
+   document.getElementById(thishere).innerHTML = Number(Number(contexthere)-1);
+  }
+ }
+ 
+ 
+function oof(howmuch) {<!--looks for dead state-->
+ var tothere = document.getElementById('initiavtive').innerHTML;
+ var isthismuch = Number(howmuch.toString().split(/\./g)[0]);
+ 
+  if(Number(isthismuch) <= 0){
+   isthismuch = Number(0); <!-- prevents micro null hits-->
+  }
+   document.getElementById('initiavtive').innerHTML = Number(Number(tothere) - 1);
+   
+  //need a way to determine time difference as well for a time and health based dead-change-states  i'm here I'm here im here Im here upgradeable upgradable 
+  
+  //maybe there should be a lock behind going negative health like having zombie background or have had a zombie skill or had a zombie spell/potion/virus used on self  i'm here I'm here im here Im here upgradeable upgradable 
+   
+  if(Number(Number(tothere)-1) < 0 && document.getElementById('bodyoutput').innerText.toString().search(/(RIP|ZOMBIE|Z0M8|DROWL|GHOST|GHASTLY|GHAST|GHOSTLY|BONES|SKELETON|UNDEAD|DARK_SOLDIER|GOUL)/gim) < 0){<!--death incoming-->
+   document.getElementById('bodyoutput').innerHTML += "&nbsp;<span id='dead' value='"+months+""+days+""+yearsout+"' title='Passed on the "+days+" day__"+monthout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....'><b style='color:rgb(99,99,99,0.9);'><sub><sup>RIP</sup></sub></b></span>&nbsp;";
+  }
+  if(Number(Number(tothere)-1) <= Number(-10) && document.getElementById('bodyoutput').innerText.toString().search(/RIP/gim) >= 0){<!--undead incoming-->
+   document.getElementById('dead').innerHTML = "<i><b style='color:rgb(149,299,149,0.8);'><sub><sup>UNDEAD</sup></sub></b></i>";
+  }
+  if(Number(Number(tothere)-1) <= Number(-30) && document.getElementById('bodyoutput').innerText.toString().search(/UNDEAD/gim) >= 0){<!--skeleton incoming-->
+   document.getElementById('dead').innerHTML = "<i><b style='color:rgb(255,255,255,0.8);'><sub><sup>SKELETON</sup></sub></b></i>";
+  }
+  if(Number(Number(tothere)-1) <= Number(-60) && document.getElementById('bodyoutput').innerText.toString().search(/SKELETON/gim) >= 0){<!--shaky skeleton incoming-->
+   document.getElementById('dead').innerHTML = "<i><b style='color:rgb(255,255,255,0.6);'><sub><sup>BONES</sup></sub></b></i>";
+  }
+  if(Number(Number(tothere)-1) <= Number(-69) && Number(Number(tothere)-1) > Number(-90)  && document.getElementById('bodyoutput').innerText.toString().search(/ZOMBIE/gim) >= 0){<!--drowl incoming-->
+   document.getElementById('dead').innerHTML = "<i><b style='color:rgb(205,205,255,0.8);'><sub><sup>DROWL</sup></sub></b></i>";
+   document.getElementById('dead').title += "Unrecgonizable by the "+days+" day__"+monthout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....";
+  }
+  if(Number(Number(tothere)-1) <= Number(-90) && document.getElementById('bodyoutput').innerText.toString().search(/BONES/gim) >= 0){<!--Ghosty skeleton incoming-->
+   document.getElementById('dead').innerHTML = "<i><b style='color:rgb(195,195,255,0.7);'><sub><sup>GHOSTLY</sup></sub></b></i>";
+  }
+  if(Number(Number(tothere)-1) <= Number(-90) && document.getElementById('bodyoutput').innerText.toString().search(/Z0M8/gim) >= 0){<!--ZOMBIE incoming-->
+   document.getElementById('dead').innerHTML = "<i><b style='color:rgb(145,145,235,0.7);'><sub><sup>ZOMBIE</sup></sub></b></i>";
+   document.getElementById('dead').title += "Zombified on the "+days+" day__"+monthout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....";
+  }
+  if(Number(Number(tothere)-1) <= Number(-131) && document.getElementById('bodyoutput').innerText.toString().search(/GHOSTLY/gim) >= 0){<!--Ghost incoming-->
+   document.getElementById('dead').innerHTML = "<i><b style='color:rgb(95,95,205,0.8);'><sub><sup>GHOST</sup></sub></b></i>";
+   document.getElementById('dead').title += "Moved on on the "+days+" day__"+monthout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]";
+  }
+  if(Number(Number(tothere)-1) <= Number(-131) && Number(Number(tothere)-1) > Number(-213) && document.getElementById('bodyoutput').innerText.toString().search(/DROWL/gim) >= 0){<!--goul incoming-->
+   document.getElementById('dead').innerHTML = "<i><b style='color:rgb(45,205,45,0.7);'><sub><sup>GOUL</sup></sub></b></i>";
+   document.getElementById('dead').title += "Fighting Feralisticism by the "+days+" day__"+monthout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....";
+  }
+  if(Number(Number(tothere)-1) <= Number(-213) && document.getElementById('bodyoutput').innerText.toString().search(/ZOMBIE/gim) >= 0){<!--drowl incoming-->
+   document.getElementById('dead').innerHTML = "<i><b style='color:rgb(205,205,255,0.8);'><sub><sup>DROWL</sup></sub></b></i>";
+   document.getElementById('dead').title += "Unrecgonizable by the "+days+" day__"+monthout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....";
+  }
+  if(Number(Number(tothere)-1) <= Number(-213) && document.getElementById('bodyoutput').innerText.toString().search(/GHOST/gim) >= 0){<!--Ghosty skeleton incoming-->
+   document.getElementById('dead').innerHTML = "<i><b style='color:rgb(105,105,235,0.5);'><sub><sup>GHASTLY</sup></sub></b></i>";
+  }
+  if(Number(Number(tothere)-1) <= Number(-255) && Number(Number(tothere)-1) > Number(-313) && document.getElementById('bodyoutput').innerText.toString().search(/DROWL/gim) >= 0){<!--GOUL incoming-->
+   document.getElementById('dead').innerHTML = "<i><b style='color:rgb(25,45,255,0.6);'><sub><sup>GOUL</sup></sub></b></i>";
+   document.getElementById('dead').title += "Fighting Feralisticism by the "+days+" day__"+monthout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....";
+  }
+  if(Number(Number(tothere)-1) <= Number(-313) && document.getElementById('bodyoutput').innerText.toString().search(/GHASTLY/gim) >= 0){<!--Ghosty skeleton incoming-->
+   document.getElementById('dead').innerHTML = "<i><b style='color:rgb(205,205,215,0.4);'><sub><sup>GHAST</sup></sub></b></i>";
+  }
+  if(Number(Number(tothere)-1) <= Number(-313) && document.getElementById('bodyoutput').innerText.toString().search(/DROWL/gim) >= 0){<!--goul incoming-->
+   document.getElementById('dead').innerHTML = "<i><b style='color:rgb(45,205,45,0.7);'><sub><sup>GOUL</sup></sub></b></i>";
+   document.getElementById('dead').title += "Fighting Feralisticism by the "+days+" day__"+monthout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....";
+  }
+  
+  
+ }
+ 
+ 
+function ood(totalmuch) {<!--looks for undead state-->
+ var tothere = document.getElementById('initiavtive').innerHTML;
+ var isthismuch = Number(totalmuch.toString().split(/\./g)[0]);
+ 
+   document.getElementById('initiavtive').innerHTML = Number(Number(tothere) + 1);
+   //keeps going to zombie or bottom option
+  if(Number(Number(tothere)+1) >= Number(1) && document.getElementById('bodyoutput').innerText.toString().search(/RIP/gi) >= 0){<!--zomb incoming-->
+   document.getElementById('dead').innerHTML = "<b style='color:rgb(99,99,99,0.9);'><sub><sup>Z0M8</sup></sub></b>";
+   document.getElementById('dead').title += "Partial Zombification on the "+days+" day__"+monthout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....";
+  }
+  else if(Number(Number(tothere)+1) >= Number(1) && document.getElementById('bodyoutput').innerText.toString().search(/(UNDEAD|Z0M8)/gi) >= 0){<!--zombie incoming-->
+   document.getElementById('dead').innerHTML = "<b style='color:rgb(99,99,99,0.9);'><sub><sup>ZOMBIE</sup></sub></b>";
+   document.getElementById('dead').title += "Zombified on the "+days+" day__"+monthout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....";
+  }
+  else if(Number(Number(tothere)+1) >= Number(1) && document.getElementById('bodyoutput').innerText.toString().search(/(SKELETON|GHOSTLY)/gi) >= 0){<!--DARK SOLDIER incoming-->
+   document.getElementById('dead').innerHTML = "<b style='color:rgb(99,99,99,0.9);'><sub><sup>DARK_SOLDIER</sup></sub></b>";
+   document.getElementById('dead').title += "Joined the Dark Army Unit on "+days+"__"+monthout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]";
+  }
+  else {
+  }
+  //document.getElementById(&#039;initiavtive&#039;).innerHTML=Number(document.getElementById(&#039;initiavtive&#039;).innerHTML)+Number(1);
+}
  
  var wenum = 0;
  var hashme = '';
@@ -2460,7 +2611,7 @@ document.getElementById('hashishere').innerHTML = hashme;
  document.getElementById('sano').innerHTML='';
  document.getElementById('sanu').innerHTML='What&#039;s the item?';
  document.getElementById('brn').innerHTML=document.getElementById('enm').innerHTML;
- document.getElementById('what').innerHTML='<span id="badges'+document.getElementById('enm').innerHTML+'"></span><span id="thisitem'+document.getElementById('enm').innerHTML+'"> <button id="itembtn'+document.getElementById('enm').innerHTML+'" class="button2" onclick="document.getElementById(&#039;item'+document.getElementById('enm').innerHTML+'num&#039;).innerHTML=Number(document.getElementById(&#039;item'+document.getElementById('enm').innerHTML+'num&#039;).innerHTML)+Number(1);document.getElementById(&#039;swapwp'+document.getElementById('enm').innerHTML+'&#039;).style=&#039;display:inline-block&#039;;document.getElementById(&#039;ghar&#039;).innerHTML=document.getElementById(&#039;item'+document.getElementById('enm').innerHTML+'num&#039;).innerHTML;document.getElementById(&#039;ghar2&#039;).innerHTML=&#039;'+document.getElementById('enm').innerHTML+'&#039;;isthere();" style="display:none">(+)</button><span id="item'+document.getElementById('enm').innerHTML+'num" title="Item Count">1</span><button id="item2btn'+document.getElementById('enm').innerHTML+'" class="button2" onclick="document.getElementById(&#039;item'+document.getElementById('enm').innerHTML+'num&#039;).innerHTML=Number(document.getElementById(&#039;item'+document.getElementById('enm').innerHTML+'num&#039;).innerHTML)-Number(1);document.getElementById(&#039;ghar&#039;).innerHTML=document.getElementById(&#039;item'+document.getElementById('enm').innerHTML+'num&#039;).innerHTML;document.getElementById(&#039;ghar2&#039;).innerHTML=&#039;'+document.getElementById('enm').innerHTML+'&#039;;isthere();"  style="display:none">(-)</button><span id="itemt'+document.getElementById('enm').innerHTML+'" title="Type of item"></br><input id="itemtype'+document.getElementById('enm').innerHTML+'" placeholder="What kind of item?" oninput="document.getElementById(&#039;where&#039;).innerHTML=this.id;document.getElementById(&#039;brn&#039;).innerHTML=&#039;'+document.getElementById('enm').innerHTML+'&#039;;document.getElementById(&#039;tyu&#039;).innerHTML=&#039;ei&#039;;sani();" /><button id="eib'+document.getElementById('enm').innerHTML+'" class="button2" onclick="document.getElementById(&#039;itemt'+document.getElementById('enm').innerHTML+'&#039;).innerHTML=&#039;</br>[&nbsp;&#039;+document.getElementById(&#039;itemtype'+document.getElementById('enm').innerHTML+'&#039;).value+&#039;&nbsp;]&#039;;checkitem();">set</button></span><span id="iitemt'+document.getElementById('enm').innerHTML+'" ></br><span id="itempowerof'+document.getElementById('enm').innerHTML+'" style="display:none"><span id="whatitem">Item Power</span>:&nbsp;<button id="ibtn'+document.getElementById('enm').innerHTML+'" class="button2" onclick="document.getElementById(&#039;iitem'+document.getElementById('enm').innerHTML+'num&#039;).innerHTML=Number(document.getElementById(&#039;iitem'+document.getElementById('enm').innerHTML+'num&#039;).innerHTML)+Number(1);">(+)</button><span id="iitem'+document.getElementById('enm').innerHTML+'num" title="Item Power">1</span><button id="ibtni'+document.getElementById('enm').innerHTML+'" class="button2" onclick="document.getElementById(&#039;iitem'+document.getElementById('enm').innerHTML+'num&#039;).innerHTML=Number(document.getElementById(&#039;iitem'+document.getElementById('enm').innerHTML+'num&#039;).innerHTML)-Number(1);">(-)</button><button id="iitemi'+document.getElementById('enm').innerHTML+'" class="button2" onclick="document.getElementById(&#039;iitemt'+document.getElementById('enm').innerHTML+'&#039;).innerHTML=&#039;&nbsp;(&#039;+document.getElementById(&#039;iitem'+document.getElementById('enm').innerHTML+'num&#039;).innerHTML+&#039;)&nbsp;</br>&#039;;document.getElementById(&#039;itembtn'+document.getElementById('enm').innerHTML+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;item2btn'+document.getElementById('enm').innerHTML+'&#039;).style=&#039display:inline-block&#039;;checkitem();" >set</button></span></br><span id="itemcarry'+document.getElementById('enm').innerHTML+'" style="display:none"><span id="cr'+document.getElementById('enm').innerHTML+'">Carry&nbsp;</span><i id="icitem'+document.getElementById('enm').innerHTML+'num" title="Carry Option Type"></i>&nbsp;Options:&nbsp;<span id="icbtn'+document.getElementById('enm').innerHTML+'"></span></br><span id="xtraopts"></span><button id="iciset'+document.getElementById('enm').innerHTML+'" class="button2" onclick="" style="display:none" >set</button></br></span></span><span id="udochold'+document.getElementById('enm').innerHTML+'"></span><span id="itemextras'+document.getElementById('enm').innerHTML+'" ></span><span id="hashout'+document.getElementById('enm').innerHTML+'" style="word-break:break-all;" onfocus="this.select();"></span><button id="itemremove'+document.getElementById('enm').innerHTML+'" class="button2" onclick="document.getElementById(&#039;badges'+document.getElementById('enm').innerHTML+'&#039;).remove();document.getElementById(&#039;item'+document.getElementById('enm').innerHTML+'&#039;).remove();document.getElementById(&#039;itembtn'+document.getElementById('enm').innerHTML+'&#039;).remove();document.getElementById(&#039;item2btn'+document.getElementById('enm').innerHTML+'&#039;).remove();document.getElementById(&#039;badges'+document.getElementById('enm').innerHTML+'&#039;).remove();document.getElementById(&#039;thisitem'+document.getElementById('enm').innerHTML+'&#039;).remove();document.getElementById(&#039;itemcarry'+document.getElementById('enm').innerHTML+'&#039;).remove();this.remove();" ><b>x</b></button><hr></br></span><span id="enum'+document.getElementById('enm').innerHTML+'" style="display:none">'+document.getElementById('enm').innerHTML+'</span></div><div id="ehold'+enum1+'"></div>';
+ document.getElementById('what').innerHTML='<span id="badges'+document.getElementById('enm').innerHTML+'"></span><span id="thisitem'+document.getElementById('enm').innerHTML+'"> <button id="itembtn'+document.getElementById('enm').innerHTML+'" class="button2" onclick="document.getElementById(&#039;item'+document.getElementById('enm').innerHTML+'num&#039;).innerHTML=Number(document.getElementById(&#039;item'+document.getElementById('enm').innerHTML+'num&#039;).innerHTML)+Number(1);document.getElementById(&#039;swapwp'+document.getElementById('enm').innerHTML+'&#039;).style=&#039;display:inline-block&#039;;document.getElementById(&#039;ghar&#039;).innerHTML=document.getElementById(&#039;item'+document.getElementById('enm').innerHTML+'num&#039;).innerHTML;document.getElementById(&#039;ghar2&#039;).innerHTML=&#039;'+document.getElementById('enm').innerHTML+'&#039;;isthere();" style="display:none">(+)</button><span id="item'+document.getElementById('enm').innerHTML+'num" title="Item Count">1</span><button id="item2btn'+document.getElementById('enm').innerHTML+'" class="button2" onclick="document.getElementById(&#039;item'+document.getElementById('enm').innerHTML+'num&#039;).innerHTML=Number(document.getElementById(&#039;item'+document.getElementById('enm').innerHTML+'num&#039;).innerHTML)-Number(1);document.getElementById(&#039;ghar&#039;).innerHTML=document.getElementById(&#039;item'+document.getElementById('enm').innerHTML+'num&#039;).innerHTML;document.getElementById(&#039;ghar2&#039;).innerHTML=&#039;'+document.getElementById('enm').innerHTML+'&#039;;isthere();"  style="display:none">(-)</button><span id="itemt'+document.getElementById('enm').innerHTML+'" title="Type of item"></br><input id="itemtype'+document.getElementById('enm').innerHTML+'" placeholder="What kind of item?" oninput="document.getElementById(&#039;where&#039;).innerHTML=this.id;document.getElementById(&#039;brn&#039;).innerHTML=&#039;'+document.getElementById('enm').innerHTML+'&#039;;document.getElementById(&#039;tyu&#039;).innerHTML=&#039;ei&#039;;sani();" /><button id="eib'+document.getElementById('enm').innerHTML+'" class="button2" onclick="document.getElementById(&#039;itemt'+document.getElementById('enm').innerHTML+'&#039;).innerHTML=&#039;</br>[&nbsp;&#039;+document.getElementById(&#039;itemtype'+document.getElementById('enm').innerHTML+'&#039;).value+&#039;&nbsp;]&#039;;checkitem();">set</button></span><span id="iitemt'+document.getElementById('enm').innerHTML+'" ></br><span id="itempowerof'+document.getElementById('enm').innerHTML+'" style="display:none"><span id="whatitem">Item Power</span>:&nbsp;<button id="ibtn'+document.getElementById('enm').innerHTML+'" class="button2" onclick="document.getElementById(&#039;iitem'+document.getElementById('enm').innerHTML+'num&#039;).innerHTML=Number(document.getElementById(&#039;iitem'+document.getElementById('enm').innerHTML+'num&#039;).innerHTML)+Number(1);">(+)</button><span id="iitem'+document.getElementById('enm').innerHTML+'num" title="Item Power">1</span><button id="ibtni'+document.getElementById('enm').innerHTML+'" class="button2" onclick="document.getElementById(&#039;iitem'+document.getElementById('enm').innerHTML+'num&#039;).innerHTML=Number(document.getElementById(&#039;iitem'+document.getElementById('enm').innerHTML+'num&#039;).innerHTML)-Number(1);">(-)</button><button id="iitemi'+document.getElementById('enm').innerHTML+'" class="button2" onclick="document.getElementById(&#039;iitemt'+document.getElementById('enm').innerHTML+'&#039;).innerHTML=&#039;&nbsp;(&#039;+document.getElementById(&#039;iitem'+document.getElementById('enm').innerHTML+'num&#039;).innerHTML+&#039;)&nbsp;</br>&#039;;document.getElementById(&#039;itembtn'+document.getElementById('enm').innerHTML+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;item2btn'+document.getElementById('enm').innerHTML+'&#039;).style=&#039display:inline-block&#039;;checkitem();" >set</button></span></br><span id="itemcarry'+document.getElementById('enm').innerHTML+'" style="display:none"><span id="cr'+document.getElementById('enm').innerHTML+'">Carry&nbsp;</span><i id="icitem'+document.getElementById('enm').innerHTML+'num" title="Carry Option Type"></i>&nbsp;Options:&nbsp;<span id="icbtn'+document.getElementById('enm').innerHTML+'"></span></br><span id="xtraopts"></span><button id="iciset'+document.getElementById('enm').innerHTML+'" class="button2" onclick="" style="display:none" >set</button></br></span></span><span id="udochold'+document.getElementById('enm').innerHTML+'"></span><span id="itemextras'+document.getElementById('enm').innerHTML+'" ></span><span id="hashout'+document.getElementById('enm').innerHTML+'" style="word-break:break-all;" onfocus="this.select();"></span><button id="itemremove'+document.getElementById('enm').innerHTML+'" class="button2" onclick="document.getElementById(&#039;badges'+document.getElementById('enm').innerHTML+'&#039;).remove();document.getElementById(&#039;item'+document.getElementById('enm').innerHTML+'&#039;).remove();document.getElementById(&#039;itembtn'+document.getElementById('enm').innerHTML+'&#039;).remove();document.getElementById(&#039;item2btn'+document.getElementById('enm').innerHTML+'&#039;).remove();document.getElementById(&#039;thisitem'+document.getElementById('enm').innerHTML+'&#039;).remove();this.remove();document.getElementById(&#039;itemcarry'+document.getElementById('enm').innerHTML+'&#039;).remove();" ><b>x</b></button><hr></br></span><span id="enum'+document.getElementById('enm').innerHTML+'" style="display:none">'+document.getElementById('enm').innerHTML+'</span></div><div id="ehold'+enum1+'"></div>';
  
  document.getElementById('enm').innerHTML=enum1;
  
@@ -2848,7 +2999,7 @@ document.getElementById('where').innerHTML = ''; //which input?
 document.getElementById('what').innerHTML = ''; //add-after insert
 document.getElementById('tyu').innerHTML = ''; //which hold is used
 document.getElementById('wha').innerHTML = ''; //if prev-value existed
- nums();
+ nums(0);
  }
  
  
@@ -3273,17 +3424,17 @@ if(Number(menu) === 2){
   checksum = 1;
  }
  
- if(checknum < 0){
+ if(checknum <= 0){
  document.getElementById('item'+checksum+'num').innerHTML = 0;
  document.getElementById('swapwp'+checksum).style="display:none";
  }
  
- if(checknum > 0) {
+ if(checknum >= 1) {
  document.getElementById('swapwp'+checksum).style='display:inline-block';
  }
- else {
- document.getElementById('swapwp'+checksum).style="display:none";
- }
+ //else {
+ //document.getElementById('swapwp'+checksum).style="display:none";
+ //}
  
  
  if(document.getElementById('itemt'+checksum).innerHTML.search(/(arrow|arrows|twig|stick|bolt|bolts)/gim) >= 0 && document.getElementById('thisitem'+checksum).className.search(/stroke/gim) >= 0){
@@ -3293,7 +3444,7 @@ if(Number(menu) === 2){
  document.getElementById('swapwp'+checksum).style = 'display:none;';
  }
  
- if(document.getElementById('iitemt'+checksum).innerHTML.search(/(tunic|armor|glove|helmet|helm|hat|hood|chest plate|chestplate|breast plate|breastplate|guard|shoe|garb|shoes|boots|sneakers|runners|streamers|gloves|comb|visor|gorget|pauldron|counter|rerebrace|brace|plackart|fauld|tasset|tassle|tassel|cuisse|gauntlet|gauntlets|fan-plate|fan plate|fanplate|greave|greeve|sabaton|stop rib|stoprib|rib|gardbrace|vambrace|fauld|mail|chainmail|platemail|cloth|leather|kabuto|nodowa|sode|sendan-no-ita|sendan no ita|sendannoita|kote|kasazuri|haidate|sune-ate|sune ate|suneate|kyahan|isurumaki|do|shoulder armor|soulderarmor|hand guard|tekko|hakama|pants|thigh guard|thighguard|tassets|tasset|tabi|socks|hitatare|robe|shirt|nape guard|napeguard|shikoro|helmet crest|hemlmetcrest|maedate|watagami|shoulder strap|shoulderstrap|strap|bascinet|vervelles|aventail|spaulder|haubergeon|lames|demi|denim|wing|gatlings|wrist gauntlets|wristgauntlets|wrist bracers|bracer|crotch plate|thigh guanlets|knee pads|kneepads|utility belt|belt|suspenders|torso guard|torso plate|torso pad|arming cap|armingcap|cap|doublet|chain maille|chainmaille|chainmalle|chain malle|hose|pantyhose|lingera|lungera|crowl|salade|salet|schalern|bevor|beavor|placard|tuille|buckle|belt buckle|skull|sight|besagne|kettle helm|fur|cape|bag|pouch|focus|sandles|sandels|tubesocks|knee high|stiletos|stileto|curb stompers|curbstompers|kleats|kleets|kelt|sporran|sgain|flashers|brogues|ghillie|argyll|leather hat|leather cap|leatehr jacket|leather armor|leather pants|leather shoes|jacket|pin|scarf|straps|cloak|hooded cloak|sock|sandel|moccasins|jynco|mjolnir|powered assult armor|powered armor|beanie|Link's Hat|Links Hat|Link Hat|Mark V|Master Chiefs|Mark VI)/gim) >= 0 && document.getElementById('thisitem'+checksum).className.search(/stroke/gim) >= 0){
+ if(document.getElementById('iitemt'+checksum).innerHTML.search(/(tunic|armor|glove|helmet|helm|hat|hood|chest\splate|chestplate|breast\splate|breastplate|guard|shoe|garb|shoes|boots|sneakers|runners|streamers|gloves|comb|visor|gorget|pauldron|counter|rerebrace|brace|plackart|fauld|tasset|tassle|tassel|cuisse|gauntlet|gauntlets|fan-plate|fan\splate|fanplate|greave|greeve|sabaton|stop\srib|stoprib|rib|gardbrace|vambrace|fauld|mail|chainmail|platemail|cloth|leather|kabuto|nodowa|sode|sendan-no-ita|sendan\sno\sita|sendannoita|kote|kasazuri|haidate|sune-ate|sune\sate|suneate|kyahan|isurumaki|do|shoulder\sarmor|soulderarmor|hand\sguard|tekko|hakama|pants|thigh\sguard|thighguard|tassets|tasset|tabi|socks|hitatare|robe|shirt|nape\sguard|napeguard|shikoro|helmet\screst|hemlmetcrest|maedate|watagami|shoulder\sstrap|shoulderstrap|strap|bascinet|vervelles|aventail|spaulder|haubergeon|lames|demi|denim|wing|gatlings|wrist\sgauntlets|wristgauntlets|wrist\sbracers|bracer|crotch\splate|thigh\sguanlets|knee\spads|kneepads|utility\sbelt|belt|suspenders|torso\sguard|torso\splate|torso\spad|arming\scap|armingcap|cap|doublet|chain\smaille|chainmaille|chainmalle|chain\smalle|hose|pantyhose|lingera|lungera|crowl|salade|salet|schalern|bevor|beavor|placard|tuille|buckle|belt\sbuckle|skull|sight|besagne|kettle\shelm|fur|cape|bag|pouch|focus|sandles|sandels|tubesocks|knee\shigh|stiletos|stileto|curb\sstompers|curbstompers|kleats|kleets|kelt|sporran|sgain|flashers|brogues|ghillie|argyll|leather\shat|leather\scap|leatehr\sjacket|leather\sarmor|leather\spants|leather\sshoes|jacket|pin|scarf|straps|cloak|hooded\scloak|sock|sandel|moccasins|jynco|mjolnir|powered\sassult\sarmor|powered\sarmor|beanie|Link's\sHat|Links\sHat|Link\sHat|Mark\sV|Master\sChiefs|Mark\sVI)/gim) >= 0 && document.getElementById('thisitem'+checksum).className.search(/stroke/gim) >= 0){
    
  document.getElementById('swapwp'+checksum).style = 'display:none;';
  }
@@ -3313,7 +3464,7 @@ if(Number(menu) === 2){
  
  
  
-if(document.getElementById(it2).innerHTML.search(/(weapon|sword|axe|hammer|bow|shield|broadsword|knife|nife|kife|butcher|blade|nail|scyth|sicle|sickle|sikle|fan|mace|dagger|long axe|2-handed|shears|sai|javelin|trident|spear|spears|staff|stalves|bomb|granade|tonfa|nunchucks|lightsaber|lightsabor|caltdrops|pick|pickaxe|sling|blow gun|blowgun|darts|dart|sledgehammer|spade|gun|rifle|machinegun|machine gun|ammo|ammunition|ammu|whip|nine tails|9-tails|9tails|nine-tails|9 tails|tail|surujin|stars|throwing|throw|throws|flail|net|spiked|spike|crossbow|crossbows|shells|cannon|balls|ball|weaponized pad|weaponized bracer|weaponized bracers|thorn|thorns|charkram|morning-star|morningstar|morning star|rapier|bastard|long-sward|longsword|lance|long-sword|short|short sword|shortsword|short-sword|sward|battleaxe|light crossbow|starknife|longspear|long spear|spiked chain|chain|ranseur|club|spiked club|boomerang|halbred|shotgun|nuke|nuclear arms|nuclear arm|blaster|pistol|blaster rifle|blaster pistol|darksaber|darksabor|lightsaber pike|pike|honor guard rifle|smoke bomb|somkebomb|flashbang|flame rifle|flamethrower|dual lightsaber|dual lightsabor|quad cannon|dual cannon|booma|missle launcher|MLRS|mlrs|usp|.45|magnum|.44|m9|desert eagle|pp2000|bbgun|bb|pp|g18|m93|raffica|tmp|machine pistol|spas|spas-12|spas12|aa-12|aa|12|striker|ranger|sawedoff|sawed off|m1014|1014|1887|model 1887|at4|rpg|rpg7|rpg-7|m79|stinger|excalibur|cloud sword|pistol sword|bladed pistol|bayentte|bayonetta|talon|war-axe|eared|glavie|boar pike|boarpike|partizan|poke-axe|awi-pike|awi|awl|guisarme|bills|swiss bill|voulge|fork|manarifle|polearm|handaxe|rod|manapistolsaya|ninja-to|ninjato|katana|kuhai|shuriken|makibishi|shuko|plasma sword|plasmasword|plasma|ma4d|br55|ma7b|ma5c|ma5k|mr55-m45|m45|ma6c|ma5b|m8|smg|br55at|br55at-ww|br55cw-sa|m7|ma2b|ma4k|m6b|m6D|m6x|br55hg|saw|sawgun|shotty|br55dm-r|sniperifle|sniper rifle|sniperrifle|br55-ss|m90|mk1|mk 1|mk 2|mk2|ssm|cqc|m6j|m6c|m6e|cw|stanchion|m99 stanchion|aptr|ma4b-aptr|1173|m90 1173|punisher|brute shot|beam rifle|carbine|h2|h1|fuel rod|fuel rod gun|needler|gravity hammer|fist of rukt|rukt|spiked bomb|plasma cannon|gravity gun|portalgun|portal gun|megaman|megagun|meagman gun|frizbar|gale|claw|double dragon|sucker punch|masamune|gladius|spatha|home-wrecker|homewecker|ture blade of the east|eastern blade|guan dao|naginata|kopis|famboyant|pattah|ajanta|barabudur|konarak|katti|natar temple sword|ram dao|ram horn|kukri|kora|kukri|hostala|ellora|katar|wrist blade|hatchet hands|hatchet|cestus|claws|blade talons|blade talon|hatchet hand|wrist blades|scissors|scissors katar|quhab|fascia|hand scythe|scythe|swayyah|war fist|natalya mark|Natalya's mark|natalyas mark|uzi|urumi|vadi|otta|colt|beretta|9mm|22|long rifle|sub-machine|submachine|sub machine gun|sub-machine gun|submachine gun|assult rifle|ar15|ar16|ar18|m1|granade launcher|moltav|tekko|stiletto|wand|wands|limb|arm|leg|pipe|monkeywrench|pipewrench|metal|strut|arm|prostetic|prosthetic|mechanical|biological|extension|limb)/gim) >= 0){
+if(document.getElementById(it2).innerHTML.search(/(weapon|sword|axe|hammer|bow|shield|broadsword|knife|nife|kife|butcher|blade|nail|scyth|sicle|sickle|sikle|fan|mace|dagger|long\saxe|2-handed|shears|sai|javelin|trident|spear|spears|staff|stalves|bomb|granade|tonfa|nunchucks|lightsaber|lightsabor|caltdrops|pick|pickaxe|sling|blow\sgun|blowgun|darts|dart|sledgehammer|spade|gun|rifle|machinegun|machine\sgun|ammo|ammunition|ammu|whip|nine\stails|9-tails|9tails|nine-tails|9\stails|tail|surujin|stars|throwing|throw|throws|flail|net|spiked|spike|crossbow|crossbows|shells|cannon|balls|ball|weaponized\spad|weaponized\sbracer|weaponized\sbracers|thorn|thorns|charkram|morning-star|morningstar|morning\sstar|rapier|bastard|long-sward|longsword|lance|long-sword|short|short\ssword|shortsword|short-sword|sward|battleaxe|light\scrossbow|starknife|longspear|long\sspear|spiked\schain|chain|ranseur|club|spiked\sclub|boomerang|halbred|shotgun|nuke|nuclear\sarms|nuclear\sarm|blaster|pistol|blaster\srifle|blaster\spistol|darksaber|darksabor|lightsaber\spike|pike|honor\sguard\srifle|smoke\sbomb|somkebomb|flashbang|flame\srifle|flamethrower|dual\slightsaber|dual\slightsabor|quad\scannon|dual\scannon|booma|missle\slauncher|MLRS|mlrs|usp|.45|magnum|.44|m9|desert\seagle|pp2000|bbgun|bb|pp|g18|m93|raffica|tmp|machine\spistol|spas|spas-12|spas12|aa-12|aa|12|striker|ranger|sawedoff|sawed\soff|m1014|1014|1887|model\s1887|at4|rpg|rpg7|rpg-7|m79|stinger|excalibur|cloud\ssword|pistol\ssword|bladed\spistol|bayentte|bayonetta|talon|war-axe|eared|glavie|boar\spike|boarpike|partizan|poke-axe|awi-pike|awi|awl|guisarme|bills|swiss\sbill|voulge|fork|manarifle|polearm|handaxe|rod|manapistolsaya|ninja-to|ninjato|katana|kuhai|shuriken|makibishi|shuko|plasma\ssword|plasmasword|plasma|ma4d|br55|ma7b|ma5c|ma5k|mr55-m45|m45|ma6c|ma5b|m8|smg|br55at|br55at-ww|br55cw-sa|m7|ma2b|ma4k|m6b|m6D|m6x|br55hg|saw|sawgun|shotty|br55dm-r|sniperifle|sniper\srifle|sniperrifle|br55-ss|m90|mk1|mk\s1|mk\s2|mk2|ssm|cqc|m6j|m6c|m6e|cw|stanchion|m99\sstanchion|aptr|ma4b-aptr|1173|m90\s1173|punisher|brute\sshot|beam\srifle|carbine|h2|h1|fuel\srod|fuel\srod\sgun|needler|gravity\shammer|fist\sof\srukt|rukt|spiked\sbomb|plasma\scannon|gravity\sgun|portalgun|portal\sgun|megaman|megagun|meagman\sgun|frizbar|gale|claw|double\sdragon|sucker\spunch|masamune|gladius|spatha|home-wrecker|homewecker|ture\sblade\sof\sthe\seast|eastern\sblade|guan\sdao|naginata|kopis|famboyant|pattah|ajanta|barabudur|konarak|katti|natar\stemple\ssword|ram\sdao|ram\shorn|kukri|kora|kukri|hostala|ellora|katar|wrist\sblade|hatchet\shands|hatchet|cestus|claws|blade\stalons|blade\stalon|hatchet\shand|wrist\sblades|scissors|scissors\skatar|quhab|fascia|hand\sscythe|scythe|swayyah|war\sfist|natalya\smark|Natalya's\smark|natalyas\smark|uzi|urumi|vadi|otta|colt|beretta|9mm|22|long\srifle|sub-machine|submachine|sub\smachine\sgun|sub-machine\sgun|submachine\sgun|assult\srifle|ar15|ar16|ar18|m1|granade\slauncher|moltav|tekko|stiletto|wand|wands|limb|arm|leg|pipe|monkeywrench|pipewrench|metal|strut|arm|prostetic|prosthetic|mechanical|biological|extension|limb)/gim) >= 0){
 //weapons
 
 document.getElementById('itempowerof'+jon).style='display:inline-block;';
@@ -3342,7 +3493,7 @@ document.getElementById('icbtn'+jon).innerHTML = '<button id="1action'+jon+'" cl
  
  }
  
- if(document.getElementById(it2).innerHTML.search(/(tunic|armor|glove|helmet|helm|hat|hood|chest plate|chestplate|breast plate|breastplate|guard|shoe|garb|shoes|boots|sneakers|runners|streamers|gloves|comb|visor|gorget|pauldron|counter|rerebrace|brace|plackart|fauld|tasset|tassle|tassel|cuisse|gauntlet|gauntlets|fan-plate|fan plate|fanplate|greave|greeve|sabaton|stop rib|stoprib|rib|gardbrace|vambrace|fauld|mail|chainmail|platemail|cloth|leather|kabuto|nodowa|sode|sendan-no-ita|sendan no ita|sendannoita|kote|kasazuri|haidate|sune-ate|sune ate|suneate|kyahan|isurumaki|do|shoulder armor|soulderarmor|hand guard|tekko|hakama|pants|thigh guard|thighguard|tassets|tasset|tabi|socks|hitatare|robe|shirt|nape guard|napeguard|shikoro|helmet crest|hemlmetcrest|maedate|watagami|shoulder strap|shoulderstrap|strap|bascinet|vervelles|aventail|spaulder|haubergeon|lames|demi|denim|wing|gatlings|wrist gauntlets|wristgauntlets|wrist bracers|bracer|crotch plate|thigh guanlets|knee pads|kneepads|utility belt|belt|suspenders|torso guard|torso plate|torso pad|arming cap|armingcap|cap|doublet|chain maille|chainmaille|chainmalle|chain malle|hose|pantyhose|lingera|lungera|crowl|salade|salet|schalern|bevor|beavor|placard|tuille|buckle|belt buckle|skull|sight|besagne|kettle helm|fur|cape|bag|pouch|focus|sandles|sandels|tubesocks|knee high|stiletos|stileto|curb stompers|curbstompers|kleats|kleets|kelt|sporran|sgain|flashers|brogues|ghillie|argyll|leather hat|leather cap|leatehr jacket|leather armor|leather pants|leather shoes|jacket|pin|scarf|straps|cloak|hooded cloak|sock|sandel|shroud|moccasins|jynco|mjolnir|powered assult armor|powered armor|beanie|Link's Hat|Links Hat|Link Hat|Mark V|Master Chiefs|Mark VI|tshirt|t-shirt|v-neck|vneck|turtleneck|sweater|parka|wind breaker)/gim) >= 0 ) {
+ if(document.getElementById(it2).innerHTML.search(/(tunic|armor|glove|helmet|helm|hat|hood|chest\splate|chestplate|breast\splate|breastplate|guard|shoe|garb|shoes|boots|sneakers|runners|streamers|gloves|comb|visor|gorget|pauldron|counter|rerebrace|brace|plackart|fauld|tasset|tassle|tassel|cuisse|gauntlet|gauntlets|fan-plate|fan\splate|fanplate|greave|greeve|sabaton|stop\srib|stoprib|rib|gardbrace|vambrace|fauld|mail|chainmail|platemail|cloth|leather|kabuto|nodowa|sode|sendan-no-ita|sendan\sno\sita|sendannoita|kote|kasazuri|haidate|sune-ate|sune\sate|suneate|kyahan|isurumaki|do|shoulder\sarmor|soulderarmor|hand\sguard|tekko|hakama|pants|thigh\sguard|thighguard|tassets|tasset|tabi|socks|hitatare|robe|shirt|nape\sguard|napeguard|shikoro|helmet\screst|hemlmetcrest|maedate|watagami|shoulder\sstrap|shoulderstrap|strap|bascinet|vervelles|aventail|spaulder|haubergeon|lames|demi|denim|wing|gatlings|wrist\sgauntlets|wristgauntlets|wrist\sbracers|bracer|crotch\splate|thigh\sguanlets|knee\spads|kneepads|utility\sbelt|belt|suspenders|torso\sguard|torso\splate|torso\spad|arming\scap|armingcap|cap|doublet|chain\smaille|chainmaille|chainmalle|chain\smalle|hose|pantyhose|lingera|lungera|crowl|salade|salet|schalern|bevor|beavor|placard|tuille|buckle|belt\sbuckle|skull|sight|besagne|kettle\shelm|fur|cape|bag|pouch|focus|sandles|sandels|tubesocks|knee\shigh|stiletos|stileto|curb\sstompers|curbstompers|kleats|kleets|kelt|sporran|sgain|flashers|brogues|ghillie|argyll|leather\shat|leather\scap|leatehr\sjacket|leather\sarmor|leather\spants|leather\sshoes|jacket|pin|scarf|straps|cloak|hooded\scloak|sock|sandel|shroud|moccasins|jynco|mjolnir|powered\sassult\sarmor|powered\sarmor|beanie|Link's\sHat|Links\sHat|Link\sHat|Mark\sV|Master\sChiefs|Mark\sVI|tshirt|t-shirt|v-neck|vneck|turtleneck|sweater|parka|wind\sbreaker)/gim) >= 0 ) {
   
   
   cap = document.getElementById(it2).innerHTML; //what the user inputted
@@ -3366,7 +3517,7 @@ document.getElementById('icbtn'+jon).innerHTML = '<button id="4action'+jon+'"  c
  
  }
  
- if(document.getElementById(it2).innerHTML.search(/(jewerly|ring|necklace|earrings|hoops|hoop|piercing|piercings|rings|necklaces|earring|ear hoop|ear ring|earhoop|earloop|ear loop|ear chain|earchain|neckchain|neck chain|pendant necklace|arm bands|wrist bands|bangels|bangel|bangle|collar|chocker|princess|matinee|opera|lariat|rope necklace|neck rope|neckrope|channel|bezel|pave|three-stone|-stone|inspired|prong|halo|split shank|splitshank|solitaire|industrial|forward helix|helix|flat|curved barbell|anti helix|anti-helix|antihelix|snug|targus|dermial|micro-dermial|microdermial|upper lobe|lobe|bridge|third eye|nasallang|austin bar|septril|septum|rhino|medussa|medusa|sports ring|champion ring|captive bead ring|navel|navel ring|choker)/gim) >= 0 ) {
+ if(document.getElementById(it2).innerHTML.search(/(jewerly|ring|necklace|earrings|hoops|hoop|piercing|piercings|rings|necklaces|earring|ear\shoop|ear\sring|earhoop|earloop|ear\sloop|ear\schain|earchain|neckchain|neck\schain|pendant\snecklace|arm\sbands|wrist\sbands|bangels|bangel|bangle|collar|chocker|princess|matinee|opera|lariat|rope\snecklace|neck\srope|neckrope|channel|bezel|pave|three-stone|-stone|inspired|prong|halo|split\sshank|splitshank|solitaire|industrial|forward\shelix|helix|flat|curved\sbarbell|anti\shelix|anti-helix|antihelix|snug|targus|dermial|micro-dermial|microdermial|upper\slobe|lobe|bridge|third\seye|nasallang|austin\sbar|septril|septum|rhino|medussa|medusa|sports\sring|champion\sring|captive\sbead\sring|navel|navel\sring|choker)/gim) >= 0 ) {
  
   document.getElementById('itempowerof'+jon).style='display:inline-block;';
 
@@ -3387,7 +3538,7 @@ document.getElementById('icbtn'+jon).innerHTML = '<button id="21action'+jon+'"  
  
  }
  
- if(document.getElementById(it2).innerHTML.search(/(tomb|scroll|spellbook|spell book|book|bible|quran|bhagavad Gita|bhagavad|composition|torah|diary|scripture|vedas|upanishads|upanishad|brahmana|aranyaka|dhanurveda|ayurveda|upa-vedas|upa-veda|veda|sruti|smriti|ithihasa|mahabharata|ramayana|purana|agama|darshana|mahapurana|mahapurava|upa|upa puranad|puranad|puranas|purana|vasihnava|shaiva|saktha|nyaya|vaisheshika|sankhya|yoga|mimamsa|uttara|pentateuch|genesis|exodus|leviticus|deuteronomy|psalms|proverb|proverbs|ecclesiastes|sirach|vajur|sama|kojiki|adi|granth|orthodox|book of mormon|necronomacon|necronomicon|perbindeshi|lolita|decameron|droll|cookbook|handbook|letter|works|works of|mein kampf|rangila rasul|stanic verses|satanic bible|lajja|zhuan falun|page|death note|deathnote|zhou enlai|mao|bloody myth|capital and ideology| of life|les moeurs|Les Mœurs|suicide note|suicidenote|ivanhoe|oliver twist|manifesto|the jungle| of erotic|world of |die gesteinigten|question of guilt|lysistrata|El Señor Presidente|el senor presidente|hind swaraj|jugbani|durdiner|zatri|bisher bashi|vangar gaan|chandrabindu|islam through hadis|annexation of sikkim|soft target|furqan|shivaji|jinnah|great soul|bulpington| of blup|brave new world|of good will|the martyr|laws of life|the constitution| constitution|bill of|bill of rights|honourable estate|dutch interior|borstal boy|little black sambo|sambo|little black book|black book|green book|white book|red book|yellow book| book|sophies choice|Sophie's Choice|schindlers ark|Schindler's Ark|da vinci code|programming|language|code| code|codex|grover| of light|fity shade| of sanity|rebirth:| rebirth|rebirth |gay is|peichi|பேய்ச்சி|notre ami le roi|le roi predateur|le roi|the rape of sita| of sita|cover-up general|coverup genera|cover up general|inter the river|great replacement|my watch|fra kristiania-bohemen|fra kristiania|albertine|snorri the seal|of the red ruby|satyarth prakash|satyarth|prakash|jinnah of|about muhammad|noli me tangere|untold story|political dos|document|documents|may handlang ang umaga|kalatas|labas|mirror of the polish crown|historia do mundo para as criancas|mundo para as|the boys|man who wouldn't stand up|man who wouldnt stand up|love comes later|thalia|new world translation|king james| version|rights of man|looing backward| elders of zion|protocols|protocol|animal farm|1984|ninteen eighty-four|ninteen eighty four|nineteen eightyfour|doctor zhivago|one day in |the life of|first circle|the circle|gulag archipelago|apocalypse|queen of sheba|goat days|frzai-e-amaal|frzai e amaal|value, price and profit| profit|and state|& state|of surplus value|anarchism or socialism|marxism|marxist|marx|heroines| and revolution| & revolution|time, foward| of the USSR| is all about|wisdom of jihad|wisdom of|that nullify|red lines|frankenstein|world of| of africa|soul on ice| is my life|burger's daughter|burgers daugher|julys people|jul's people|year 501|bad samaritans| samaritan| samaritans|one spoon on this earth|ulysses|devil's discus|devil discus|devil bible|devil's bible|king never smiles|areopagitica|rights of man|lord horror|anarchist cookbook|kill or get killed|canterbuy tales|tales|meritorious price of our redemption|moll flanders|fanny hill|candide|uncle tom's cabin|uncle toms cabin|elmer gantry|tropic of cancer|forever amber|grapes of wrath|howl|pedagogy of the oppressed|federal mafia|60 years later|operation dark heart|paradise of the blind|nickel-plated-feet gang|les pieds|dans le maquis|new class|curved river|on fierce wound|thoughts of a corpse|storytellers|of the wind|deuterocanon|epistles|canon law|common law|law|protestant bible|apocrypha|manasseh|chronicles|maccabees|enoch|titus flavius|wycliffe|hussite|reformation|deuterocanonical|luther bible|lutheran bible|lutheran|tyndale|of jonah|geneva bible|coverdale|dutch bible|casiodoro de reina|bear bible|biblia del oso|alfonsia|cipriano de valera|valera|pocket bible|pocket book|jewish hebrew bible|protocanon|protocanonical|interestamental|robit|ecclesiasticus|baruch|susanna|bel and the dragon|lined paper|rag paper|handbill|tag|poster|bound words|bound texts|sea scrolls|dead sea scroll|sea scroll|words|scribing|scribings|spell|spell book|spell page|spell scroll|sealed|opened|manual)/gim) >= 0 ) {
+ if(document.getElementById(it2).innerHTML.search(/(tomb|scroll|spellbook|spell\sbook|book|bible|quran|bhagavad\sGita|bhagavad|composition|torah|diary|scripture|vedas|upanishads|upanishad|brahmana|aranyaka|dhanurveda|ayurveda|upa-vedas|upa-veda|veda|sruti|smriti|ithihasa|mahabharata|ramayana|purana|agama|darshana|mahapurana|mahapurava|upa|upa\spuranad|puranad|puranas|purana|vasihnava|shaiva|saktha|nyaya|vaisheshika|sankhya|yoga|mimamsa|uttara|pentateuch|genesis|exodus|leviticus|deuteronomy|psalms|proverb|proverbs|ecclesiastes|sirach|vajur|sama|kojiki|adi|granth|orthodox|book\sof\smormon|necronomacon|necronomicon|perbindeshi|lolita|decameron|droll|cookbook|handbook|letter|works|works\sof|mein\skampf|rangila\srasul|stanic\sverses|satanic\sbible|lajja|zhuan\sfalun|page|death\snote|deathnote|zhou\senlai|mao|bloody\smyth|capital\sand\sideology|\sof\slife|les\smoeurs|Les\sMœurs|suicide\snote|suicidenote|ivanhoe|oliver\stwist|manifesto|the\sjungle|\sof\serotic|world\sof\s|die\sgesteinigten|question\sof\sguilt|lysistrata|El\sSeñor\sPresidente|el\ssenor\spresidente|hind\sswaraj|jugbani|durdiner|zatri|bisher\sbashi|vangar\sgaan|chandrabindu|islam\sthrough\shadis|annexation\sof\ssikkim|soft\starget|furqan|shivaji|jinnah|great\ssoul|bulpington|\sof\sblup|brave\snew\sworld|of\sgood\swill|the\smartyr|laws\sof\slife|the\sconstitution|\sconstitution|bill\sof|bill\sof\srights|honourable\sestate|dutch\sinterior|borstal\sboy|little\sblack\ssambo|sambo|little\sblack\sbook|black\sbook|green\sbook|white\sbook|red\sbook|yellow\sbook|\sbook|sophies\schoice|Sophie's\sChoice|schindlers\sark|Schindler's\sArk|da\svinci\scode|programming|language|code|\scode|codex|grover|\sof\slight|fity\sshade|\sof\ssanity|rebirth:|\srebirth|rebirth\s|gay\sis|peichi|பேய்ச்சி|notre\sami\sle\sroi|le\sroi\spredateur|le\sroi|the\srape\sof\ssita|\sof\ssita|cover-up\sgeneral|coverup\sgenera|cover\sup\sgeneral|inter\sthe\sriver|great\sreplacement|my\swatch|fra\skristiania-bohemen|fra\skristiania|albertine|snorri\sthe\sseal|of\sthe\sred\sruby|satyarth\sprakash|satyarth|prakash|jinnah\sof|about\smuhammad|noli\sme\stangere|untold\sstory|political\sdos|document|documents|may\shandlang\sang\sumaga|kalatas|labas|mirror\sof\sthe\spolish\scrown|historia\sdo\smundo\spara\sas\scriancas|mundo\spara\sas|the\sboys|man\swho\swouldn't\sstand\sup|man\swho\swouldnt\sstand\sup|love\scomes\slater|thalia|new\sworld\stranslation|king\sjames|\sversion|rights\sof\sman|looing\sbackward|\selders\sof\szion|protocols|protocol|animal\sfarm|1984|ninteen\seighty-four|ninteen\seighty\sfour|nineteen\seightyfour|doctor\szhivago|one\sday\sin\s|the\slife\sof|first\scircle|the\scircle|gulag\sarchipelago|apocalypse|queen\sof\ssheba|goat\sdays|frzai-e-amaal|frzai\se\samaal|value,\sprice\sand\sprofit|\sprofit|and\sstate|&\sstate|of\ssurplus\svalue|anarchism\sor\ssocialism|marxism|marxist|marx|heroines|\sand\srevolution|\s&\srevolution|time,\sfoward|\sof\sthe\sUSSR|\sis\sall\sabout|wisdom\sof\sjihad|wisdom\sof|that\snullify|red\slines|frankenstein|world\sof|\sof\safrica|soul\son\sice|\sis\smy\slife|burger's\sdaughter|burgers\sdaugher|julys\speople|jul's\speople|year\s501|bad\ssamaritans|\ssamaritan|\ssamaritans|one\sspoon\son\sthis\searth|ulysses|devil's\sdiscus|devil\sdiscus|devil\sbible|devil's\sbible|king\snever\ssmiles|areopagitica|rights\sof\sman|lord\shorror|anarchist\scookbook|kill\sor\sget\skilled|canterbuy\stales|tales|meritorious\sprice\sof\sour\sredemption|moll\sflanders|fanny\shill|candide|uncle\stom's\scabin|uncle\stoms\scabin|elmer\sgantry|tropic\sof\scancer|forever\samber|grapes\sof\swrath|howl|pedagogy\sof\sthe\soppressed|federal\smafia|60\syears\slater|operation\sdark\sheart|paradise\sof\sthe\sblind|nickel-plated-feet\sgang|les\spieds|dans\sle\smaquis|new\sclass|curved\sriver|on\sfierce\swound|thoughts\sof\sa\scorpse|storytellers|of\sthe\swind|deuterocanon|epistles|canon\slaw|common\slaw|law|protestant\sbible|apocrypha|manasseh|chronicles|maccabees|enoch|titus\sflavius|wycliffe|hussite|reformation|deuterocanonical|luther\sbible|lutheran\sbible|lutheran|tyndale|of\sjonah|geneva\sbible|coverdale|dutch\sbible|casiodoro\sde\sreina|bear\sbible|biblia\sdel\soso|alfonsia|cipriano\sde\svalera|valera|pocket\sbible|pocket\sbook|jewish\shebrew\sbible|protocanon|protocanonical|interestamental|robit|ecclesiasticus|baruch|susanna|bel\sand\sthe\sdragon|lined\spaper|rag\spaper|handbill|tag|poster|bound\swords|bound\stexts|sea\sscrolls|dead\ssea\sscroll|sea\sscroll|words|scribing|scribings|spell|spell\sbook|spell\spage|spell\sscroll|sealed|opened|manual)/gim) >= 0) {
  
   document.getElementById('itempowerof'+jon).style='display:inline-block;';
  
@@ -3405,13 +3556,14 @@ document.getElementById('iitemi'+jon).style = 'display:none';
  
 document.getElementById('icbtn'+jon).innerHTML = '<button id="33action'+jon+'"  class="button2"  id="ic1b'+jon+'" onclick="document.getElementById(&#034;iitemt'+jon+'&#034;).innerHTML=&#034;&nbsp;(&#034;+document.getElementById(&#039;iitem'+jon+'num&#039;).innerHTML+&#034;)&nbsp;<span title=&#039;Religious Book&#039;>(<sub><b><sup>TOMB</sup></b></sub>) <span id=&#039;spellhere'+jon+'&#039;></span></span></br>&#034;;document.getElementById(&#039;iitemt'+jon+'&#039;).title=&#039;Effect Level&#039;;document.getElementById(&#039;itembtn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;item2btn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;ghar2&#039;).innerHTML=&#039;'+jon+'&#039;;document.getElementById(&#039;ghar&#039;).innerHTML=document.getElementById(&#039;item'+jon+'num&#039;).innerHTML;spelljewel();" >Religious Book</button> <button id="34action'+jon+'"  class="button2"  id="ic2b'+jon+'" onclick="document.getElementById(&#034;iitemt'+jon+'&#034;).innerHTML=&#034;&nbsp;(&#034;+document.getElementById(&#039;iitem'+jon+'num&#039;).innerHTML+&#034;)&nbsp;<span style=&#039;font-size:85%;&#039;  title=&#039;Blank Book&#039;>(<sub><b><sup>BLANK</sup></b></sub>)</span></br>&#034;;document.getElementById(&#039;iitemt'+jon+'&#039;).title=&#039;Pages&#039;;document.getElementById(&#039;itembtn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;item2btn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;ghar2&#039;).innerHTML='+jon+';isthere();" >Empty Page(s)</button> <button id="35action'+jon+'"  class="button2"  id="ic3b'+jon+'" onclick="document.getElementById(&#034;iitemt'+jon+'&#034;).innerHTML=&#034;&nbsp;(&#034;+document.getElementById(&#039;iitem'+jon+'num&#039;).innerHTML+&#034;)&nbsp;<span style=&#039;font-size:85%;&#039;  title=&#039;Important Text&#039;>(<sub><b><sup>NOTED</sup></b></sub>)</span></br>&#034;;document.getElementById(&#039;iitemt'+jon+'&#039;).title=&#039;Pages&#039;;document.getElementById(&#039;itembtn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;item2btn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;ghar2&#039;).innerHTML='+jon+';isthere();" >Notable Text</button> <button id="36action'+jon+'"  class="button2"  id="ic4b'+jon+'" onclick="document.getElementById(&#034;iitemt'+jon+'&#034;).innerHTML=&#034;&nbsp;(&#034;+document.getElementById(&#039;iitem'+jon+'num&#039;).innerHTML+&#034;)&nbsp;<span style=&#039;font-size:85%;&#039;  title=&#039;Personal Book&#039;>(<sub><b><sup>DIARY</sup></b></sub>)</span></br>&#034;;document.getElementById(&#039;iitemt'+jon+'&#039;).title=&#039;Pages&#039;;document.getElementById(&#039;itembtn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;item2btn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;ghar2&#039;).innerHTML='+jon+';isthere();" >Personal Writtings</button> <button id="37action'+jon+'"  class="button2"  id="ic5b'+jon+'" onclick="document.getElementById(&#034;iitemt'+jon+'&#034;).innerHTML=&#034;&nbsp;(&#034;+document.getElementById(&#039;iitem'+jon+'num&#039;).innerHTML+&#034;)&nbsp;<span style=&#039;font-size:85%;&#039; title=&#039;Learn Spells&#039;>(<sub><b><sup>SCROLL</sup></b></sub>)</span><span  id=&#039;spellhere'+jon+'&#039;></span></br>&#034;;document.getElementById(&#039;iitemt'+jon+'&#039;).title=&#039;Spell Level&#039;;document.getElementById(&#039;itembtn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;item2btn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;ghar2&#039;).innerHTML=&#039;'+jon+'&#039;;document.getElementById(&#039;ghar&#039;).innerHTML=document.getElementById(&#039;item'+jon+'num&#039;).innerHTML;spelljewel();" >Spell Scroll</button> <button class="button2" id="38action'+jon+'"  id="ic6b'+jon+'" onclick="document.getElementById(&#034;iitemt'+jon+'&#034;).innerHTML=&#034;&nbsp;(&#034;+document.getElementById(&#039;iitem'+jon+'num&#039;).innerHTML+&#034;)&nbsp;<span style=&#039;font-size:85%;&#039; title=&#039;Spell Scroll&#039;>(<sub><b><sup>SPELLS</sup></b></sub>)</span> <span id=&#039;spellhere'+jon+'&#039; ></span></br>&#034;;document.getElementById(&#039;iitemt'+jon+'&#039;).title=&#039;Effect Level&#039;;document.getElementById(&#039;itembtn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;item2btn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;ghar2&#039;).innerHTML=&#039;'+jon+'&#039;;document.getElementById(&#039;ghar&#039;).innerHTML=document.getElementById(&#039;item'+jon+'num&#039;).innerHTML;spelljewel();" >Spell Tag</button> <button id="39action'+jon+'"  class="button2"  id="ic7b'+jon+'" onclick="document.getElementById(&#034;iitemt'+jon+'&#034;).innerHTML=&#034;&nbsp;(&#034;+document.getElementById(&#039;iitem'+jon+'num&#039;).innerHTML+&#034;)&nbsp;<span style=&#039;font-size:85%;&#039;  title=&#039;Old Text&#039;>(<sub><b><sup>OLD&nbsp;TEXT</sup></b></sub>)</span></br>&#034;;document.getElementById(&#039;iitemt'+jon+'&#039;).title=&#039;Pages&#039;;document.getElementById(&#039;itembtn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;item2btn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;ghar2&#039;).innerHTML='+jon+';isthere();" >Old Text</button> <button class="button2"  id="40action'+jon+'"  onclick="document.getElementById(&#034;iitemt'+jon+'&#034;).innerHTML=&#034;&nbsp;(&#034;+document.getElementById(&#039;iitem'+jon+'num&#039;).innerHTML+&#034;)&nbsp;<span style=&#039;font-size:85%;&#039;  title=&#039;Shooling Text&#039;>(<sub><b><sup>SCHOOL</sup></b></sub>)</span></br>&#034;;document.getElementById(&#039;iitemt'+jon+'&#039;).title=&#039;Effect Level&#039;;document.getElementById(&#039;itembtn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;item2btn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;ghar2&#039;).innerHTML='+jon+';isthere();" >Teachings</button> <button id="41action'+jon+'"   class="button2"  id="ic9b'+jon+'" onclick="document.getElementById(&#034;iitemt'+jon+'&#034;).innerHTML=&#034;&nbsp;(&#034;+document.getElementById(&#039;iitem'+jon+'num&#039;).innerHTML+&#034;)&nbsp;<span style=&#039;font-size:85%;&#039;  title=&#039;Belief Tomb&#039;>(<sub><b><sup>MANIFESTO</sup></b></sub>)</span></br>&#034;;document.getElementById(&#039;iitemt'+jon+'&#039;).title=&#039;Effect Level&#039;;document.getElementById(&#039;itembtn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;item2btn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;ghar2&#039;).innerHTML='+jon+';isthere();" >Manifesto</button> <button id="42action'+jon+'"   class="button2"  id="ic10b'+jon+'" onclick="document.getElementById(&#034;iitemt'+jon+'&#034;).innerHTML=&#034;&nbsp;(&#034;+document.getElementById(&#039;iitem'+jon+'num&#039;).innerHTML+&#034;)&nbsp;<span style=&#039;font-size:85%;&#039;  title=&#039;Burned Book&#039;>(<sub><b><sup>BURNED</sup></b></sub>)</span></br>&#034;;document.getElementById(&#039;iitemt'+jon+'&#039;).title=&#039;Percentage Lost&#039;;document.getElementById(&#039;itembtn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;item2btn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;ghar2&#039;).innerHTML='+jon+';isthere();" >Burned Book</button> <button id="43action'+jon+'"   class="button2"  id="ic11b'+jon+'" onclick="document.getElementById(&#034;iitemt'+jon+'&#034;).innerHTML=&#034;&nbsp;(&#034;+document.getElementById(&#039;iitem'+jon+'num&#039;).innerHTML+&#034;)&nbsp;<span style=&#039;font-size:85%;&#039;  title=&#039;Banned Book&#039;>(<sub><b><sup>BANNED</sup></b></sub>)</span></br>&#034;;document.getElementById(&#039;iitemt'+jon+'&#039;).title=&#039;Pages&#039;;document.getElementById(&#039;itembtn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;item2btn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;ghar2&#039;).innerHTML='+jon+';isthere();" >Banned Book</button>';
  
- document.getElementById('itemextras'+jon).innerHTML += "<button class='button2' id='swapwp"+jon+"'  style='display:none'  onclick='document.getElementById(&#039;item"+jon+"&#039;).className=&#039;stroke&#039;;document.getElementById(&#039;thisitem"+jon+"&#039;).className=&#039;stroke&#039;;this.style=&#039;display:none&#039;;document.getElementById(&#039;ghar2&#039;).innerHTML=&#039;"+jon+"&#039;;document.getElementById(&#039;itemremove"+jon+"&#039;).style=&#039;display:none;&#039;;bookin();' ><s title='Using this?'><b>o</b></s></button>";  
+ document.getElementById('itemextras'+jon).innerHTML += "<button class='button2' id='swapwp"+jon+"'  style='display:none'  onclick='document.getElementById(&#039;item"+jon+"&#039;).className=&#039;stroke&#039;;document.getElementById(&#039;thisitem"+jon+"&#039;).className=&#039;stroke&#039;;this.style=&#039;display:none&#039;;document.getElementById(&#039;ghar2&#039;).innerHTML=&#039;"+jon+"&#039;;document.getElementById(&#039;itemremove"+jon+"&#039;).style=&#039;display:none;&#039;;bookin("+jon+");' ><s title='Using this?'><b>o</b></s></button>";  
  
  }
  
- //need to add in custom inputs for "deed" & "bounty" (norm + text inp + owner/payeer + bounty deets)
+ //need to add in custom inputs for "deed" & "bounty" (norm + text inp + owner/payeer + bounty deets) i'm here I'm here im here Im here
  //need to set up readable on click options for some books like deed, bounty & blank (to write in)
- if(document.getElementById(it2).innerHTML.search(/(spiral|papers|paper|deed|bounty|journal|blank|blank book|unsealed|notebook)/gim) >= 0 ) {
+ //need to add multiple pages for multiple paged objects here 
+ if(document.getElementById(it2).innerHTML.search(/(spiral|papers|paper|deed|bounty|journal|blank\spages|blank\snotebook|blank\sspiral|spiral\snotebook|blank\sbook|blankbook|unsealed|notebook)/gi) >= 0 ) {
  
 document.getElementById('itempowerof'+jon).style='display:inline-block;';
  
@@ -3434,7 +3586,7 @@ document.getElementById('icbtn'+jon).innerHTML = '<button id="44action'+jon+'"  
  }
  
  //importer system
- if(document.getElementById(it2).innerHTML.search(/(import|download|install|mount|collect|item hash|hash in|hash)/gim) >= 0 ) {
+ if(document.getElementById(it2).innerHTML.search(/(import|download|install|mount|collect|item\shash|hash\sin|hash)/gim) >= 0 ) {
  
 //document.getElementById('itempowerof'+jon).style='display:inline-block;';
  
@@ -3687,15 +3839,15 @@ document.getElementById('item2btn'+jon).style = 'display:inline-block';
  document.getElementById('itemextras'+jon).innerHTML = "<button class='button2' id='share"+jon+"' title='Share/Send this Item?' onclick='this.style=&#039;display:none&#039;;document.getElementById(&#039;shared"+jon+"&#039;).style=&#039;display:inline-block&#039;;document.getElementById(&#039;ghar2&#039;).innerHTML=&#039;"+jon+"&#039;;shareit();' ><b>s</b></button>  <button class='button2' style='display:none' id='shared"+jon+"' title='Hide Share Hash' onclick='this.style=&#039;display:none&#039;;document.getElementById(&#039;share"+jon+"&#039;).style=&#039;display:inline-block&#039;;document.getElementById(&#039;hashout"+jon+"&#039;).innerHTML = &#039;&#039;;' ><s><b>s</b></s></button> "+document.getElementById('itemextras'+jon).innerHTML;
  
  
- if(document.getElementById(it3).innerHTML.search(/(dragonbreath|fire|flame|flarred|fanned|chared|char|campfire|torch|torched|flamed|dragon breath|scorched|chorched|charcoal|on fire|flaming|hot|heat)/gim) >= 0){
+ if(document.getElementById(it3).innerHTML.search(/(dragonbreath|fire|flame|flarred|fanned|chared|char|campfire|torch|torched|flamed|dragon\sbreath|scorched|chorched|charcoal|on\sfire|flaming|hot|heat)/gim) >= 0){
  document.getElementById(it4).innerHTML += " <sub><sup><sup>(<b style='color:red;background-color:transparent' title='Flame Element'>F</b>)</sup></sup></sub>";
  }
  
- if(document.getElementById(it3).innerHTML.search(/(icebreath|cold|snow|snowing|frostbite|frost|frosted|frosting|frothed|frothy|chilled|chilly|frosty|blue snake bite|tundra|hypothermia)/gim) >= 0){
+ if(document.getElementById(it3).innerHTML.search(/(icebreath|cold|snow|snowing|frostbite|frost|frosted|frosting|frothed|frothy|chilled|chilly|frosty|blue\ssnake\sbite|tundra|hypothermia)/gim) >= 0){
  document.getElementById(it4).innerHTML += " <sub><sup><sup>(<b style='color:blue;background-color:transparent' title='Cold Element'>C</b>)</sup></sup></sub>";
  }
  
- if(document.getElementById(it3).innerHTML.search(/(crisp|sharp|edged|leveled|ready|blizzard|ice|frozen|freezer burn|ice burn|cold burn)/gim) >= 0){
+ if(document.getElementById(it3).innerHTML.search(/(crisp|sharp|edged|leveled|ready|blizzard|ice|frozen|freezer\sburn|ice\sburn|cold\sburn)/gim) >= 0){
  document.getElementById(it4).innerHTML += " <sub><sup><sup>(<b style='color:blue;background-color:transparent' title='Ice Element'>I</b>)</sup></sup></sub>";
  }
  
@@ -3703,11 +3855,11 @@ document.getElementById('item2btn'+jon).style = 'display:inline-block';
  document.getElementById(it4).innerHTML += " <sub><sup><sup>(<b style='color:grey;background-color:transparent' title='Wind Element'>W</b>)</sup></sup></sub>";
  }
  
- if(document.getElementById(it3).innerHTML.search(/(sunny|spring|bright|sunny|sun|flared|sunrays|sun rays|rays|light)/gim) >= 0){
+ if(document.getElementById(it3).innerHTML.search(/(sunny|spring|bright|sunny|sun|flared|sunrays|sun\srays|rays|light)/gim) >= 0){
  document.getElementById(it4).innerHTML += " <sub><sup><sup>(<b style='color:yellow;background-color:transparent' title='Sun Element'>S</b>)</sup></sup></sub>";
  }
  
- if(document.getElementById(it3).innerHTML.search(/(fogbreath|dreary|deary|gloomy|goth|gothic|punk rock|metal|death|dark|night|moon|starie|stary|staree|reflect)/gim) >= 0){
+ if(document.getElementById(it3).innerHTML.search(/(fogbreath|dreary|deary|gloomy|goth|gothic|punk\srock|metal|death|dark|night|moon|starie|stary|staree|reflect)/gim) >= 0){
  document.getElementById(it4).innerHTML += " <sub><sup><sup>(<b style='color:grey;background-color:transparent' title='Dark Element'>D</b>)</sup></sup></sub>";
  }
  if(document.getElementById(it3).innerHTML.search(/(portal|multiverse|multplex|multi-universe|metaverse|metaversal|universal|nebula|cloud|cloudy|complex|rose)/gim) >= 0){
@@ -3721,7 +3873,7 @@ document.getElementById('item2btn'+jon).style = 'display:inline-block';
  document.getElementById(it4).innerHTML += " <sub><sup><sup>(<b style='color:pink;background-color:transparent' title='Enfluenced Element'>E</b>)</sup></sup></sub>";
  }
  
- if(document.getElementById(it3).innerHTML.search(/(green|420|smoke|toke|bruh|brosiv|herb|marijuana|smoked|joint|blunt|stash)/gim) >= 0){
+ if(document.getElementById(it3).innerHTML.search(/(green|420|smoke|toke|bruh|brosiv|herb|marijuana|smoked|joint|blunt|stash|weed)/gim) >= 0){
  document.getElementById(it4).innerHTML += " <sub><sup><sup>(<b style='color:green;background-color:transparent' title='High Element'>M</b>)</sup></sup></sub>";
  }
  if(document.getElementById(it3).innerHTML.search(/(technical|electrician|technician|mechanical|geared|engerniered|engerneer|engineer|engineered|engineering)/gim) >= 0){
@@ -3732,11 +3884,11 @@ document.getElementById('item2btn'+jon).style = 'display:inline-block';
  document.getElementById(it4).innerHTML += " <sub><sup><sup>(<b style='color:grey;background-color:transparent' title='Fearfull Element'>1</b>)</sup></sup></sub>";
  }
  
- if(document.getElementById(it3).innerHTML.search(/(possesed|haunted|horror|horrific|scary|feared|spook show|manslaughter)/gim) >= 0){
+ if(document.getElementById(it3).innerHTML.search(/(possesed|haunted|horror|horrific|scary|feared|spook\sshow|manslaughter)/gim) >= 0){
  document.getElementById(it4).innerHTML += " <sub><sup><sup>(<b style='color:dimgrey;background-color:transparent' title='Feared Element'>2</b>)</sup></sup></sub>";
  }
  
- if(document.getElementById(it3).innerHTML.search(/(holy|higher|power|above|regard|missle|marine|god-like|god like|demigod|demegod|god son|god daughter)/gim) >= 0){
+ if(document.getElementById(it3).innerHTML.search(/(holy|higher|power|above|regard|missle|marine|god-like|god\slike|demigod|demegod|god\sson|god\sdaughter)/gim) >= 0){
  document.getElementById(it4).innerHTML += " <sub><sup><sup>(<b style='color:silver;background-color:transparent' title='Fearless Element'>3</b>)</sup></sup></sub>";
  }
  
@@ -3758,7 +3910,7 @@ document.getElementById('item2btn'+jon).style = 'display:inline-block';
  document.getElementById(it4).innerHTML += " <sub><sup><sup>(<b style='color:grey;background-color:transparent' title='Bodly Extension'>X</b>)</sup></sup></sub>";
  }
  
- 
+ //need new element sets here like the empress lore stuff I'm here i'm here Im here im here upgradeable 
  
  
 }
@@ -4653,7 +4805,7 @@ if(Number(document.getElementById('pack').querySelectorAll('#dbtn'+jon11).length
  var it22 = 'itemt'+jon;
  var jn = 0;
  var ehjn = 0;
- nums();
+ nums(0);
  
  
  var sthuh = Number(muscle) + Number(phydex);
@@ -4768,12 +4920,14 @@ document.getElementById('ghar2').innerHTML = '';
  }
  
  function checklimb(){
+ var jon = document.getElementById('ghar2').innerHTML;
  if(document.getElementById('itemt'+jon).innerHTML.search(/(arm|prostetic|prosthetic|mechanical|biological|extension|limb)/gim) >= 0 && document.getElementById('item'+jon).innerHTML.search(/(limb|arm|prostetic|prosthetic|mechanical|biological)/gim) >= 0){
  limbcount = Number(limbcount) + 1;
  }
  
  }
  function checklimb2(){
+ var jon = document.getElementById('ghar2').innerHTML;
  if(document.getElementById('itemt'+jon).innerHTML.search(/(arm|prostetic|prosthetic|mechanical|biological|extension|limb)/gim) >= 0 && document.getElementById('item'+jon).innerHTML.search(/(limb|arm|prostetic|prosthetic|mechanical|biological)/gim) >= 0){
  limbcount = Number(limbcount) + 2;
  }
@@ -4787,7 +4941,7 @@ document.getElementById('ghar2').innerHTML = '';
  var jimjon = Number(document.getElementById('qnm').innerHTML);
  var jon2 = Number(document.getElementById('enm').innerHTML) - Number(1);
  var it22 = 'itemt'+jon;
- nums();
+ nums(0);
  var prl = 0;
  
  if(document.getElementById('iitemt'+jon).innerHTML.search("HEAD") >= 0) {
@@ -4915,7 +5069,7 @@ document.getElementById('ghar2').innerHTML = '';
  var jimjon = Number(document.getElementById('qnm').innerHTML);
  var jon2 = Number(document.getElementById('enm').innerHTML) - Number(1);
  var it22 = 'itemt'+jon;
- nums();
+ nums(0);
  var perl = 0;
  
 
@@ -5175,10 +5329,10 @@ document.getElementById('ghar2').innerHTML = '';
  }
  
  
- function bookin(){
+ function bookin(place){
  var bon = 0; //wieght
  var jon = document.getElementById('ghar2').innerHTML;
- nums();
+ nums(0);
  var prld = 0;
  
   if(weaponcount === 0 || weaponcount === 1){
@@ -5196,15 +5350,16 @@ document.getElementById('ghar2').innerHTML = '';
    remjewel = bon;
    newspell = 1;
    
-   if(document.getElementById('wisdom').innerHTML === "Mental Dex"){
-   document.getElementById('wisdom').innerHTML = 0;
+   if(document.getElementById('fhold10').innerHTML.toString().search(/\d/g) === Number(-1) && isNaN(mendex) === true){
+    //document.getElementById('wisdom').innerHTML = 0;
+    mendex = Number(0);
    }
-   document.getElementById('wisdom').innerHTML = mendex;
+//   document.getElementById('wisdom').innerHTML = mendex;
   
-   document.getElementById('weapondump').innerHTML += '<span id="bk1i'+jon+'" >'+document.getElementById("item"+jon).innerHTML+' <b title="Pages">('+document.getElementById("iitemt"+jon).innerHTML.split("&nbsp;(")[1].split(")&nbsp;")[0]+')</b>&nbsp; <span id="itemtype'+jon+'" title="item" >['+document.getElementById("iitemt"+jon).innerHTML.split("(")[2].split(")")[0]+']</span></br><button class="button2" onclick="document.getElementById(&#039;bk1i'+jon+'&#039;).remove();armcount=armcount-'+bon+';weaponcount=weaponcount-1;mendex=mendex-'+prld+';document.getElementById(&#039;thisitem'+jon+'&#039;).className=&#039;&#039;;document.getElementById(&#039;item'+jon+'&#039;).className=&#039;&#039;;document.getElementById(&#039;swapwp'+jon+'&#039;).style=&#039;display:inline-block&#039;;document.getElementById(&#039;itemremove'+jon+'&#039;).style=&#039;display:inline-block&#039;;document.getElementById(&#039;ghar2&#039;).innerHTML=&#039;'+jon+'&#039;;document.getElementById(&#039;wisdom&#039;).innerHTML=mendex;document.getElementById(&#039;spell'+mmn+'rem&#039;).click();"><b style="font-size:125%" title="Click to UnEquip">UnEquip</b></button></br></span>';
+   document.getElementById('weapondump').innerHTML += '<span id="bk1i'+jon+'" >'+document.getElementById("item"+jon).innerHTML+' <b title="Pages">('+document.getElementById("iitemt"+jon).innerHTML.split("&nbsp;(")[1].split(")&nbsp;")[0]+')</b>&nbsp; <span id="itemtype'+jon+'" title="item" >['+document.getElementById("iitemt"+jon).innerHTML.split("(")[2].split(")")[0]+']</span></br><button class="button2" onclick="document.getElementById(&#039;bk1i'+jon+'&#039;).remove();armcount=armcount-'+bon+';weaponcount=weaponcount-1;mendex=mendex-'+prld+';document.getElementById(&#039;thisitem'+jon+'&#039;).className=&#039;&#039;;document.getElementById(&#039;item'+jon+'&#039;).className=&#039;&#039;;document.getElementById(&#039;swapwp'+jon+'&#039;).style=&#039;display:inline-block&#039;;document.getElementById(&#039;itemremove'+jon+'&#039;).style=&#039;display:inline-block&#039;;document.getElementById(&#039;ghar2&#039;).innerHTML=&#039;'+jon+'&#039;;document.getElementById(&#039;spell'+mmn+'rem&#039;).click();"><b style="font-size:125%" title="Click to UnEquip">UnEquip</b></button></br></span>';
    
    document.getElementById('gh2').innerHTML = document.getElementById("item"+jon).innerHTML + ' ' + document.getElementById("iitemt"+jon).innerHTML.split("&nbsp;(")[1].split(")&nbsp;")[0] + ' ' + mmn; 
-   spelladd();
+   spelladd(place);
    
    var sh9 = document.getElementById("spellhere"+jon).innerHTML.split("(")[1].split(")")[0];
    document.getElementById('spellinp'+mmn).value=sh9;
@@ -5559,26 +5714,30 @@ if(ee >= 1000){
   document.getElementById('newrnd').disabled = true;
  }
  
- function spelled(sn,sd){
+ function spelled(sn,sd,sv,lloc){
  var previns = document.getElementById('inspiration').innerHTML;
+  if(previns === "" || isNaN(previns) === true || previns <= 0){
+   previns = Number(0);
+  }
  var spillnum = sn;
- var nn3 = Number(document.getElementById('mnm').innerHTML)-1;
+ var nn3 = sv;
    
    do{
-   
-   //spellwatch = Number(document.getElementById('spelldiff'+spillnum).innerHTML); <!--original design-->
    spellwatch = Number(document.getElementById('spelldiff'+nn3).innerHTML);
    
    var spnn = spellwatch * 5;
    
-   //var spll = Number(document.getElementById('spell'+spillnum+'num').innerHTML)/spnn;
    var spll = Number(document.getElementById('spell'+nn3+'num').innerHTML)/spnn;
    
-   if(spll > 2){
-   //document.getElementById('spell'+spillnum+'pwr').innerHTML = Number(document.getElementById('spell'+spillnum+'pwr').innerHTML) + 1;
+   if(Number(spll) > Number(2)){
    document.getElementById('spell'+nn3+'pwr').innerHTML = Number(document.getElementById('spell'+nn3+'pwr').innerHTML) + 1;
    inspired = Number(previns) + 1;
-   //document.getElementById('spelldiff'+spillnum).innerHTML = spellwatch + 1;
+   
+    if(isNaN(lloc) === false && Number(lloc) >= Number(0)){
+	var jimmyjam =  document.getElementById("iitemt"+lloc).innerHTML;
+      document.getElementById("iitemt"+lloc).innerHTML = jimmyjam.toString().split("&nbsp;(")[0] + "&nbsp;("+Number(Number(spellwatch) + 1)+")&nbsp;" + jimmyjam.toString().split(")&nbsp;")[1];
+    } 
+	
    document.getElementById('spelldiff'+nn3).innerHTML = spellwatch + 1;
    }
    spellwatch = 0;
@@ -5587,18 +5746,18 @@ if(ee >= 1000){
   while(spillnum < nn3);
  }
  
- function skilled(snum,sdif){
+ function skilled(snum,sdif,skv){
  var previns = document.getElementById('inspiration').innerHTML;
  
  var skillnum = snum;
-   var nnn = Number(document.getElementById('num').innerHTML)-1;
+   var nnn = skv;
    skillwatch = Number(sdif);
    var snn = skillwatch * 20;
    do{
-   var sk11 = Number(document.getElementById('skill'+skillnum+'num').innerHTML)/snn;
+   var sk11 = Number(document.getElementById('skill'+nnn+'num').innerHTML)/snn;
    if(sk11 > 2){
    inspired = Number(previns) + 1;
-   document.getElementById('skilldiff'+nnn).innerHTML = skillwatch + 1;//may need to change nnn to sdif upgrade here upgradeable upgradable 
+   document.getElementById('skilldiff'+nnn).innerHTML = skillwatch + 1; <!-- skilldiff number is the defining factor for limiting skill leveling-->
    }
    skillwatch = 0;
    skillnum = skillnum + 1;
@@ -5722,8 +5881,10 @@ if(heighted === Number(-1) && weighted === Number(-1)){ //unsure if this underwi
  if(x21.toString().search(/\-/g) >= 0 && Number(x21) < Number(-0.9)){ //underwieght
  
   if(Number(x21) < Number(hp) && document.getElementById('initiavtive').innerHTML.toString().search(/(\d|\d+)/g) >= 0){ //dead
-    document.getElementById('initiavtive').innerHTML = "DEAD";
-	
+    document.getElementById('renamehealth').innerHTML = "DEAD";
+  if(Number(Number(tothere)-1) <= Number(-10) && document.getElementById('bodyoutput').innerText.toString().search(/(RIP|ZOMBIE|Z0M8|DROWL|GHOST|GHASTLY|GHAST|GHOSTLY|BONES|SKELETON|UNDEAD|DARK_SOLDIER|GOUL)/gim) < 0){<!--death incoming-->
+   document.getElementById('bodyoutput').innerHTML += "&nbsp;<span id='dead' value='"+months+""+days+""+yearsout+"' title='Passed on the "+days+" day__"+monthout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....'><b style='color:rgb(99,99,99,0.9);'><sub><sup>RIP</sup></sub></b></span>&nbsp;";
+   }
 	//need to insert a dead function to allow body to be used as a corpse (can be filled with objects, can be cut down (2 opposite limbs for bounties), can be-headed (for bounties), can be used as large heavy duffle bag that grows in weight per game hour !! I'm here im here upgrade Im here i'm here upgradable 
 	
 	document.getElementById('newround').value = 0;
@@ -5739,7 +5900,7 @@ if(heighted === Number(-1) && weighted === Number(-1)){ //unsure if this underwi
    }
    
    if(Number(x21) < Number(hp) && document.getElementById('initiavtive').innerHTML.toString().search(/(\d|\d+)/g) >= 0){ //dead
-    document.getElementById('initiavtive').innerHTML = "DEAD";
+    document.getElementById('renamehealth').innerHTML = "DEAD";
 	
 	//need to insert a dead function to allow body to be used as a corpse (can be filled with objects, can be cut down (2 opposite limbs for bounties), can be-headed (for bounties), can be used as large heavy duffle bag that grows in weight per game hour !! I'm here im here upgrade Im here i'm here upgradable 
 	
@@ -5757,7 +5918,10 @@ if(heighted === Number(-1) && weighted === Number(-1)){ //unsure if this underwi
    }
    
    if(Number(x21) < Number(hp) && document.getElementById('initiavtive').innerHTML.toString().search(/(\d|\d+)/g) >= 0){ //dead
-    document.getElementById('initiavtive').innerHTML = "DEAD";
+    document.getElementById('renamehealth').innerHTML = "DEAD";
+  if(Number(Number(tothere)-1) <= Number(-10) && document.getElementById('bodyoutput').innerText.toString().search(/(RIP|ZOMBIE|Z0M8|DROWL|GHOST|GHASTLY|GHAST|GHOSTLY|BONES|SKELETON|UNDEAD|DARK_SOLDIER|GOUL)/gim) < 0){<!--death incoming-->
+   document.getElementById('bodyoutput').innerHTML += "&nbsp;<span id='dead' value='"+months+""+days+""+yearsout+"' title='Passed on the "+days+" day__"+monthout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....'><b style='color:rgb(99,99,99,0.9);'><sub><sup>RIP</sup></sub></b></span>&nbsp;";
+   }
 	
 	//need to insert a dead function to allow body to be used as a corpse (can be filled with objects, can be cut down (2 opposite limbs for bounties), can be-headed (for bounties), can be used as large heavy duffle bag that grows in weight per game hour !! I'm here im here upgrade Im here i'm here upgradable 
 	
@@ -5775,7 +5939,10 @@ if(heighted === Number(-1) && weighted === Number(-1)){ //unsure if this underwi
    }
    
    if(Number(x21) < Number(hp) && document.getElementById('initiavtive').innerHTML.toString().search(/(\d|\d+)/g) >= 0){ //dead
-    document.getElementById('initiavtive').innerHTML = "DEAD";
+    document.getElementById('renamehealth').innerHTML = "DEAD";
+  if(Number(Number(tothere)-1) <= Number(-10) && document.getElementById('bodyoutput').innerText.toString().search(/(RIP|ZOMBIE|Z0M8|DROWL|GHOST|GHASTLY|GHAST|GHOSTLY|BONES|SKELETON|UNDEAD|DARK_SOLDIER|GOUL)/gim) < 0){<!--death incoming-->
+   document.getElementById('bodyoutput').innerHTML += "&nbsp;<span id='dead' value='"+months+""+days+""+yearsout+"' title='Passed on the "+days+" day__"+monthout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....'><b style='color:rgb(99,99,99,0.9);'><sub><sup>RIP</sup></sub></b></span>&nbsp;";
+  }
 	
 	//need to insert a dead function to allow body to be used as a corpse (can be filled with objects, can be cut down (2 opposite limbs for bounties), can be-headed (for bounties), can be used as large heavy duffle bag that grows in weight per game hour !! I'm here im here upgrade Im here i'm here upgradable 
 	
@@ -5793,8 +5960,10 @@ if(heighted === Number(-1) && weighted === Number(-1)){ //unsure if this underwi
    }
    
    if(Number(x21) < Number(hp) && document.getElementById('initiavtive').innerHTML.toString().search(/(\d|\d+)/g) >= 0){ //dead
-    document.getElementById('initiavtive').innerHTML = "DEAD";
-	
+    document.getElementById('renamehealth').innerHTML = "DEAD";
+  if(Number(Number(tothere)-1) <= Number(-10) && document.getElementById('bodyoutput').innerText.toString().search(/(RIP|ZOMBIE|Z0M8|DROWL|GHOST|GHASTLY|GHAST|GHOSTLY|BONES|SKELETON|UNDEAD|DARK_SOLDIER|GOUL)/gim) < 0){<!--death incoming-->
+   document.getElementById('bodyoutput').innerHTML += "&nbsp;<span id='dead' value='"+months+""+days+""+yearsout+"' title='Passed on the "+days+" day__"+monthout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....'><b style='color:rgb(99,99,99,0.9);'><sub><sup>RIP</sup></sub></b></span>&nbsp;";
+	}
 	//need to insert a dead function to allow body to be used as a corpse (can be filled with objects, can be cut down (2 opposite limbs for bounties), can be-headed (for bounties), can be used as large heavy duffle bag that grows in weight per game hour !! I'm here im here upgrade Im here i'm here upgradable 
 	
 	document.getElementById('newround').value = 0;
@@ -5808,7 +5977,10 @@ if(heighted === Number(-1) && weighted === Number(-1)){ //unsure if this underwi
    }
    
    if(Number(x21) < Number(hp) && document.getElementById('initiavtive').innerHTML.toString().search(/(\d|\d+)/g) >= 0){ //dead
-    document.getElementById('initiavtive').innerHTML = "DEAD";
+    document.getElementById('renamehealth').innerHTML = "DEAD";
+  if(Number(Number(tothere)-1) <= Number(-10) && document.getElementById('bodyoutput').innerText.toString().search(/(RIP|ZOMBIE|Z0M8|DROWL|GHOST|GHASTLY|GHAST|GHOSTLY|BONES|SKELETON|UNDEAD|DARK_SOLDIER|GOUL)/gim) < 0){<!--death incoming-->
+   document.getElementById('bodyoutput').innerHTML += "&nbsp;<span id='dead' value='"+months+""+days+""+yearsout+"' title='Passed on the "+days+" day__"+monthout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....'><b style='color:rgb(99,99,99,0.9);'><sub><sup>RIP</sup></sub></b></span>&nbsp;";
+  }
 	
 	//need to insert a dead function to allow body to be used as a corpse (can be filled with objects, can be cut down (2 opposite limbs for bounties), can be-headed (for bounties), can be used as large heavy duffle bag that grows in weight per game hour !! I'm here im here upgrade Im here i'm here upgradable 
 	
@@ -5997,23 +6169,18 @@ document.getElementById('themes').innerHTML = '</br><button class="button2" id="
   
   //negative flaws doesn't force player moves 
   
-  //we shouldn't be able to equip things that removed sections
-  
-  //rest can't work without input (it should be able to just rest)
-  
-  //player shouldn't have to input anything of lost/gained xp to end a round 
-  
   //Self-ALignment & Personality Traits should be linked like key words seen in self-alignment & background should add data downline
-  
-  //skill boost should say "Skill Base" cause it's the base level for this character's skill Level
   
   //each skill & spell needs seperated ways to track their individual levels to add with player skill or for "min skill to use"
   
-  //spell levels increased from held books is lost when not equiped when only some of the levels should be lost when not equiped but incresed slowly to loose more the longer the player doesn't hold the book or learn the spell elsewhere
+  //spell levels lost when not equiped over time so you loose more the longer you don't re-hold the book or learn the spell elsewhere
   
-  //add to "All information being inputted is only existing on your device & within the browser." To include, " Only if you transfer objects, character sheets or awarded hashes from within the game (In Example: Item Hashes for giving to another player) outside of your device & browser will any potential information leave your running installment of iCS (no phyiscal install is needed, iCS runs as webware or electronic intranet required software that runs locally within the ram of the device. All transferred data will be considered previously owned or currently owned by the characters from within the game. Players of these characters only hold rights to the character in namesake and actions they directed the character to make, not the objects nor the data formed, made or provided during or within the game sheet or alogrithms. Their character may own the objects built, made, handled; used within the game for their character is the one interacting, building and/or using the in-game objects not the player. The player is the director of the character even if the character is made to mimic the player 100% completely in every aspect."
   
-  //books sometimes can't be held
+  
+  
+  
+  
+  
  
  
  //these are known wants to be added:
@@ -6031,6 +6198,8 @@ document.getElementById('themes').innerHTML = '</br><button class="button2" id="
   //need more element types like: knockback, thorns, Area_of_Elemental damange (AoE damange), regeneration of (anything), degeneration of (anything), food spoils, food, zombification, humanfication, dieseied, curing, take-damage when using some items, harm-self for spell effectiviness increase, harm-self for blood-damange with weapons, harm-self if infected to spread desease, add poision to objects/weapons, weapon traps, object traps 
   
   //needs in-paper traps, in-paper payment system & more bounty check systems for getting auto-paid in bounty
+ 
+  //spells you already know should be added onto not added beside and if it's a temp add (book held) then that bit should go away when not holding book but book level stays same as always slowly dissapate if not re-held or known
  
  </script>
  </div>

@@ -1,11 +1,15 @@
 # iCS
-### An interactive Character Sheet Intelligently Acting with a custom open ended "Unlicense" to be used as a FOSS & Opened Table-Top System
+### An interactive Character Sheet Intelligently Acting with a custom open ended "Unlicense" to be used as a FOSS & Open Table-Top System
 ---
-##### &nbsp;&nbsp;&nbsp; iCS is slowly becoming an "Intelligent Character Sheet" since the iCS system is doing some algo work and word recgonition. I don't think iCS will reach ICS standards very quickly but maybe one day iCS (interactive Character Sheet) will also be an ICS (Intelligent Character Sheet).
+##### &nbsp;&nbsp;&nbsp; iCS is slowly becoming an "Intelligent Character Sheet" since the iCS system is doing some algo work and word recgonition. I don't think iCS [interactive] will reach ICS [Intelligent] standards very quickly but maybe one day iCS (interactive Character Sheet) will also be an ICS (Intelligent Character Sheet).
 
 --
 ---
-### To play with iCS live, visit https://3dd.in/iCS or the use IFPS CID directly #QmNVmZ5LmRHnypPw8QDJYATGj6wxaRSspTQYYo1LS2SC5U to view, use & host
+### To play with iCS live, visit https://3dd.in/iCS or to use the IFPS, try snagging the CID directly #QmNVmZ5LmRHnypPw8QDJYATGj6wxaRSspTQYYo1LS2SC5U to view, use & host locally!
+
+
+### You can now download the most recent version release through Github! 
+##### Look in the side panel or within the "Releases" section
 ---
 --
 
@@ -14,11 +18,11 @@
 ## About iCS::
 
 
-&nbsp;&nbsp;&nbsp; The interactive Character Sheet was first built up by 3Douglas "<i>3D</i>" Pihl. The Open Gaming License (pre OGL 2) was looking at being changed by Hasbro via Wizards of the Coast. Because of the hurt this would cause, many people (VTT and Table Top Players) very quickly begun changing to adapt to the unforturnate events by these conglomerates. Out of that madness, 3D began working on an online usable Character Sheet. With a non-static character sheet not reliant upon the OGL licensing, this could help people continue to enjoy their favorite table top, RPG or larping online without worry. Using Itty-Bitty v1 to create personalized iCS saves that allows for people to send, trade or continue previous saves. Wave Data APIs are used for sending objects into and out-of the interactive Character Sheet (iCS).
+&nbsp;&nbsp;&nbsp; The interactive Character Sheet was first built up by 3Douglas "<i>3D</i>" Pihl to transfer generic character data from one game to another. When the Open Gaming License (pre OGL 2) was looking at being changed by Hasbro via Wizards of the Coast. Because of the hurt their changes would cause, many people (VTT and Table Top Players) very quickly began changing to adapt to the unforturnate events by these conglomerates. Out of that madness, 3D began working on making his Character Sheet usable online. With a non-static character sheet not reliant upon the OGL licensing (or any other pre-designed similar system), this could help people continue to enjoy their favorite table top, RPG or larping online without worry. Using Itty-Bitty v1 to create personalized iCS saves that allows for people to send, trade or continue previous saves. Wave Data APIs are used for sending objects into and out-of the interactive Character Sheet (iCS).
 
 &nbsp;&nbsp;&nbsp; iCS takes cares of many actions for the users and considerations in a manner that is based on a custom RPG layout concept. Where OGL DnD may be mostly based upon common logic consideration & Pathfinder could be considered more Mathematical logical considersations, while both are relaint on rolls for checks. iCS uses a combination of both common logic & mathematical logical considerations & uses equational checks & rolls for randomizing possibilities. The internal algos help make the process of keeping up with a character sheet easy for all user levels, from handling equip allowances to determining if you are overburden. Almost every aspect that isn't strictly player choice, has been reduced to alorithms & equations. The algorithms used are as follows:
 
-## Input Maker: This algorithm inserts an input with some customized information per area called for an input. This allows for anything on the page that can be changed just needs the user to click to be able to change it.
+## Input Maker: This algorithm inserts an input with some customized information per area called for an input. This allows for anything that can be changed just needs the user to click on the section to be able to change it.
 
 ## Weight: This algorithm considers the estimated weight of items based on their item type. When a player becomes over-burdened, an orange OB will appear next to the Armor words. If a player is too underweight (overweight will be coming with this feature soon), they can becomed overburdened easier or even be unable to sustain their own weight (with armor, weapons, etc) which can cause loss of carry capability as well as loss of health points.
 
@@ -429,13 +433,13 @@ This license must be visiable with a maximum of a single click mechanic, a singl
 
 
 ### &nbsp; &nbsp; Spell & Standard Input Sanatizer:
-###### Used with a replacement function: <code>/[^a-z0-9áéíóúñü\[\] \@#&.,_-]/gim</code> ***JavaScript RegEx***
+###### Used with a replacement function: <code>/[^a-z0-9áéíóúñü\[\] \'@#&.,_-]/gim</code> ***JavaScript RegEx***
 ###### This design doesn't allow for much more than important writable characters. This should prevent links & javascript manipulation in the input field.
 
 
 
 ### &nbsp; &nbsp; Document Sanatizer:
-###### Used with a replacement function: <code>/[^a-z0-9áéíóúñü\[\] \@#&.,_-]/gim</code> ***JavaScript RegEx***
+###### Used with a replacement function: <code>/[^a-z0-9áéíóúñü\[\] \'@#&.,_-]/gim</code> ***JavaScript RegEx***
 ###### Using the same as the spell sanatizer but this is implimented at 3 lines at a time, which is max lines size for writable documents in iCS. This should prevent links & javascript manipulation in the input field.
 
 

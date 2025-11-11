@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-   <a id='link' name='link' align='center' style='align:center;justify-content:space-evenly;'>
+   <a id='link' name='link' align='center' style='align:center'>
 <html id='html'>
 <head>
  <title>iCS
@@ -8,7 +8,7 @@
  <meta property="og:url" content="The interactive character sheet making playing online table top games easier. Comes with an UnLicense for free-plays and more! FOSS">
  <meta name="apple-mobile-web-app-capable" content="yes">
  <html manifest="Hlist.appcache">
- <meta name="version" content="3.x.n" value="3.0.2">
+ <meta name="version" content="3.x.n" value="3.0.1">
  <meta name="tags" content="iCS,interactive Character Sheet,Intelligent Character Sheet,Smart Sheet,UnLicense,Character Sheet,VTT,Table Top">
  </meta>
 <link rel="icon" type="image/x-icon" href="https://ipfs.io/ipfs/QmcGxSGGzAQ31E2eqCzDy7hskJp4s7udDK5HcrxHThwf4y">
@@ -25,14 +25,14 @@
   overflow-x: none;
   scroll-x: none;
   scroll-behavior: smooth;
-  width:100%;
+  width:98%;
   padding: 0.25vw;
   display:flex;
   word-break:break-all;
   }
   
   #iframe, iframe {
-  width:100vw;
+  width:100%;
   align:center;
   margin: 0px;
   padding:0px;
@@ -54,14 +54,14 @@ border-color: silver;
   postion: fixed;
   bottom: 0;
   left: 0;
-  width: 98%;
+  width: 96%;
   z-index: 1;
  }
  
-span[onclick]:hover, h3[onclick]:hover, h1[onclick]:hover {
- text-shadow: 0px 0px 19px rgb(247,147,26,0.49);
+span[onclick]:hover, h3[onclick]:hover {
+ text-shadow: 0px 0px 13px rgb(192,199,192,0.45);
  cursor:pointer;
- font-weight: bold;
+ color:rgb(192,194,192,0.85);
 }
 
  html {
@@ -73,9 +73,9 @@ span[onclick]:hover, h3[onclick]:hover, h1[onclick]:hover {
   x-scroll: none;
   y-scroll: smooth;
   -moz-scroll-behavior: smooth;
-  -ms-scroll-behavior: smooth;  
-  text-shadow: 0px 0px 0.69px green;
-  display:flex;
+-ms-scroll-behavior: smooth;  
+text-shadow: 0px 0px 0.69px green;
+display:flex;
   height: auto;
  }
 
@@ -88,8 +88,8 @@ span[onclick]:hover, h3[onclick]:hover, h1[onclick]:hover {
   x-scroll: none;
   y-scroll: smooth;
   -moz-scroll-behavior: smooth;
-  -ms-scroll-behavior: smooth;  
-  text-shadow: 0px 0px 0.69px green;
+-ms-scroll-behavior: smooth;  
+text-shadow: 0px 0px 0.69px green;
   width: 100%;
   align:center;
  }
@@ -631,7 +631,7 @@ span[onclick]:hover, h3[onclick]:hover, h1[onclick]:hover {
  <body id="body" class="maintheme" onload="window.scrollTo(0,0)" >
   <div id="main" class="maintheme" onload="window.scrollTo(0,0)" >
   <div id='box1'></br>
-  <span id='thold0'><h1 id="maintxt" onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='h1';document.getElementById('sanu').innerHTML='Character Name';document.getElementById('brn').innerHTML=0;document.getElementById('tyu').innerHTML='t';document.getElementById('sano').innerHTML=this.getAttribute('onclick');document.getElementById('wha').innerHTML=this.innerHTML;inpmaker();document.getElementById('starttype').innerHTML=1;greenstart=1;nameupdate+=1;" title="Click to add character name">interactive Character Sheet (iCS)<h5 style='cursor:default;'><sup title='UnBound to Pathfinder, Hasbro, WOTC, DnD, VTM, or any other RPG Playsystem'>A Custom Logical-Mathematical Deterministic Intellegent RPG Playsystem<sub></br>Idea for Online Role Play, Various Table-Top games, VTT, Larpers, VTubers, Online & Virtual Personas!</sub></sup></br></br></h5></span></h1>
+  <span id='thold0'><h1 id="maintxt" onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='h1';document.getElementById('sanu').innerHTML='Character Name';document.getElementById('brn').innerHTML=0;document.getElementById('tyu').innerHTML='t';document.getElementById('sano').innerHTML=this.getAttribute('onclick');document.getElementById('wha').innerHTML=this.innerHTML;inpmaker();document.getElementById('starttype').innerHTML=1;greenstart=1;nameupdate+=1;" title="Click to add character name">interactive Character Sheet (iCS)<h5 style='cursor:default;'><sup>Idea for online role play, IRL Table-Top, VTT, larpers, online personas & Vstreamers!</sup></h5></span></h1>
    <span><div id='thold1' align="left" ><h3 id="subt1" onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='h3';document.getElementById('sanu').innerHTML='Change Class';document.getElementById('brn').innerHTML=1;document.getElementById('tyu').innerHTML='t';document.getElementById('sano').innerHTML=this.getAttribute('onclick');document.getElementById('wha').innerHTML=this.innerHTML;inpmaker();classupdate+=1;"  title="Click to add character class type">Click any text to change it</h3></div><div id='thold2' align="right"><h3 id="subt2" onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='h3';document.getElementById('sanu').innerHTML='Change Race';document.getElementById('brn').innerHTML=2;document.getElementById('tyu').innerHTML='t';document.getElementById('sano').innerHTML=this.getAttribute('onclick');document.getElementById('wha').innerHTML=this.innerHTML;inpmaker();raceupdate+=1;"  title="Click to add character race or origin">Click me to change me here</h3></div></span>
   <hr>
   </div>
@@ -679,47 +679,47 @@ span[onclick]:hover, h3[onclick]:hover, h1[onclick]:hover {
 </div>
    <div id="tophold" >
 <hr >
-<div style="display:flex;flex-direction:row;flex-wrap:wrap;word-wrap:no-wrap;width:auto;justify-content:space-evenly;">
-  <div id='fhold14' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;justify-content: center;flex-basis:15vw;width:auto;'><span id='hight' onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='span';document.getElementById('sanu').innerHTML='How Tall are you?';document.getElementById('brn').innerHTML=Number(14);document.getElementById('tyu').innerHTML='f';document.getElementById('sano').innerHTML=this.getAttribute('onclick');document.getElementById('wha').innerHTML=this.innerHTML;inpmaker();document.getElementById('up'+Number(document.getElementById('brn').innerHTML)).style.display='inline-block';document.getElementById('dn'+Number(document.getElementById('brn').innerHTML)).style.display='inline-block';heightupdate+=1;"  title="Click to add a character height (<30.1ft or >30cm)">Height</span></div>
+<div style="display:flex;flex-direction:row;flex-wrap:wrap;word-wrap:no-wrap;width:100vw;margin-right:3vw;margin-left:-3vw;padding-left:-2vw;padding-right:-2vw;justify-content:space-evenly;">
+  <div id='fhold14' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;justify-content: center;flex-basis:16.35vw;width:auto;'><span id='hight' onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='span';document.getElementById('sanu').innerHTML='How Tall are you?';document.getElementById('brn').innerHTML=Number(14);document.getElementById('tyu').innerHTML='f';document.getElementById('sano').innerHTML=this.getAttribute('onclick');document.getElementById('wha').innerHTML=this.innerHTML;inpmaker();document.getElementById('up'+Number(document.getElementById('brn').innerHTML)).style.display='inline-block';document.getElementById('dn'+Number(document.getElementById('brn').innerHTML)).style.display='inline-block';heightupdate+=1;"  title="Click to add a character height (<30.1ft or >30cm)">Height</span></div>
   
-  <div id='fhold15' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;justify-content: center;flex-basis:15vw;width:auto;'><span id='weight' onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='span';document.getElementById('sanu').innerHTML='How much do you weight?';document.getElementById('brn').innerHTML=Number(15);document.getElementById('tyu').innerHTML='f';document.getElementById('sano').innerHTML=this.getAttribute('onclick');document.getElementById('wha').innerHTML=this.innerHTML;inpmaker();document.getElementById('up'+Number(document.getElementById('brn').innerHTML)).style.display='inline-block';document.getElementById('dn'+Number(document.getElementById('brn').innerHTML)).style.display='inline-block';weightupdate+=1;"  title="Click to add a character weight (>90lbs or <90kg)">Weight</span></div>
+  <div id='fhold15' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;justify-content: center;flex-basis:16.35vw;width:auto;'><span id='weight' onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='span';document.getElementById('sanu').innerHTML='How much do you weight?';document.getElementById('brn').innerHTML=Number(15);document.getElementById('tyu').innerHTML='f';document.getElementById('sano').innerHTML=this.getAttribute('onclick');document.getElementById('wha').innerHTML=this.innerHTML;inpmaker();document.getElementById('up'+Number(document.getElementById('brn').innerHTML)).style.display='inline-block';document.getElementById('dn'+Number(document.getElementById('brn').innerHTML)).style.display='inline-block';weightupdate+=1;"  title="Click to add a character weight (>90lbs or <90kg)">Weight</span></div>
   
-  <div id='fhold12' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;justify-content: center;flex-basis:15vw;width:auto;'><span id='age' onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='span';document.getElementById('sanu').innerHTML='How old are you?';document.getElementById('brn').innerHTML=Number(12);document.getElementById('tyu').innerHTML='f';document.getElementById('sano').innerHTML=this.getAttribute('onclick');document.getElementById('wha').innerHTML=this.innerHTML;inpmaker();document.getElementById('up'+Number(document.getElementById('brn').innerHTML)).style.display='inline-block';document.getElementById('dn'+Number(document.getElementById('brn').innerHTML)).style.display='inline-block';ageupdate+=1;"  title="Click to add a character years alive age">Age</span></div>
+  <div id='fhold12' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;justify-content: center;flex-basis:16.35vw;width:auto;'><span id='age' onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='span';document.getElementById('sanu').innerHTML='How old are you?';document.getElementById('brn').innerHTML=Number(12);document.getElementById('tyu').innerHTML='f';document.getElementById('sano').innerHTML=this.getAttribute('onclick');document.getElementById('wha').innerHTML=this.innerHTML;inpmaker();document.getElementById('up'+Number(document.getElementById('brn').innerHTML)).style.display='inline-block';document.getElementById('dn'+Number(document.getElementById('brn').innerHTML)).style.display='inline-block';ageupdate+=1;"  title="Click to add a character years alive age">Age</span></div>
   
-  <div id='fhold16' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;justify-content: center;flex-basis:15vw;width:auto;'><span id='gpa' onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='span';document.getElementById('sanu').innerHTML='Inset an IQ or GPA';document.getElementById('brn').innerHTML=Number(16);document.getElementById('tyu').innerHTML='f';document.getElementById('sano').innerHTML=this.getAttribute('onclick');document.getElementById('wha').innerHTML=this.innerHTML;inpmaker();document.getElementById('up'+Number(document.getElementById('brn').innerHTML)).style.display='inline-block';document.getElementById('dn'+Number(document.getElementById('brn').innerHTML)).style.display='inline-block';gpaupdate+=1;"  title="Click to add a character IQ or GPA">IQ|GPA</span></div>
+  <div id='fhold16' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;justify-content: center;flex-basis:16.35vw;width:auto;'><span id='gpa' onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='span';document.getElementById('sanu').innerHTML='Inset an IQ or GPA';document.getElementById('brn').innerHTML=Number(16);document.getElementById('tyu').innerHTML='f';document.getElementById('sano').innerHTML=this.getAttribute('onclick');document.getElementById('wha').innerHTML=this.innerHTML;inpmaker();document.getElementById('up'+Number(document.getElementById('brn').innerHTML)).style.display='inline-block';document.getElementById('dn'+Number(document.getElementById('brn').innerHTML)).style.display='inline-block';gpaupdate+=1;"  title="Click to add a character IQ or GPA">IQ|GPA</span></div>
   
-  <div id='thold13' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;justify-content: center;flex-basis:15vw;width:auto;'><span id='fromloc' onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='span';document.getElementById('sanu').innerHTML='Where are you from?';document.getElementById('brn').innerHTML=Number(13);document.getElementById('tyu').innerHTML='t';document.getElementById('sano').innerHTML=this.getAttribute('onclick');document.getElementById('wha').innerHTML=this.innerHTML;inpmaker();hometownupdate+=1;"  title="Click to add a character hometown">Hometown</span></div>
+  <div id='thold13' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;justify-content: center;flex-basis:16.35vw;width:auto;'><span id='fromloc' onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='span';document.getElementById('sanu').innerHTML='Where are you from?';document.getElementById('brn').innerHTML=Number(13);document.getElementById('tyu').innerHTML='t';document.getElementById('sano').innerHTML=this.getAttribute('onclick');document.getElementById('wha').innerHTML=this.innerHTML;inpmaker();hometownupdate+=1;"  title="Click to add a character hometown">Hometown</span></div>
 
-	<div id='fhold3' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;justify-content: center;flex-basis:15vw;width:auto;'><span id='townsize' onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='span';document.getElementById('sanu').innerHTML='How many people?';document.getElementById('brn').innerHTML=Number(3);document.getElementById('tyu').innerHTML='f';document.getElementById('sano').innerHTML=this.getAttribute('onclick');document.getElementById('wha').innerHTML=this.innerHTML;inpmaker();document.getElementById('up'+Number(document.getElementById('brn').innerHTML)).style.display='inline-block';document.getElementById('dn'+Number(document.getElementById('brn').innerHTML)).style.display='inline-block';populationupdate+=1;"  title="Click to add the hometown population">Population</span></div>
+	<div id='fhold3' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;justify-content: center;flex-basis:16.35vw;width:auto;'><span id='townsize' onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='span';document.getElementById('sanu').innerHTML='How many people?';document.getElementById('brn').innerHTML=Number(3);document.getElementById('tyu').innerHTML='f';document.getElementById('sano').innerHTML=this.getAttribute('onclick');document.getElementById('wha').innerHTML=this.innerHTML;inpmaker();document.getElementById('up'+Number(document.getElementById('brn').innerHTML)).style.display='inline-block';document.getElementById('dn'+Number(document.getElementById('brn').innerHTML)).style.display='inline-block';populationupdate+=1;"  title="Click to add the hometown population">Population</span></div>
 	</div>
 	</br>
-    <div style="display:flex;flex-direction:row;flex-wrap:wrap;word-wrap:no-wrap;width:auto;justify-content:space-evenly;">
-	<div id='thold16' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;justify-content: center;flex-basis:15vw;width:auto;'><span id='fav1' onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='span';document.getElementById('sanu').innerHTML='Whatchu favor?';document.getElementById('brn').innerHTML=Number(16);document.getElementById('tyu').innerHTML='t';document.getElementById('sano').innerHTML=this.getAttribute('onclick');document.getElementById('wha').innerHTML=this.innerHTML;inpmaker();fav1update+=1;"  title="Click to add a character favorite">Favorite[1]</span></div>
+    <div style="display:flex;flex-direction:row;flex-wrap:wrap;word-wrap:no-wrap;width:100vw;margin-right:2.5vw;margin-left:-2.5vw;padding-left:-2vw;padding-right:-2vw;justify-content:space-evenly;">
+	<div id='thold16' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;justify-content: center;flex-basis:16.35vw;width:auto;'><span id='fav1' onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='span';document.getElementById('sanu').innerHTML='Whatchu favor?';document.getElementById('brn').innerHTML=Number(16);document.getElementById('tyu').innerHTML='t';document.getElementById('sano').innerHTML=this.getAttribute('onclick');document.getElementById('wha').innerHTML=this.innerHTML;inpmaker();fav1update+=1;"  title="Click to add a character favorite">Favorite[1]</span></div>
 	
-	<div id='thold17' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;justify-content: center;flex-basis:15vw;width:auto;'><span id='fav2' onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='span';document.getElementById('sanu').innerHTML='Whatchu fancy?';document.getElementById('brn').innerHTML=Number(17);document.getElementById('tyu').innerHTML='t';document.getElementById('sano').innerHTML=this.getAttribute('onclick');document.getElementById('wha').innerHTML=this.innerHTML;inpmaker();fav2update+=1;"  title="Click to add a character favorite">Favorite[2]</span></div>
+	<div id='thold17' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;justify-content: center;flex-basis:16.35vw;width:auto;'><span id='fav2' onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='span';document.getElementById('sanu').innerHTML='Whatchu fancy?';document.getElementById('brn').innerHTML=Number(17);document.getElementById('tyu').innerHTML='t';document.getElementById('sano').innerHTML=this.getAttribute('onclick');document.getElementById('wha').innerHTML=this.innerHTML;inpmaker();fav2update+=1;"  title="Click to add a character favorite">Favorite[2]</span></div>
 	
-	<div id='thold18' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;justify-content: center;flex-basis:15vw;width:auto;'><span id='fav3' onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='span';document.getElementById('sanu').innerHTML='Whatchu enjoy?';document.getElementById('brn').innerHTML=Number(18);document.getElementById('tyu').innerHTML='t';document.getElementById('sano').innerHTML=this.getAttribute('onclick');document.getElementById('wha').innerHTML=this.innerHTML;inpmaker();fav3update+=1;"  title="Click to add a character favorite">Favorite[3]</span></div>
+	<div id='thold18' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;justify-content: center;flex-basis:16.35vw;width:auto;'><span id='fav3' onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='span';document.getElementById('sanu').innerHTML='Whatchu enjoy?';document.getElementById('brn').innerHTML=Number(18);document.getElementById('tyu').innerHTML='t';document.getElementById('sano').innerHTML=this.getAttribute('onclick');document.getElementById('wha').innerHTML=this.innerHTML;inpmaker();fav3update+=1;"  title="Click to add a character favorite">Favorite[3]</span></div>
 	
-	<div id='thold19' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;justify-content: center;flex-basis:15vw;width:auto;'><span id='believean' onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='span';document.getElementById('sanu').innerHTML='Present Your Belief';document.getElementById('brn').innerHTML=Number(19);document.getElementById('tyu').innerHTML='t';document.getElementById('sano').innerHTML=this.getAttribute('onclick');document.getElementById('wha').innerHTML=this.innerHTML;inpmaker();beliefupdate+=1;"  title="Click to add a character belief">Belief</span></div>
+	<div id='thold19' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;justify-content: center;flex-basis:16.35vw;width:auto;'><span id='believean' onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='span';document.getElementById('sanu').innerHTML='Present Your Belief';document.getElementById('brn').innerHTML=Number(19);document.getElementById('tyu').innerHTML='t';document.getElementById('sano').innerHTML=this.getAttribute('onclick');document.getElementById('wha').innerHTML=this.innerHTML;inpmaker();beliefupdate+=1;"  title="Click to add a character belief">Belief</span></div>
 	
-	<div id='thold4' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;justify-content: center;flex-basis:15vw;width:auto;'><span id='selfalign' onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='span';document.getElementById('sanu').innerHTML='Present Your Alignment';document.getElementById('brn').innerHTML=4;document.getElementById('tyu').innerHTML='t';document.getElementById('sano').innerHTML=this.getAttribute('onclick');document.getElementById('wha').innerHTML=this.innerHTML;inpmaker();alignmentupdate+=1;"  title="Click to add a character alignment">Alignment</span></div>
+	<div id='thold4' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;justify-content: center;flex-basis:16.35vw;width:auto;'><span id='selfalign' onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='span';document.getElementById('sanu').innerHTML='Present Your Alignment';document.getElementById('brn').innerHTML=4;document.getElementById('tyu').innerHTML='t';document.getElementById('sano').innerHTML=this.getAttribute('onclick');document.getElementById('wha').innerHTML=this.innerHTML;inpmaker();alignmentupdate+=1;"  title="Click to add a character alignment">Alignment</span></div>
 	
-	<div id='thold24' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;justify-content: center;flex-basis:15vw;width:auto;'><span id='bckgrd' onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='span';document.getElementById('sanu').innerHTML='Add a Background';document.getElementById('brn').innerHTML=Number(24);document.getElementById('tyu').innerHTML='t';document.getElementById('sano').innerHTML=this.getAttribute('onclick');document.getElementById('wha').innerHTML=this.innerHTML;inpmaker();backgroundupdate+=1;"  title="Click to add a character background">Background</span></div>
+	<div id='thold24' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;justify-content: center;flex-basis:16.35vw;width:auto;'><span id='bckgrd' onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='span';document.getElementById('sanu').innerHTML='Add a Background';document.getElementById('brn').innerHTML=Number(24);document.getElementById('tyu').innerHTML='t';document.getElementById('sano').innerHTML=this.getAttribute('onclick');document.getElementById('wha').innerHTML=this.innerHTML;inpmaker();backgroundupdate+=1;"  title="Click to add a character background">Background</span></div>
 	</div>
 	</br>
-    <div style="display:flex;flex-direction:row;flex-wrap:wrap;word-wrap:no-wrap;width:auto;justify-content:space-evenly;">
+    <div style="display:flex;flex-direction:row;flex-wrap:wrap;word-wrap:no-wrap;width:100vw;margin-right:2.5vw;margin-left:-2.5vw;padding-left:-2vw;padding-right:-2vw;justify-content:space-evenly;">
 
-	<div id='lhold22' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;justify-content: center;flex-basis:15vw;width:auto;cursor:default;'><span id='bodyoutput' value="l"   title="I show body notifiers">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+	<div id='lhold22' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;justify-content: center;flex-basis:16.35vw;width:auto;cursor:default;'><span id='bodyoutput' value="l"   title="I show body notifiers">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
 	
-	<div id='lhold21' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;justify-content: center;flex-basis:15vw;width:auto;cursor:default;'><span id='muscleoutput' value="l"   title="I show muscle notifiers">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+	<div id='lhold21' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;justify-content: center;flex-basis:16.35vw;width:auto;cursor:default;'><span id='muscleoutput' value="l"   title="I show muscle notifiers">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
 	
-	<div id='lhold20' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;justify-content: center;flex-basis:15vw;width:auto;cursor:default;'><span id='mentaloutput' value="l"   title="I show mental notifiers">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+	<div id='lhold20' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;justify-content: center;flex-basis:16.35vw;width:auto;cursor:default;'><span id='mentaloutput' value="l"   title="I show mental notifiers">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
 
-	<div id='lhold23' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;justify-content: center;flex-basis:15vw;width:auto;cursor:default;'><span id='skilloutput' value="l"   title="I show skill notifiers">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+	<div id='lhold23' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;justify-content: center;flex-basis:16.35vw;width:auto;cursor:default;'><span id='skilloutput' value="l"   title="I show skill notifiers">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
 	
-	<div id='lhold5' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;justify-content: center;flex-basis:15vw;width:auto;'><span id='skillboost' onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='span';document.getElementById('sanu').innerHTML='Proficiency boost amount';document.getElementById('brn').innerHTML=5;document.getElementById('tyu').innerHTML='l';document.getElementById('sano').innerHTML=this.getAttribute('onclick');document.getElementById('wha').innerHTML=this.innerHTML;inpmaker();document.getElementById('up'+Number(document.getElementById('brn').innerHTML)).style.display='inline-block';document.getElementById('dn'+Number(document.getElementById('brn').innerHTML)).style.display='inline-block';skillboostupdate+=1;" value="l"  title="Click to add a boost base">Skill Boost</span></div>
+	<div id='lhold5' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;justify-content: center;flex-basis:16.35vw;width:auto;'><span id='skillboost' onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='span';document.getElementById('sanu').innerHTML='Proficiency boost amount';document.getElementById('brn').innerHTML=5;document.getElementById('tyu').innerHTML='l';document.getElementById('sano').innerHTML=this.getAttribute('onclick');document.getElementById('wha').innerHTML=this.innerHTML;inpmaker();document.getElementById('up'+Number(document.getElementById('brn').innerHTML)).style.display='inline-block';document.getElementById('dn'+Number(document.getElementById('brn').innerHTML)).style.display='inline-block';skillboostupdate+=1;" value="l"  title="Click to add a boost base">Skill Boost</span></div>
 	
-	<div id='thold25' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;justify-content: center;flex-basis:15vw;width:auto;'><span id='addalign' onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='span';document.getElementById('sanu').innerHTML='Present Your Style';document.getElementById('brn').innerHTML=Number(25);document.getElementById('tyu').innerHTML='t';document.getElementById('sano').innerHTML=this.getAttribute('onclick');document.getElementById('wha').innerHTML=this.innerHTML;inpmaker();styleupdate+=1;"  title="Click to add character style">Style</span></div>
+	<div id='thold25' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;justify-content: center;flex-basis:16.35vw;width:auto;'><span id='addalign' onclick="document.getElementById('where').innerHTML=this.getAttribute('id')+'inp';document.getElementById('sani').innerHTML=this.getAttribute('id');document.getElementById('sanp').innerHTML='span';document.getElementById('sanu').innerHTML='Present Your Style';document.getElementById('brn').innerHTML=Number(25);document.getElementById('tyu').innerHTML='t';document.getElementById('sano').innerHTML=this.getAttribute('onclick');document.getElementById('wha').innerHTML=this.innerHTML;inpmaker();styleupdate+=1;"  title="Click to add character style">Style</span></div>
 	
 	</div>
     <span id='brbr'></br></span>
@@ -739,7 +739,7 @@ span[onclick]:hover, h3[onclick]:hover, h1[onclick]:hover {
 	
 	<div id='nhold12'><span id='savemodifier' title='Save Modifiers' ></span></div>
 	<hr id='newbehr' style='display:none'>
-	<span id='nbi' style='padding-bottom:6.5px;border-bottom-style:inset;border-bottom-width:0.5px;'><button id='dobuyin' class='button2' onclick='this.style="display:inline-block";document.getElementById("setbuyin").style="display:inline-block";document.getElementById("nbitext").style="display:inline-block";document.getElementById("bi").innerHTML=1;this.style="display:none";' title='Start Your BuyIn'><b>O</b></button> <span id='nbitext' title="BuyIn Limit" style="display:none"></span> <button id='setbuyin' style="display:none" class='button2' onclick='this.style="display:none";document.getElementById("resetbuyin").style="display:inline-block";buyin();' title='Sets Your BuyIn'><b>I</b></button> <button id='resetbuyin' style="display:none" class='button2' onclick='document.getElementById("nbi").style="display:none";this.style="display:none";document.getElementById("newbehr").style.display="block";' title='Remove extra buttons'><b><s>O</s></b></button> <button id='nobuyin' class='button2' onclick='pointbuy=0;document.getElementById("bi").innerHTML=0;document.getElementById("nbitext").innerHTML=Number(-2);document.getElementById("nbi").style="visibility:hidden";rmv("buyin");' title='Cancel BuyIn Method'><b>x</b></button></span>
+	<span id='nbi' style='padding-bottom:6.5px;border-bottom-style:inset;border-bottom-width:0.5px;'><button id='dobuyin' class='button2' onclick='this.style="display:inline-block";document.getElementById("setbuyin").style="display:inline-block";document.getElementById("nbitext").style="display:inline-block";document.getElementById("bi").innerHTML=1;this.style="display:none";' title='Start Your BuyIn'><b>O</b></button> <span id='nbitext' title="BuyIn Limit" style="display:none"></span> <button id='setbuyin' style="display:none" class='button2' onclick='this.style="display:none";document.getElementById("resetbuyin").style="display:inline-block";buyin();' title='Sets Your BuyIn'><b>I</b></button> <button id='resetbuyin' style="display:none" class='button2' onclick='document.getElementById("nbi").style="display:none";this.style="display:none";document.getElementById("newbehr").style.display="block";' title='Remove extra buttons'><b><s>O</s></b></button> <button id='nobuyin' class='button2' onclick='pointbuy=0;document.getElementById("bi").innerHTML=0;document.getElementById("nbitext").innerHTML=Number(-2);document.getElementById("nbi").style="visibility:hidden";' title='Cancel BuyIn Method'><b>x</b></button></span>
 	</br>
 	<hr id='skillshr'>
 	</br>
@@ -748,9 +748,7 @@ span[onclick]:hover, h3[onclick]:hover, h1[onclick]:hover {
 	<span id='skillsbtns'>
 	<button class='button2' onclick="skilladd();" id='sa' ><b style='font-size:175%' title='Click to add a skill'>Add a Skill</b></button></br class='brs'>
 	<button class='button2' onclick='document.getElementById("skillsbtns").remove();' title='Click to not be able to add more skills'><b style='font-size:125%'>o</b></button>
-	<button class='button2' onclick='document.getElementById("skills2").remove();rmv("skills");' title='Click to remove the skills section'><b style='font-size:125%'>x</b></button>
-	
-	
+	<button class='button2' onclick='document.getElementById("skills2").remove();' title='Click to remove the skills section'><b style='font-size:125%'>x</b></button>
 	</span></br class='brs'>
 	</br>
 	</div>
@@ -782,7 +780,7 @@ span[onclick]:hover, h3[onclick]:hover, h1[onclick]:hover {
 	</div>
 	<span id='healthbtns'>
 	<button class='button2' onclick='document.getElementById("healthbtns").remove();' title='Click to remove remove extra health buttons'><b style='font-size:125%'>o</b></button>
-	<button class='button2' onclick='document.getElementById("healthstuff").remove();rmv("health");' title);' title='Click to remove Health section'><b style='font-size:125%'>x</b></button>
+	<button class='button2' onclick='document.getElementById("healthstuff").remove();' title='Click to remove Health section'><b style='font-size:125%'>x</b></button>
 	<!--<div id='healthstuff'><button class='button2' onclick="healthadd();" ><b style='font-size:175%' title='Click to add temp health'>Add Temp Health</b></button>
 	</br></div>
 	<button class='button2' onclick='document.getElementById("healths2").remove();'><b style='font-size:125%' title='Click to remove extra Health button'>o</b></button>-->
@@ -796,7 +794,7 @@ span[onclick]:hover, h3[onclick]:hover, h1[onclick]:hover {
 	<span id="weapondump"></span>
 	<span id='weaponbtns'>
 	<button class='button2' onclick='document.getElementById("weaponbtns").remove();' title='Click to remove extra Weapon button'><b style='font-size:125%'>o</b></button>&nbsp;
-	<button class='button2' onclick='document.getElementById("weaponstuff").remove();rmv("weapons");' title='Click to remove Weapon section'><b style='font-size:125%'>x</b></button>
+	<button class='button2' onclick='document.getElementById("weaponstuff").remove();' title='Click to remove Weapon section'><b style='font-size:125%'>x</b></button>
 	</span>
 	</br>
 	</div>
@@ -813,7 +811,7 @@ span[onclick]:hover, h3[onclick]:hover, h1[onclick]:hover {
 	 <span id="armordump"></span>
 	<span id='armorbtns'>
 	<button class='button2' onclick='document.getElementById("armorbtns").remove();' title='Click to remove extra Armor button'><b style='font-size:125%'>o</b></button>&nbsp;
-	<button class='button2' onclick='document.getElementById("armorstuff").remove();rmv("armor");' title='Click to remove Armor section'><b style='font-size:125%'>x</b></button>
+	<button class='button2' onclick='document.getElementById("armorstuff").remove();' title='Click to remove Armor section'><b style='font-size:125%'>x</b></button>
 	</span>
 	</br>
 	</div>
@@ -831,7 +829,7 @@ span[onclick]:hover, h3[onclick]:hover, h1[onclick]:hover {
 	<div id='magicstuff' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;'>
 	<span id='magicbtns'><button class='button2' onclick="spelladd();" ><b style='font-size:175%' title='Click to add a skill'>Add a Spell</b></button></br class='brs'>
 	<button class='button2' onclick='document.getElementById("magicbtns").remove();'><b style='font-size:125%' title='Click to remove extra spell buttons'>o</b></button>
-	<button class='button2' onclick='document.getElementById("magic").remove();rmv("magic");' title='Click to remove the spells section'><b style='font-size:125%'>x</b></button>
+	<button class='button2' onclick='document.getElementById("magic").remove();' title='Click to remove the spells section'><b style='font-size:125%'>x</b></button>
 	</span></br class='brs'>
 	</br>
 	</div>
@@ -847,7 +845,7 @@ span[onclick]:hover, h3[onclick]:hover, h1[onclick]:hover {
    <div id='packstuff' style='padding-bottom:4px;border-bottom-style:inset;border-bottom-width:0.5px;'><button class='button2' onclick="itemadd();" ><b style='font-size:175%' title='Click to add an item'>Add Item</b></button></br class='brs'>
    <span id='packbtns'>
 	<button class='button2' onclick='document.getElementById("packbtns").remove();'><b style='font-size:125%' title='Click to not be able to add more items'>o</b></button>
-	<button class='button2' onclick='document.getElementById("pack").remove();rmv("pack");'><b style='font-size:125%' title='Click to remove the pack section'>x</b></button>
+	<button class='button2' onclick='document.getElementById("pack").remove();'><b style='font-size:125%' title='Click to remove the pack section'>x</b></button>
 	</span>
 	</br>
 	</div>
@@ -885,8 +883,6 @@ span[onclick]:hover, h3[onclick]:hover, h1[onclick]:hover {
    <span id="stats" style="display:none">
    <h1 align="center">Stats <sup><sub><i>LIVE</i></sub></sup></h1></br>
    <p id='statout'>&nbsp;</p>
-   </br>
-   <p id='logout' align="center" ><h1 onclick="document.getElementById('loghere').style.display='inline-block';this.disabled=true;" title="Click to Open Logs" >Log(s) <sup><sub><i id='logtotal'>0</i></sub></sup></h1><span id='loghere' onclick='this.style.display="none";document.getElementById("logout").disabled=false;' style='display:none'><sup><sup><b title='What sparked the note'>Noted-Observation</b> <b title='Prudent Info'>Additional-Information</b> <b title='iCS Time Code'>[Time-Stamp]</b> <b title='This is optional data'>Misc-Data</b> <b title='optional data may not appear'>[misc-data-info]</b> <b title='Function that took note'>Witness-Function()</b> <b title='How the function observed'>[witness|actor]</b><hr></sup></sup><span id='logs' ></span></span></p>
    </span>
    </p><button class="button2" onclick='document.getElementById("lm").style="display:none";document.getElementById("learnmore").style="visibility:show;";' style="cursor:pointer"><h1>X</h1></button></br></br></br>
    </div>
@@ -1125,9 +1121,7 @@ span[onclick]:hover, h3[onclick]:hover, h1[onclick]:hover {
   var bin = document.getElementById('bi').innerHTML;  <!--used for algo switching and determining
   
   
- <!-- character values --> 
-  var dod = Number(-1);
-  var deadstate = Number(-3) //deadstate starts in neg! 
+ <!-- random global values & character values --> 
   var limbcount = 0;        //how many limbs are being used to hold objects 
   var brnum = 0;           //unique ID value for inpmaker() 
   var yrnum = 0;          //a type of sanitizer unique ID system 
@@ -1169,8 +1163,6 @@ span[onclick]:hover, h3[onclick]:hover, h1[onclick]:hover {
   var alignedfully = Number(-2); //aligned was input & found as perspective Idea
   var backisnow = Number(-2);   //background contains bonds/flaws (if all words === 3, if only pos === 2, if only neg === 1, if only some === 0, if none === -1, if notset === -2, if only opposites are seen in background to what's in bonds/flaws === -3)
   
-  //upgradables above and below this comment! i'm here I'm here im here Im here !!!!
-  
  <!-- historical data arrays --> 
   var bookcount = [0];               //NOT CURRENTLY USED   //should hold the number of read books then an array of book titles and % read <NUM_READ;[Title%NUM]> <Number of Books Read; [Book Title%Percentage Read][title%num][title%num]>
   var armcount2 = [0,0,0];         //NOT CURRENTLY USED   //should hold the number of used weapons;num of held books; array of object types held <NUM_WEAP;NUM_BOOK;NUM_RING; [OBJ_TYPE%OBJ_NAME]> <number of weapons used; Number of books held; number of rings/jewelry used (with use not just for looks); [OBJ_TYPE%OBJ_NAME][OBJ_TYPE%OBJ_NAME][OBJ_TYPE%OBJ_NAME]>
@@ -1197,8 +1189,6 @@ span[onclick]:hover, h3[onclick]:hover, h1[onclick]:hover {
   var piadj = 314;     //darkside pi day
   var moon = 28;      //new moon counter 
   var moonstar = 28; //1st new moon adjuster
-  
-  var datecode = Number(Number(Number(months)+Number(days))+Number(year));//special iCS date code MONTH+DAY+YEAR (if -YEAR, all code is "-"; else all code is "+")
   
  <!-- eclipse maths -->
   var esm = 29.0685226;     //synodic month equiv
@@ -1435,7 +1425,6 @@ else{
   nights = Number(nights) + 1;
   
   if(days >= 31){  //force a reset
-   months = Number(1); //this line wasn't nor originally here i'm here I'm here im here Im here note please note
    seasons = Number(seasons) + 1;
    days = Number(1); 
   }
@@ -1447,14 +1436,6 @@ else{
   }
  }
 }
-  
-   
- if(years.toString().search(/\-/) === 0){
-  datecode = "-"+""+Number(Number(Number(months)+Number(days))+Number(year.toString().replace(/\-/, '')));
- }
- else{
-  datecode = Number(Number(Number(months)+Number(days))+Number(year));
- }
 
  livestats();
 
@@ -1482,8 +1463,6 @@ document.getElementById('statout').innerHTML = "<div style='width:90%;text-align
 
 
 dayis();
-
-deadcheck();
 }
 
 
@@ -1533,7 +1512,7 @@ if(hrs >= 24){
  timeindays = Number(timeindays) + 1;
  
  if(days >= 31){  //force a reset
-   months = Number(1);
+   months = Number(months) + 1;
    seasons = Number(seasons) + 1;
    days = Number(1); 
   }
@@ -1544,68 +1523,10 @@ if(hrs >= 24){
   years = Number(years)+1;
  }
 }
- 
- 
- if(years.toString().search(/\-/) === 0){
-  datecode = "-"+""+Number(Number(Number(months)+Number(days))+Number(year.toString().replace(/\-/, '')));
- }
- else{
- datecode = Number(Number(Number(months)+Number(days))+Number(year));
- }
 
  livestats();
  document.getElementById('newround').value="";
  document.getElementById('stats').style='cursor:help;inline-block;';
- 
-  var yrch = "yearsout";
-  
-  var negcheck = document.getElementById(yrch).innerHTML; 
- 
- if(negcheck.toString().search(/\-/) === 0){
-  datecode = "-"+""+Number(Number(Number(months)+Number(days))+Number(document.getElementById(yrch).innerText.toString().replace(/\-/, '')));
- }
- else{
- datecode = Number(Number(Number(months)+Number(days))+Number(document.getElementById(yrch).innerText));
- }
-   
-   if(Number(negcheck) >= 3031){ <!-- Emress Lore -->
-    document.getElementById('yrbadges').innerHTML = "<sup id='Her Era' title='Empress Era' style='color:rgb(255,221,67,0.79);'><sub><sub><b><i>HER</i></b></sub></sub></sup>";
-   }
-   else if(negcheck.toString().search(/\-/g) >= 0 && Number(negcheck.toString().replace(/\-/g, '')) <= 368){ <!-- Emress Lore -->
-    document.getElementById('yrbadges').innerHTML = "<sup id='bcera' title='B.C. Era' style='color:rgb(140,120,83,0.6);'><sub><sub><b><i>BCE</i></b></sub></sub></sup>"; //before Collections Era
-   }
-   else if(negcheck.toString().search(/\-/g) >= 0 && Number(negcheck.toString().replace(/\-/g, '')) >= 369 && Number(negcheck.toString().replace(/\-/g, '')) <= 998.99){ <!-- Emress Lore -->
-    document.getElementById('yrbadges').innerHTML = "<sup id='aeera' title='A.E. Era' style='color:rgb(41,28,84,0.5);'><sub><sub><b><i>MORN</i></b></sub></sub></sup>"; //after Empress Era
-   }
-   else if(negcheck.toString().search(/\-/g) >= 0 && Number(negcheck.toString().replace(/\-/g, '')) >= 999 && Number(negcheck.toString().replace(/\-/g, '')) <= 99999999999998.99){ <!-- Emress Lore -->
-    document.getElementById('yrbadges').innerHTML = "<sup id='Her Era' title='Empress Era' style='color:rgb(204,186,120,0.7);'><sub><sub><b><i>HODL</i></b></sub></sub></sup>";
-   }
-   else if(negcheck.toString().search(/\-/g) >= 0 && Number(negcheck.toString().replace(/\-/g, '')) >= 99999999999999 && Number(negcheck.toString().replace(/\-/g, '')) <= 99999999999999998.99){ <!-- Emress Lore -->
-    document.getElementById('yrbadges').innerHTML = "<sup id='before eras' title='Shackles Still Unknown' style='color:rgb(129,132,199,0.8);'><sub><sub><b><i>SSU</i></b></sub></sub></sup>";
-   }
-   else if(negcheck.toString().search(/\-/g) >= 0 && Number(negcheck.toString().replace(/\-/g, '')) >= 99999999999999999 && Number(negcheck.toString().replace(/\-/g, '')) <= 999999999999999998.99){ <!-- Emress Lore -->
-    document.getElementById('yrbadges').innerHTML = "<sup id='before eras' title='Before Time was Noticed' style='color:rgb(244,30,81,0.9);'><sub><sub><b><i>Before&nbsp;Time</i></b></sub></sub></sup>";
-   }
-   else if(negcheck.toString().search(/\-/g) >= 0 && Number(negcheck.toString().replace(/\-/g, '')) >= 999999999999999999){ <!-- Emress Lore -->
-    document.getElementById('yrbadges').innerHTML = "<sup id='Her Painful Slumber' title='**loud screaming heard all around**' style='color:rgb(0,3,4,0.5);'><sub><sub><b><i>--!--</i></b></sub></sub></sup>"; //the years of the Empress' Re-Birth, the loop continues
-   }
-   else if(negcheck.toString().search(/\-/g) < 0 && Number(negcheck) >= 303108008136){ <!-- Emress Lore -->
-	document.getElementById(yrch).innerHTML = Number(-999999999999999999); <!-- reset time -->
-    document.getElementById('yrbadges').innerHTML = "<sup id='Her Sacrifice' title='**loud screaming heard all around**' style='color:rgb(0,3,4,0.5);'><sub><sub><b><i>--!--</i></b></sub></sub></sup>"; //the years of the Empress' Re-Birth, the loop continues
-   }
-   else {
-    document.getElementById('yrbadges').innerHTML = "";
-   }
- document.getElementById(yrch).innerHTML = Number(negcheck.toString().replace(/\-/g, ''));
- 
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='logged"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Rest Observered ["+datecode+""+yrbd+"] <b>rest()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- //I'm here i'm here im here Im here    the special day thing needs to considered at time change so we can just call the variable to account for neg years all the time!!!
  
 }
 
@@ -1905,7 +1826,7 @@ if(days <= 1 && seasons === 1 && timeindays > 1){ //marker day
  document.getElementById('dayout').innerHTML = Math.trunc(hrs-12)+" pm (Night) <span id='yearsout' onclick='document.getElementById(&#039;yrinp&#039;).style.display=&#039;inline-block&#039;;document.getElementById(&#039;inpconf&#039;).style.display=&#039;inline-block&#039;;' title='Click to Specify a Year'></span>&nbsp;<span id='yrbadges'></span></span>&nbsp;<input id='yrinp' style='display:none'  oninput='this.value=this.value.replace(/[^0-9 \-]/gim,&#039;&#039;);' placeholder='Enter a Year' /><button type='button' id='inpconf' onclick='document.getElementById(&#039;yearsout&#039;).innerHTML=document.getElementById(&#039;yrinp&#039;).value;year=document.getElementById(&#039;yrinp&#039;).value;document.getElementById(&#039;yrinp&#039;).style.display=&#039;none&#039;;document.getElementById(&#039;inpconf&#039;).style.display=&#039;none&#039;;nums(&#039;yearsout&#039;);' style='display:none'><sup><sub><b>Done</b></sub></sup></button></br>" + monthout + " [" + seasonout + "]";
  }
  else{ //if(hrs >= 25){
- document.getElementById('dayout').innerHTML = "(Midnight) <span id='yearsout' onclick='document.getElementById(&#039;yrinp&#039;).style.display=&#039;inline-block&#039;;document.getElementById(&#039;inpconf&#039;).style.display=&#039;inline-block&#039;;' title='Click to Specify a Year'></span>&nbsp;<span id='yrbadges'></span></span>&nbsp;<input id='yrinp' style='display:none'  oninput='this.value=this.value.replace(/[^0-9 \-]/gim,&#039;&#039;);' placeholder='Enter a Year' /><button type='button' id='inpconf' onclick='document.getElementById(&#039;yearsout&#039;).innerHTML=document.getElementById(&#039;yrinp&#039;).value;year=document.getElementById(&#039;yrinp&#039;).value;document.getElementById(&#039;yrinp&#039;).style.display=&#039;none&#039;;document.getElementById(&#039;inpconf&#039;).style.display=&#039;none&#039;;nums(&#039;yearsout&#039;);' style='display:none'><sup><sub><b>Done</b></sub></sup></button></br>" + monthout + " [" + seasonout + "]";
+ document.getElementById('dayout').innerHTML = "(Midnight) <span id='yearsout' onclick='document.getElementById(&#039;yrinp&#039;).style.display=&#039;inline-block&#039;;document.getElementById(&#039;inpconf&#039;).style.display=&#039;inline-block&#039;;' title='Click to Specify a Year'></span>&nbsp;<span id='yrbadges'></span></span>&nbsp;<input id='yrinp' style='display:none'  oninput='this.value=this.value.replace(/[^0-9 \-]/gim,&#039;&#039;);' placeholder='Enter a Year' /><button type='button' id='inpconf' onclick='document.getElementById(&#039;yearsout&#039;).innerHTML=document.getElementById(&#039;yrinp&#039;).value;year=document.getElementById(&#039;yrinp&#039;).value;document.getElementById(&#039;yrinp&#039;).style.display=&#039;none&#039;;document.getElementById(&#039;inpconf&#039;).style.display=&#039;none&#039;;nums(&#039;yearsout&#039;);' style='display:none'><sup><sub><b>Done</b></sub></sup></button></br>" + monthout + " " + seasonout;
  hrs = 1;
  
  }
@@ -1927,16 +1848,8 @@ if(days <= 1 && seasons === 1 && timeindays > 1){ //marker day
  spd = document.getElementById('speed').innerHTML;
  mve = document.getElementById('move').innerHTML;
  
-if(yrch.toString().search(/[^0]/) >= 0){
- if(document.getElementById(yrch).innerText.toString().search(/[^0]/) >= 0){ <!--year was changed-->
+ if(yrch.toString().search(/[^0]/) >= 0){
   var negcheck = document.getElementById(yrch).innerHTML; 
- 
- if(negcheck.toString().search(/\-/) === 0){
-  datecode = "-"+""+Number(Number(Number(months)+Number(days))+Number(document.getElementById(yrch).innerText.toString().replace(/\-/, '')));
- }
- else{
- datecode = Number(Number(Number(months)+Number(days))+Number(document.getElementById(yrch).innerText));
- }
    
    if(Number(negcheck) >= 3031){ <!-- Emress Lore -->
     document.getElementById('yrbadges').innerHTML = "<sup id='Her Era' title='Empress Era' style='color:rgb(255,221,67,0.79);'><sub><sub><b><i>HER</i></b></sub></sub></sup>";
@@ -1967,18 +1880,7 @@ if(yrch.toString().search(/[^0]/) >= 0){
     document.getElementById('yrbadges').innerHTML = "";
    }
  document.getElementById(yrch).innerHTML = Number(negcheck.toString().replace(/\-/g, ''));
- 
- 
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
  }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Changed year ["+datecode+""+yrbd+"] <b>nums()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
- }
-}
  
  if(document.getElementById('fhold6').querySelectorAll('span#strength').length >= 1){
   if(document.getElementById('strength').innerHTML.toString().search(/\d+/gm) >= 0){
@@ -2110,7 +2012,7 @@ if(nameupdate > 0 || classupdate > 0 || raceupdate > 0 || heightupdate > 0 || we
  if(document.getElementById('hight').innerHTML.search(/(\d|\d+)/g) >= 0 && document.getElementById('hight').innerHTML.search(/(ft|in)/g) < 0 || document.getElementById('hight').innerHTML === "" && document.getElementById('hight').innerHTML.search(/(ft|in)/g) < 0 || document.getElementById('hight').innerHTML === null && document.getElementById('hight').innerHTML.search(/(ft|in)/g) < 0 ){
   var thight = document.getElementById('hight').innerHTML;
   
-  if(thight === "" || thight === Number(0) || Number(thight) === Number(0) || isNaN(thight) === true){
+  if(thight === "" || thight === Number(0)){
    thight = Number(5.1);
   }
   
@@ -2131,13 +2033,7 @@ if(nameupdate > 0 || classupdate > 0 || raceupdate > 0 || heightupdate > 0 || we
   }
   
   document.getElementById('hight').innerHTML = Number(thight) + "<sup><sub>&nbsp;<sub>[ft.in]</sub></sub></sup>";
-  
-  if(thight.toString().search(/\./g) < 0){
-   document.getElementById('hight').title=""+thight.toString().split(/\./)[0]+" feet & 0 inches";
-  }
-  else{
-   document.getElementById('hight').title=""+thight.toString().split(/\./)[0]+" feet & "+thight.toString().split(/\./)[1]+" inches";
-  }
+  document.getElementById('hight').title=""+thight.toString().split(/\./)[0]+" feet & "+thight.toString().split(/\./)[1]+" inches";
  }
  
  
@@ -2166,13 +2062,7 @@ if(nameupdate > 0 || classupdate > 0 || raceupdate > 0 || heightupdate > 0 || we
   }
   
   document.getElementById('weight').innerHTML = Number(twight) + "<sup><sub>&nbsp;<sub>[lbs.oz]</sub></sub></sup>";
-  
-  if(twight.toString().search(/\./g) < 0){
-   document.getElementById('weight').title=""+twight.toString().split(/\./)[0]+" pounds & 0 ounces";
-  }
-  else{
-   document.getElementById('weight').title=""+twight.toString().split(/\./)[0]+" pounds & "+twight.toString().split(/\./)[1]+" ounces";
-  }
+  document.getElementById('weight').title=""+twight.toString().split(/\./)[0]+" pounds & "+twight.toString().split(/\./)[1]+" ounces";
  }
  
  
@@ -2180,8 +2070,8 @@ if(nameupdate > 0 || classupdate > 0 || raceupdate > 0 || heightupdate > 0 || we
  if(document.getElementById('age').innerHTML.search(/(\d|\d+)/g) >= 0 && document.getElementById('age').innerHTML.search(/(YRS|OLD)/gi) < 0 || document.getElementById('age').innerHTML === "" && document.getElementById('age').innerHTML.search(/(YRS|OLD)/gi) < 0  || document.getElementById('age').innerHTML === null && document.getElementById('age').innerHTML.search(/(YRS|OLD)/gi) < 0){ //all the ways we use to describe ('age') without saying 'age' needs to be in the search/(yrs|old|...here...)/g <!-- There -->
   var tage = document.getElementById('age').innerHTML;
   
-  if(tage === "" || tage <= Number(0) || Number(tage) === Number(0) || tage === 0 || isNaN(tage) === true){
-   tage = Number(Math.floor(Math.random()*11)+18).toFixed(0); <!-- soft-age min is 18 -->
+  if(tage === "" || tage <= Number(0)){
+   tage = Number(18); <!-- min age -->
   }
   
   var wheph = ["old","yrs","old"]; //if we can come up with new ways to describe ('age') without saying 'age' we can just add them in  update updatable updateable possible 
@@ -2192,31 +2082,32 @@ if(nameupdate > 0 || classupdate > 0 || raceupdate > 0 || heightupdate > 0 || we
  }
  
  <!--auto IQ/GPA config -->
- if(document.getElementById('gpa').innerHTML.search(/(\d|\d+)/g) >= 0 && document.getElementById('gpa').innerHTML.search(/(IQ|GPA)/gi) < 0 ){
+ if(document.getElementById('gpa').innerHTML.search(/(\d|\d+)/g) >= 0 && document.getElementById('gpa').innerHTML.search(/(IQ|GPA)/gi) < 0 ){ 
   var tgpa = document.getElementById('gpa').innerHTML;
-  var Tiq = 0;
   
-  if(tgpa === "" || tgpa <= Number(0) || Number(tgpa) === Number(0) || tgpa === 0 || isNaN(tgpa) === true || tgpa === null){
-   tgpa = Number(Math.floor(Math.random()*4)+0.1).toFixed(2); 
-  }
-  
+ if(document.getElementById('age').innerHTML.search(/(\d|\d+)/g) >= 0){
+  var ag = document.getElementById('age').innerHTML.toString().split("<sup><sub>")[0];
+ }
+ else{
+  var ag = Number(18); //minimum in-game age (softset, not real limited)
+ }
  <!-- Mental_Age / Chronological_Age * 100 === IQ && 0.04*IQ-1 === GPA -->
   if(Number(tgpa) >= 10.1){  //if any value over 10 is input it will be taken as IQ inputted 
     var gpame = Number(Number(0.04)*Number(tgpa))-1;
-	Tiq = Number(tgpa).toFixed(0); <!--should be IQ-->
+	var Tiq = Number(tgpa).toFixed(0); <!--should be IQ-->
 	tgpa = Number(gpame).toFixed(1); <!--should be gpa-->
   }
   else if(Number(tgpa) >= Number(8.1) && Number(tgpa) <= Number(10)){  //if GPA inputted (highly non-normal)
     var iqme = Number(Number(Number(tgpa)/3)*Number(0.333))*100;
-	Tiq = Number(iqme).toFixed(0); <!--should be IQ-->
+	var Tiq = Number(iqme).toFixed(0); <!--should be IQ-->
   }
   else if(Number(tgpa) >= Number(5.6) && Number(tgpa) <= Number(8)){  //if GPA inputted (non-normal)
     var iqme = Number(Number(Number(tgpa)/2)*Number(0.333))*100;
-	Tiq = Number(iqme).toFixed(0); <!--should be IQ-->
+	var Tiq = Number(iqme).toFixed(0); <!--should be IQ-->
   }
   else{  //if GPA inputted 
     var iqme = Number(Number(tgpa)*Number(0.333))*100;
-	Tiq = Number(iqme).toFixed(0); <!--should be IQ-->
+	var Tiq = Number(iqme).toFixed(0); <!--should be IQ-->
   }
   
   document.getElementById('gpa').innerHTML = Number(tgpa) + "<sup><sub>&nbsp;<sub>[GPA]</sub></sub></sup>&nbsp;:&nbsp;" + Number(Tiq) + "<sup><sub>&nbsp;<sub>[IQ]</sub></sub></sup>";
@@ -2235,8 +2126,8 @@ if(nameupdate > 0 || classupdate > 0 || raceupdate > 0 || heightupdate > 0 || we
   
   <!--the next two variables contains a ton of variables that should never be seen and many will been seen and no one will realize it but in order for the population system to handle the odd number of zeros, this is the crazy method for the preferred "odd" look of some values like 1.55 million will look like 1550k--> //lore specific design 
   var wheph = ["k","ones","hundreds","k","0k","00k","m","0m","00m","b","0b","00b","t","0t","00t","Qd","0Qd","00Qd","Qt","0Qt","00Qt","St","0St","00St","Sp","0Sp","00Sp","Ot","0Ot","00Ot","Nn","0Nn","00Nn","Dc","0Dc","00Dc","Ud","0Ud","00Ud","Dd","0Dd","00Dd","Td","0Td","00Td","QTd","0QTd","00QTd","QDc","0QDc","00QDc","SDc","0SDc","00SDc","SpD","0SpD","00SpD","ODc","0ODc","00ODc","NDc","0NDc","00NDc","VnT","0VnT","00VnT","Gg","0Gg","00Gg","CnT","0CnT","00CnT","Ggp","0Ggp","00Ggp","Ttc","0Ttc","00Ttc","pinf","inf","only"]; 
-   //[witness] means you cheated!
-   var testme = ["[witness]","ones","hundreds","thousands","ten-thousands","hundred-thousands","millions","ten-millions","hundred-millions","billions","ten-billions","hundred-billions","trillions","ten-trillions","hundred-trillions","Quadrillion","ten-Quadrillion","hundred-Quadrillion","Quintrillion","ten-Quintrillion","hundred-Quintrillion","Sextillion","ten-Sextillion","hundred-Sextillion","Septillion","ten-Septillion","hundred-Septillion","Octillion","ten-Octillion","hundred-Octillion","Nonillion","ten-Nonillion","hundred-Nonillion","Decillion","ten-Decillion","hundred-Decillion","Undecillion","ten-Undecillion","hundred-Undecillion","Duodecilliion","ten-Duodecilliion","hundred-Duodecilliion","Tredecillion","ten-Tredecillion","hundred-Tredecillion","QuatTuordecillion","ten-QuatTuordecillion","hundred-QuatTuordecillion","QuinDecillion","ten-QuinDecillion","hundred-QuinDecillion","SexDecillion","ten-SexDecillion","hundred-SexDecillion","SeptenDecillion","ten-SeptenDecillion","hundred-SeptenDecillion","OctDecillion","ten-OctDecillion","hundred-OctDecillion","NovemDecillion","ten-NovemDecillion","hundred-NovemDecillion","ViginTillion","ten-ViginTillion","hundred-ViginTillion","Googol","ten-Googol","hundred-Googol","CenTillion","ten-CenTillion","hundred-CenTillion","Googleplex","ten-Googleplex","hundred-Googleplex","Trillitrestrigintatrecentillitrestrigintatrecentilliduotrigintatrecentillion","ten-Trillitrestrigintatrecentillitrestrigintatrecentilliduotrigintatrecentillion","hundred-Trillitrestrigintatrecentillitrestrigintatrecentilliduotrigintatrecentillion","pre-infinite","Infinite","Only-1"];
+   //:eyes: means you cheated!
+   var testme = [":eyes:","ones","hundreds","thousands","ten-thousands","hundred-thousands","millions","ten-millions","hundred-millions","billions","ten-billions","hundred-billions","trillions","ten-trillions","hundred-trillions","Quadrillion","ten-Quadrillion","hundred-Quadrillion","Quintrillion","ten-Quintrillion","hundred-Quintrillion","Sextillion","ten-Sextillion","hundred-Sextillion","Septillion","ten-Septillion","hundred-Septillion","Octillion","ten-Octillion","hundred-Octillion","Nonillion","ten-Nonillion","hundred-Nonillion","Decillion","ten-Decillion","hundred-Decillion","Undecillion","ten-Undecillion","hundred-Undecillion","Duodecilliion","ten-Duodecilliion","hundred-Duodecilliion","Tredecillion","ten-Tredecillion","hundred-Tredecillion","QuatTuordecillion","ten-QuatTuordecillion","hundred-QuatTuordecillion","QuinDecillion","ten-QuinDecillion","hundred-QuinDecillion","SexDecillion","ten-SexDecillion","hundred-SexDecillion","SeptenDecillion","ten-SeptenDecillion","hundred-SeptenDecillion","OctDecillion","ten-OctDecillion","hundred-OctDecillion","NovemDecillion","ten-NovemDecillion","hundred-NovemDecillion","ViginTillion","ten-ViginTillion","hundred-ViginTillion","Googol","ten-Googol","hundred-Googol","CenTillion","ten-CenTillion","hundred-CenTillion","Googleplex","ten-Googleplex","hundred-Googleplex","Trillitrestrigintatrecentillitrestrigintatrecentilliduotrigintatrecentillion","ten-Trillitrestrigintatrecentillitrestrigintatrecentilliduotrigintatrecentillion","hundred-Trillitrestrigintatrecentillitrestrigintatrecentilliduotrigintatrecentillion","pre-infinite","Infinite","Only-1"];
    
    <!--pop up title card-->
   if(tpop.toString().search(/0{3,}$/) >= 0){ //only looking at trailing zeros 
@@ -2521,35 +2412,48 @@ if(nameupdate > 0 || classupdate > 0 || raceupdate > 0 || heightupdate > 0 || we
  document.getElementById('fhold11').innerHTML = 'Charisma (<b title="OG Value">'+tempy11+'</b>) <button id="fh111"  class="button2" onclick=document.getElementById("chad").innerHTML=Number(document.getElementById("chad").innerHTML)+Number(1);>(+)</button> <span id="chad">'+subboost14+'</span> <button id="fh112" class="button2" onclick=document.getElementById("chad").innerHTML=Number(document.getElementById("chad").innerHTML)-Number(1);>(-)</button>';
 
 
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
  }
  
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Finalized Buy-In ["+datecode+""+yrbd+"] <b>buyin()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
  
+ function buyout(){
+ document.getElementById('fh61').style='display:none;';
+ document.getElementById('stad').style='display:none;';
+ document.getElementById('fh62').style='display:none;';
+ 
+ document.getElementById('fh71').style='display:none;';
+ document.getElementById('dexad').style='display:none;';
+ document.getElementById('fh72').style='display:none;';
+ 
+ document.getElementById('fh81').style='display:none;';
+ document.getElementById('coad').style='display:none;';
+ document.getElementById('fh82').style='display:none;';
+ 
+ document.getElementById('fh91').style='display:none;';
+ document.getElementById('inad').style='display:none;';
+ document.getElementById('fh92').style='display:none;';
+ 
+ document.getElementById('fh101').style='display:none;';
+ document.getElementById('wiad').style='display:none;';
+ document.getElementById('fh102').style='display:none;';
+ 
+ document.getElementById('fh111').style='display:none;';
+ document.getElementById('chad').style='display:none;';
+ document.getElementById('fh112').style='display:none;';
  }
+ 
+ 
+  <!--algo above-->
   
   
   
   function jim(){
   document.getElementById('what').innerHTML="</br><button class='button2' id='hup' onclick='ood(1)'>(+)&nbsp;</button>&nbsp;<button class='button2' id='hdn' onclick='oof(1)'>&nbsp;(-)</button></br>";
   document.getElementById('renamehealth').innerHTML = "Health</br></br>";
-  
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Activated health ["+datecode+""+yrbd+"] <b>jim()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
   }
  
   
   
- function skilladd(){
+ function skilladd(){  
  var bnum = Number(document.getElementById('bnm').innerHTML)+Number(1);
  
  document.getElementById('tyu').innerHTML='u';
@@ -2559,7 +2463,7 @@ if(nameupdate > 0 || classupdate > 0 || raceupdate > 0 || heightupdate > 0 || we
  document.getElementById('sano').innerHTML='document.getElementById(&#039;tyu&#039;).innerHTML=&#039;u&#039;;document.getElementById(&#039;where&#039;).innerHTML=this.getAttribute(&#039;id&#039;)+&#039;inp&#039;;document.getElementById(&#039;sani&#039;).innerHTML=this.getAttribute(&#039;id&#039;);document.getElementById(&#039;sanp&#039;).innerHTML=&#039;span&#039;;document.getElementById(&#039;sano&#039;).innerHTML=this.getAttribute(&#039;onclick&#039;);document.getElementById(&#039;sanu&#039;).innerHTML=&#039;Changing Skills?&#039;;document.getElementById(&#039;brn&#039;).innerHTML='+document.getElementById("bnm").innerHTML+';document.getElementById(&#039;wha&#039;).innerHTML='+document.getElementById("where").innerHTML+';inpmaker();';
  document.getElementById('sanu').innerHTML='Wha&#039;s Your Skill?';
  document.getElementById('brn').innerHTML=document.getElementById('bnm').innerHTML;
- document.getElementById('what').innerHTML='<button id="silklbtn'+document.getElementById('num').innerHTML+'" class="button2" onclick="document.getElementById(&#039;skill'+document.getElementById('num').innerHTML+'num&#039;).innerHTML=Number(document.getElementById(&#039;skill'+document.getElementById('num').innerHTML+'num&#039;).innerHTML)+Number(1);skilled(document.getElementById(&#039;skill'+document.getElementById('num').innerHTML+'num&#039;).innerText,document.getElementById(&#039;skilldiff'+document.getElementById('num').innerHTML+'&#039;).innerText,&#039;'+document.getElementById('num').innerHTML+'&#039;);">(+)</button><span id="skill'+document.getElementById('num').innerHTML+'num" title="Skill Level">1</span><span id="skillbadges'+document.getElementById('num').innerHTML+'" ></span><span id="skilldiff'+document.getElementById('num').innerHTML+'" style="display:none"></span> </span> <button class="button2" onclick="document.getElementById(&#039;skill'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;silklbtn'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;skill'+document.getElementById('num').innerHTML+'num&#039;).remove();this.remove();" >X</button><div id="uhold'+bnum+'"></div>';
+ document.getElementById('what').innerHTML='<button id="silklbtn'+document.getElementById('num').innerHTML+'" class="button2" onclick="document.getElementById(&#039;skill'+document.getElementById('num').innerHTML+'num&#039;).innerHTML=Number(document.getElementById(&#039;skill'+document.getElementById('num').innerHTML+'num&#039;).innerHTML)+Number(1);skilled(document.getElementById(&#039;skill'+document.getElementById('num').innerHTML+'num&#039;).innerText,document.getElementById(&#039;skilldiff'+document.getElementById('num').innerHTML+'&#039;).innerText,'+document.getElementById('num').innerHTML+');">(+)</button><span id="skill'+document.getElementById('num').innerHTML+'num" title="Skill Level">1</span><span id="skillbadges'+document.getElementById('num').innerHTML+'" ></span><span id="skilldiff'+document.getElementById('num').innerHTML+'" style="display:none"></span> </span> <button class="button2" onclick="document.getElementById(&#039;skill'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;silklbtn'+document.getElementById('num').innerHTML+'&#039;).remove();document.getElementById(&#039;skill'+document.getElementById('num').innerHTML+'num&#039;).remove();this.remove();" >X</button><div id="uhold'+bnum+'"></div>';
  
  document.getElementById('bnm').innerHTML=bnum;
  var thisnumhere = document.getElementById('num').innerHTML;
@@ -2590,11 +2494,11 @@ if(nameupdate > 0 || classupdate > 0 || raceupdate > 0 || heightupdate > 0 || we
   
  
  if(newspell === 1){ //new spell //from tomb 
- document.getElementById('what').innerHTML='<span id="thisspell'+document.getElementById('mnm').innerHTML+'"><button id="slpelbtn'+document.getElementById('mnm').innerHTML+'" class="button2" onclick="document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'num&#039;).innerHTML=Number(document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'num&#039;).innerHTML)+Number(1);spelled(document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'num&#039;).innerText,document.getElementById(&#039;spelldiff'+document.getElementById('mnm').innerHTML+'&#039;).innerText,'+document.getElementById('mnm').innerHTML+','+lastbe+',&#039;spell'+document.getElementById('mnm').innerHTML+'&#039;);">(+)</button><span id="spell'+document.getElementById('mnm').innerHTML+'num" title="Spell Level">1</span><button id="2btn'+document.getElementById('mnm').innerHTML+'" class="button2" onclick="document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'num&#039;).innerHTML=Number(document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'num&#039;).innerHTML)-Number(1);">(-)</button><span>(</span><span id="spell'+document.getElementById('mnm').innerHTML+'pwr" title="Spell Power">1</span><span>)</span><span id="spellbadges'+document.getElementById('mnm').innerHTML+'"></span><span id="spelldiff'+document.getElementById('mnm').innerHTML+'" style="display:none">1</span> </span> <button style="display:none" id="spell'+document.getElementById('mnm').innerHTML+'rem" class="button2" onclick="armcount=armcount-'+remjewel+';document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'&#039;).remove();document.getElementById(&#039;slpelbtn'+document.getElementById('mnm').innerHTML+'&#039;).remove();document.getElementById(&#039;thisspell'+document.getElementById('mnm').innerHTML+'&#039;).remove();this.remove();" >X</button> <div id="mhold'+mnum+'"></div>';
+ document.getElementById('what').innerHTML='<span id="thisspell'+document.getElementById('mnm').innerHTML+'"><button id="slpelbtn'+document.getElementById('mnm').innerHTML+'" class="button2" onclick="document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'num&#039;).innerHTML=Number(document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'num&#039;).innerHTML)+Number(1);spelled(document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'num&#039;).innerText,document.getElementById(&#039;spelldiff'+document.getElementById('mnm').innerHTML+'&#039;).innerText,'+document.getElementById('mnm').innerHTML+','+lastbe+');">(+)</button><span id="spell'+document.getElementById('mnm').innerHTML+'num" title="Spell Level">1</span><button id="2btn'+document.getElementById('mnm').innerHTML+'" class="button2" onclick="document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'num&#039;).innerHTML=Number(document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'num&#039;).innerHTML)-Number(1);">(-)</button><span>(</span><span id="spell'+document.getElementById('mnm').innerHTML+'pwr" title="Spell Power">1</span><span>)</span><span id="spellbadges'+document.getElementById('mnm').innerHTML+'"></span><span id="spelldiff'+document.getElementById('mnm').innerHTML+'" style="display:none">1</span> </span> <button style="display:none" id="spell'+document.getElementById('mnm').innerHTML+'rem" class="button2" onclick="armcount=armcount-'+remjewel+';document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'&#039;).remove();document.getElementById(&#039;slpelbtn'+document.getElementById('mnm').innerHTML+'&#039;).remove();document.getElementById(&#039;thisspell'+document.getElementById('mnm').innerHTML+'&#039;).remove();this.remove();" >X</button> <div id="mhold'+mnum+'"></div>';
  }
  
  if(newspell != 1){ //not new spell
- document.getElementById('what').innerHTML='<span id="thisspell'+document.getElementById('mnm').innerHTML+'"><button id="slpelbtn'+document.getElementById('mnm').innerHTML+'" class="button2" onclick="document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'num&#039;).innerHTML=Number(document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'num&#039;).innerHTML)+Number(1);spelled(document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'num&#039;).innerText,document.getElementById(&#039;spelldiff'+document.getElementById('mnm').innerHTML+'&#039;).innerText,'+document.getElementById('mnm').innerHTML+',&#039;f&#039;,&#039;spell'+document.getElementById('mnm').innerHTML+'&#039;)">(+)</button><span id="spell'+document.getElementById('mnm').innerHTML+'num" title="Spell Level">1</span><button id="btn'+document.getElementById('mnm').innerHTML+'" class="button2" onclick="umph(&#039;spell'+document.getElementById('mnm').innerHTML+'num&#039;,&#039;spell'+document.getElementById('mnm').innerHTML+'&#039;);">(-)</button><span>(</span><span id="spell'+document.getElementById('mnm').innerHTML+'pwr" title="Spell Power">1</span><span>)</span><span id="spellbadges'+document.getElementById('mnm').innerHTML+'"></span><span id="spelldiff'+document.getElementById('mnm').innerHTML+'" style="display:none">1</span> </span> </span><button class="button2" onclick="document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'&#039;).remove();document.getElementById(&#039;btn'+document.getElementById('mnm').innerHTML+'&#039;).remove();document.getElementById(&#039;thisspell'+document.getElementById('mnm').innerHTML+'&#039;).remove();this.remove();" >X</button> <div id="mhold'+mnum+'"></div>';
+ document.getElementById('what').innerHTML='<span id="thisspell'+document.getElementById('mnm').innerHTML+'"><button id="slpelbtn'+document.getElementById('mnm').innerHTML+'" class="button2" onclick="document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'num&#039;).innerHTML=Number(document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'num&#039;).innerHTML)+Number(1);spelled(document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'num&#039;).innerText,document.getElementById(&#039;spelldiff'+document.getElementById('mnm').innerHTML+'&#039;).innerText,'+document.getElementById('mnm').innerHTML+')">(+)</button><span id="spell'+document.getElementById('mnm').innerHTML+'num" title="Spell Level">1</span><button id="btn'+document.getElementById('mnm').innerHTML+'" class="button2" onclick="umph(&#039;spell'+document.getElementById('mnm').innerHTML+'num&#039;);">(-)</button><span>(</span><span id="spell'+document.getElementById('mnm').innerHTML+'pwr" title="Spell Power">1</span><span>)</span><span id="spellbadges'+document.getElementById('mnm').innerHTML+'"></span><span id="spelldiff'+document.getElementById('mnm').innerHTML+'" style="display:none">1</span> </span> </span><button class="button2" onclick="document.getElementById(&#039;spell'+document.getElementById('mnm').innerHTML+'&#039;).remove();document.getElementById(&#039;btn'+document.getElementById('mnm').innerHTML+'&#039;).remove();document.getElementById(&#039;thisspell'+document.getElementById('mnm').innerHTML+'&#039;).remove();this.remove();" >X</button> <div id="mhold'+mnum+'"></div>';
  
  
  }
@@ -2608,22 +2512,12 @@ if(nameupdate > 0 || classupdate > 0 || raceupdate > 0 || heightupdate > 0 || we
  }
  
  
-function umph(thishere,bspell) {<!--prevents neg spell pwr levels-->
+function umph(thishere) {<!--prevents neg spell pwr levels-->
  var contexthere = document.getElementById(thishere).innerHTML;
  
   if(Number(Number(contexthere)-1) >= 0){
    document.getElementById(thishere).innerHTML = Number(Number(contexthere)-1);
-  
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Adjusted Spell "+document.getElementById(bspell).innerHTML+" (-) ["+datecode+""+yrbd+"] <b>umph()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
   }
-  
  }
  
  
@@ -2636,199 +2530,60 @@ function oof(howmuch) {<!--looks for dead state-->
   }
    document.getElementById('initiavtive').innerHTML = Number(Number(tothere) - 1);
    
-  //time based dead-change-states works-ish so this may work for temp health and other temp effects for user deadcheck() !!  i'm here I'm here im here Im here upgradeable upgradable 
+  //need a way to determine time difference as well for a time and health based dead-change-states  i'm here I'm here im here Im here upgradeable upgradable 
   
   //maybe there should be a lock behind going negative health like having zombie background or have had a zombie skill or had a zombie spell/potion/virus used on self  i'm here I'm here im here Im here upgradeable upgradable 
    
-  if(Number(Number(tothere)-1) >= 1 && deadstate < 0 && document.getElementById('bodyoutput').innerText.toString().search(/(RIP|ZOMBIE|Z0M8|DROWL|GHOST|GHASTLY|GHAST|GHOSTLY|BONES|SKELETON|UNDEAD|DARK_SOLDIER|GOUL)/gim) < 0){
-   deadstate = 0;<!--alive-->
-  }
   if(Number(Number(tothere)-1) < 0 && document.getElementById('bodyoutput').innerText.toString().search(/(RIP|ZOMBIE|Z0M8|DROWL|GHOST|GHASTLY|GHAST|GHOSTLY|BONES|SKELETON|UNDEAD|DARK_SOLDIER|GOUL)/gim) < 0){<!--death incoming-->
-   document.getElementById('bodyoutput').innerHTML += "&nbsp;<span id='dead' value='"+months+""+days+""+yearsout+"' title='Passed on the "+days+" day__"+seasonout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....'><b style='color:rgb(99,99,99,0.9);'><sub><sup>RIP</sup></sub></b></span>&nbsp;";
-   dod = months+","+days+","+yearsout;
-   deadstate = 1;
-   
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Deadstate Observed ->(RIP) ["+datecode+""+yrbd+"] <b>oof()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
+   document.getElementById('bodyoutput').innerHTML += "&nbsp;<span id='dead' value='"+months+""+days+""+yearsout+"' title='Passed on the "+days+" day__"+monthout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....'><b style='color:rgb(99,99,99,0.9);'><sub><sup>RIP</sup></sub></b></span>&nbsp;";
   }
   if(Number(Number(tothere)-1) <= Number(-10) && document.getElementById('bodyoutput').innerText.toString().search(/RIP/gim) >= 0){<!--undead incoming-->
    document.getElementById('dead').innerHTML = "<i><b style='color:rgb(149,299,149,0.8);'><sub><sup>UNDEAD</sup></sub></b></i>";
-   deadstate = 2;
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Deadstate Observed ->(UNDEAD) ["+datecode+""+yrbd+"] <b>oof()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
   }
   if(Number(Number(tothere)-1) <= Number(-30) && document.getElementById('bodyoutput').innerText.toString().search(/UNDEAD/gim) >= 0){<!--skeleton incoming-->
    document.getElementById('dead').innerHTML = "<i><b style='color:rgb(255,255,255,0.8);'><sub><sup>SKELETON</sup></sub></b></i>";
-   deadstate = 3;
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Deadstate Observed ->(SKELETON) ["+datecode+""+yrbd+"] <b>oof()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
   }
   if(Number(Number(tothere)-1) <= Number(-60) && document.getElementById('bodyoutput').innerText.toString().search(/SKELETON/gim) >= 0){<!--shaky skeleton incoming-->
    document.getElementById('dead').innerHTML = "<i><b style='color:rgb(255,255,255,0.6);'><sub><sup>BONES</sup></sub></b></i>";
-   deadstate = 4;
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Deadstate Observed ->(BONES) ["+datecode+""+yrbd+"] <b>oof()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
   }
   if(Number(Number(tothere)-1) <= Number(-69) && Number(Number(tothere)-1) > Number(-90)  && document.getElementById('bodyoutput').innerText.toString().search(/ZOMBIE/gim) >= 0){<!--drowl incoming-->
    document.getElementById('dead').innerHTML = "<i><b style='color:rgb(205,205,255,0.8);'><sub><sup>DROWL</sup></sub></b></i>";
-   document.getElementById('dead').title += "Unrecgonizable by the "+days+" day__"+seasonout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....";
-   deadstate = 9;
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Deadstate Observed ->(DROWL) ["+datecode+""+yrbd+"] <b>oof()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
+   document.getElementById('dead').title += "Unrecgonizable by the "+days+" day__"+monthout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....";
   }
   if(Number(Number(tothere)-1) <= Number(-90) && document.getElementById('bodyoutput').innerText.toString().search(/BONES/gim) >= 0){<!--Ghosty skeleton incoming-->
    document.getElementById('dead').innerHTML = "<i><b style='color:rgb(195,195,255,0.7);'><sub><sup>GHOSTLY</sup></sub></b></i>";
-   deadstate = 5;
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Deadstate Observed ->(GHOSTLY) ["+datecode+""+yrbd+"] <b>oof()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
   }
   if(Number(Number(tothere)-1) <= Number(-90) && document.getElementById('bodyoutput').innerText.toString().search(/Z0M8/gim) >= 0){<!--ZOMBIE incoming-->
    document.getElementById('dead').innerHTML = "<i><b style='color:rgb(145,145,235,0.7);'><sub><sup>ZOMBIE</sup></sub></b></i>";
-   document.getElementById('dead').title += "Zombified on the "+days+" day__"+seasonout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....";
-   deadstate = 13;
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Deadstate Observed ->(ZOMBIE) ["+datecode+""+yrbd+"] <b>oof()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
+   document.getElementById('dead').title += "Zombified on the "+days+" day__"+monthout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....";
   }
   if(Number(Number(tothere)-1) <= Number(-131) && document.getElementById('bodyoutput').innerText.toString().search(/GHOSTLY/gim) >= 0){<!--Ghost incoming-->
    document.getElementById('dead').innerHTML = "<i><b style='color:rgb(95,95,205,0.8);'><sub><sup>GHOST</sup></sub></b></i>";
-   document.getElementById('dead').title += "Moved on on the "+days+" day__"+seasonout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]";
-   deadstate = 6;
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Deadstate Observed ->(GHOST) ["+datecode+""+yrbd+"] <b>oof()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
+   document.getElementById('dead').title += "Moved on on the "+days+" day__"+monthout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]";
   }
   if(Number(Number(tothere)-1) <= Number(-131) && Number(Number(tothere)-1) > Number(-213) && document.getElementById('bodyoutput').innerText.toString().search(/DROWL/gim) >= 0){<!--goul incoming-->
    document.getElementById('dead').innerHTML = "<i><b style='color:rgb(45,205,45,0.7);'><sub><sup>GOUL</sup></sub></b></i>";
-   document.getElementById('dead').title += "Fighting Feralisticism by the "+days+" day__"+seasonout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....";
-   deadstate = 10;
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Deadstate Observed ->(GOUL) ["+datecode+""+yrbd+"] <b>oof()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
+   document.getElementById('dead').title += "Fighting Feralisticism by the "+days+" day__"+monthout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....";
   }
   if(Number(Number(tothere)-1) <= Number(-213) && document.getElementById('bodyoutput').innerText.toString().search(/ZOMBIE/gim) >= 0){<!--drowl incoming-->
    document.getElementById('dead').innerHTML = "<i><b style='color:rgb(205,205,255,0.8);'><sub><sup>DROWL</sup></sub></b></i>";
-   document.getElementById('dead').title += "Unrecgonizable by the "+days+" day__"+seasonout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....";
-   deadstate = 9;
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Deadstate Observed ->(DROWL) ["+datecode+""+yrbd+"] <b>oof()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
+   document.getElementById('dead').title += "Unrecgonizable by the "+days+" day__"+monthout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....";
   }
-  if(Number(Number(tothere)-1) <= Number(-213) && document.getElementById('bodyoutput').innerText.toString().search(/GHOST/gim) >= 0){<!--Ghastly incoming-->
+  if(Number(Number(tothere)-1) <= Number(-213) && document.getElementById('bodyoutput').innerText.toString().search(/GHOST/gim) >= 0){<!--Ghosty skeleton incoming-->
    document.getElementById('dead').innerHTML = "<i><b style='color:rgb(105,105,235,0.5);'><sub><sup>GHASTLY</sup></sub></b></i>";
-   deadstate = 8;
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Deadstate Observed ->(GHASTLY) ["+datecode+""+yrbd+"] <b>oof()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
   }
   if(Number(Number(tothere)-1) <= Number(-255) && Number(Number(tothere)-1) > Number(-313) && document.getElementById('bodyoutput').innerText.toString().search(/DROWL/gim) >= 0){<!--GOUL incoming-->
    document.getElementById('dead').innerHTML = "<i><b style='color:rgb(25,45,255,0.6);'><sub><sup>GOUL</sup></sub></b></i>";
-   document.getElementById('dead').title += "Fighting Feralisticism by the "+days+" day__"+seasonout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....";
-   deadstate = 10;
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Deadstate Observed ->(GOUL) ["+datecode+""+yrbd+"] <b>oof()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
+   document.getElementById('dead').title += "Fighting Feralisticism by the "+days+" day__"+monthout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....";
   }
-  if(Number(Number(tothere)-1) <= Number(-313) && document.getElementById('bodyoutput').innerText.toString().search(/GHASTLY/gim) >= 0){<!--Ghast incoming-->
+  if(Number(Number(tothere)-1) <= Number(-313) && document.getElementById('bodyoutput').innerText.toString().search(/GHASTLY/gim) >= 0){<!--Ghosty skeleton incoming-->
    document.getElementById('dead').innerHTML = "<i><b style='color:rgb(205,205,215,0.4);'><sub><sup>GHAST</sup></sub></b></i>";
-   deadstate = 7;
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Deadstate Observed ->(GHAST) ["+datecode+""+yrbd+"] <b>oof()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
   }
   if(Number(Number(tothere)-1) <= Number(-313) && document.getElementById('bodyoutput').innerText.toString().search(/DROWL/gim) >= 0){<!--goul incoming-->
    document.getElementById('dead').innerHTML = "<i><b style='color:rgb(45,205,45,0.7);'><sub><sup>GOUL</sup></sub></b></i>";
-   document.getElementById('dead').title += "Fighting Feralisticism by the "+days+" day__"+seasonout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....";
-   deadstate = 10;
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Deadstate Observed ->(GOUL) ["+datecode+""+yrbd+"] <b>oof()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
+   document.getElementById('dead').title += "Fighting Feralisticism by the "+days+" day__"+monthout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....";
   }
   
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Adjusted HP (-) ["+datecode+""+yrbd+"] <b>oof()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
   
  }
  
@@ -2838,62 +2593,22 @@ function ood(totalmuch) {<!--looks for undead state-->
  var isthismuch = Number(totalmuch.toString().split(/\./g)[0]);
  
    document.getElementById('initiavtive').innerHTML = Number(Number(tothere) + 1);
-  
-  if(Number(Number(tothere)+1) >= 1 && deadstate < 0 && document.getElementById('bodyoutput').innerText.toString().search(/(RIP|ZOMBIE|Z0M8|DROWL|GHOST|GHASTLY|GHAST|GHOSTLY|BONES|SKELETON|UNDEAD|DARK_SOLDIER|GOUL)/gim) < 0){
-   deadstate = 0;<!--alive-->
-  }
-  else if(Number(Number(tothere)+1) >= Number(1) && document.getElementById('bodyoutput').innerText.toString().search(/RIP/gi) >= 0){<!--zomb incoming-->
+   //keeps going to zombie or bottom option
+  if(Number(Number(tothere)+1) >= Number(1) && document.getElementById('bodyoutput').innerText.toString().search(/RIP/gi) >= 0){<!--zomb incoming-->
    document.getElementById('dead').innerHTML = "<b style='color:rgb(99,99,99,0.9);'><sub><sup>Z0M8</sup></sub></b>";
-   document.getElementById('dead').title += "Partial Zombification on the "+days+" day__"+seasonout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....";
-   deadstate = 12;
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Deadstate Dormancy ->(Z0M8) ["+datecode+""+yrbd+"] <b>ood()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
+   document.getElementById('dead').title += "Partial Zombification on the "+days+" day__"+monthout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....";
   }
   else if(Number(Number(tothere)+1) >= Number(1) && document.getElementById('bodyoutput').innerText.toString().search(/(UNDEAD|Z0M8)/gi) >= 0){<!--zombie incoming-->
    document.getElementById('dead').innerHTML = "<b style='color:rgb(99,99,99,0.9);'><sub><sup>ZOMBIE</sup></sub></b>";
-   document.getElementById('dead').title += "Zombified on the "+days+" day__"+seasonout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....";
-   deadstate = 13;
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Deadstate Dormancy ->(Zombie) ["+datecode+""+yrbd+"] <b>ood()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
+   document.getElementById('dead').title += "Zombified on the "+days+" day__"+monthout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....";
   }
   else if(Number(Number(tothere)+1) >= Number(1) && document.getElementById('bodyoutput').innerText.toString().search(/(SKELETON|GHOSTLY)/gi) >= 0){<!--DARK SOLDIER incoming-->
    document.getElementById('dead').innerHTML = "<b style='color:rgb(99,99,99,0.9);'><sub><sup>DARK_SOLDIER</sup></sub></b>";
    document.getElementById('dead').title += "Joined the Dark Army Unit on "+days+"__"+monthout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]";
-   deadstate = 14;
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Dead-Services Joined ->(Dark_Soldier) ["+datecode+""+yrbd+"] <b>ood()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
   }
   else {
   }
-  
   //document.getElementById(&#039;initiavtive&#039;).innerHTML=Number(document.getElementById(&#039;initiavtive&#039;).innerHTML)+Number(1);
-  
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Adjusted HP (+) ["+datecode+""+yrbd+"] <b>ood()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
 }
  
  var wenum = 0;
@@ -3013,22 +2728,7 @@ document.getElementById('hashishere').innerHTML = hashme;
  
   document.getElementById('btnrep'+brnum).innerHTML = '<button class="button" align="center" style="align:center" id="'+tyu+'b'+brnum+'" onclick="backfill1()" disabled>'+chg8+'</button>';
  
- if(document.getElementById('sani').innerText.toString().search(/(item|item\d|item?=\d|item\d$)/gi) < 0){
- 
- 
-  var yrbd = "";
-  if(document.getElementById('preday').style.display === "none"){
-   yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
-  }
- 
-  document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Changed "+whereis.toString().split('inp')[0]+" ["+datecode+""+yrbd+"] <b>inpmaker()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
- 
- }
- 
  document.getElementById(whereis).select();
- 
  }
  
  
@@ -3285,7 +2985,7 @@ if(tid === "u"){
  if(document.getElementById(it3).innerHTML.search(/(green|420|smoke|toke|bruh|brosiv|herb|marijuana|smoked|joint|blunt|stash)/gim) >= 0){
  document.getElementById(it4).innerHTML += " <sub><sup><sup>(<b style='color:green;background-color:transparent' title='High Element'>420</b>)</sup></sup></sub>";
  }
- if(document.getElementById(it3).innerHTML.search(/(technical|electrician|technician|mechanical|geared|engerniered|engerneer|engineer|engineered|engineering|LTT|L\.T\.T\.|L\.T\.T)/gim) >= 0){
+ if(document.getElementById(it3).innerHTML.search(/(technical|electrician|technician|mechanical|geared|engerniered|engerneer|engineer|engineered|engineering)/gim) >= 0){
  document.getElementById(it4).innerHTML += " <sub><sup><sup>(<b style='color:limegreen;background-color:transparent' title='Techy Element'>T</b>)</sup></sup></sub>";
  }
  
@@ -3331,11 +3031,7 @@ if(tid === "u"){
  
 if(wherebe.toString().search(/(\d|\d+|w|w+|w+?=inp|inp)/gim) >= 0){ 
  if(wherebe.toString().search(/itemtype/) < 0){
- if(document.getElementById(wherebe).value === "" && tyu === "f" || isNaN(document.getElementById(wherebe).value) === true && tyu === "f"){
-  document.getElementById(wherebe).value = Number(0);
- }
- 
-  document.getElementById(tyu+"hold"+brnum).innerHTML = '<'+document.getElementById('sanp').innerHTML+' id="'+document.getElementById('sani').innerHTML+'" onclick="'+document.getElementById('sano').innerHTML+'" dod="'+datecode+'" value="'+datecode+'">'+document.getElementById(wherebe).value+'</'+document.getElementById('sanp').innerHTML+'>'+document.getElementById('what').innerHTML;
+  document.getElementById(tyu+"hold"+brnum).innerHTML = '<'+document.getElementById('sanp').innerHTML+' id="'+document.getElementById('sani').innerHTML+'" onclick="'+document.getElementById('sano').innerHTML+'" >'+document.getElementById(wherebe).value+'</'+document.getElementById('sanp').innerHTML+'>'+document.getElementById('what').innerHTML;
  }
 }
 
@@ -3343,7 +3039,6 @@ if(wherebe.toString().search(/(\d|\d+|w|w+|w+?=inp|inp)/gim) >= 0){
  if(tyu === "m" || tyu === "u"){
  sele(tyu);  //need a way to check for duplicate spells and skills upgraded NEEDED needed UPGRADE I'm here im here Im here i'm here !!!
  }
- 
  
  if(tyu === "e"){
  document.getElementById('itemtype'+brnum).select();
@@ -3356,7 +3051,6 @@ if(wherebe.toString().search(/(\d|\d+|w|w+|w+?=inp|inp)/gim) >= 0){
  }
  });
  }
- 
  
  
 document.getElementById('sani').innerHTML = ''; //element id
@@ -3505,15 +3199,6 @@ if(whereis === "flawsinp" || whereis === "thold9"){
   // acting = [];    //active character traits  <!--must be active, no passive effects here! -->
   <!-- acting section below this line-->
   
-  
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Changed "+whereis.toString().split('inp')[0]+" ["+datecode+""+yrbd+"] <b>btnmaker()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
  }  //end of btnmaker()
  
  
@@ -3822,7 +3507,7 @@ if(Number(menu) === 2){
  document.getElementById('swapwp'+checksum).style = 'display:none;';
  }
  
- if(document.getElementById('iitemt'+checksum).innerHTML.search(/(tunic|armor|glove|helmet|helm|hat|hood|chest\splate|chestplate|breast\splate|breastplate|guard|shoe|garb|shoes|boots|sneakers|runners|streamers|gloves|comb|visor|gorget|pauldron|counter|rerebrace|brace|plackart|fauld|tasset|tassle|tassel|cuisse|gauntlet|gauntlets|fan-plate|fan\splate|fanplate|greave|greeve|sabaton|stop\srib|stoprib|rib|gardbrace|vambrace|fauld|mail|chainmail|platemail|cloth|leather|kabuto|nodowa|sode|sendan-no-ita|sendan\sno\sita|sendannoita|kote|kasazuri|haidate|sune-ate|sune\sate|suneate|kyahan|isurumaki|do|shoulder\sarmor|soulderarmor|hand\sguard|tekko|hakama|pants|thigh\sguard|thighguard|tassets|tasset|tabi|socks|hitatare|robe|shirt|nape\sguard|napeguard|shikoro|helmet\screst|hemlmetcrest|maedate|watagami|shoulder\sstrap|shoulderstrap|strap|bascinet|vervelles|aventail|spaulder|haubergeon|lames|demi|denim|wing|gatlings|wrist\sgauntlets|wristgauntlets|wrist\sbracers|bracer|crotch\splate|thigh\sguanlets|knee\spads|kneepads|utility\sbelt|belt|suspenders|torso\sguard|torso\splate|torso\spad|arming\scap|armingcap|cap|doublet|chain\smaille|chainmaille|chainmalle|chain\smalle|hose|pantyhose|lingera|lungera|crowl|salade|salet|schalern|bevor|beavor|placard|tuille|buckle|belt\sbuckle|skull|sight|besagne|kettle\shelm|fur|cape|focus|sandles|sandels|tubesocks|knee\shigh|stiletos|stileto|curb\sstompers|curbstompers|kleats|kleets|kelt|sporran|sgain|flashers|brogues|ghillie|argyll|leather\shat|leather\scap|leatehr\sjacket|leather\sarmor|leather\spants|leather\sshoes|jacket|pin|scarf|straps|cloak|hooded\scloak|sock|sandel|moccasins|jynco|mjolnir|powered\sassult\sarmor|powered\sarmor|beanie|Link's\sHat|Links\sHat|Link\sHat|Mark\sV|Master\sChiefs|Mark\sVI)/gim) >= 0 && document.getElementById('thisitem'+checksum).className.search(/stroke/gim) >= 0){
+ if(document.getElementById('iitemt'+checksum).innerHTML.search(/(tunic|armor|glove|helmet|helm|hat|hood|chest\splate|chestplate|breast\splate|breastplate|guard|shoe|garb|shoes|boots|sneakers|runners|streamers|gloves|comb|visor|gorget|pauldron|counter|rerebrace|brace|plackart|fauld|tasset|tassle|tassel|cuisse|gauntlet|gauntlets|fan-plate|fan\splate|fanplate|greave|greeve|sabaton|stop\srib|stoprib|rib|gardbrace|vambrace|fauld|mail|chainmail|platemail|cloth|leather|kabuto|nodowa|sode|sendan-no-ita|sendan\sno\sita|sendannoita|kote|kasazuri|haidate|sune-ate|sune\sate|suneate|kyahan|isurumaki|do|shoulder\sarmor|soulderarmor|hand\sguard|tekko|hakama|pants|thigh\sguard|thighguard|tassets|tasset|tabi|socks|hitatare|robe|shirt|nape\sguard|napeguard|shikoro|helmet\screst|hemlmetcrest|maedate|watagami|shoulder\sstrap|shoulderstrap|strap|bascinet|vervelles|aventail|spaulder|haubergeon|lames|demi|denim|wing|gatlings|wrist\sgauntlets|wristgauntlets|wrist\sbracers|bracer|crotch\splate|thigh\sguanlets|knee\spads|kneepads|utility\sbelt|belt|suspenders|torso\sguard|torso\splate|torso\spad|arming\scap|armingcap|cap|doublet|chain\smaille|chainmaille|chainmalle|chain\smalle|hose|pantyhose|lingera|lungera|crowl|salade|salet|schalern|bevor|beavor|placard|tuille|buckle|belt\sbuckle|skull|sight|besagne|kettle\shelm|fur|cape|bag|pouch|focus|sandles|sandels|tubesocks|knee\shigh|stiletos|stileto|curb\sstompers|curbstompers|kleats|kleets|kelt|sporran|sgain|flashers|brogues|ghillie|argyll|leather\shat|leather\scap|leatehr\sjacket|leather\sarmor|leather\spants|leather\sshoes|jacket|pin|scarf|straps|cloak|hooded\scloak|sock|sandel|moccasins|jynco|mjolnir|powered\sassult\sarmor|powered\sarmor|beanie|Link's\sHat|Links\sHat|Link\sHat|Mark\sV|Master\sChiefs|Mark\sVI)/gim) >= 0 && document.getElementById('thisitem'+checksum).className.search(/stroke/gim) >= 0){
    
  document.getElementById('swapwp'+checksum).style = 'display:none;';
  }
@@ -3871,7 +3556,7 @@ document.getElementById('icbtn'+jon).innerHTML = '<button id="1action'+jon+'" cl
  
  }
  
- if(document.getElementById(it2).innerHTML.search(/(tunic|armor|glove|helmet|helm|hat|hood|chest\splate|chestplate|breast\splate|breastplate|guard|shoe|garb|shoes|boots|sneakers|runners|streamers|gloves|comb|visor|gorget|pauldron|counter|rerebrace|brace|plackart|fauld|tasset|tassle|tassel|cuisse|gauntlet|gauntlets|fan-plate|fan\splate|fanplate|greave|greeve|sabaton|stop\srib|stoprib|rib|gardbrace|vambrace|fauld|mail|chainmail|platemail|cloth|leather|kabuto|nodowa|sode|sendan-no-ita|sendan\sno\sita|sendannoita|kote|kasazuri|haidate|sune-ate|sune\sate|suneate|kyahan|isurumaki|do|shoulder\sarmor|soulderarmor|hand\sguard|tekko|hakama|pants|thigh\sguard|thighguard|tassets|tasset|tabi|socks|hitatare|robe|shirt|nape\sguard|napeguard|shikoro|helmet\screst|hemlmetcrest|maedate|watagami|shoulder\sstrap|shoulderstrap|strap|bascinet|vervelles|aventail|spaulder|haubergeon|lames|demi|denim|wing|gatlings|wrist\sgauntlets|wristgauntlets|wrist\sbracers|bracer|crotch\splate|thigh\sguanlets|knee\spads|kneepads|utility\sbelt|belt|suspenders|torso\sguard|torso\splate|torso\spad|arming\scap|armingcap|cap|doublet|chain\smaille|chainmaille|chainmalle|chain\smalle|hose|pantyhose|lingera|lungera|crowl|salade|salet|schalern|bevor|beavor|placard|tuille|buckle|belt\sbuckle|skull|sight|besagne|kettle\shelm|fur|cape|focus|sandles|sandels|tubesocks|knee\shigh|stiletos|stileto|curb\sstompers|curbstompers|kleats|kleets|kelt|sporran|sgain|flashers|brogues|ghillie|argyll|leather\shat|leather\scap|leatehr\sjacket|leather\sarmor|leather\spants|leather\sshoes|jacket|pin|scarf|straps|cloak|hooded\scloak|sock|sandel|shroud|moccasins|jynco|mjolnir|powered\sassult\sarmor|powered\sarmor|beanie|Link's\sHat|Links\sHat|Link\sHat|Mark\sV|Master\sChiefs|Mark\sVI|tshirt|t-shirt|v-neck|vneck|turtleneck|sweater|parka|wind\sbreaker)/gim) >= 0 ) {
+ if(document.getElementById(it2).innerHTML.search(/(tunic|armor|glove|helmet|helm|hat|hood|chest\splate|chestplate|breast\splate|breastplate|guard|shoe|garb|shoes|boots|sneakers|runners|streamers|gloves|comb|visor|gorget|pauldron|counter|rerebrace|brace|plackart|fauld|tasset|tassle|tassel|cuisse|gauntlet|gauntlets|fan-plate|fan\splate|fanplate|greave|greeve|sabaton|stop\srib|stoprib|rib|gardbrace|vambrace|fauld|mail|chainmail|platemail|cloth|leather|kabuto|nodowa|sode|sendan-no-ita|sendan\sno\sita|sendannoita|kote|kasazuri|haidate|sune-ate|sune\sate|suneate|kyahan|isurumaki|do|shoulder\sarmor|soulderarmor|hand\sguard|tekko|hakama|pants|thigh\sguard|thighguard|tassets|tasset|tabi|socks|hitatare|robe|shirt|nape\sguard|napeguard|shikoro|helmet\screst|hemlmetcrest|maedate|watagami|shoulder\sstrap|shoulderstrap|strap|bascinet|vervelles|aventail|spaulder|haubergeon|lames|demi|denim|wing|gatlings|wrist\sgauntlets|wristgauntlets|wrist\sbracers|bracer|crotch\splate|thigh\sguanlets|knee\spads|kneepads|utility\sbelt|belt|suspenders|torso\sguard|torso\splate|torso\spad|arming\scap|armingcap|cap|doublet|chain\smaille|chainmaille|chainmalle|chain\smalle|hose|pantyhose|lingera|lungera|crowl|salade|salet|schalern|bevor|beavor|placard|tuille|buckle|belt\sbuckle|skull|sight|besagne|kettle\shelm|fur|cape|bag|pouch|focus|sandles|sandels|tubesocks|knee\shigh|stiletos|stileto|curb\sstompers|curbstompers|kleats|kleets|kelt|sporran|sgain|flashers|brogues|ghillie|argyll|leather\shat|leather\scap|leatehr\sjacket|leather\sarmor|leather\spants|leather\sshoes|jacket|pin|scarf|straps|cloak|hooded\scloak|sock|sandel|shroud|moccasins|jynco|mjolnir|powered\sassult\sarmor|powered\sarmor|beanie|Link's\sHat|Links\sHat|Link\sHat|Mark\sV|Master\sChiefs|Mark\sVI|tshirt|t-shirt|v-neck|vneck|turtleneck|sweater|parka|wind\sbreaker)/gim) >= 0 ) {
   
   
   cap = document.getElementById(it2).innerHTML; //what the user inputted
@@ -3986,38 +3671,12 @@ document.getElementById('icbtn'+jon).innerHTML = '<input placeholder="Paste Hash
  }
  
  
-  //packs 
- if(document.getElementById(it2).innerHTML.search(/(pack|bag|pouch|skin\spouch|skinpouch|pouch$|duffle\sbag|duffle?=bag$|bag$|^duffle|purse|purse$|fany?=pack|fany\spack|phany\spack|phany?=pack|pack$|backpack|Rutsack|Rucksack|Napsack|sack$|lunchbox|box$|breifcase|case$|gun?=case|gun\scase|knife\scase|torso|cadaver|paper\sbag|paper?=bag|plastic?=bag|plastic\sbag|Carry\-on|Carry\son|carryon|travelpack|travel\spack|Rolling\sLuggage|Luggage|Lugage|Laptop\sbag|Trekking\sBag|Trekk\sBag|Trekk|Camping\sBag|Camp\sBag|Campingbag|campbag|trekkbag|laptopbag|framed|^framed|framed?=pack|framed?=bag|framed\sbag|framed\spack|Drawstring\sbag|sporting\sbag|sports\sbag|sport\sbag|sportsbag|drawstringbag|drawstring\ssack|skiing|skiing\sbag||skiingbag|tote|tote\sbag|totebag|sachel|crossbody|crossbody\sbag|crossbodybag|knapsack|clutch|handbag|hand\sbag|hippie\spurse|Ma\Ws\sBag|Ma\sBag|trash\sbag|trahbag|blackbag|black\sbag|canvas\sbag|canvasbag|BSA\spack|Scouts\spack|Scouting\spack|Scout\spack|BSApack|Scoutpack|Scoutspack|scoutingpack|GSA\spack|GSA\sbag|GSApack|GSAbag|Empress\sBag|Empress\sStoe|Stoe|Stoe\sIron|Soft\sStoe|Low\sStoe)/gim) >= 0) {
- 
-  document.getElementById('itempowerof'+jon).style='display:inline-block;';
- 
- 
-
-document.getElementById('itempowerof'+jon).style='display:inline-block;';
-document.getElementById('itemcarry'+jon).style='display:inline-block;';
-
-document.getElementById('cr'+jon).style = 'display:none';
-document.getElementById('icitem'+jon+'num').innerHTML = 'Bound Words';
-document.getElementById('whatitem').innerHTML = 'Effect Level';
-
-document.getElementById('iitemi'+jon).style = 'display:none';
- 
- //<button id="99action'+jon+'"  class="button2"  id="ic1b'+jon+'" onclick="document.getElementById(&#034;iitemt'+jon+'&#034;).innerHTML=&#034;&nbsp;(&#034;+document.getElementById(&#039;iitem'+jon+'num&#039;).innerHTML+&#034;)&nbsp;<span title=&#039;Religious Book&#039;>(<sub><b><sup>TOMB</sup></b></sub>) <span id=&#039;spellhere'+jon+'&#039;></span></span></br>&#034;;document.getElementById(&#039;iitemt'+jon+'&#039;).title=&#039;Effect Level&#039;;document.getElementById(&#039;itembtn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;item2btn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;ghar2&#039;).innerHTML=&#039;'+jon+'&#039;;document.getElementById(&#039;ghar&#039;).innerHTML=document.getElementById(&#039;item'+jon+'num&#039;).innerHTML;spelljewel();" >Religious Book</button>
- 
- <!--custom design without buttons for this setup, once we know it's a pack/bag --> treat it like it! --> I'm here i'm here im here Im here
- 
-document.getElementById('icbtn'+jon).innerHTML = '<button id="33action'+jon+'"  class="button2"  id="ic1b'+jon+'" onclick="document.getElementById(&#034;iitemt'+jon+'&#034;).innerHTML=&#034;&nbsp;(&#034;+document.getElementById(&#039;iitem'+jon+'num&#039;).innerHTML+&#034;)&nbsp;<span title=&#039;Religious Book&#039;>(<sub><b><sup>TOMB</sup></b></sub>) <span id=&#039;spellhere'+jon+'&#039;></span></span></br>&#034;;document.getElementById(&#039;iitemt'+jon+'&#039;).title=&#039;Effect Level&#039;;document.getElementById(&#039;itembtn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;item2btn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;ghar2&#039;).innerHTML=&#039;'+jon+'&#039;;document.getElementById(&#039;ghar&#039;).innerHTML=document.getElementById(&#039;item'+jon+'num&#039;).innerHTML;spelljewel();" >Religious Book</button> <button id="34action'+jon+'"  class="button2"  id="ic2b'+jon+'" onclick="document.getElementById(&#034;iitemt'+jon+'&#034;).innerHTML=&#034;&nbsp;(&#034;+document.getElementById(&#039;iitem'+jon+'num&#039;).innerHTML+&#034;)&nbsp;<span style=&#039;font-size:85%;&#039;  title=&#039;Blank Book&#039;>(<sub><b><sup>BLANK</sup></b></sub>)</span></br>&#034;;document.getElementById(&#039;iitemt'+jon+'&#039;).title=&#039;Pages&#039;;document.getElementById(&#039;itembtn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;item2btn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;ghar2&#039;).innerHTML='+jon+';isthere();" >Empty Page(s)</button> <button id="35action'+jon+'"  class="button2"  id="ic3b'+jon+'" onclick="document.getElementById(&#034;iitemt'+jon+'&#034;).innerHTML=&#034;&nbsp;(&#034;+document.getElementById(&#039;iitem'+jon+'num&#039;).innerHTML+&#034;)&nbsp;<span style=&#039;font-size:85%;&#039;  title=&#039;Important Text&#039;>(<sub><b><sup>NOTED</sup></b></sub>)</span></br>&#034;;document.getElementById(&#039;iitemt'+jon+'&#039;).title=&#039;Pages&#039;;document.getElementById(&#039;itembtn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;item2btn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;ghar2&#039;).innerHTML='+jon+';isthere();" >Notable Text</button> <button id="36action'+jon+'"  class="button2"  id="ic4b'+jon+'" onclick="document.getElementById(&#034;iitemt'+jon+'&#034;).innerHTML=&#034;&nbsp;(&#034;+document.getElementById(&#039;iitem'+jon+'num&#039;).innerHTML+&#034;)&nbsp;<span style=&#039;font-size:85%;&#039;  title=&#039;Personal Book&#039;>(<sub><b><sup>DIARY</sup></b></sub>)</span></br>&#034;;document.getElementById(&#039;iitemt'+jon+'&#039;).title=&#039;Pages&#039;;document.getElementById(&#039;itembtn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;item2btn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;ghar2&#039;).innerHTML='+jon+';isthere();" >Personal Writtings</button> <button id="37action'+jon+'"  class="button2"  id="ic5b'+jon+'" onclick="document.getElementById(&#034;iitemt'+jon+'&#034;).innerHTML=&#034;&nbsp;(&#034;+document.getElementById(&#039;iitem'+jon+'num&#039;).innerHTML+&#034;)&nbsp;<span style=&#039;font-size:85%;&#039; title=&#039;Learn Spells&#039;>(<sub><b><sup>SCROLL</sup></b></sub>)</span><span  id=&#039;spellhere'+jon+'&#039;></span></br>&#034;;document.getElementById(&#039;iitemt'+jon+'&#039;).title=&#039;Spell Level&#039;;document.getElementById(&#039;itembtn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;item2btn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;ghar2&#039;).innerHTML=&#039;'+jon+'&#039;;document.getElementById(&#039;ghar&#039;).innerHTML=document.getElementById(&#039;item'+jon+'num&#039;).innerHTML;spelljewel();" >Spell Scroll</button> <button class="button2" id="38action'+jon+'"  id="ic6b'+jon+'" onclick="document.getElementById(&#034;iitemt'+jon+'&#034;).innerHTML=&#034;&nbsp;(&#034;+document.getElementById(&#039;iitem'+jon+'num&#039;).innerHTML+&#034;)&nbsp;<span style=&#039;font-size:85%;&#039; title=&#039;Spell Scroll&#039;>(<sub><b><sup>SPELLS</sup></b></sub>)</span> <span id=&#039;spellhere'+jon+'&#039; ></span></br>&#034;;document.getElementById(&#039;iitemt'+jon+'&#039;).title=&#039;Effect Level&#039;;document.getElementById(&#039;itembtn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;item2btn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;ghar2&#039;).innerHTML=&#039;'+jon+'&#039;;document.getElementById(&#039;ghar&#039;).innerHTML=document.getElementById(&#039;item'+jon+'num&#039;).innerHTML;spelljewel();" >Spell Tag</button> <button id="39action'+jon+'"  class="button2"  id="ic7b'+jon+'" onclick="document.getElementById(&#034;iitemt'+jon+'&#034;).innerHTML=&#034;&nbsp;(&#034;+document.getElementById(&#039;iitem'+jon+'num&#039;).innerHTML+&#034;)&nbsp;<span style=&#039;font-size:85%;&#039;  title=&#039;Old Text&#039;>(<sub><b><sup>OLD&nbsp;TEXT</sup></b></sub>)</span></br>&#034;;document.getElementById(&#039;iitemt'+jon+'&#039;).title=&#039;Pages&#039;;document.getElementById(&#039;itembtn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;item2btn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;ghar2&#039;).innerHTML='+jon+';isthere();" >Old Text</button> <button class="button2"  id="40action'+jon+'"  onclick="document.getElementById(&#034;iitemt'+jon+'&#034;).innerHTML=&#034;&nbsp;(&#034;+document.getElementById(&#039;iitem'+jon+'num&#039;).innerHTML+&#034;)&nbsp;<span style=&#039;font-size:85%;&#039;  title=&#039;Shooling Text&#039;>(<sub><b><sup>SCHOOL</sup></b></sub>)</span></br>&#034;;document.getElementById(&#039;iitemt'+jon+'&#039;).title=&#039;Effect Level&#039;;document.getElementById(&#039;itembtn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;item2btn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;ghar2&#039;).innerHTML='+jon+';isthere();" >Teachings</button> <button id="41action'+jon+'"   class="button2"  id="ic9b'+jon+'" onclick="document.getElementById(&#034;iitemt'+jon+'&#034;).innerHTML=&#034;&nbsp;(&#034;+document.getElementById(&#039;iitem'+jon+'num&#039;).innerHTML+&#034;)&nbsp;<span style=&#039;font-size:85%;&#039;  title=&#039;Belief Tomb&#039;>(<sub><b><sup>MANIFESTO</sup></b></sub>)</span></br>&#034;;document.getElementById(&#039;iitemt'+jon+'&#039;).title=&#039;Effect Level&#039;;document.getElementById(&#039;itembtn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;item2btn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;ghar2&#039;).innerHTML='+jon+';isthere();" >Manifesto</button> <button id="42action'+jon+'"   class="button2"  id="ic10b'+jon+'" onclick="document.getElementById(&#034;iitemt'+jon+'&#034;).innerHTML=&#034;&nbsp;(&#034;+document.getElementById(&#039;iitem'+jon+'num&#039;).innerHTML+&#034;)&nbsp;<span style=&#039;font-size:85%;&#039;  title=&#039;Burned Book&#039;>(<sub><b><sup>BURNED</sup></b></sub>)</span></br>&#034;;document.getElementById(&#039;iitemt'+jon+'&#039;).title=&#039;Percentage Lost&#039;;document.getElementById(&#039;itembtn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;item2btn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;ghar2&#039;).innerHTML='+jon+';isthere();" >Burned Book</button> <button id="43action'+jon+'"   class="button2"  id="ic11b'+jon+'" onclick="document.getElementById(&#034;iitemt'+jon+'&#034;).innerHTML=&#034;&nbsp;(&#034;+document.getElementById(&#039;iitem'+jon+'num&#039;).innerHTML+&#034;)&nbsp;<span style=&#039;font-size:85%;&#039;  title=&#039;Banned Book&#039;>(<sub><b><sup>BANNED</sup></b></sub>)</span></br>&#034;;document.getElementById(&#039;iitemt'+jon+'&#039;).title=&#039;Pages&#039;;document.getElementById(&#039;itembtn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;item2btn'+jon+'&#039;).style=&#039display:inline-block&#039;;document.getElementById(&#039;ghar2&#039;).innerHTML='+jon+';isthere();" >Banned Book</button>';
- 
- document.getElementById('itemextras'+jon).innerHTML += "<button class='button2' id='swapwp"+jon+"'  style='display:none'  onclick='document.getElementById(&#039;item"+jon+"&#039;).className=&#039;stroke&#039;;document.getElementById(&#039;thisitem"+jon+"&#039;).className=&#039;stroke&#039;;this.style=&#039;display:none&#039;;document.getElementById(&#039;ghar2&#039;).innerHTML=&#039;"+jon+"&#039;;document.getElementById(&#039;itemremove"+jon+"&#039;).style=&#039;display:none;&#039;;bookin("+jon+");' ><s title='Using this?'><b>o</b></s></button>";  
- 
- }
- 
 
  if(document.getElementById(it2).innerHTML.search(/wtreset/gim) >= 0 ) {
  document.getElementById('dayout').innerHTML='';
- days = 1;
- months = 1;
- seasons = 1;
+ days = 0;
+ months = 0;
+ seasons = 0;
  year = 1;
  hrs = 0;
  document.getElementById('itemremove'+jon).click();
@@ -4232,7 +3891,7 @@ document.getElementById('icbtn'+jon).innerHTML = '<div><p><input id="hashinp2" p
  
  
  //NOTEBOOK needs a new page buton to add into a div section to search via name + jon > span for number of to use for a next page button
- //notebook re-writables failed only writable once atm **bug** bug report i'm here I'm here im here Im here 
+ //notebook re-writables failed only writable once atm **bug**
  
 else {
  document.getElementById('itembtn'+jon).style = 'display:inline-block';
@@ -4317,16 +3976,6 @@ document.getElementById('item2btn'+jon).style = 'display:inline-block';
  //need new element sets here like the empress lore stuff I'm here i'm here Im here im here upgradeable 
  
  
- 
- 
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Generated Item "+document.getElementById(it3).innerText+" ["+datecode+""+yrbd+"] <b>checkitem()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
 }
 
 function sendfx(){
@@ -4336,16 +3985,6 @@ var fxmix = ",.tx.,"+document.getElementById('sendcount'+jon).innerHTML+",..,";
 var fxin = window.btoa(fxmix);
 document.getElementById('credits').value = fxin;
 document.getElementById('sendcount'+jon).innerHTML = 0 ;
-
-
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Gifted Credits "+jon+" ["+datecode+""+yrbd+"] <b>sendfx()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
 }
 
 
@@ -4358,15 +3997,6 @@ var thisim = fxxim.split('tx.,')[1].split(',.')[0];
 document.getElementById('goldon').innerHTML = Number(document.getElementById('goldon').innerHTML) + Number(thisim);
 document.getElementById('credits').value = '';
 //document.getElementById('itemremove'+jon).click();
-
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Received Credits "+jon+" ["+datecode+""+yrbd+"] <b>getfx()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
 }
 
 
@@ -4478,23 +4108,11 @@ document.getElementById('marketbottom').innerHTML = "";
 
 document.getElementById('gh2').innerHTML = trades;
 document.getElementById('sci').innerHTML = document.getElementById('sendcount'+jon).innerHTML;
-
-
 }
 
 function sendit(){
 checksend();
 //real sending function to come if by title locking works
-
-
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Sent UTXO ["+datecode+""+yrbd+"] <b>sendit()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
 }
 
 function prepsend(){
@@ -4538,15 +4156,6 @@ function send2(){
  document.getElementById('hashinu'+jon).style = "display:inline-block";
  document.getElementById('hashinu'+jon).value = window.btoa(utxo);
  document.getElementById(sending).innerHTML = 0;
- 
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Sent UTXO "+jon+" ["+datecode+""+yrbd+"] <b>send2()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
 }
 
 //input share and import keys functions
@@ -4605,16 +4214,6 @@ get = get + ",.chold-line1.,"+ document.getElementById('utext'+find).innerHTML.s
  get = get + ",..|";
  
  document.getElementById('hashout'+find).innerHTML = "<input value="+window.btoa(get)+" onfocus=this.select() /></br>";
- 
- 
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Shared Item "+document.getElementById('iitemt'+find).innerText+" ["+datecode+""+yrbd+"] <b>shareit()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
 }
 
 
@@ -4626,17 +4225,6 @@ var ki = di.split('utxo.,')[1].split(',.')[0];
 document.getElementById('hashon').innerHTML = Number(document.getElementById('hashon').innerHTML) + Number(ki);
 document.getElementById('hashinp2').value = '';
 document.getElementById('itemremove'+jon).click();
-
-
- 
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Received UTXO "+jon+" ["+datecode+""+yrbd+"] <b>catch2()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
 }
 
 
@@ -5150,16 +4738,6 @@ document.getElementById('itemremove'+jon23).click();
 
 
 document.getElementById('itemremove'+jon23).click();
-
-
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Saved "+jon+" ["+datecode+""+yrbd+"] <b>saveit()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
 }
 
 var innum = 0;
@@ -6184,15 +5762,6 @@ if(ee >= 1000){
   
    rolldiff = rolldiff + 1;
   }
- 
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='logged"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Level["+Number(prevlvl)+"] -> ["+document.getElementById('level').innerHTML+"] ["+Number(Number(Number(months)+Number(days)+1)+Number(yearsout))+""+yrbd+"] <b>rest()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
   
   }
   else {
@@ -6206,62 +5775,9 @@ if(ee >= 1000){
   document.getElementById('expbank').innerHTML = Number(0);
   document.getElementById('newround').value = '';
   document.getElementById('newrnd').disabled = true;
-  
-  livestats();
-  
- 
-  var yrch = "yearsout";
-  
-  var negcheck = document.getElementById(yrch).innerHTML; 
- 
- if(negcheck.toString().search(/\-/) === 0){
-  datecode = "-"+""+Number(Number(Number(months)+Number(days))+Number(document.getElementById(yrch).innerText.toString().replace(/\-/, '')));
- }
- else{
- datecode = Number(Number(Number(months)+Number(days))+Number(document.getElementById(yrch).innerText));
- }
-   
-   if(Number(negcheck) >= 3031){ <!-- Emress Lore -->
-    document.getElementById('yrbadges').innerHTML = "<sup id='Her Era' title='Empress Era' style='color:rgb(255,221,67,0.79);'><sub><sub><b><i>HER</i></b></sub></sub></sup>";
-   }
-   else if(negcheck.toString().search(/\-/g) >= 0 && Number(negcheck.toString().replace(/\-/g, '')) <= 368){ <!-- Emress Lore -->
-    document.getElementById('yrbadges').innerHTML = "<sup id='bcera' title='B.C. Era' style='color:rgb(140,120,83,0.6);'><sub><sub><b><i>BCE</i></b></sub></sub></sup>"; //before Collections Era
-   }
-   else if(negcheck.toString().search(/\-/g) >= 0 && Number(negcheck.toString().replace(/\-/g, '')) >= 369 && Number(negcheck.toString().replace(/\-/g, '')) <= 998.99){ <!-- Emress Lore -->
-    document.getElementById('yrbadges').innerHTML = "<sup id='aeera' title='A.E. Era' style='color:rgb(41,28,84,0.5);'><sub><sub><b><i>MORN</i></b></sub></sub></sup>"; //after Empress Era
-   }
-   else if(negcheck.toString().search(/\-/g) >= 0 && Number(negcheck.toString().replace(/\-/g, '')) >= 999 && Number(negcheck.toString().replace(/\-/g, '')) <= 99999999999998.99){ <!-- Emress Lore -->
-    document.getElementById('yrbadges').innerHTML = "<sup id='Her Era' title='Empress Era' style='color:rgb(204,186,120,0.7);'><sub><sub><b><i>HODL</i></b></sub></sub></sup>";
-   }
-   else if(negcheck.toString().search(/\-/g) >= 0 && Number(negcheck.toString().replace(/\-/g, '')) >= 99999999999999 && Number(negcheck.toString().replace(/\-/g, '')) <= 99999999999999998.99){ <!-- Emress Lore -->
-    document.getElementById('yrbadges').innerHTML = "<sup id='before eras' title='Shackles Still Unknown' style='color:rgb(129,132,199,0.8);'><sub><sub><b><i>SSU</i></b></sub></sub></sup>";
-   }
-   else if(negcheck.toString().search(/\-/g) >= 0 && Number(negcheck.toString().replace(/\-/g, '')) >= 99999999999999999 && Number(negcheck.toString().replace(/\-/g, '')) <= 999999999999999998.99){ <!-- Emress Lore -->
-    document.getElementById('yrbadges').innerHTML = "<sup id='before eras' title='Before Time was Noticed' style='color:rgb(244,30,81,0.9);'><sub><sub><b><i>Before&nbsp;Time</i></b></sub></sub></sup>";
-   }
-   else if(negcheck.toString().search(/\-/g) >= 0 && Number(negcheck.toString().replace(/\-/g, '')) >= 999999999999999999){ <!-- Emress Lore -->
-    document.getElementById('yrbadges').innerHTML = "<sup id='Her Painful Slumber' title='**loud screaming heard all around**' style='color:rgb(0,3,4,0.5);'><sub><sub><b><i>--!--</i></b></sub></sub></sup>"; //the years of the Empress' Re-Birth, the loop continues
-   }
-   else if(negcheck.toString().search(/\-/g) < 0 && Number(negcheck) >= 303108008136){ <!-- Emress Lore -->
-	document.getElementById(yrch).innerHTML = Number(-999999999999999999); <!-- reset time -->
-    document.getElementById('yrbadges').innerHTML = "<sup id='Her Sacrifice' title='**loud screaming heard all around**' style='color:rgb(0,3,4,0.5);'><sub><sub><b><i>--!--</i></b></sub></sub></sup>"; //the years of the Empress' Re-Birth, the loop continues
-   }
-   else {
-    document.getElementById('yrbadges').innerHTML = "";
-   }
- document.getElementById(yrch).innerHTML = Number(negcheck.toString().replace(/\-/g, ''));
- 
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
  }
  
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Round "+roundsare+" Ended ["+datecode+""+yrbd+"] <b>round()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
- }
- 
- function spelled(sn,sd,sv,lloc,aspell){
+ function spelled(sn,sd,sv,lloc){
  var previns = document.getElementById('inspiration').innerHTML;
   if(previns === "" || isNaN(previns) === true || previns <= 0){
    previns = Number(0);
@@ -6291,16 +5807,6 @@ if(ee >= 1000){
    spillnum = spillnum + 1;
   }
   while(spillnum < nn3);
-  
-  
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Adjusted Spell "+document.getElementById(aspell).innerText+" (+) ["+datecode+""+yrbd+"] <b>spelled()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
  }
  
  function skilled(snum,sdif,skv){
@@ -6321,14 +5827,6 @@ if(ee >= 1000){
   }
   while(skillnum < nnn);
   
- 
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Adjusted Skill "+document.getElementById('skill'+nnn).innerText+" (+) ["+datecode+""+yrbd+"] <b>skilled()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
  
  }
  
@@ -6368,7 +5866,7 @@ if(Number(hu) === Number(2)){//down
 
 
 <!--updater is also a form of reward system but only inital rewards-->
-function updater(named, classed, raced, heighted, weighted, aged, gpaed, hometowned, populationed, fav1ed, fav2ed, fav3ed, beliefed, alignmented, backgrounded, skillboosted, styled, traitsed, perspectivesed, bondsed, flawsed){
+function updater(named, classed, raced, heighted, weighted, aged, gpaed, hometowned, populationed, fav1ed, fav2ed, fav3ed, beliefed, alignmented, backgrounded, skillboosted, styled, traitsed, perspectivesed, bondsed, flawsed){ 
 
 if(named === 1){ //reward for setting character name 
  if(document.getElementById('maintxt').innerHTML.toString().search("interactive Character Sheet (iCS)") < 0){
@@ -6377,15 +5875,6 @@ if(named === 1){ //reward for setting character name
    rollnext = Number(rollnext)+1;
    named = Number(-1); <!-- sets done -->
    nameupdate = Number(-2); <!-- prevents this from happening again -->
-   
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Rewarded Player (Set Name) ["+datecode+""+yrbd+"] <b>updater()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
  }
  else{
   named = Number(-3); <!-- should never activate -->
@@ -6399,15 +5888,6 @@ if(classed === 1){ //reward for setting character class
    rollnext = Number(rollnext)+1;
    classed = Number(-1); <!-- sets done -->
    classupdate = Number(-2); <!-- prevents this from happening again-->
-   
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Rewarded Player (Set Class) ["+datecode+""+yrbd+"] <b>updater()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
  }
  else{
   classed = Number(-3); <!-- should never activate -->
@@ -6421,15 +5901,6 @@ if(raced === 1){ //reward for setting character race
    rollnext = Number(rollnext)+1;
    raced = Number(-1); <!-- sets done -->
    raceupdate = Number(-2); <!-- prevents this from happening again-->
-   
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Rewarded Player (Set Race) ["+datecode+""+yrbd+"] <b>updater()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
  }
  else{
   raced = Number(-3); <!-- should never activate -->
@@ -6441,30 +5912,12 @@ if(named === Number(-1) && classed === Number(-1) && raced === Number(-1)){ //re
   document.getElementById('inspiration').innerHTML = Number(Number(tempinsp) + Number(1));
  var t4 = document.getElementById('expbank').innerHTML;
   document.getElementById('expbank').innerHTML = Number(t4) + Number(3);
-   
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Rewarded Player (Set Header) ["+datecode+""+yrbd+"] <b>updater()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
 }
 
 if(heighted === 1){
  if(document.getElementById('hight').innerHTML.toString().search("Height") < 0){
    heighted = Number(-1); <!-- sets done -->
    heightupdate = Number(-2); <!-- prevents this from happening again-->
-   
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Rewarded Player (Set Height) ["+datecode+""+yrbd+"] <b>updater()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
  }
  else{
   heighted = Number(-3); <!-- should never activate -->
@@ -6475,15 +5928,6 @@ if(weighted === 1){
  if(document.getElementById('weight').innerHTML.toString().search("Weight") < 0){
    weighted = Number(-1); <!-- sets done -->
    weightupdate = Number(-2); <!-- prevents this from happening again-->
-   
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Rewarded Player (Set Weight) ["+datecode+""+yrbd+"] <b>updater()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
  }
  else{
   weighted = Number(-3); <!-- should never activate -->
@@ -6502,7 +5946,7 @@ if(heighted === Number(-1) && weighted === Number(-1)){ //unsure if this underwi
   if(Number(x21) < Number(hp) && document.getElementById('initiavtive').innerHTML.toString().search(/(\d|\d+)/g) >= 0){ //dead
     document.getElementById('renamehealth').innerHTML = "DEAD";
   if(Number(Number(tothere)-1) <= Number(-10) && document.getElementById('bodyoutput').innerText.toString().search(/(RIP|ZOMBIE|Z0M8|DROWL|GHOST|GHASTLY|GHAST|GHOSTLY|BONES|SKELETON|UNDEAD|DARK_SOLDIER|GOUL)/gim) < 0){<!--death incoming-->
-   document.getElementById('bodyoutput').innerHTML += "&nbsp;<span id='dead' value='"+months+""+days+""+yearsout+"' title='Passed on the "+days+" day__"+seasonout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....'><b style='color:rgb(99,99,99,0.9);'><sub><sup>RIP</sup></sub></b></span>&nbsp;";
+   document.getElementById('bodyoutput').innerHTML += "&nbsp;<span id='dead' value='"+months+""+days+""+yearsout+"' title='Passed on the "+days+" day__"+monthout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....'><b style='color:rgb(99,99,99,0.9);'><sub><sup>RIP</sup></sub></b></span>&nbsp;";
    }
 	//need to insert a dead function to allow body to be used as a corpse (can be filled with objects, can be cut down (2 opposite limbs for bounties), can be-headed (for bounties), can be used as large heavy duffle bag that grows in weight per game hour !! I'm here im here upgrade Im here i'm here upgradable 
 	
@@ -6539,7 +5983,7 @@ if(heighted === Number(-1) && weighted === Number(-1)){ //unsure if this underwi
    if(Number(x21) < Number(hp) && document.getElementById('initiavtive').innerHTML.toString().search(/(\d|\d+)/g) >= 0){ //dead
     document.getElementById('renamehealth').innerHTML = "DEAD";
   if(Number(Number(tothere)-1) <= Number(-10) && document.getElementById('bodyoutput').innerText.toString().search(/(RIP|ZOMBIE|Z0M8|DROWL|GHOST|GHASTLY|GHAST|GHOSTLY|BONES|SKELETON|UNDEAD|DARK_SOLDIER|GOUL)/gim) < 0){<!--death incoming-->
-   document.getElementById('bodyoutput').innerHTML += "&nbsp;<span id='dead' value='"+months+""+days+""+yearsout+"' title='Passed on the "+days+" day__"+seasonout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....'><b style='color:rgb(99,99,99,0.9);'><sub><sup>RIP</sup></sub></b></span>&nbsp;";
+   document.getElementById('bodyoutput').innerHTML += "&nbsp;<span id='dead' value='"+months+""+days+""+yearsout+"' title='Passed on the "+days+" day__"+monthout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....'><b style='color:rgb(99,99,99,0.9);'><sub><sup>RIP</sup></sub></b></span>&nbsp;";
    }
 	
 	//need to insert a dead function to allow body to be used as a corpse (can be filled with objects, can be cut down (2 opposite limbs for bounties), can be-headed (for bounties), can be used as large heavy duffle bag that grows in weight per game hour !! I'm here im here upgrade Im here i'm here upgradable 
@@ -6560,7 +6004,7 @@ if(heighted === Number(-1) && weighted === Number(-1)){ //unsure if this underwi
    if(Number(x21) < Number(hp) && document.getElementById('initiavtive').innerHTML.toString().search(/(\d|\d+)/g) >= 0){ //dead
     document.getElementById('renamehealth').innerHTML = "DEAD";
   if(Number(Number(tothere)-1) <= Number(-10) && document.getElementById('bodyoutput').innerText.toString().search(/(RIP|ZOMBIE|Z0M8|DROWL|GHOST|GHASTLY|GHAST|GHOSTLY|BONES|SKELETON|UNDEAD|DARK_SOLDIER|GOUL)/gim) < 0){<!--death incoming-->
-   document.getElementById('bodyoutput').innerHTML += "&nbsp;<span id='dead' value='"+months+""+days+""+yearsout+"' title='Passed on the "+days+" day__"+seasonout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....'><b style='color:rgb(99,99,99,0.9);'><sub><sup>RIP</sup></sub></b></span>&nbsp;";
+   document.getElementById('bodyoutput').innerHTML += "&nbsp;<span id='dead' value='"+months+""+days+""+yearsout+"' title='Passed on the "+days+" day__"+monthout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....'><b style='color:rgb(99,99,99,0.9);'><sub><sup>RIP</sup></sub></b></span>&nbsp;";
   }
 	
 	//need to insert a dead function to allow body to be used as a corpse (can be filled with objects, can be cut down (2 opposite limbs for bounties), can be-headed (for bounties), can be used as large heavy duffle bag that grows in weight per game hour !! I'm here im here upgrade Im here i'm here upgradable 
@@ -6581,7 +6025,7 @@ if(heighted === Number(-1) && weighted === Number(-1)){ //unsure if this underwi
    if(Number(x21) < Number(hp) && document.getElementById('initiavtive').innerHTML.toString().search(/(\d|\d+)/g) >= 0){ //dead
     document.getElementById('renamehealth').innerHTML = "DEAD";
   if(Number(Number(tothere)-1) <= Number(-10) && document.getElementById('bodyoutput').innerText.toString().search(/(RIP|ZOMBIE|Z0M8|DROWL|GHOST|GHASTLY|GHAST|GHOSTLY|BONES|SKELETON|UNDEAD|DARK_SOLDIER|GOUL)/gim) < 0){<!--death incoming-->
-   document.getElementById('bodyoutput').innerHTML += "&nbsp;<span id='dead' value='"+months+""+days+""+yearsout+"' title='Passed on the "+days+" day__"+seasonout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....'><b style='color:rgb(99,99,99,0.9);'><sub><sup>RIP</sup></sub></b></span>&nbsp;";
+   document.getElementById('bodyoutput').innerHTML += "&nbsp;<span id='dead' value='"+months+""+days+""+yearsout+"' title='Passed on the "+days+" day__"+monthout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....'><b style='color:rgb(99,99,99,0.9);'><sub><sup>RIP</sup></sub></b></span>&nbsp;";
 	}
 	//need to insert a dead function to allow body to be used as a corpse (can be filled with objects, can be cut down (2 opposite limbs for bounties), can be-headed (for bounties), can be used as large heavy duffle bag that grows in weight per game hour !! I'm here im here upgrade Im here i'm here upgradable 
 	
@@ -6598,7 +6042,7 @@ if(heighted === Number(-1) && weighted === Number(-1)){ //unsure if this underwi
    if(Number(x21) < Number(hp) && document.getElementById('initiavtive').innerHTML.toString().search(/(\d|\d+)/g) >= 0){ //dead
     document.getElementById('renamehealth').innerHTML = "DEAD";
   if(Number(Number(tothere)-1) <= Number(-10) && document.getElementById('bodyoutput').innerText.toString().search(/(RIP|ZOMBIE|Z0M8|DROWL|GHOST|GHASTLY|GHAST|GHOSTLY|BONES|SKELETON|UNDEAD|DARK_SOLDIER|GOUL)/gim) < 0){<!--death incoming-->
-   document.getElementById('bodyoutput').innerHTML += "&nbsp;<span id='dead' value='"+months+""+days+""+yearsout+"' title='Passed on the "+days+" day__"+seasonout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....'><b style='color:rgb(99,99,99,0.9);'><sub><sup>RIP</sup></sub></b></span>&nbsp;";
+   document.getElementById('bodyoutput').innerHTML += "&nbsp;<span id='dead' value='"+months+""+days+""+yearsout+"' title='Passed on the "+days+" day__"+monthout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....'><b style='color:rgb(99,99,99,0.9);'><sub><sup>RIP</sup></sub></b></span>&nbsp;";
   }
 	
 	//need to insert a dead function to allow body to be used as a corpse (can be filled with objects, can be cut down (2 opposite limbs for bounties), can be-headed (for bounties), can be used as large heavy duffle bag that grows in weight per game hour !! I'm here im here upgrade Im here i'm here upgradable 
@@ -6624,16 +6068,6 @@ if(aged === 1){
  if(document.getElementById('age').innerHTML.toString().search("Age") < 0){
    aged = Number(-1); <!-- sets done -->
    ageupdate = Number(-2); <!-- prevents this from happening again-->
-   
-   <!-- unlock reward log when a reward is made for setting age -->
-// var yrbd = "";
- //if(document.getElementById('preday').style.display === "none"){
- // yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- //}
- 
-// document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Rewarded Player (Set Age) ["+datecode+""+yrbd+"] <b>updater()&nbsp;[witness]</b></span> &nbsp;</br>";
-// document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
  }
  else{
   aged = Number(-3); <!-- should never activate -->
@@ -6644,15 +6078,6 @@ if(gpaed === 1){
  if(document.getElementById('gpa').innerHTML.toString().search("IQ|GPA") < 0){
    gpaed = Number(-1); <!-- sets done -->
    gpaupdate = Number(-2); <!-- prevents this from happening again-->
-   
-   <!-- unlock reward log when a reward is made for setting gpa/iq -->
-// var yrbd = "";
- //if(document.getElementById('preday').style.display === "none"){
- // yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- //}
- 
-// document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Rewarded Player (Set GPA|IQ) ["+datecode+""+yrbd+"] <b>updater()&nbsp;[witness]</b></span> &nbsp;</br>";
-// document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
  }
  else{
   //add in IQ/GPA factor to smarts & charasima & mental dex adjusting 
@@ -6664,15 +6089,6 @@ if(hometowned === 1){
  if(document.getElementById('fromloc').innerHTML.toString().search(/Hometown/i) < 0){
    hometowned = Number(-1); <!-- sets done -->
    hometownupdate = Number(-2); <!-- prevents this from happening again-->
-   
-   <!-- unlock reward log when a reward is made for setting hometown -->
-// var yrbd = "";
- //if(document.getElementById('preday').style.display === "none"){
- // yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- //}
- 
-// document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Rewarded Player (Set Hometown) ["+datecode+""+yrbd+"] <b>updater()&nbsp;[witness]</b></span> &nbsp;</br>";
-// document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
  }
  else{
   //add in hometown adjuster (word associated call)
@@ -6684,15 +6100,6 @@ if(populationed === 1){
  if(document.getElementById('townsize').innerHTML.toString().search("Population") < 0){
    populationed = Number(-1); <!-- sets done -->
    populationupdate = Number(-2); <!-- prevents this from happening again-->
-   
-   <!-- unlock reward log when a reward is made for setting population -->
-// var yrbd = "";
- //if(document.getElementById('preday').style.display === "none"){
- // yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- //}
- 
-// document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Rewarded Player (Set Population) ["+datecode+""+yrbd+"] <b>updater()&nbsp;[witness]</b></span> &nbsp;</br>";
-// document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
  }
  else{
   //add in hometown population adjuster to charisma & stamina adjusters
@@ -6704,15 +6111,6 @@ if(fav1ed === 1){
  if(document.getElementById('fav1').innerHTML.toString().search(/(Favorite|Favorite?=\[\d\]|[^Favorite?=\[\D+\]])/gim) < 0){
    fav1ed = Number(-1); <!-- sets done -->
    fav1update = Number(-2); <!-- prevents this from happening again-->
-   
-   <!-- unlock reward log when a reward is made for setting Fav1 -->
-// var yrbd = "";
- //if(document.getElementById('preday').style.display === "none"){
- // yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- //}
- 
-// document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Rewarded Player (Set Fav1) ["+datecode+""+yrbd+"] <b>updater()&nbsp;[witness]</b></span> &nbsp;</br>";
-// document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
  }
  else{
   //favs assocation
@@ -6724,15 +6122,6 @@ if(fav2ed === 1){
  if(document.getElementById('fav2').innerHTML.toString().search(/(Favorite|Favorite?=\[\d\]|[^Favorite?=\[\D+\]])/gim) < 0){
    fav2ed = Number(-1); <!-- sets done -->
    fav2update = Number(-2); <!-- prevents this from happening again-->
-   
-   <!-- unlock reward log when a reward is made for setting Fav2 -->
-// var yrbd = "";
- //if(document.getElementById('preday').style.display === "none"){
- // yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- //}
- 
-// document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Rewarded Player (Set Fav2) ["+datecode+""+yrbd+"] <b>updater()&nbsp;[witness]</b></span> &nbsp;</br>";
-// document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
  }
  else{
   //favs assocation
@@ -6744,15 +6133,6 @@ if(fav3ed === 1){
  if(document.getElementById('fav3').innerHTML.toString().search(/(Favorite|Favorite?=\[\d\]|[^Favorite?=\[\D+\]])/gim) < 0){
    fav3ed = Number(-1); <!-- sets done -->
    fav3update = Number(-2); <!-- prevents this from happening again-->
-   
-   <!-- unlock reward log when a reward is made for setting Fav3 -->
-// var yrbd = "";
- //if(document.getElementById('preday').style.display === "none"){
- // yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- //}
- 
-// document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Rewarded Player (Set Fav3) ["+datecode+""+yrbd+"] <b>updater()&nbsp;[witness]</b></span> &nbsp;</br>";
-// document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
  }
  else{
   //favs assocation
@@ -6764,15 +6144,6 @@ if(beliefed === 1){
  if(document.getElementById('believean').innerHTML.toString().search(/(Belief|Beleve)/i) < 0){
    beliefed = Number(-1); <!-- sets done -->
    beliefupdate = Number(-2); <!-- prevents this from happening again-->
-   
-   <!-- unlock reward log when a reward is made for setting age -->
-// var yrbd = "";
- //if(document.getElementById('preday').style.display === "none"){
- // yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- //}
- 
-// document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Rewarded Player (Set Belief) ["+datecode+""+yrbd+"] <b>updater()&nbsp;[witness]</b></span> &nbsp;</br>";
-// document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
  }
  else{
   //belief & alignment adjusters (word associated call)
@@ -6781,18 +6152,9 @@ if(beliefed === 1){
 }
 
 if(alignmented === 1){
- if(document.getElementById('selfalign').innerHTML.toString().search(/(Self\-Alignment|SelfAlignment|Self\sAlignment|Self\&nbsp\;Alignment|Self?=Alignment|Alignment|Alignment|Align|Self)/gim) < 0){
+ if(document.getElementById('selfalign').innerHTML.toString().search(/(Self\-Alignment|SelfAlignment|Self\sAlignment|Self\&nbsp\;Alignment|Self?=Alignment|Alignment)/gim) < 0){
    alignmented = Number(-1); <!-- sets done -->
    alignmentupdate = Number(-2); <!-- prevents this from happening again-->
-   
-   <!-- unlock reward log when a reward is made for setting alignment -->
-// var yrbd = "";
- //if(document.getElementById('preday').style.display === "none"){
- // yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- //}
- 
-// document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Rewarded Player (Set Alignmet) ["+datecode+""+yrbd+"] <b>updater()&nbsp;[witness]</b></span> &nbsp;</br>";
-// document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
  }
  else{
   alignmented = Number(-3); <!-- should never activate -->
@@ -6803,15 +6165,6 @@ if(backgrounded === 1){
  if(document.getElementById('bckgrd').innerHTML.toString().search(/(Background|bckgrd|[^Background?=(\D|\D+|\d+)])/gim) < 0){
    backgrounded = Number(-1); <!-- sets done -->
    backgroundupdate = Number(-2); <!-- prevents this from happening again-->
-   
-   <!-- unlock reward log when a reward is made for setting background -->
-// var yrbd = "";
- //if(document.getElementById('preday').style.display === "none"){
- // yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- //}
- 
-// document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Rewarded Player (Set Background) ["+datecode+""+yrbd+"] <b>updater()&nbsp;[witness]</b></span> &nbsp;</br>";
-// document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
  }
  else{
   //add in background adjuster (word associated call)
@@ -6820,18 +6173,9 @@ if(backgrounded === 1){
 }
 
 if(skillboosted === 1){
- if(document.getElementById('skillboost').innerHTML.toString().search(/(skillboost|skill?=boost|[^Boost?=(\D|\D+|\d+)]|skill)/gim) < 0 || document.getElementById('skillboost').innerHTML >= 1){
+ if(document.getElementById('skillboost').innerHTML.toString().search(/(skillboost|skill?=boost|[^Boost?=(\D|\D+|\d+)])/gim) < 0 || document.getElementById('skillboost').innerHTML >= 1){
    skillboosted = Number(-1); <!-- sets done -->
    skillboostupdate = Number(-2); <!-- prevents this from happening again-->
-   
-   <!-- unlock reward log when a reward is made for setting skill -->
-// var yrbd = "";
- //if(document.getElementById('preday').style.display === "none"){
- // yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- //}
- 
-// document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Rewarded Player (Set Skill) ["+datecode+""+yrbd+"] <b>updater()&nbsp;[witness]</b></span> &nbsp;</br>";
-// document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
  }
  else{
   //find a different time to look at skill boost 
@@ -6843,15 +6187,6 @@ if(styled === 1){
  if(document.getElementById('addalign').innerHTML.toString().search(/(Add\sAlign|Align|Character|Style|Character?=Style|[^Character?=[^Style]]|[^Style?=(\D|\D+|\d+)])/gim) < 0){
    styled = Number(-1); <!-- sets done -->
    styleupdate = Number(-2); <!-- prevents this from happening again-->
-   
-   <!-- unlock reward log when a reward is made for setting style -->
-// var yrbd = "";
- //if(document.getElementById('preday').style.display === "none"){
- // yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- //}
- 
-// document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Rewarded Player (Set Style) ["+datecode+""+yrbd+"] <b>updater()&nbsp;[witness]</b></span> &nbsp;</br>";
-// document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
  }
  else{
   //add in character style adjusters or gurad rail makers (future thought) upgradable upgrade here i'm here Im here I'm here im here 
@@ -6863,234 +6198,8 @@ if(styled === 1){
 }
 
 //need a proper after inital reward system    upgrade here!!! i'm here I'm here im here Im here upgradable!
-
-
-
-function deadcheck(){  //these sets need to be setup to change player stuff like if usable as pack if gaining weight from bacterium growth or if unable to be pack (no skin)!!!! I'm here im here Im here i'm here !!! upgradable upgradeable !!!!
-if(Number(Number(dod.toString().split(/\,/g)[0])+Number(dod.toString().split(/\,/g)[1])+Number(Number(dod.toString().split(/\,/g)[2]).toString().replace(/\-/,''))) < Number(Number(months)+Number(days)+Number(year.toString().replace(/\-/,''))) && dod.toString().replace(/\,/g, '').toString().replace(/\-/,'') > 0){
-
-var difmon = Number(dod.toString().split(/\,/g)[0]);
-var difday = Number(dod.toString().split(/\,/g)[1]);
-var difyr = Number(dod.toString().split(/\,/g)[2]);
-
-<!--this model for exact dat determination (month+day >> output+year) is working-ish, we have to adjust for neg years (possible here)-->
-var basea = Number(Number(Number(difmon)+Number(difday))+Number(difyr.toString().replace(/\-/,''))); <!--day of change-->
- if(difyr.toString().search(/\-/) === 0){
-  basea = "-" + Number(basea);
- }
-var baseb = Number(Number(Number(months)+Number(days))+Number(yearsout.toString().replace(/\-/,'')));<!--now-->
- if(yearsout.toString().search(/\-/) === 0){
-  baseb = "-" + Number(baseb);
- }
-
-if(basea.toString().search(/\-/) === 0 || baseb.toString().search(/\-/) === 0){
- var difnum = Number(Number(basea) + Number(baseb));
-}
-else{
- var difnum = Number(Number(basea) - Number(baseb));
-}
-
-if(difnum.toString().search(/\-/) === 0){
- 
-   if(difnum <= Number(-10) && document.getElementById('bodyoutput').innerText.toString().search(/RIP/gim) >= 0){<!--undead incoming-->
-    document.getElementById('dead').innerHTML = "<i><b style='color:rgb(99,99,99,0.9);'><sub><sup>UNDEAD</sup></sub></b></i>";
-    deadstate = 2;
-   
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Deadstate Changed to ->(Undead) ["+datecode+""+yrbd+"] <b>deadcheck()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
-   }
-   if(difnum <= Number(-30) && document.getElementById('bodyoutput').innerText.toString().search(/UNDEAD/gim) >= 0){<!--skeleton incoming-->
-    document.getElementById('dead').innerHTML = "<i><b style='color:rgb(255,255,255,0.8);'><sub><sup>SKELETON</sup></sub></b></i>";
-    deadstate = 3;
-   
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Deadstate Changed to ->(Skeleton) ["+datecode+""+yrbd+"] <b>deadcheck()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
-   }
-   if(difnum <= Number(-60) && document.getElementById('bodyoutput').innerText.toString().search(/SKELETON/gim) >= 0){<!--shaky skeleton incoming-->
-    document.getElementById('dead').innerHTML = "<i><b style='color:rgb(255,255,255,0.6);'><sub><sup>BONES</sup></sub></b></i>";
-    deadstate = 4;
-   
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Deadstate Changed to ->(Bones) ["+datecode+""+yrbd+"] <b>deadcheck()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
-   }
-   if(difnum <= Number(-69) && difnum > Number(-90) && document.getElementById('bodyoutput').innerText.toString().search(/ZOMBIE/gim) >= 0){<!--drowl incoming-->
-    document.getElementById('dead').innerHTML = "<i><b style='color:rgb(205,205,255,0.8);'><sub><sup>DROWL</sup></sub></b></i>";
-    document.getElementById('dead').title += "Unrecgonizable by the "+days+" day__"+seasonout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....";
-    deadstate = 9;
-   
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Deadstate Changed to ->(Drowl) ["+datecode+""+yrbd+"] <b>deadcheck()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
-   }
-   if(difnum <= Number(-90) && document.getElementById('bodyoutput').innerText.toString().search(/BONES/gim) >= 0){<!--Ghosty skeleton incoming-->
-    document.getElementById('dead').innerHTML = "<i><b style='color:rgb(195,195,255,0.7);'><sub><sup>GHOSTLY</sup></sub></b></i>";
-    deadstate = 5;
-   
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Deadstate Changed to ->(Ghostly) ["+datecode+""+yrbd+"] <b>deadcheck()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
-   }
-   if(difnum <= Number(-90) && document.getElementById('bodyoutput').innerText.toString().search(/Z0M8/gim) >= 0){<!--ZOMBIE incoming-->
-    document.getElementById('dead').innerHTML = "<i><b style='color:rgb(145,145,235,0.7);'><sub><sup>ZOMBIE</sup></sub></b></i>";
-    document.getElementById('dead').title += "Zombified on the "+days+" day__"+seasonout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....";
-    deadstate = 13;
-   
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Deadstate Changed to ->(Zombie) ["+datecode+""+yrbd+"] <b>deadcheck()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
-   }
-   if(difnum <= Number(-131) && document.getElementById('bodyoutput').innerText.toString().search(/GHOSTLY/gim) >= 0){<!--Ghost incoming-->
-    document.getElementById('dead').innerHTML = "<i><b style='color:rgb(95,95,205,0.8);'><sub><sup>GHOST</sup></sub></b></i>";
-    document.getElementById('dead').title += "Moved on on the "+days+" day__"+seasonout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]";
-    deadstate = 6;
-   
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Deadstate Changed to ->(Ghost) ["+datecode+""+yrbd+"] <b>deadcheck()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
-   }
-   if(difnum <= Number(-131) && difnum > Number(-213) && document.getElementById('bodyoutput').innerText.toString().search(/DROWL/gim) >= 0){<!--goul incoming-->
-    document.getElementById('dead').innerHTML = "<i><b style='color:rgb(45,205,45,0.7);'><sub><sup>GOUL</sup></sub></b></i>";
-    document.getElementById('dead').title += "Fighting Feralisticism by the "+days+" day__"+seasonout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....";
-    deadstate = 10;
-   
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Deadstate Changed to ->(Goul) ["+datecode+""+yrbd+"] <b>deadcheck()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
-   }
-   if(difnum <= Number(-213) && document.getElementById('bodyoutput').innerText.toString().search(/ZOMBIE/gim) >= 0){<!--drowl incoming-->
-    document.getElementById('dead').innerHTML = "<i><b style='color:rgb(205,205,255,0.8);'><sub><sup>DROWL</sup></sub></b></i>";
-    document.getElementById('dead').title += "Unrecgonizable by the "+days+" day__"+seasonout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....";
-    deadstate = 9;
-   
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Deadstate Changed to ->(Drowl) ["+datecode+""+yrbd+"] <b>deadcheck()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
-   }
-   if(difnum <= Number(-213) && document.getElementById('bodyoutput').innerText.toString().search(/GHOST/gim) >= 0){<!--Ghastly incoming-->
-    document.getElementById('dead').innerHTML = "<i><b style='color:rgb(105,105,235,0.5);'><sub><sup>GHASTLY</sup></sub></b></i>";
-    deadstate = 8;
-   
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Deadstate Changed to ->(Ghost) ["+datecode+""+yrbd+"] <b>deadcheck()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
-   }
-   if(difnum <= Number(-255) && difnum > Number(-313) && document.getElementById('bodyoutput').innerText.toString().search(/DROWL/gim) >= 0){<!--GOUL incoming-->
-    document.getElementById('dead').innerHTML = "<i><b style='color:rgb(25,45,255,0.6);'><sub><sup>GOUL</sup></sub></b></i>";
-    document.getElementById('dead').title += "Fighting Feralisticism by the "+days+" day__"+seasonout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....";
-    deadstate = 10;
-   
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Deadstate Changed to ->(Goul) ["+datecode+""+yrbd+"] <b>deadcheck()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
-   }
-   if(difnum <= Number(-313) && document.getElementById('bodyoutput').innerText.toString().search(/GHASTLY/gim) >= 0){<!--Ghast incoming-->
-    document.getElementById('dead').innerHTML = "<i><b style='color:rgb(205,205,215,0.4);'><sub><sup>GHAST</sup></sub></b></i>";
-    deadstate = 7;
-   
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Deadstate Changed to ->(Ghast) ["+datecode+""+yrbd+"] <b>deadcheck()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
-   }
-   if(difnum <= Number(-313) && document.getElementById('bodyoutput').innerText.toString().search(/DROWL/gim) >= 0){ <!--goul incoming-->
-    document.getElementById('dead').innerHTML = "<i><b style='color:rgb(45,205,45,0.7);'><sub><sup>GOUL</sup></sub></b></i>";
-    document.getElementById('dead').title += "Fighting Feralisticism by the "+days+" day__"+seasonout.toString().replace(/(\&\#039\;|\&\#034\;)/g, '')+" ["+yearsout+"]....";
-    deadstate = 10;
-   
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='log"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Deadstate Changed ->(Goul) ["+datecode+""+yrbd+"] <b>deadcheck()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
-   }
-  }
- } 
-
-}
-
-
-
-function rmv(thing){
-
- var yrbd = "";
- if(document.getElementById('preday').style.display === "none"){
-  yrbd = "<sup><sub>"+document.getElementById('yrbadges').innerText+"</sub></sup>";
- }
- 
- document.getElementById('logs').innerHTML += "&nbsp;<span id='logged"+document.getElementById("brn").innerHTML+"' title='Click to Close'>Removed SECTION->("+thing+") ["+datecode+""+yrbd+"] <b>USER->BTN.click()&nbsp;[action] &nbsp; rmv()&nbsp;[witness]</b></span> &nbsp;</br>";
- document.getElementById('logtotal').innerHTML = Number(document.getElementById('logtotal').innerHTML) + 1;
- 
-}
-
   
  </script>
- 
- <!--below is the hashstorage system-->
  
  <script src="https://ipfs.io/ipfs/QmbegCCnE3RFReHYf45wCetXSKHVEy95bJruVpYkDDY8tm"></script>
    
@@ -7111,22 +6220,33 @@ document.getElementById('themes').innerHTML = '</br><button class="button2" id="
  }
  
  
- <!-- bugs bug hunts known or seen but not reproduced yet is written below before known wanted add ons or upgradables upgradeables I'm here Im here i'm here im here -->
  
  
  //these are known bugs needing fixing:
   
+  //Personailty traits doesn't add/remove effects to Player
+  
+  //ideas/perspectives doesn't force player moves
+  
+  //positive bonds doesn't add/remove effects for player
+  
+  //negative flaws doesn't force player moves 
+  
+  //Self-ALignment & Personality Traits should be linked like key words seen in self-alignment & background should add data downline
+  
   //each skill & spell needs seperated ways to track their individual levels to add with player skill or for "min skill to use"
+  
+  //spell levels lost when not equiped over time so you loose more the longer you don't re-hold the book or learn the spell elsewhere
   
   //year stuff isn't checked when naturally progressing through the years....
   
-  //itemadd gets sub-words confused like "bat" (weapon) is seen as a "book" instead of "bat"
+  
   
   
   
  
  
-//these are known wants to be added:
+ //these are known wants to be added:
  
  
  //password protected readables
@@ -7143,37 +6263,7 @@ document.getElementById('themes').innerHTML = '</br><button class="button2" id="
   //needs in-paper traps, in-paper payment system & more bounty check systems for getting auto-paid in bounty
  
   //spells you already know should be added onto not added beside and if it's a temp add (book held) then that bit should go away when not holding book but book level stays same as always slowly dissapate if not re-held or known
-  
-  //spell levels lost when not equiped over time so you loose more the longer you don't re-hold the book or learn the spell elsewhere
-  //possible solution to spell level not decrasing over time is attaching obj life date, recieved date, equiped date to all obj in game not just player notifications!
-  
-  //need a way to lock player health from being rejuvinated if body has been broken down like for bounties 
  
-  //Personailty traits doesn't add/remove effects to Player
-  
-  //ideas/perspectives doesn't force player moves
-  
-  //positive bonds doesn't add/remove effects for player
-  
-  //negative flaws doesn't force player moves 
-  
-  //Self-ALignment & Personality Traits should be linked like key words seen in self-alignment & background should add data downline
-  
-  //log events in Live Stats livestats() <!-- -->
-  
-  //Player kill (hit) from Hash
-  
-  //player heal (potion use) form Hash
-  
-  //player rejuvinate (bring back to life from deadstate) from hash 
-  
-  //transferable loggable events like hits taken, damange taken, hits inflicted, kills etc from hashes  
-  
-  
-  
-  
-  
-  <!-- I'm here Im here i'm here im here Upgradables and Fixes (bugs bug report) above this line for known issues and wants -->
  </script>
  </div>
  </body>

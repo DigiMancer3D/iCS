@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iCS WGE</title>
+    <style>
+        body { background-color: #121212; color: #ffffff; font-family: Arial, sans-serif; }
+        .tab { display: flex; }
+        .tab.active { text-shadow: 0 0 5px green; }
+        .inputField { margin: 1em 0; }
+        .feedback { font-size: 0.9em; }
+        .neon-shadow { text-shadow: 0 0 5px green; }
+        button { opacity: 0; transition: opacity 0.3s; }
+        .active-button { opacity: 1; }
+    </style>
+</head>
+<body>
+    <div class="tab" id="tabContainer"></div>
+    <div class="inputField">
+        <input type="text" id="inputField" onfocus="clearFeedback()" placeholder="Type here..." />
+        <div class="feedback" id="feedback"></div>
+    </div>
+    <button id="hashButton">DB Hash</button>
+    <script>
+        const tabs = [];
+        const tabContainer = document.getElementById('tabContainer');
+        const inputField = document.getElementById('inputField');
+        const feedback = document.getElementById('feedback');
+        const hashButton = document.getElementById('hashButton');
+
+        // Modify tabs and button behaviors according to requirements.
+        function clearFeedback() {
+            feedback.innerText = '';
+        }
+
+        function addTab(name) {
+            const tab = document.createElement('div');
+            tab.innerText = name;
+            tab.classList.add('tab');
+            tab.onclick = () => selectTab(tab);
+            tabs.push(tab);
+            tabContainer.appendChild(tab);
+            adjustTabButtons();
+        }
+
+        function selectTab(tab) {
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            clearFeedback();
+            // Ensure active tab is visible
+            tab.scrollIntoView();
+        }
+
+        function adjustTabButtons() {
+            // Show or hide hashButton based on tab position
+            // Example logic to show/hide hashButton
+            if (tabs.length > 1) {
+                hashButton.classList.add('active-button');
+            }
+        }
+
+        // Set events for adding new words/categories
+        function addWord() {
+            const word = inputField.value;
+            if (word) {
+                addTab(word);
+                inputField.value = '';
+            }
+        }
+
+        hashButton.addEventListener('click', () => {
+            // Handle DB hash button click
+            console.log('DB Hash clicked!');
+        });
+
+        // Initialize with demo data
+        addTab('Category 1');
+        addTab('Category 2');
+        addWord();
+    </script>
+</body>
+</html>

@@ -1,83 +1,431 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iCS WGE</title>
-    <style>
-        body { background-color: #121212; color: #ffffff; font-family: Arial, sans-serif; }
-        .tab { display: flex; }
-        .tab.active { text-shadow: 0 0 5px green; }
-        .inputField { margin: 1em 0; }
-        .feedback { font-size: 0.9em; }
-        .neon-shadow { text-shadow: 0 0 5px green; }
-        button { opacity: 0; transition: opacity 0.3s; }
-        .active-button { opacity: 1; }
-    </style>
+<meta charset="utf-8">
+<title>iCS-WGE</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+:root { --silver: #CCC; --black: #111; --neon: #53ffae;}
+body { background: var(--black); color: var(--silver); font-family: system-ui,sans-serif; margin: 0; min-height: 100vh;}
+h1 { text-align:center; font-size:2.5rem; font-weight:bold; margin: 1rem 0 0.5rem 0; color:var(--silver); text-shadow:0 0 12px #0f2,0 0 10px #222;}
+#inputRow { display:flex;justify-content:center;flex-wrap:wrap;gap:1rem;margin:2rem auto 0.5rem auto;width:90%;position:relative;}
+.inputCol { background:#181818;border-radius:14px;flex:1 1 320px;max-width:440px;min-width:240px;margin:0 4px;box-shadow:0 2px 12px #000a;display:flex;flex-direction:column;align-items:center;padding:1rem 0.5rem 1.5rem 0.5rem;}
+.inputCol h3 { margin:0.5rem 0 0.4rem 0;font-size:1.3rem;font-weight:bold;color:#eee;text-align:center;}
+input[type="text"] { background:#222;color:var(--silver);border:2px solid #444;border-radius:5px;font-size:1.15rem;padding:8px 10px;width:80%;margin:0.1rem 0 0.25rem 0;text-align:center;outline:none;}
+input[type="text"]:hover, input[type="text"]:focus { border-color:#39f;}
+.inputCol p { min-height:28px;font-size:1rem;margin:0.35rem 0 0.25rem 0;text-align:center;word-break:break-all;}
+.neon-gram {color:var(--neon);text-shadow:0 0 6px var(--neon),0 0 16px #2f8;font-weight:bold;background:linear-gradient(90deg,#112,#004a2d14);border-radius:8px;padding:2px 7px;display:inline-block;}
+.copyBtn {margin-left:4px;vertical-align:middle;border:none;background:none;color:#53ffae;font-size:1.04em;cursor:pointer;}
+.copyBtn:active {color:#21bc7c;}
+button { background:#000;color:var(--silver);border:2px solid #888;border-radius:24px;font-size:1.1rem;padding:0.25em 1.5em;margin:0.3rem 0 0.6rem 0;font-weight:500;cursor:pointer;transition:box-shadow .2s,border-color .2s;}
+button:disabled {border-color:#333;color:#777;background:#181818;cursor:not-allowed;}
+button:not(:disabled):hover,.overlayBtn:hover {border-color:#53ffae;box-shadow:0 0 16px var(--neon);color:#fff;}
+.overlayBtn {background:#151;color:#fff;border:2.5px solid #53ffae;font-size:1.15rem;border-radius:11px;position:absolute;left:50%;top:55%;transform:translate(-50%,-50%);padding:18px 33px;box-shadow:0 4px 32px var(--neon),0 2px 10px #000a;font-weight:bold;z-index:200;opacity:1;transition:opacity .6s;}
+.overlayBtn.fading{opacity:0;}
+@media (max-width:600px){
+  #inputRow { flex-direction:column;gap:1.6rem;margin-top:1.2rem;}
+  #dbHashBtnWrap { position:relative;left:0;transform:none;width:100%;top:0;display:flex;justify-content:center;}
+}
+@media (max-width:480px){
+  h1{font-size:1.25rem;}
+  .inputCol{min-width:unset;font-size:0.97rem;}
+}
+#dbHashBtnWrap { position: absolute; left: 50%; transform: translateX(-50%); width:100%; display:flex; justify-content:center; pointer-events:none; top:65%; z-index:199;}
+hr { border:0;border-top:2px solid #333;margin:1rem 0;}
+#indexBlock {max-width:1200px;margin:0 auto;background:#181818;border-radius:13px;min-height:320px;box-shadow:0 0 14px #000c;padding:2px;position:relative;}
+#tabs { white-space:nowrap;overflow-x:auto;padding:0.6em 2px 0.3em 2px;background:#161616;border-radius:8px 8px 0 0;display:flex;gap:2px;align-items:center;position:relative;scroll-behavior:smooth;}
+.tabBtn {display:inline-block;border:1px solid #888;background:#222;color:#ccc;margin-right:3px;border-radius:8px 8px 0 0;padding:0.5em 1.2em;font-weight:bold;font-size:1.08em;cursor:pointer;transition:background .15s, color .13s, border-color .19s;}
+.tabBtn.selected {background:var(--silver);color:#181818;border-color:#39f;z-index:3;}
+.tabBtn:active {background:#ffd;color:#181818;}
+#tabScrollLeft,#tabScrollRight {position:absolute;top:6px;height:30px;width:28px;border-radius:8px;background:#111e;color:var(--silver);border:none;cursor:pointer;font-size:1.22em;font-weight:bold;z-index:10;transition:opacity .13s;}
+#tabScrollRight {right:3px;}
+#tabScrollLeft {left:3px;}
+#tabContent {background:#202025;min-height:120px;padding:1.4em 2vw;border-radius:0 0 9px 9px;transition:background .16s;margin-bottom:0.7em;font-size:1.07em;}
+#collapseBtn {position:absolute;top:10px;right:15px;background:var(--silver);color:#222;border:none;border-radius:12px;font-size:1.6rem;font-weight:bold;cursor:pointer;padding:2px 19px;z-index:30;}
+textarea {background:#191a1d;color:#ededed;border-radius:7px;width:98%;border:1.5px solid #333;font-size:1em;padding:10px;margin-top:4px;resize:vertical;min-height:120px;}
+.tab-footer {display: block;color: #53ffae;font-weight:bold;margin:1.2em 0 0.4em 0;font-size:1.04em;text-shadow:0 0 8px #53ffae,0 0 24px #222;}
+#filePickerWrap {text-align:center;margin-top:2em;display:none;}
+</style>
 </head>
 <body>
-    <div class="tab" id="tabContainer"></div>
-    <div class="inputField">
-        <input type="text" id="inputField" onfocus="clearFeedback()" placeholder="Type here..." />
-        <div class="feedback" id="feedback"></div>
-    </div>
-    <button id="hashButton">DB Hash</button>
-    <script>
-        const tabs = [];
-        const tabContainer = document.getElementById('tabContainer');
-        const inputField = document.getElementById('inputField');
-        const feedback = document.getElementById('feedback');
-        const hashButton = document.getElementById('hashButton');
+<h1>interactive Character Sheet Word-Gram Encoder (iCS-WGE)</h1>
+<div id="inputRow">
+  <div class="inputCol" id="colCategory">
+    <h3>Category</h3>
+    <input type="text" id="catInput" placeholder="Add category">
+    <p id="catFeedback">&nbsp;</p>
+    <button id="catAddBtn" disabled>Add Category</button>
+  </div>
+  <div class="inputCol" id="colWord" style="position:relative;">
+    <h3>Object Word</h3>
+    <input type="text" id="wordInput" placeholder="Add word">
+    <p id="wordFeedback">&nbsp;</p>
+    <button id="wordAddBtn" disabled>Add Word</button>
+  </div>
+  <div id="dbHashBtnWrap" style="display:none;"></div>
+</div>
+<hr>
+<div id="indexBlock">
+  <div id="tabs"></div>
+  <button id="tabScrollLeft" style="display:none;">&#8592;</button>
+  <button id="tabScrollRight" style="display:none;">&#8594;</button>
+  <div id="tabContent"></div>
+  <button id="collapseBtn" style="display:none;" title="Collapse Index">&#x2191;</button>
+</div>
+<!-- Manual loader (always available) -->
+<div id="filePickerWrap">
+  <label style="color:orange;font-weight:bold;">Manual load: Select your iCS Rec.list file</label><br>
+  <input type="file" id="filePicker" accept=".list,.txt,text/plain">
+  <button id="loadFileBtn" disabled>Load Dictionary Now</button>
+  <button onclick="closeFilePicker()">Close Importer</button>
+</div>
+<script>
+'use strict';
+// ----- Deduplication -----
+const canonicalMap = {
+  knife: ["knife", "nife", "kife", "nkife"], shield: ["shield", "sheild", "shild", "sheld"], distress: ["distress", "distresss", "distresses"]
+};
+function canonicalize(word) {word = word.trim().toLowerCase();for (const canon in canonicalMap) {if (canonicalMap[canon].includes(word)) return canon;}let ieFlip = word.replace(/ie/g, "ei").replace(/ei/g, "ie"); if (ieFlip !== word) return ieFlip;if (word.match(/(.+)s$/)) return word.replace(/s+$/,"");if (word.match(/(.+)ies$/)) return word.replace(/ies$/,"y");return word; }
+// --- Embedded DB ---
+const embeddedDatabase = {
+  "Weapons": ["weapon", "sword", "axe", "knife", "nife", "kife", "shield", "sheild", "shild", "sheld", "distress", "distresss", "distresses"],
+  "Bow & Crossbow ammo": ["arrow", "arrows", "twig", "stick", "bolt", "bolts"],
+  "Armors": ["armor", "helmet", "cloak", "glove"],
+  "Wearables": ["ring", "necklace", "earring", "piercing"],
+  "Elements": ["fire", "cold", "ice", "wind", "sun", "dark", "rosen"]
+};
+let dict = {}, gramToCategories = {}, catDict = {}, categories = {}, loadedLines = [], parsedCategories = {}, allWords = [];
+let dbReady=false, dbError=false, dbHashContent='', dbBtn = null, dbHashTabScrollTimeout = null, hashBtnTimer = null;
+function makeGram(word) {word = word.trim().toLowerCase();if(word.length <= 4) return word;const tries = [ [3,3],[2,3],[4,3],[3,4],[5,3],[3,5],[2,4],[4,2],[2,5],[5,2],[4,4],[5,5] ];for(let [f,b] of tries) { if(word.length>=f+b) return word.slice(0,f)+':'+word.slice(-b);}return word;}
+function combineGrams(cat, word) { return makeGram(cat) + ':' + makeGram(word);}
+function uniqueGram(word, category, set) {let gram = makeGram(word);let i=1;while(set.has(gram)) { gram = makeGram(word+'#'+i++); if(i>99) break;}return gram;}
+function parseRecList(lines) {let cat = null;parsedCategories = {};const regexCat = /^([\w &\-()]+):\s*(.*)/;for(const line of lines) {let ln = line.trim();if(!ln || ln.startsWith("//") || ln.startsWith("#") || ln.startsWith("<!--")) continue;let m = ln.match(regexCat);if(m) {cat = m[1].trim();let itemList = m[2].split(/,\s*/).filter(w => !!w);if(cat && itemList.length) parsedCategories[cat]=itemList;}}return parsedCategories;}
+function fillDBFromParsed(parsed) {dict = {}; gramToCategories = {}; catDict = {}; categories = {}; allWords = [];for(const cat in parsed) {let items = parsed[cat];categories[cat] = {words:[],grams:new Set()};const catGram = makeGram(cat);catDict[catGram]=cat;for(const item of items) {const word = item.trim().toLowerCase();allWords.push(word);let gram = uniqueGram(word, cat, categories[cat].grams);categories[cat].grams.add(gram);dict[gram]=word;if (!gramToCategories[gram]) gramToCategories[gram]= new Set();gramToCategories[gram].add(cat);categories[cat].words.push(word);}}}
+function parseEmbeddedDB() {parsedCategories = {};for(const cat in embeddedDatabase) {parsedCategories[cat]=embeddedDatabase[cat];}}
+function getUnique(words) {let canonTrack = {};for(const w of words) {let canonical = canonicalize(w);canonTrack[canonical]=true;}return Object.keys(canonTrack);}
+function getTabWordFooter(catName) {if(!dbReady||dbError||!categories[catName]) return "<span class='tab-footer'>Words: --- | Unique: ---</span>";let words = categories[catName].words;let unique = getUnique(words);return "<span class='tab-footer'>Words: "+words.length+" | Unique: "+unique.length+"</span>";}
+function getOverallWordFooter() {if(!dbReady||dbError) return "<span class='tab-footer'>Words: --- | Unique: ---</span>";let unique = getUnique(allWords);return "<span class='tab-footer'>Words: "+allWords.length+" | Unique: "+unique.length+"</span>";}
+let selectedTab = 'Help';
+function buildTabs() {
+  const tabsDiv = document.getElementById('tabs');
+  tabsDiv.innerHTML = '';
+  let tabNames = ['Help', ...Object.keys(categories).sort(), 'DB Hash']; // <<< Always include DB Hash!
+  tabNames.forEach(name => {
+    let tab = document.createElement('span');
+    tab.textContent = name;
+    tab.className = "tabBtn";
+    if(selectedTab===name) tab.classList.add('selected');
+    tab.onclick = () => {
+      document.querySelectorAll('.tabBtn').forEach(b=>b.classList.remove('selected'));
+      tab.classList.add('selected');
+      selectTab(name);
+      if(name=='DB Hash') setTimeout(()=>scrollTabToFarRight(),100);
+    };
+    tabsDiv.appendChild(tab);
+  });
+  handleTabArrows(tabsDiv);
+}
+function handleTabArrows(tabsDiv) {
+  const tabLeft = document.getElementById('tabScrollLeft');
+  const tabRight = document.getElementById('tabScrollRight');
+  let canScroll = tabsDiv.scrollWidth > tabsDiv.clientWidth + 5;
+  let atLeft = tabsDiv.scrollLeft < 5;
+  let atRight = tabsDiv.scrollLeft + tabsDiv.clientWidth >= tabsDiv.scrollWidth - 5;
+  tabLeft.style.display = (!canScroll || atLeft) ? 'none' : '';
+  tabRight.style.display = (!canScroll || atRight) ? 'none' : '';
+  tabLeft.onclick = () => {tabsDiv.scrollBy({left:-120,behavior:'smooth'});setTimeout(()=>{handleTabArrows(tabsDiv);},400);}
+  tabRight.onclick = () => {tabsDiv.scrollBy({left:120,behavior:'smooth'});setTimeout(()=>{handleTabArrows(tabsDiv);},400);}
+  tabsDiv.onscroll = ()=>setTimeout(()=>handleTabArrows(tabsDiv),120);
+  setTimeout(()=>handleTabArrows(tabsDiv),250);
+}
+function scrollTabIntoView(tab, tabsDiv) {
+  const tabRect = tab.getBoundingClientRect(), tabsRect = tabsDiv.getBoundingClientRect();
+  if(tabRect.left < tabsRect.left || tabRect.right > tabsRect.right) {tab.scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'});}
+}
+function scrollTabToFarRight() {
+  const tabsDiv = document.getElementById('tabs');
+  tabsDiv.scrollLeft = tabsDiv.scrollWidth;
+  handleTabArrows(tabsDiv);
+}
+// --- DB Hash Vampire Export ---
+function buildDBHashLive() {
+  let cats = Object.keys(categories).sort();
+  // Remove Help and DB Hash from hash export
+  cats = cats.filter(cat => cat !== 'Help' && cat !== 'DB Hash');
+  let str = '|Rec.List,..,'; //Recgonized Lists special header
+  str += cats.length ? `${cats.length},..,` : "";
+  cats.forEach(cat=>{ str+=cat+',..,'+categories[cat].words.slice().sort().join('|')+',..,'; });
+  str += ',.cc.,iCS-WGE,..,,..|'; //Recgonized Lists special footer
+  return btoa(str);
+}
+function showDBBtn() {
+  if(dbBtn) return;
+  const dbHashBtnWrap = document.getElementById('dbHashBtnWrap');
+  dbHashBtnWrap.innerHTML = '';
+  dbHashBtnWrap.style.display = '';
+  dbBtn = document.createElement('button');
+  dbBtn.textContent = 'DB Hash Now';
+  dbBtn.className = 'overlayBtn';
+  dbBtn.onclick = ()=>{
+      selectTab('DB Hash');
+      scrollTabToFarRight();
+      fadeDBBtn();
+  };
+  dbHashBtnWrap.appendChild(dbBtn);
+  // Decay/fade out after 3s if not clicked
+  hashBtnTimer && clearTimeout(hashBtnTimer);
+  hashBtnTimer = setTimeout(fadeDBBtn, 3000);
+}
+function fadeDBBtn() {
+  if(!dbBtn) return;
+  dbBtn.classList.add('fading');
+  setTimeout(()=>{revokeDBBtn();},700);
+}
+function revokeDBBtn() {
+  const dbHashBtnWrap = document.getElementById('dbHashBtnWrap');
+  dbHashBtnWrap.innerHTML='';
+  dbBtn=null;
+  hashBtnTimer && clearTimeout(hashBtnTimer);
+  hashBtnTimer = null;
+}
 
-        // Modify tabs and button behaviors according to requirements.
-        function clearFeedback() {
-            feedback.innerText = '';
-        }
+// ---- Word-Gram Copy Logic ----
+function copyToClipboard(val,el) {
+  try {
+    navigator.clipboard.writeText(val);
+    el.style.color='#21bc7c'; // flash green
+    setTimeout(()=>el.style.color='',500);
+  } catch {
+    alert("Copied: "+val);
+  }
+}
+function gramWithCopy(gram) {
+  return `<span class="neon-gram">${gram}</span>
+<button class="copyBtn" title="Copy" onclick="copyToClipboard('${gram}',this)">&#128203;</button>`;
+}
 
-        function addTab(name) {
-            const tab = document.createElement('div');
-            tab.innerText = name;
-            tab.classList.add('tab');
-            tab.onclick = () => selectTab(tab);
-            tabs.push(tab);
-            tabContainer.appendChild(tab);
-            adjustTabButtons();
-        }
+function selectTab(tab) {
+  selectedTab = tab;
+  const c = document.getElementById('tabContent');
+  if(tab==='Help') {
+    c.innerHTML = `<b>Welcome to iCS Word-Gram Encoder (iCS-WGE)</b>
+<ul>
+  <li><b>Category:</b> Enter/select category. System displays the calculated word-gram below for builder reference. ${gramWithCopy('category-gram')}</li>
+  <li><b>Object Word:</b> Enter a word—system also gives word-gram. If present in multiple cats, all are listed. ${gramWithCopy('object-word-gram')}</li>
+  <li><b>Adding:</b> Add both category and object together if new; see all word-grams here.</li>
+  <li><b>Tabs:</b> Scrolls left/right, DB Hash tab is always far right. One per category, plus Help and DB Hash.</li>
+  <li><b>DB Hash:</b> Click green-glow button between columns to get hash export (iCS format), click copy for Base64.</li>
+  <li><b>Word counts:</b> Tab footer shows total and deduplicated word counts.</li>
+</ul>
+<button id='pickit' type="button" onclick="showFilePicker()">Import Dictionary Manually</button>
+${getOverallWordFooter()}
+    `;
+    document.getElementById('filePickerWrap').style.display = 'none';
+    document.getElementById('pickit').style.display = 'inline-block';
+  } else if(tab==='DB Hash') {
+    let liveHash = buildDBHashLive();
+    c.innerHTML = `<textarea readonly>${liveHash||'No updates yet. Add data to generate hash.'}</textarea>
+    <button type="button" onclick="copyToClipboard('${liveHash}',this)">Copy Base64 DB Hash</button>
+    ${getOverallWordFooter()}`;
+  } else if(categories[tab]) {
+    if(categories[tab].words.length===0)
+      c.innerHTML = '<em>No words in this category.</em>' + getTabWordFooter(tab);
+    else
+      c.innerHTML = '<b>Words:</b> '+categories[tab].words.slice().sort().join(', ') + getTabWordFooter(tab);
+  } else
+    c.innerHTML = '';
+}
 
-        function selectTab(tab) {
-            tabs.forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
-            clearFeedback();
-            // Ensure active tab is visible
-            tab.scrollIntoView();
-        }
+const catInput = document.getElementById('catInput'), catFeedback = document.getElementById('catFeedback'),
+      catAddBtn = document.getElementById('catAddBtn'), wordInput = document.getElementById('wordInput'),
+      wordFeedback = document.getElementById('wordFeedback'), wordAddBtn = document.getElementById('wordAddBtn'),
+      dbHashBtnWrap = document.getElementById('dbHashBtnWrap');
+let currentCat = '', catKnown = false, wordKnown = false, wordCats = [],
+    catTimer = null, wordTimer = null;
 
-        function adjustTabButtons() {
-            // Show or hide hashButton based on tab position
-            // Example logic to show/hide hashButton
-            if (tabs.length > 1) {
-                hashButton.classList.add('active-button');
-            }
-        }
+catInput.onfocus = function() { catInput.value = ''; catFeedback.innerHTML = '&nbsp;'; revokeDBBtn(); };
+wordInput.onfocus = function() { wordInput.value = ''; wordFeedback.innerHTML = '&nbsp;'; revokeDBBtn(); };
+function resetCatUI() { catKnown=false; currentCat=''; catAddBtn.disabled=true; wordAddBtn.disabled=true; catFeedback.innerHTML='&nbsp;'; }
+function resetWordUI() { wordKnown=false; wordCats=[]; wordAddBtn.disabled=true; wordFeedback.innerHTML='&nbsp;'; }
+function inputCheckManager(field, checkFn) {
+  let idleTimer;
+  field.oninput = ()=>{
+    clearTimeout(idleTimer);
+    idleTimer=setTimeout(checkFn,1200); revokeDBBtn();
+  };
+  field.onblur = checkFn;
+  field.onkeydown = (e) => { if(e.key==='Enter') {checkFn(); field.blur();} };
+}
+function checkCategoryInput() {
+  if(!dbReady) {resetCatUI();return;}
+  const raw = catInput.value.trim();
+  if(!raw) {resetCatUI();return;}
+  const catGram = makeGram(raw);
+  const catGramHtml = gramWithCopy(catGram);
+  if(catDict[catGram]) {
+    catKnown=true; currentCat=catDict[catGram];
+    catFeedback.innerHTML = `Known Category: ${catGramHtml}`;
+    catAddBtn.disabled=true;
+    wordAddBtn.disabled=wordInput.value.trim().length===0;
+    if(wordInput.value.trim()) checkWordInput();
+  } else {
+    catKnown=false; currentCat=raw;
+    catFeedback.innerHTML = `Not yet a category: ${catGramHtml}<br>Add?`;
+    catAddBtn.disabled=false;
+    wordAddBtn.disabled=wordInput.value.trim().length===0;
+  }
+}
+inputCheckManager(catInput,checkCategoryInput);
+catAddBtn.onclick = ()=>{
+  if(!currentCat) return;
+  if(!categories[currentCat]) { categories[currentCat] = {words:[],grams:new Set()}; catDict[makeGram(currentCat)]=currentCat; }
+  buildTabs();
+  setTimeout(()=>{ let tabsDiv = document.getElementById('tabs'); let targetTab = Array.from(tabsDiv.querySelectorAll('.tabBtn')).find(t => t.textContent===currentCat); targetTab && scrollTabIntoView(targetTab, tabsDiv); },200);
+  selectTab(currentCat);
+  catInput.value=currentCat;
+  checkCategoryInput();
+  setDBChanged();
+};
 
-        // Set events for adding new words/categories
-        function addWord() {
-            const word = inputField.value;
-            if (word) {
-                addTab(word);
-                inputField.value = '';
-            }
-        }
+function checkWordInput() {
+  if(!dbReady) {resetWordUI();return;}
+  const catRaw = catInput.value.trim();
+  if(!catRaw) {resetWordUI();return;}
+  const catGram = makeGram(catRaw), catGramHtml = gramWithCopy(catGram), catName = catDict[catGram] || catRaw;
+  const raw = wordInput.value.trim().toLowerCase();
+  if(!raw) {resetWordUI();return;}
+  let gram = makeGram(raw), gramHtml = gramWithCopy(gram), comboGram = combineGrams(catRaw, raw), comboGramHtml = gramWithCopy(comboGram);
+  let foundCats = [];
+  for(let cg in gramToCategories) {
+    if(dict[gram] && cg==gram) {
+      foundCats=[...gramToCategories[gram]];
+      break;
+    }
+  }
+  wordCats=foundCats;
+  if(foundCats.length>0) {
+    wordKnown=true;
+    wordFeedback.innerHTML=`Known word-gram: ${gramHtml}<br>
+    Found in: ${foundCats.map(c=>'<span style="color:#eee">'+c+'</span>').join(', ')}
+    <br>Combo: ${comboGramHtml}`;
+    wordAddBtn.disabled = foundCats.includes(catName);
+  } else {
+    wordKnown=false;
+    wordFeedback.innerHTML='Word '+gramHtml+' — will add.<br>Word-Gram: '+gramHtml +
+      `<br>Category-Gram: ${catGramHtml}` +
+      `<br>Combo-Gram: ${comboGramHtml}`;
+    wordAddBtn.disabled = !catName;
+  }
+}
+inputCheckManager(wordInput,checkWordInput);
+wordAddBtn.onclick = ()=>{
+  if(!dbReady) return;
+  const catRaw = catInput.value.trim(), wordRaw=wordInput.value.trim().toLowerCase();
+  if(!catRaw || !wordRaw) return;
+  let catGram = makeGram(catRaw), catName = catDict[catGram] || catRaw;
+  if(!categories[catName]) { categories[catName] = {words:[],grams:new Set()}; catDict[makeGram(catName)]=catName; buildTabs(); setTimeout(()=>{ let tabsDiv = document.getElementById('tabs'); let targetTab = Array.from(tabsDiv.querySelectorAll('.tabBtn')).find(t => t.textContent===catName); targetTab && scrollTabIntoView(targetTab, tabsDiv); },200); }
+  let usedGrams = categories[catName].grams;
+  let gram = uniqueGram(wordRaw,catName,usedGrams);
+  usedGrams.add(gram); dict[gram]=wordRaw;
+  if(!gramToCategories[gram])gramToCategories[gram]=new Set();
+  gramToCategories[gram].add(catName);
+  categories[catName].words.push(wordRaw); allWords.push(wordRaw);
+  wordInput.value=wordRaw;
+  checkWordInput();
+  setTimeout(()=>{ let tabsDiv = document.getElementById('tabs'); let targetTab = Array.from(tabsDiv.querySelectorAll('.tabBtn')).find(t => t.textContent===catName); targetTab && scrollTabIntoView(targetTab, tabsDiv); },220);
+  selectTab(catName);
+  setDBChanged();
+};
 
-        hashButton.addEventListener('click', () => {
-            // Handle DB hash button click
-            console.log('DB Hash clicked!');
-        });
+catInput.onfocus = revokeDBBtn; wordInput.onfocus = revokeDBBtn;
 
-        // Initialize with demo data
-        addTab('Category 1');
-        addTab('Category 2');
-        addWord();
-    </script>
+let expanded = false;
+const indexBlock = document.getElementById('indexBlock'), collapseBtn = document.getElementById('collapseBtn');
+function toggleIndex(expand=!expanded) {
+  expanded=expand;
+  if(expanded) { indexBlock.style.position="fixed"; indexBlock.style.left="0"; indexBlock.style.top="0"; indexBlock.style.width="100vw"; indexBlock.style.height="100vh"; indexBlock.style.zIndex="50"; collapseBtn.style.display=''; }
+  else { indexBlock.style.position="relative"; indexBlock.style.width=""; indexBlock.style.height=""; indexBlock.style.zIndex=""; collapseBtn.style.display='none'; }
+}
+collapseBtn.onclick=()=>toggleIndex(false);
+
+/* --- Loader Logic: fetch, filepicker, embedded fallback --- */
+function tryFileFetch() {
+  fetch('iCS Rec.list')
+    .then(resp=>resp.text())
+    .then(txt=>{
+      loadedLines = txt.split(/\n/);
+      parsedCategories = parseRecList(loadedLines);
+      fillDBFromParsed(parsedCategories);
+      dbReady=true; dbError=false;
+      buildTabs(); selectTab('Help');
+      document.getElementById('filePickerWrap').style.display = 'none';
+    })
+    .catch(e=>{
+      dbReady=false; dbError=true;
+      document.getElementById('tabContent').innerHTML =
+        "<b style='color:#e88700'>Auto-load failed: "+(e.message||e)+
+        "</b><br>Manual dictionary import available in Help tab — or fallback to built-in dictionary in 4 seconds.";
+      setTimeout(()=>{
+        if(!dbReady) fallbackToEmbedded();
+      }, 4000);
+    });
+}
+function fallbackToEmbedded() {
+  parseEmbeddedDB();
+  fillDBFromParsed(parsedCategories);
+  dbReady=true; dbError=false;
+  buildTabs();
+  selectTab('Help');
+  document.getElementById('filePickerWrap').style.display = 'none';
+}
+/* --- Manual dictionary import --- */
+function showFilePicker() {
+  document.getElementById('filePickerWrap').style.display = 'block';
+  document.getElementById('pickit').style.display = 'none';
+  document.getElementById('loadFileBtn').disabled = true;
+}
+function closeFilePicker() {
+  document.getElementById('filePickerWrap').style.display = 'none';
+  document.getElementById('pickit').style.display = 'inline-block';
+  document.getElementById('filePicker').value = '';
+  document.getElementById('loadFileBtn').disabled = true;
+}
+document.addEventListener("DOMContentLoaded", function() {
+  let filePicker = document.getElementById('filePicker');
+  let loadFileBtn = document.getElementById('loadFileBtn');
+  if(filePicker && loadFileBtn) {
+    filePicker.addEventListener('change', function() {
+      loadFileBtn.disabled = !filePicker.files.length;
+    });
+    loadFileBtn.addEventListener('click', function() {
+      if(!filePicker.files.length) return;
+      const file = filePicker.files[0];
+      const reader = new FileReader();
+      reader.onload = function(ev) {
+        loadedLines = ev.target.result.split(/\n/);
+        parsedCategories = parseRecList(loadedLines);
+        fillDBFromParsed(parsedCategories);
+        dbReady=true; dbError=false;
+        buildTabs(); selectTab('Help');
+        closeFilePicker();
+      };
+      reader.onerror = function(ev) {
+        document.getElementById('tabContent').innerHTML =
+          "<b style='color:#e88700'>Manual load error: "+(ev.message||ev)+
+          "</b><br>Falling back to built-in dictionary.";
+        fallbackToEmbedded();
+        closeFilePicker();
+      };
+      reader.readAsText(file, 'UTF-8');
+    });
+  }
+});
+function setDBChanged() {
+  showDBBtn();
+}
+function initMaster() { tryFileFetch(); }
+initMaster();
+
+</script>
 </body>
 </html>
